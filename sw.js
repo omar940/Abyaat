@@ -1,6 +1,6 @@
 /* عامل الخدمة: يجعل «أبيات» يعمل بلا اتصال.
    عند نشر تعديل، غيّر رقم VERSION ليصل التحديث إلى المستخدمين. */
-const VERSION = 'abyaat-v7';
+const VERSION = 'abyaat-v8';
 const CORE = [
   './', 'index.html', 'manifest.webmanifest', 'css/styles.css',
   'js/util.js', 'js/i18n.js', 'js/fsrs.js', 'js/store.js', 'js/app.js', 'data/library.json',
@@ -13,10 +13,10 @@ const CORE = [
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(VERSION);
-    await cache.addAll(CORE);
+    await cache.addAll(CORE.map((u) => new Request(u, { cache: 'reload' })));
     try {                                   // كل القصائد المذكورة في المكتبة
       const lib = await (await fetch('data/library.json', { cache: 'no-cache' })).json();
-      await cache.addAll(lib.poems.map((p) => p.file));
+      await cache.addAll(lib.poems.map((p) => new Request(p.file, { cache: 'reload' })));
     } catch (e) { /* يُكمَل عند أول اتصال */ }
     await self.skipWaiting();
   })());
