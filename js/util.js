@@ -24,7 +24,7 @@
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
   const cap = (x) => x.charAt(0).toUpperCase() + x.slice(1);
-  const baytCount = (n) => lang === 'en' ? `${n} bayt${n === 1 ? '' : 's'}`
+  const baytCount = (n) => lang === 'en' ? `${n} verse${n === 1 ? '' : 's'}`
     : n === 1 ? 'بيت واحد' : n === 2 ? 'بيتين' : (n >= 3 && n <= 10) ? ar(n) + ' أبيات' : ar(n) + ' بيتًا';
   const dayCount = (n) => lang === 'en' ? `${n} day${n === 1 ? '' : 's'}`
     : n === 1 ? 'يوم واحد' : n === 2 ? 'يومان' : (n >= 3 && n <= 10) ? ar(n) + ' أيام' : ar(n) + ' يومًا';
