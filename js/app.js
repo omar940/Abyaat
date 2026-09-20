@@ -15,11 +15,13 @@
     chev: '<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>',
     chevL: '<svg class="ic chev mirror" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>',
     check: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>',
+    eye: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
+    eyeOff: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></svg>',
   };
 
   const ui = {
     tab: 'home', mode: null,   // الحفظ والمراجعة: mode = learn | near | far
-    learn: { stage: 'home', target: 0, done: 0, hint: false, en: false, completed: [] },
+    learn: { stage: 'home', target: 0, done: 0, hint: false, hidden: false, en: false, completed: [] },
     near: { stage: 'list', pid: null, cid: null, page: 0, shown: null, result: null },
     far: { stage: 'list', pid: null, cid: null, page: 0, shown: 0, missed: {}, rated: null },
     lib: { section: 'qasaid', poem: null, reader: null },
@@ -63,7 +65,7 @@
   const pTitle = (pid) => pick(S.meta(pid), 'title');
   const kicker = (pid, cid) => {
     const m = S.meta(pid), c = m.chapters.find((x) => x.id === cid);
-    if (c.optional) return t('optional');
+    if (c.optional) return pick(c, 'title');
     return t('chapterN', { i: m.chapters.filter((x) => !x.optional).findIndex((x) => x.id === cid) });
   };
 
@@ -167,23 +169,18 @@
   function learnCard() {
     const L = ui.learn, cursor = learnCursor(), b = cursor.bayt;
     const dots = L.target > 8 ? `<span>${ar(L.done + 1)} / ${ar(L.target)}</span>` : Array.from({ length: L.target }, (_, i) => `<i class="${i < L.done ? 'on' : i === L.done ? 'cur' : ''}"></i>`).join('');
-    const hidden = L.stage === 'recite';
+    const hidden = !!L.hidden;
     const mode = hidden ? (L.hint ? 'hint' : 'hide') : 'show';
     const showEn = L.en || S.settings().showEn;
-    let actions = '';
-    if (L.stage === 'learn') {
-      actions = `<button class="btn block" data-act="learn-hide">${e('hideRecite')}</button>
-        ${b.t ? `<button class="btn block ghost small" data-act="toggle-en">${showEn ? e('hideTrans') : e('showTrans')}</button>` : ''}`;
-    } else if (L.stage === 'recite') {
-      actions = `<p class="prompt">${e('recitePrompt')}</p>
-        <div class="row"><button class="btn quiet" data-act="learn-hint">${L.hint ? e('hideHint') : e('hint')}</button><button class="btn" data-act="learn-reveal">${e('revealCheck')}</button></div>`;
-    } else {
-      actions = `<p class="prompt">${e('checkPrompt')}</p>
-        <div class="row"><button class="btn quiet" data-act="learn-unknown">${e('notYet')}</button><button class="btn" data-act="learn-known">${e('memorized')}</button></div>`;
-    }
+    const trans = (b.t && !hidden)
+      ? `<div class="trans-row${showEn ? '' : ' off'}">${showEn ? transHTML(b) : ''}<button class="eye" data-act="toggle-en" aria-pressed="${showEn}" aria-label="${showEn ? e('hideTrans') : e('showTrans')}">${showEn ? IC.eyeOff : IC.eye}</button></div>`
+      : '';
+    const actions = `<div class="row"><button class="btn quiet" data-act="learn-hide">${hidden ? (isEn() ? 'Show verse' : 'إظهار البيت') : (isEn() ? 'Hide verse' : 'إخفاء البيت')}</button>
+        <button class="btn quiet" data-act="learn-hint" ${hidden ? '' : 'disabled'}>${L.hint ? e('hideHint') : e('hint')}</button></div>
+      <button class="btn block" data-act="learn-known">${e('memorized')}</button>`;
     return `<div class="learn-top"><span><b>${e('baytN', { n: cursor.bayt.n || cursor.idx + 1 })}</b> <span class="muted small"${da}>${esc(pick(cMeta(cursor.pid, cursor.chap.id), 'title'))}</span></span><span class="dots" aria-label="${e('progressToday')}">${dots}</span></div>
       <div class="fit-box folio wrap" dir="rtl" data-min="16" data-max="48"><div class="fit-content">${baytHTML(b, cursor.idx, { s: mode, e: mode })}</div></div>
-      ${showEn && !hidden ? transHTML(b) : ''}
+      ${trans}
       <div class="actions">${actions}</div>`;
   }
   function learnDone() {
@@ -226,7 +223,7 @@
     const total = st.status === 'learning' ? st.learned : chap.bayts.length;
     const pages = Math.max(1, Math.ceil(total / 5)), page = Math.min(Math.max(N.page, 0), pages - 1);
     const slice = chap.bayts.slice(page * 5, Math.min(page * 5 + 5, total));
-    const shown = N.shown == null ? slice.length : Math.min(N.shown, slice.length);
+    const shown = N.shown == null ? 0 : Math.min(N.shown, slice.length);
     const last = page >= pages - 1;
     const body = slice.map((b, i) => baytHTML(b, page * 5 + i, { no: true, s: i < shown ? 'show' : 'hide', e: i < shown ? 'show' : 'hide', nopeek: true })).join('');
     return `${pagerTop(N.pid, N.cid, page, pages)}
@@ -440,11 +437,11 @@
       /* الحفظ الجديد */
       case 'learn-start': case 'learn-more': {
         const rem = Math.max(0, S.settings().perDay - S.todayNewDone());
-        Object.assign(L, { stage: 'learn', target: name === 'learn-more' ? 1 : Math.max(1, rem), done: 0, hint: false, en: false, completed: [] });
+        Object.assign(L, { stage: 'learn', target: name === 'learn-more' ? 1 : Math.max(1, rem), done: 0, hint: false, hidden: false, en: false, completed: [] });
         return render();
       }
       case 'learn-home': L.stage = 'home'; return render();
-      case 'learn-hide': L.stage = 'recite'; L.hint = false; return render();
+      case 'learn-hide': L.hidden = !L.hidden; L.hint = false; return render({ keep: true });
       case 'learn-hint': L.hint = !L.hint; return render({ keep: true });
       case 'learn-reveal': L.stage = 'check'; return render();
       case 'learn-unknown': L.stage = 'learn'; return render();
@@ -452,7 +449,7 @@
       case 'learn-known': {
         const cursor = learnCursor(); if (!cursor) { L.stage = 'done'; return render(); }
         const r = S.markLearned(cursor.pid, cursor.chap.id);
-        L.done += 1; L.hint = false; if (r.completed) L.completed.push(cursor.chap.id);
+        L.done += 1; L.hint = false; L.hidden = false; if (r.completed) L.completed.push(cursor.chap.id);
         L.stage = (L.done >= L.target || !learnCursor()) ? 'done' : 'learn';
         return render();
       }
@@ -471,7 +468,7 @@
         const c = ui.mode === 'near' ? N : Q, chap = chapterOf(c.pid, c.cid);
         let total = chap.bayts.length;
         if (ui.mode === 'near') { const st = S.chapter(c.pid, c.cid); if (st.status === 'learning') total = st.learned; }
-        const n = Math.min(5, total - c.page * 5), now = c.shown == null ? n : c.shown;
+        const n = Math.min(5, total - c.page * 5), now = c.shown == null ? 0 : c.shown;
         c.shown = Math.min(n, Math.max(0, now + (name === 'reveal-plus' ? 1 : -1)));
         return render({ keep: true });
       }
