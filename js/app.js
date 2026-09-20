@@ -171,10 +171,8 @@
     const dots = L.target > 8 ? `<span>${ar(L.done + 1)} / ${ar(L.target)}</span>` : Array.from({ length: L.target }, (_, i) => `<i class="${i < L.done ? 'on' : i === L.done ? 'cur' : ''}"></i>`).join('');
     const hidden = !!L.hidden;
     const mode = hidden ? (L.hint ? 'hint' : 'hide') : 'show';
-    const showEn = L.en || S.settings().showEn;
-    const trans = (b.t && !hidden)
-      ? `<div class="trans-row${showEn ? '' : ' off'}">${showEn ? transHTML(b) : ''}<button class="eye" data-act="toggle-en" aria-pressed="${showEn}" aria-label="${showEn ? e('hideTrans') : e('showTrans')}">${showEn ? IC.eyeOff : IC.eye}</button></div>`
-      : '';
+    const showEn = S.settings().showEn;   // الترجمة تُضبط من الإعدادات فقط
+    const trans = (b.t && showEn) ? `<div class="trans-row">${transHTML(b)}</div>` : '';
     const actions = `<div class="row"><button class="btn quiet" data-act="learn-hide">${hidden ? (isEn() ? 'Show verse' : 'إظهار البيت') : (isEn() ? 'Hide verse' : 'إخفاء البيت')}</button>
         <button class="btn quiet" data-act="learn-hint" ${hidden ? '' : 'disabled'}>${L.hint ? e('hideHint') : e('hint')}</button></div>
       <button class="btn block" data-act="learn-known">${e('memorized')}</button>`;
