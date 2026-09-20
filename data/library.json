@@ -1,0 +1,29 @@
+{
+ "sections": [
+  {
+   "id": "qasaid",
+   "title": "قصائد",
+   "titleEn": "Qasaid"
+  },
+  {
+   "id": "mutoon",
+   "title": "متون",
+   "titleEn": "Mutoon"
+  }
+ ],
+ "poems": [
+  {
+   "id": "burdah",
+   "file": "data/poems/burdah.json",
+   "section": "qasaid",
+   "title": "البردة",
+   "fullTitle": "قصيدة البردة الشريفة",
+   "author": "الإمام شرف الدين البوصيري",
+   "baytCount": 160,
+   "chapterCount": 10,
+   "titleEn": "Al-Burdah",
+   "fullTitleEn": "Qasidat al-Burdah al-Sharifah",
+   "authorEn": "Imam Sharaf al-Din al-Busiri"
+  }
+ ]
+}
