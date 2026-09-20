@@ -55,6 +55,7 @@ h1,h2,h3,p{margin:0}
 }
 .brand{font-family:var(--font-poem);font-weight:700;font-size:28px;line-height:1;color:var(--green);display:flex;align-items:center;gap:9px;letter-spacing:0}
 .brand-mark{width:9px;height:9px;background:var(--gold);transform:rotate(45deg);display:inline-block}
+html[dir="ltr"] #top .brand{order:2;flex-direction:row-reverse}
 .chip{
   font-size:13px;font-weight:500;color:var(--green-2);background:var(--green-soft);
   padding:5px 12px;border-radius:99px;max-width:55%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
