@@ -372,7 +372,7 @@
     const st = S.settings();
     const seg = (key, opts, curVal) => `<div class="seg" role="group">${opts.map(([v, l]) => `<button data-act="set" data-key="${key}" data-val="${v}" aria-pressed="${String(curVal) === String(v)}">${esc(l)}</button>`).join('')}</div>`;
     return `<h2 class="page-title">${e('setTitle')}</h2>
-      <div class="set"><div class="lbl">${e('perDayT')}</div><div class="desc">${e('perDayD')}</div>${stepper(t('perDayLbl'), st.perDay, 1, 10)}</div>
+      <div class="set"><div class="lbl">${e('perDayT')}</div>${stepper(t('perDayLbl'), st.perDay, 1, 10)}</div>
       <div class="set"><div class="lbl">${e('themeT')}</div><div class="desc">${e('themeD')}</div>${seg('theme', [['light', t('themeLight')], ['dark', t('themeDark')], ['auto', t('themeAuto')]], st.theme)}</div>
       <div class="set"><div class="lbl">${e('langT')}</div><div class="desc">${e('langD')}</div>${seg('lang', [['ar', 'العربية'], ['en', 'English']], st.lang)}</div>
       <div class="set"><div class="lbl">${e('retT')}</div><div class="desc">${e('retD')}</div>${seg('retention', [[0.85, t('pct', { v: 85 })], [0.9, t('pct', { v: 90 })], [0.95, t('pct', { v: 95 })]], st.retention)}</div>
