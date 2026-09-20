@@ -34,7 +34,7 @@
   --fill:#3b7560; --fill-2:#2f6250; --on-fill:#f4efe0;
   --gold-soft:#3a3016; --gold-ink:#e6cd85; --rust-ink:#efb9a9; --on-rust:#2a120c;
   --seg-on:#3a3325; --toast-bg:#efe6d0; --toast-ink:#1a160f; --knob:#efe6d0;
-  color-scheme:dark;
+  color-scheme:dark; --bg:#2a1f18; --bg-2:#33261d; --surface:#3a2c22; --surface-2:#443428; --ink:#f2e7d5; --ink-2:#d2bfa4; --ink-3:#a8957b; --line:#4f3d2f; --line-2:#6b5541; --green:#b3c493; --green-2:#cddab3; --green-soft:#3d402c; --gold:#dcb46a; --gold-line:#94773f; --rust:#df8c72; --rust-soft:#4a2b22; --fill:#6b7f4e; --fill-2:#586a3f; --gold-soft:#4a3a1d; --gold-ink:#ecd28a; --seg-on:#4f3d2f;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;margin:0}
