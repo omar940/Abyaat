@@ -1,0 +1,24 @@
+{
+ "sections": [
+  {
+   "id": "qasaid",
+   "title": "قصائد"
+  },
+  {
+   "id": "mutoon",
+   "title": "متون"
+  }
+ ],
+ "poems": [
+  {
+   "id": "burdah",
+   "file": "data/poems/burdah.json",
+   "section": "qasaid",
+   "title": "البردة",
+   "fullTitle": "قصيدة البردة الشريفة",
+   "author": "الإمام شرف الدين البوصيري",
+   "baytCount": 160,
+   "chapterCount": 10
+  }
+ ]
+}
