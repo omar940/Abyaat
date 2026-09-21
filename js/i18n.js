@@ -66,7 +66,7 @@
     /* القراءة */
     jumpTo: 'انتقل إلى فصل', readerBack: 'رجوع', smaller: 'تصغير الخط', larger: 'تكبير الخط', translation: 'الترجمة', smallerLbl: 'أ−', largerLbl: 'أ+',
     /* الإعدادات */
-    setTitle: 'الإعدادات', perDayT: 'عدد الأبيات الجديدة يوميًا', perDayD: 'يمكنك تغييره أيضًا من شاشة الحفظ الجديد.', perDayLbl: 'الأبيات في اليوم',
+    setTitle: 'الإعدادات', perDayT: 'عدد الأبيات الجديدة يوميًا', perDayD: 'كلما زاد عدد الأبيات الجديدة زاد عدد المراجعات.', perDayLbl: 'الأبيات في اليوم',
     retT: 'نسبة التذكّر المستهدفة', retD: 'الأعلى تعني مراجعات أكثر تقاربًا.', pct: (p) => n(p.v) + '٪',
     alwaysEnT: 'إظهار الترجمة الإنجليزية دائمًا', alwaysEnD: 'مخفية افتراضيًا، ويمكن إظهارها لكل بيت عند الحاجة.',
     themeT: 'المظهر', themeD: 'اختر الوضع الفاتح أو الداكن، أو اتبع إعداد جهازك.', themeLight: 'فاتح', themeDark: 'داكن', themeAuto: 'تلقائي',
@@ -132,7 +132,7 @@
     markTitle: (p) => `How well do you know “${p.title}”?`, markSub: 'The chapter enters old review, and your rating sets its first review date.',
     md1: 'I cannot recite it now', md2: 'I recall it with effort and hesitation', md3: 'I recite it with confidence and few slips', md4: 'I recite it quickly without hesitation',
     jumpTo: 'Jump to chapter', readerBack: 'Back', smaller: 'Smaller text', larger: 'Larger text', translation: 'Translation', smallerLbl: 'A−', largerLbl: 'A+',
-    setTitle: 'Settings', perDayT: 'New verses per day', perDayD: 'You can also change it on the New memorization screen.', perDayLbl: 'Verses per day',
+    setTitle: 'Settings', perDayT: 'New verses per day', perDayD: 'Learning more new verses per day also increases the number of reviews you will have.', perDayLbl: 'Verses per day',
     retT: 'Target retention', retD: 'Higher means more frequent reviews.', pct: (p) => p.v + '%',
     alwaysEnT: 'Always show the English translation', alwaysEnD: 'Shown under each verse while memorizing. Turn off to hide it.',
     themeT: 'Appearance', themeD: 'Choose light or dark, or follow your device.', themeLight: 'Light', themeDark: 'Dark', themeAuto: 'Auto',
