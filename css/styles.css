@@ -18,7 +18,7 @@
   --font-ui:"IBM Plex Sans Arabic","Noto Sans Arabic",system-ui,sans-serif;
   --font-poem:"Amiri","Noto Naskh Arabic","Traditional Arabic",serif;
   --font-en:"Iowan Old Style","Palatino Linotype",Georgia,serif;
-  --nav-h:62px; --top-h:52px;
+  --nav-h:52px; --top-h:52px;
   --fill:#2b5748; --fill-2:#1f4034; --on-fill:#f7f1e1;
   --gold-soft:#ecdcae; --gold-ink:#6d5416; --rust-ink:#6d2e21; --on-rust:#fff;
   --seg-on:#f6eedb; --toast-bg:#2a2116; --toast-ink:#f6eedb; --knob:#fbf6ea;
@@ -95,9 +95,9 @@ html[dir="ltr"] #top .brand{order:2;flex-direction:row-reverse}
 /* ---------- التبويبات السفلية ---------- */
 #tabs{
   display:grid;grid-template-columns:repeat(3,1fr);background:var(--surface);border-top:1px solid var(--line);
-  padding:4px 4px calc(env(safe-area-inset-bottom) + 4px);
+  padding:2px 4px calc(env(safe-area-inset-bottom) + 2px);
 }
-#tabs button{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:3px;padding:6px 2px 4px;color:var(--ink-3);border-radius:10px;min-height:var(--nav-h)}
+#tabs button{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:3px;padding:6px 2px 3px;color:var(--ink-3);border-radius:10px;min-height:0}
 #tabs svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 #tabs span{font-size:11px;line-height:1.2;text-align:center;font-weight:500}
 #tabs button[aria-current="page"]{color:var(--green)}
@@ -303,7 +303,12 @@ html[lang="en"] .page-title{font-size:24px}
 .is-hidden{text-decoration-skip-ink:none;-webkit-text-decoration-skip:none}
 .trans-row{display:flex;align-items:flex-start;gap:6px;direction:ltr}
 .trans-row.off{justify-content:flex-end}
-.trans-row .trans{flex:1;min-width:0;font-size:19px;line-height:1.55;padding-top:12px}
+.trans-row .trans{flex:1;min-width:0;font-size:14.5px;line-height:1.55;padding-top:12px}
 .eye{flex:none;width:36px;height:36px;margin-top:8px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:0;border-radius:50%;color:var(--ink-3);cursor:pointer}
 .eye:active{background:var(--green-soft)}
 .eye .ic{width:18px;height:18px}
+
+body.reader-on{grid-template-rows:auto minmax(0,1fr)}
+body.reader-on #tabs{position:fixed;left:0;right:0;bottom:0;z-index:30;transition:transform .25s ease}
+body.reader-on.nav-hide #tabs{transform:translateY(110%)}
+body.reader-on #view{padding-bottom:80px}
