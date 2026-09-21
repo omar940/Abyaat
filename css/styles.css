@@ -312,3 +312,5 @@ body.reader-on{grid-template-rows:auto minmax(0,1fr)}
 body.reader-on #tabs{position:fixed;left:0;right:0;bottom:0;z-index:30;transition:transform .25s ease}
 body.reader-on.nav-hide #tabs{transform:translateY(110%)}
 body.reader-on #view{padding-bottom:80px}
+body.reader-on .reader-bar{transition:transform .25s ease}
+body.reader-on.nav-hide .reader-bar{transform:translateY(-110%)}
