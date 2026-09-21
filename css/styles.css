@@ -94,7 +94,7 @@ html[dir="ltr"] #top .brand{order:2;flex-direction:row-reverse}
 
 /* ---------- التبويبات السفلية ---------- */
 #tabs{
-  display:grid;grid-template-columns:repeat(3,1fr);background:var(--surface);border-top:1px solid var(--line);
+  direction:rtl;display:grid;grid-template-columns:repeat(3,1fr);background:var(--surface);border-top:1px solid var(--line);
   padding:2px 4px calc(env(safe-area-inset-bottom) + 2px);
 }
 #tabs button{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:3px;padding:6px 2px 3px;color:var(--ink-3);border-radius:10px;min-height:0}
