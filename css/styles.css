@@ -314,3 +314,4 @@ body.reader-on.nav-hide #tabs{transform:translateY(110%)}
 body.reader-on #view{padding-bottom:80px}
 body.reader-on .reader-bar{transition:transform .25s ease}
 body.reader-on.nav-hide .reader-bar{transform:translateY(-110%)}
+.stepper .ctl{direction:ltr}
