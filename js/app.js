@@ -32,6 +32,7 @@
   /* ---------- اللغة والمظهر ---------- */
   const isEn = () => U.getLang() === 'en';
   const pick = (o, k) => (isEn() && o[k + 'En']) ? o[k + 'En'] : o[k];
+  const ctitle = (o) => (isEn() && S.settings().showEn && o.titleEn) ? o.titleEn : o.title;   // ترجمة عناوين الفصول تتبع إعداد الترجمة
   const da = ' dir="auto"';
   function applyLang() {
     U.setLang(S.settings().lang);
@@ -61,11 +62,11 @@
   }
   const chapterOf = (pid, cid) => { const p = POEMS.get(pid); return p && p.chapters.find((c) => c.id === cid); };
   const cMeta = (pid, cid) => S.meta(pid).chapters.find((c) => c.id === cid);
-  const cTitle = (pid, cid) => pick(cMeta(pid, cid), 'title');
+  const cTitle = (pid, cid) => ctitle(cMeta(pid, cid));
   const pTitle = (pid) => pick(S.meta(pid), 'title');
   const kicker = (pid, cid) => {
     const m = S.meta(pid), c = m.chapters.find((x) => x.id === cid);
-    if (c.optional) return pick(c, 'title');
+    if (c.optional) return ctitle(c);
     return t('chapterN', { i: m.chapters.filter((x) => !x.optional).findIndex((x) => x.id === cid) });
   };
 
@@ -158,7 +159,7 @@
       ? `<button class="btn block" data-act="learn-start">${e('learnStart', { n: Math.min(rem, Math.max(left, 1)) })}</button>`
       : `<div class="notice">${e('learnDoneNotice', { n: done })}</div><button class="btn block quiet" data-act="learn-more">${e('learnMore')}</button>`;
     return `<div class="stack">
-      <div class="hero"><div class="kicker">${esc(kicker(pid, cm.id))}</div><h2 class="title"${da}>${esc(pick(cm, 'title'))}</h2><div class="sub"${da}>${esc(pTitle(pid))}</div></div>
+      <div class="hero"><div class="kicker">${esc(kicker(pid, cm.id))}</div><h2 class="title"${da}>${esc(ctitle(cm))}</h2><div class="sub"${da}>${esc(pTitle(pid))}</div></div>
       <div><div class="bar" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><i style="width:${pct}%"></i></div>
         <p class="small muted" style="margin-top:6px">${e('learnedOf', { n: st.learned, total: cm.len })}</p></div>
       ${stepper(t('baytsToday'), perDay, 1, 10)}
@@ -176,7 +177,7 @@
     const actions = `<div class="row"><button class="btn quiet" data-act="learn-hide">${hidden ? (isEn() ? 'Show verse' : 'إظهار البيت') : (isEn() ? 'Hide verse' : 'إخفاء البيت')}</button>
         <button class="btn quiet" data-act="learn-hint" ${hidden ? '' : 'disabled'}>${L.hint ? e('hideHint') : e('hint')}</button></div>
       <button class="btn block" data-act="learn-known">${e('memorized')}</button>`;
-    return `<div class="learn-top"><span><b>${e('baytN', { n: cursor.bayt.n || cursor.idx + 1 })}</b> <span class="muted small"${da}>${esc(pick(cMeta(cursor.pid, cursor.chap.id), 'title'))}</span></span><span class="dots" aria-label="${e('progressToday')}">${dots}</span></div>
+    return `<div class="learn-top"><span><b>${e('baytN', { n: cursor.bayt.n || cursor.idx + 1 })}</b> <span class="muted small"${da}>${esc(ctitle(cMeta(cursor.pid, cursor.chap.id)))}</span></span><span class="dots" aria-label="${e('progressToday')}">${dots}</span></div>
       <div class="fit-box folio wrap" dir="rtl" data-min="16" data-max="48"><div class="fit-content">${baytHTML(b, cursor.idx, { s: mode, e: mode })}</div></div>
       ${trans}
       <div class="actions">${actions}</div>`;
@@ -327,7 +328,7 @@
     const pid = ui.lib.poem, poem = POEMS.get(pid), m = S.meta(pid), pr = S.poemProgress(pid), active = S.state.activePoem === pid;
     const rows = m.chapters.map((c) => {
       const st = chapterStatus(pid, c);
-      return `<li><button class="li" data-act="lib-ch" data-cid="${esc(c.id)}"><span class="main"><span class="ch-no">${esc(kicker(pid, c.id))}</span><div class="t"${da}>${esc(pick(c, 'title'))}</div><div class="s">${esc(st.sub)}</div></span><span class="end">${st.pill}</span></button></li>`;
+      return `<li><button class="li" data-act="lib-ch" data-cid="${esc(c.id)}"><span class="main"><span class="ch-no">${esc(kicker(pid, c.id))}</span><div class="t"${da}>${esc(ctitle(c))}</div><div class="s">${esc(st.sub)}</div></span><span class="end">${st.pill}</span></button></li>`;
     }).join('');
     return `<button class="back" data-act="lib-back">${IC.chev}<span>${e('navLib')}</span></button>
       <div class="hero"><div class="kicker"${da}>${esc(pick(poem, 'author'))}</div><h2 class="title"${da}>${esc(pick(poem, 'fullTitle'))}</h2></div>
@@ -342,7 +343,7 @@
     if (s.status === 'new' || s.status === 'learning') acts.push(`<button class="btn block" data-act="ch-current" data-cid="${esc(cid)}">${s.status === 'learning' ? e('continueHere') : e('startHere')}</button>`);
     if (s.status !== 'review') acts.push(`<button class="btn block quiet" data-act="ch-mark" data-cid="${esc(cid)}">${e('markMemorized')}</button>`);
     if (s.status !== 'new') acts.push(`<button class="btn block danger" data-act="ch-reset" data-cid="${esc(cid)}">${e('restartChapter')}</button>`);
-    openSheet(`<h2${da}>${esc(kicker(pid, cid))}: ${esc(pick(c, 'title'))}</h2><p class="sub">${esc(st.sub)}</p><div class="opts">${acts.join('')}</div>`);
+    openSheet(`<h2${da}>${esc(kicker(pid, cid))}: ${esc(ctitle(c))}</h2><p class="sub">${esc(st.sub)}</p><div class="opts">${acts.join('')}</div>`);
   }
   function openMarkSheet(cid) {
     const pid = ui.lib.poem, opts = S.previewMark();
@@ -353,8 +354,8 @@
   /* ---------- القراءة (نص القصيدة عربي ومن اليمين دائمًا) ---------- */
   function vReader() {
     const R = ui.lib.reader, poem = POEMS.get(R.pid), size = S.settings().readerSize, en = R.en;
-    const enTitle = (c) => (isEn() && c.titleEn) ? `<p class="rch-en en" lang="en" dir="ltr">${esc(c.titleEn)}</p>` : '';
-    const jump = `<select id="jump" aria-label="${e('jumpTo')}"><option value="">${e('jumpTo')}</option>${poem.chapters.map((c) => `<option value="${esc(c.id)}"${da}>${esc(kicker(R.pid, c.id))}: ${esc(pick(c, 'title'))}</option>`).join('')}</select>`;
+    const enTitle = (c) => (en && c.titleEn) ? `<p class="rch-en en" lang="en" dir="ltr">${esc(c.titleEn)}</p>` : '';
+    const jump = `<select id="jump" aria-label="${e('jumpTo')}"><option value="">${e('jumpTo')}</option>${poem.chapters.map((c) => `<option value="${esc(c.id)}"${da}>${esc(kicker(R.pid, c.id))}: ${esc(ctitle(c))}</option>`).join('')}</select>`;
     const chapters = poem.chapters.map((c) => {
       const bs = c.bayts.map((b, i) => `<article class="rbayt" dir="rtl" data-k="${esc(c.id)}:${i}"><span class="rno">${ar(b.n || i + 1)}</span><div class="rlines"><div class="rs">${esc(b.s)}</div>${b.e ? `<div class="re">${esc(b.e)}</div>` : ''}</div>${en && b.t ? `<div class="rtrans en" lang="en" dir="ltr"><p>${esc(b.t[0])}</p><p>${esc(b.t[1])}</p></div>` : ''}</article>`).join('');
       return `<section id="rch-${esc(c.id)}"><div class="rch"><span class="ch-no">${esc(kicker(R.pid, c.id))}</span><h3 dir="rtl">${esc(c.title)}</h3>${enTitle(c)}</div>${bs}</section>`;
@@ -372,7 +373,7 @@
     const st = S.settings();
     const seg = (key, opts, curVal) => `<div class="seg" role="group">${opts.map(([v, l]) => `<button data-act="set" data-key="${key}" data-val="${v}" aria-pressed="${String(curVal) === String(v)}">${esc(l)}</button>`).join('')}</div>`;
     return `<h2 class="page-title">${e('setTitle')}</h2>
-      <div class="set"><div class="lbl">${e('perDayT')}</div>${stepper(t('perDayLbl'), st.perDay, 1, 10)}</div>
+      <div class="set"><div class="lbl">${e('perDayT')}</div><div class="desc">${e('perDayD')}</div>${stepper(t('perDayLbl'), st.perDay, 1, 10)}</div>
       <div class="set"><div class="lbl">${e('themeT')}</div><div class="desc">${e('themeD')}</div>${seg('theme', [['light', t('themeLight')], ['dark', t('themeDark')], ['auto', t('themeAuto')]], st.theme)}</div>
       <div class="set"><div class="lbl">${e('langT')}</div><div class="desc">${e('langD')}</div>${seg('lang', [['ar', 'العربية'], ['en', 'English']], st.lang)}</div>
       <div class="set"><div class="lbl">${e('retT')}</div><div class="desc">${e('retD')}</div>${seg('retention', [[0.85, t('pct', { v: 85 })], [0.9, t('pct', { v: 90 })], [0.95, t('pct', { v: 95 })]], st.retention)}</div>
