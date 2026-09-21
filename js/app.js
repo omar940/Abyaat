@@ -356,7 +356,7 @@
     const enTitle = (c) => (isEn() && c.titleEn) ? `<p class="rch-en en" lang="en" dir="ltr">${esc(c.titleEn)}</p>` : '';
     const jump = `<select id="jump" aria-label="${e('jumpTo')}"><option value="">${e('jumpTo')}</option>${poem.chapters.map((c) => `<option value="${esc(c.id)}"${da}>${esc(kicker(R.pid, c.id))}: ${esc(pick(c, 'title'))}</option>`).join('')}</select>`;
     const chapters = poem.chapters.map((c) => {
-      const bs = c.bayts.map((b, i) => `<article class="rbayt" dir="rtl"><span class="rno">${ar(b.n || i + 1)}</span><div class="rlines"><div class="rs">${esc(b.s)}</div>${b.e ? `<div class="re">${esc(b.e)}</div>` : ''}</div>${en && b.t ? `<div class="rtrans en" lang="en" dir="ltr"><p>${esc(b.t[0])}</p><p>${esc(b.t[1])}</p></div>` : ''}</article>`).join('');
+      const bs = c.bayts.map((b, i) => `<article class="rbayt" dir="rtl" data-k="${esc(c.id)}:${i}"><span class="rno">${ar(b.n || i + 1)}</span><div class="rlines"><div class="rs">${esc(b.s)}</div>${b.e ? `<div class="re">${esc(b.e)}</div>` : ''}</div>${en && b.t ? `<div class="rtrans en" lang="en" dir="ltr"><p>${esc(b.t[0])}</p><p>${esc(b.t[1])}</p></div>` : ''}</article>`).join('');
       return `<section id="rch-${esc(c.id)}"><div class="rch"><span class="ch-no">${esc(kicker(R.pid, c.id))}</span><h3 dir="rtl">${esc(c.title)}</h3>${enTitle(c)}</div>${bs}</section>`;
     }).join('');
     const enHead = isEn() && poem.fullTitleEn ? `<p class="en" lang="en" dir="ltr">${esc(poem.fullTitleEn)}, ${esc(poem.authorEn || '')}</p>` : '';
@@ -389,6 +389,19 @@
   const FLUSH = () => (cur() === 'learn' && ui.learn.stage !== 'home' && ui.learn.stage !== 'done' && S.state.activePoem && POEMS.get(S.state.activePoem) && !!learnCursor())
     || (cur() === 'near' && ui.near.stage === 'pager') || (cur() === 'far' && ui.far.stage === 'review');
 
+  let lastY = 0;
+  const barH = () => { const b = $('.reader-bar'); return b ? b.offsetHeight : 0; };
+  function rAnchor() {
+    if (!(ui.tab === 'lib' && ui.lib.reader)) return null;
+    const t = view.getBoundingClientRect().top + barH();
+    for (const el of $$('.rbayt', view)) { const r = el.getBoundingClientRect(); if (r.bottom > t + 2) return { k: el.dataset.k, off: r.top - t }; }
+    return null;
+  }
+  function rRestore(an) {
+    if (!an) return;
+    const el = view.querySelector('.rbayt[data-k="' + an.k + '"]'); if (!el) return;
+    view.scrollTop += el.getBoundingClientRect().top - (view.getBoundingClientRect().top + barH()) - an.off;
+  }
   function render(opts) {
     opts = opts || {};
     const prev = view.scrollTop;
@@ -399,10 +412,15 @@
     view.scrollTop = opts.keep ? prev : 0;
     updateChrome();
     afterRender();
-    if (ui.tab === 'lib' && ui.lib.reader && ui.lib.reader.cid && !opts.keep) {
+    const inR = ui.tab === 'lib' && !!ui.lib.reader;
+    document.body.classList.toggle('reader-on', inR);
+    if (!opts.keep) document.body.classList.remove('nav-hide');
+    if (inR && ui.lib.reader.pos) { rRestore(ui.lib.reader.pos); ui.lib.reader.pos = null; }
+    else if (inR && ui.lib.reader.cid && !opts.keep) {
       const el = $('#rch-' + ui.lib.reader.cid); if (el) view.scrollTop = el.offsetTop - 56;
       ui.lib.reader.cid = null;
     }
+    lastY = view.scrollTop;
   }
   function updateChrome() {
     const pid = S.state.activePoem, chip = $('#poem-chip'), p = pid && POEMS.get(pid), inMode = ui.tab === 'home' && !!ui.mode;
@@ -419,6 +437,7 @@
 
   /* ---------- الأحداث ---------- */
   function go(tab) {
+    if (ui.tab === 'lib' && ui.lib.reader) ui.lib.reader.pos = rAnchor();
     if (tab === 'learn' || tab === 'near' || tab === 'far') { ui.tab = 'home'; ui.mode = tab; }
     else { ui.tab = tab; if (tab === 'home') ui.mode = null; }
     closeSheet(); render();
@@ -487,8 +506,8 @@
       case 'ch-reset': return confirmSheet(t('restartQ'), t('restartBody'), t('restartYes'), 'ch-reset-yes', { cid: d.cid }, true);
       case 'ch-reset-yes': S.resetChapter(ui.lib.poem, d.cid); closeSheet(); L.stage = 'home'; toast(t('tReset')); return render();
       case 'reader-close': ui.lib.reader = null; return render();
-      case 'reader-font': S.setSetting('readerSize', Math.min(44, Math.max(18, S.settings().readerSize + Number(d.d)))); return render({ keep: true });
-      case 'reader-en': ui.lib.reader.en = !ui.lib.reader.en; return render({ keep: true });
+      case 'reader-font': { const an = rAnchor(); S.setSetting('readerSize', Math.min(44, Math.max(18, S.settings().readerSize + Number(d.d)))); render({ keep: true }); rRestore(an); lastY = view.scrollTop; return; }
+      case 'reader-en': { const v = !S.settings().showEn; S.setSetting('showEn', v); ui.lib.reader.en = v; const an = rAnchor(); render({ keep: true }); rRestore(an); lastY = view.scrollTop; return; }
       /* الإعدادات */
       case 'set':
         S.setSetting(d.key, isNaN(Number(d.val)) ? d.val : Number(d.val));
@@ -523,6 +542,12 @@
     const a = ev.target.closest('[data-act]');
     if (a) act(a.dataset.act, a);
   });
+  view.addEventListener('scroll', () => {
+    const y = view.scrollTop, d = y - lastY;
+    if (!document.body.classList.contains('reader-on')) { lastY = y; return; }
+    if (d > 8 && y > 80) { document.body.classList.add('nav-hide'); lastY = y; }
+    else if (d < -8 || y <= 80) { document.body.classList.remove('nav-hide'); lastY = y; }
+  }, { passive: true });
   document.addEventListener('change', (ev) => {
     if (ev.target.id === 'jump' && ev.target.value) {
       const el = $('#rch-' + ev.target.value); if (el) view.scrollTop = el.offsetTop - 56; ev.target.value = '';
