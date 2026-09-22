@@ -84,7 +84,7 @@
 
   const en = {
     docTitle: 'Abyaat: Arabic poetry memorizer',
-    navLabel: 'Main navigation', navHome: 'Memorize & Review', navLib: 'Library', navSettings: 'Settings',
+    navLabel: 'Main navigation', navHome: 'Memorize', navLib: 'Library', navSettings: 'Settings',
     modeLearn: 'New memorization', modeNear: 'New review', modeFar: 'Old review',
     cancel: 'Cancel', back: 'Back', backToList: 'Back to the list',
     optional: 'Optional', chapterN: (p) => 'Chapter ' + (p.i + 1),
