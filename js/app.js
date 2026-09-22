@@ -381,6 +381,7 @@
       <div class="set"><div class="lbl">${e('backupT')}</div><div class="desc">${e('backupD')}</div>
         <div class="row"><button class="btn quiet small" data-act="export">${e('exportBtn')}</button><button class="btn quiet small" data-act="import">${e('importBtn')}</button></div>
         <input id="imp" type="file" accept="application/json,.json" hidden></div>
+      <div class="set"><div class="lbl">${e('updT')}</div><div class="desc">${e('updD')}</div><button class="btn quiet small" data-act="update-app">${e('updBtn')}</button></div>
       <div class="set"><button class="btn danger small" data-act="reset-ask">${e('eraseBtn')}</button></div>
       <p class="about">${nl(t('about'))}</p>`;
   }
@@ -516,6 +517,7 @@
         if (d.key === 'theme') applyTheme();
         return render({ keep: true });
       case 'set-en': S.setSetting('showEn', !S.settings().showEn); return render({ keep: true });
+      case 'update-app': return updateApp();
       case 'export': return exportData();
       case 'import': return $('#imp').click();
       case 'reset-ask': return confirmSheet(t('eraseQ'), t('eraseBody'), t('eraseYes'), 'reset-yes', {}, true);
@@ -525,6 +527,16 @@
         catch (err) { closeSheet(); return toast(t('tImportFail')); }
       default: return undefined;
     }
+  }
+
+  async function updateApp() {
+    if (!navigator.onLine) return toast(t('tUpdFail'));
+    toast(t('tUpdating'));
+    try {   // يمسح ذاكرة الملفات فقط؛ تقدّمك في localStorage لا يُمَس
+      if ('serviceWorker' in navigator) await Promise.all((await navigator.serviceWorker.getRegistrations()).map((r) => r.unregister()));
+      if (window.caches) await Promise.all((await caches.keys()).map((k) => caches.delete(k)));
+      location.reload();
+    } catch (err) { toast(t('tUpdFail')); }
   }
 
   async function exportData() {

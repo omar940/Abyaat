@@ -72,6 +72,7 @@
     themeT: 'المظهر', themeD: 'اختر الوضع الفاتح أو الداكن، أو اتبع إعداد جهازك.', themeLight: 'فاتح', themeDark: 'داكن', themeAuto: 'تلقائي',
     langT: 'لغة الواجهة', langD: 'تبقى القصائد بالعربية. تتغيّر الأزرار والقوائم فقط.',
     backupT: 'النسخ الاحتياطي', backupD: 'يُحفظ تقدّمك على هذا الجهاز فقط. صدّر نسخة لنقله أو حفظه.', exportBtn: 'تصدير التقدّم', importBtn: 'استيراد', eraseBtn: 'مسح كل التقدّم',
+    updT: 'تحديث التطبيق', updD: 'يمسح الملفات المخزّنة مؤقتًا ويحمّل أحدث إصدار. تقدّمك لا يتأثر.', updBtn: 'مسح الذاكرة المؤقتة وتحديث', tUpdating: 'جارٍ التحديث…', tUpdFail: 'تعذّر التحديث، تحقّق من الاتصال',
     about: 'أبيات، الإصدار ١. المراجعة المتباعدة بخوارزمية FSRS، بطاقة واحدة لكل فصل.\nالخطوط: الأميري وIBM Plex Sans Arabic (رخصة OFL).',
     /* رسائل */
     tNowMem: 'صارت قيد الحفظ', tStartHere: 'سيبدأ الحفظ من هذا الفصل', tAdded: 'أُضيف الفصل إلى المراجعة البعيدة', tReset: 'أُعيد ضبط الفصل',
@@ -138,6 +139,7 @@
     themeT: 'Appearance', themeD: 'Choose light or dark, or follow your device.', themeLight: 'Light', themeDark: 'Dark', themeAuto: 'Auto',
     langT: 'Interface language', langD: 'Poems always stay in Arabic. Only the buttons and menus change.',
     backupT: 'Backup', backupD: 'Your progress is saved on this device only. Export a copy to move or keep it.', exportBtn: 'Export progress', importBtn: 'Import', eraseBtn: 'Erase all progress',
+    updT: 'Update app', updD: 'Clears cached files and loads the latest version. Your progress is not affected.', updBtn: 'Clear cache & update', tUpdating: 'Updating…', tUpdFail: 'Update failed, check your connection',
     about: 'Abyaat, version 1. Spaced repetition with FSRS, one card per chapter.\nFonts: Amiri and IBM Plex Sans Arabic (OFL license).',
     tNowMem: 'Now memorizing this poem', tStartHere: 'Memorization will start from this chapter', tAdded: 'Chapter added to old review', tReset: 'Chapter reset',
     restartQ: 'Restart this chapter?', restartBody: 'This chapter’s progress and review schedule will be erased.', restartYes: 'Yes, restart',
