@@ -1,7 +1,7 @@
 # أبيات — Abyaat
 
-A progressive web app for memorizing Arabic poems (qasaid) and texts (mutoon), with spaced repetition.
-The interface is in Arabic (right-to-left) by default, with an English interface and a dark mode available in الإعدادات (Settings). The poems themselves always stay in Arabic. First poem included: **Qasidat al-Burdah** (160 bayts, 10 chapters, plus optional opening and closing bayts).
+A progressive web app for memorizing Arabic poems (qaṣā’id) and texts (mutūn), with spaced repetition.
+The interface is in Arabic (right-to-left) by default, with an English interface and a dark mode available in الإعدادات (Settings). The poems themselves always stay in Arabic. First poem included: **Qaṣīdat al-Burdah** (160 bayts, 10 chapters, plus optional opening and closing bayts).
 
 The app has three tabs: **الحفظ والمراجعة** (a panel with three cards: new memorization, near review, old review, each showing today's status; tap one to continue from it), **المكتب** (library) and **الإعدادات** (settings).
 

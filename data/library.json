@@ -3,12 +3,12 @@
   {
    "id": "qasaid",
    "title": "قصائد",
-   "titleEn": "Qasaid"
+   "titleEn": "Qaṣā’id"
   },
   {
    "id": "mutoon",
    "title": "متون",
-   "titleEn": "Mutuun"
+   "titleEn": "Mutūn"
   }
  ],
  "poems": [
@@ -22,8 +22,8 @@
    "baytCount": 160,
    "chapterCount": 10,
    "titleEn": "Al-Burdah",
-   "fullTitleEn": "Qasidat al-Burdah al-Sharifah",
-   "authorEn": "Imam Sharaf al-Din al-Busiri"
+   "fullTitleEn": "Qaṣīdat al-Burdah al-Sharīfah",
+   "authorEn": "Imām Sharaf al-Dīn al-Būṣīrī"
   }
  ]
 }
