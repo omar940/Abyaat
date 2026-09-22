@@ -21,9 +21,9 @@
 
   const ui = {
     tab: 'home', mode: null,   // الحفظ والمراجعة: mode = learn | near | far
-    learn: { stage: 'home', target: 0, done: 0, hint: false, hidden: false, en: false, completed: [] },
-    near: { stage: 'list', pid: null, cid: null, page: 0, shown: null, result: null },
-    far: { stage: 'list', pid: null, cid: null, page: 0, shown: 0, missed: {}, rated: null },
+    learn: { stage: 'home', target: 0, done: 0, hint: false, hidden: false, en: false, completed: [], completedParts: [] },
+    near: { stage: 'list', pid: null, cid: null, segIdx: null, page: 0, shown: null, result: null },
+    far: { stage: 'list', pid: null, cid: null, segIdx: null, page: 0, shown: 0, missed: {}, rated: null },
     lib: { section: 'qasaid', poem: null, reader: null },
   };
   let LIB = null;
@@ -69,6 +69,9 @@
     if (c.optional) return ctitle(c);
     return t('chapterN', { i: m.chapters.filter((x) => !x.optional).findIndex((x) => x.id === cid) });
   };
+  /* تسمية الجزء: تظهر فقط حين يُقسَّم الفصل إلى أكثر من جزء واحد في المراجعة */
+  const partLabel = (segIdx, segCount) => segCount > 1 ? t('partN', { i: segIdx + 1, total: segCount }) : '';
+  const withPart = (label, segIdx, segCount) => segCount > 1 ? `${label} · ${partLabel(segIdx, segCount)}` : label;
 
   /* ---------- أدوات الواجهة ---------- */
   function toast(msg) {
@@ -185,10 +188,11 @@
   function learnDone() {
     const L = ui.learn, pid = S.state.activePoem;
     const finished = L.completed.map((cid) => `<div class="notice">${e('chapterFinished', { title: cTitle(pid, cid), days: DAYS })}</div>`).join('');
+    const finishedParts = L.completedParts.map((p) => `<div class="notice">${e('partFinished', { title: withPart(cTitle(pid, p.cid), p.segIdx, p.segCount), days: DAYS })}</div>`).join('');
     return `<div class="stack" style="padding-top:16px">
       <div class="center hero"><div class="empty" style="padding:8px 0"><div class="glyph" aria-hidden="true">أ</div></div>
         <h2 class="title" style="font-size:30px">${e('wellDone')}</h2><p class="sub">${e('sessionDone', { n: L.done })}</p></div>
-      ${finished}
+      ${finished}${finishedParts}
       <button class="btn block" data-act="goto" data-to="near">${e('openNear')}</button>
       <button class="btn block quiet" data-act="learn-more">${e('learnMore')}</button>
       <button class="btn block ghost" data-act="learn-home">${e('back')}</button></div>`;
@@ -206,8 +210,8 @@
       const sub = x.status === 'consolidating'
         ? t('nearRowConsol', { poem: pTitle(x.pid), n: x.daysDone, days: DAYS })
         : t('nearRowLearn', { poem: pTitle(x.pid), n: x.learned, b: x.len });
-      return `<li><button class="li ${x.done ? 'dim' : ''}" data-act="near-open" data-pid="${esc(x.pid)}" data-cid="${esc(x.cid)}">
-        <span class="main"><span class="ch-no">${esc(kicker(x.pid, x.cid))}</span><div class="t"${da}>${esc(cTitle(x.pid, x.cid))}</div><div class="s">${esc(sub)}</div></span>
+      return `<li><button class="li ${x.done ? 'dim' : ''}" data-act="near-open" data-pid="${esc(x.pid)}" data-cid="${esc(x.cid)}" data-seg="${x.segIdx}">
+        <span class="main"><span class="ch-no">${esc(withPart(kicker(x.pid, x.cid), x.segIdx, x.segCount))}</span><div class="t"${da}>${esc(cTitle(x.pid, x.cid))}</div><div class="s">${esc(sub)}</div></span>
         <span class="end">${x.done ? `<span class="check">${IC.check}</span>` : IC.chevL}</span></button></li>`;
     }).join('');
     return `<h2 class="page-title">${e('modeNear')}</h2>
@@ -216,23 +220,29 @@
   }
   /* زرّا + و − : يُظهر البيت التالي أو يُخفي آخر بيت ظاهر */
   const revealCtl = (shown, n) => `<div class="rc"><button data-act="reveal-minus" aria-label="${e('hideLast')}" ${shown <= 0 ? 'disabled' : ''}>−</button><span>${e('visibleOf', { a: shown, b: n })}</span><button data-act="reveal-plus" aria-label="${e('showNext')}" ${shown >= n ? 'disabled' : ''}>+</button></div>`;
-  const pagerTop = (pid, cid, page, pages) => `<div class="learn-top"><span><b>${esc(kicker(pid, cid))}</b> <span class="muted small"${da}>${esc(cTitle(pid, cid))}</span></span><span>${ar(page + 1)} / ${ar(pages)}</span></div>`;
+  const pagerTop = (pid, cid, segIdx, segCount, page, pages) => `<div class="learn-top"><span><b>${esc(withPart(kicker(pid, cid), segIdx, segCount))}</b> <span class="muted small"${da}>${esc(cTitle(pid, cid))}</span></span><span>${ar(page + 1)} / ${ar(pages)}</span></div>`;
+  /* شريحة أبيات الجزء الحالي من الفصل، ضمن حدوده فقط */
+  const segSlice = (pid, cid, segIdx) => {
+    const chap = chapterOf(pid, cid), sg = cMeta(pid, cid).segs[segIdx];
+    return { bayts: chap.bayts.slice(sg.start, sg.start + sg.len), sg, segCount: cMeta(pid, cid).segs.length };
+  };
   function nearPager() {
-    const N = ui.near, chap = chapterOf(N.pid, N.cid), st = S.chapter(N.pid, N.cid);
-    const total = st.status === 'learning' ? st.learned : chap.bayts.length;
+    const N = ui.near, { bayts, sg, segCount } = segSlice(N.pid, N.cid, N.segIdx);
+    const rec = S.chapter(N.pid, N.cid).segs && S.chapter(N.pid, N.cid).segs[N.segIdx];
+    const total = (rec && rec.status === 'learning') ? Math.max(0, S.chapter(N.pid, N.cid).learned - sg.start) : sg.len;
     const pages = Math.max(1, Math.ceil(total / 5)), page = Math.min(Math.max(N.page, 0), pages - 1);
-    const slice = chap.bayts.slice(page * 5, Math.min(page * 5 + 5, total));
+    const slice = bayts.slice(page * 5, Math.min(page * 5 + 5, total));
     const shown = N.shown == null ? 0 : Math.min(N.shown, slice.length);
     const last = page >= pages - 1;
     const body = slice.map((b, i) => baytHTML(b, page * 5 + i, { no: true, s: i < shown ? 'show' : 'hide', e: i < shown ? 'show' : 'hide', nopeek: true })).join('');
-    return `${pagerTop(N.pid, N.cid, page, pages)}
+    return `${pagerTop(N.pid, N.cid, N.segIdx, segCount, page, pages)}
       <div class="fit-box folio nowrap" dir="rtl" data-min="11" data-max="34" style="padding-inline:34px 20px"><div class="fit-content">${body}</div></div>
       <div class="actions" style="padding-top:10px">${revealCtl(shown, slice.length)}
         <div class="row"><button class="btn quiet" data-act="near-prev" ${page === 0 ? 'disabled' : ''}>${e('prev')}</button>
         ${last ? `<button class="btn" data-act="near-finish">${e('finishReview')}</button>` : `<button class="btn" data-act="near-next">${e('next')}</button>`}</div></div>`;
   }
   function nearResult() {
-    const N = ui.near, r = N.result, title = cTitle(N.pid, N.cid);
+    const N = ui.near, r = N.result, title = withPart(cTitle(N.pid, N.cid), N.segIdx, cMeta(N.pid, N.cid).segs.length);
     let msg;
     if (r.graduated) msg = t('resGrad', { title, days: DAYS, when: U.inDays(U.diffDays(U.today(), r.card.due)) });
     else if (r.status === 'consolidating') msg = t('resConsol', { n: r.daysDone, days: DAYS });
@@ -241,7 +251,7 @@
     return `<div class="stack" style="padding-top:16px"><div class="center hero"><div class="empty" style="padding:8px 0"><div class="glyph" aria-hidden="true">أ</div></div>
       <h2 class="title" style="font-size:30px">${e('reviewComplete')}</h2></div>
       <div class="notice">${esc(msg)}</div>
-      ${next ? `<button class="btn block" data-act="near-open" data-pid="${esc(next.pid)}" data-cid="${esc(next.cid)}">${e('nextReview', { title: cTitle(next.pid, next.cid) })}</button>` : ''}
+      ${next ? `<button class="btn block" data-act="near-open" data-pid="${esc(next.pid)}" data-cid="${esc(next.cid)}" data-seg="${next.segIdx}">${e('nextReview', { title: withPart(cTitle(next.pid, next.cid), next.segIdx, next.segCount) })}</button>` : ''}
       <button class="btn block ${next ? 'quiet' : ''}" data-act="near-list">${next ? e('backToList') : e('back')}</button>
       ${!next ? `<button class="btn block quiet" data-act="goto" data-to="learn">${e('modeLearn')}</button>` : ''}</div>`;
   }
@@ -254,26 +264,26 @@
     if (Q.stage === 'done') return farDone();
     const all = S.oldReviewList(), due = all.filter((x) => x.isDue), up = all.filter((x) => !x.isDue);
     if (!all.length) return emptyState(t('farEmptyT'), t('farEmptyB', { days: DAYS }), t('openLib'), 'lib');
-    const row = (x, isDue) => `<li><button class="li" data-act="far-open" data-pid="${esc(x.pid)}" data-cid="${esc(x.cid)}">
-      <span class="main"><span class="ch-no">${esc(kicker(x.pid, x.cid))}</span><div class="t"${da}>${esc(cTitle(x.pid, x.cid))}</div><div class="s">${e('farRowSub', { poem: pTitle(x.pid), b: x.len })}</div></span>
+    const row = (x, isDue) => `<li><button class="li" data-act="far-open" data-pid="${esc(x.pid)}" data-cid="${esc(x.cid)}" data-seg="${x.segIdx}">
+      <span class="main"><span class="ch-no">${esc(withPart(kicker(x.pid, x.cid), x.segIdx, x.segCount))}</span><div class="t"${da}>${esc(cTitle(x.pid, x.cid))}</div><div class="s">${e('farRowSub', { poem: pTitle(x.pid), b: x.len })}</div></span>
       <span class="end">${isDue ? IC.chevL : esc(U.inDays(x.dueIn, true))}</span></button></li>`;
     return `<h2 class="page-title">${e('modeFar')}</h2>
       <p class="lede">${due.length ? e('farLede', { n: due.length }) : e('farNone')}</p>
       ${due.length ? `<ul class="list" style="margin-top:8px">${due.map((x) => row(x, true)).join('')}</ul>` : ''}
       ${up.length ? `<h3 class="section-h">${e('upcoming')}</h3><ul class="list">${up.map((x) => row(x, false)).join('')}</ul>` : ''}`;
   }
-  const startFar = (pid, cid) => Object.assign(ui.far, { stage: 'review', pid, cid, page: 0, shown: 0, missed: {}, rated: null });
+  const startFar = (pid, cid, segIdx) => Object.assign(ui.far, { stage: 'review', pid, cid, segIdx, page: 0, shown: 0, missed: {}, rated: null });
   /* خمسة أبيات في الصفحة: استظهر، ثم المس البيت الذي يصعب عليك ليُؤشَّر عليه */
   function farReview() {
-    const Q = ui.far, chap = chapterOf(Q.pid, Q.cid), total = chap.bayts.length;
+    const Q = ui.far, { bayts, sg, segCount } = segSlice(Q.pid, Q.cid, Q.segIdx), total = sg.len;
     const pages = Math.max(1, Math.ceil(total / 5)), page = Math.min(Math.max(Q.page, 0), pages - 1), last = page >= pages - 1;
-    const slice = chap.bayts.slice(page * 5, page * 5 + 5), shown = Math.min(Q.shown, slice.length);
+    const slice = bayts.slice(page * 5, page * 5 + 5), shown = Math.min(Q.shown, slice.length);
     const marked = Object.keys(Q.missed).length;
     const body = slice.map((b, k) => {
       const i = page * 5 + k, m = k < shown ? 'show' : 'hide';
       return `<div class="tapwrap${Q.missed[i] ? ' missed' : ''}" role="button" tabindex="0" aria-pressed="${!!Q.missed[i]}" data-act="q-toggle" data-i="${i}">${baytHTML(b, i, { no: true, s: m, e: m, nopeek: true })}</div>`;
     }).join('');
-    return `${pagerTop(Q.pid, Q.cid, page, pages)}
+    return `${pagerTop(Q.pid, Q.cid, Q.segIdx, segCount, page, pages)}
       <div class="fit-box folio nowrap" dir="rtl" data-min="11" data-max="34" style="padding-inline:34px 20px"><div class="fit-content">${body}</div></div>
       <div class="actions" style="padding-top:10px"><p class="prompt">${e('farPrompt', { marked })}</p>
         ${revealCtl(shown, slice.length)}
@@ -282,11 +292,11 @@
   }
   /* اختيار الفترة: الخيارات الأربعة من FSRS، وكل زر يبيّن موعد المراجعة القادمة */
   function farRate() {
-    const Q = ui.far, chap = chapterOf(Q.pid, Q.cid), tot = chap.bayts.length, miss = Object.keys(Q.missed).length;
+    const Q = ui.far, tot = cMeta(Q.pid, Q.cid).segs[Q.segIdx].len, miss = Object.keys(Q.missed).length;
     const suggest = miss === 0 ? 3 : miss / tot <= 0.25 ? 2 : 1;
-    const opts = S.previewOld(Q.pid, Q.cid);
+    const opts = S.previewOld(Q.pid, Q.cid, Q.segIdx);
     const btns = [1, 2, 3, 4].map((g) => `<button class="rate ${g === suggest ? 'suggest' : ''}" data-act="far-rate" data-g="${g}"><span><b>${esc(U.inDays(opts[g].interval, true))}</b><small>${e('r' + g)}</small></span></button>`).join('');
-    return `<div class="stack"><div class="hero"><div class="kicker"${da}>${esc(cTitle(Q.pid, Q.cid))}</div>
+    return `<div class="stack"><div class="hero"><div class="kicker"${da}>${esc(withPart(cTitle(Q.pid, Q.cid), Q.segIdx, cMeta(Q.pid, Q.cid).segs.length))}</div>
       <h2 class="title" style="font-size:30px">${miss ? e('rateTitle', { n: miss, b: tot }) : e('rateNone')}</h2></div>
       <p class="lede">${e('rateLede')}</p>
       <div class="opts" style="display:flex;flex-direction:column;gap:9px">${btns}</div></div>`;
@@ -295,7 +305,7 @@
     const Q = ui.far, next = S.dueOld()[0];
     return `<div class="stack" style="padding-top:16px"><div class="center hero"><div class="empty" style="padding:8px 0"><div class="glyph" aria-hidden="true">أ</div></div>
       <h2 class="title" style="font-size:30px">${e('reviewDone')}</h2><p class="sub">${e('farDoneNext', { when: U.inDays(Q.rated) })}</p></div>
-      ${next ? `<button class="btn block" data-act="far-open" data-pid="${esc(next.pid)}" data-cid="${esc(next.cid)}">${e('nextChapter', { title: cTitle(next.pid, next.cid) })}</button>` : ''}
+      ${next ? `<button class="btn block" data-act="far-open" data-pid="${esc(next.pid)}" data-cid="${esc(next.cid)}" data-seg="${next.segIdx}">${e('nextChapter', { title: withPart(cTitle(next.pid, next.cid), next.segIdx, next.segCount) })}</button>` : ''}
       <button class="btn block ${next ? 'quiet' : ''}" data-act="far-list">${e('backToList')}</button></div>`;
   }
 
@@ -319,8 +329,18 @@
   }
   function chapterStatus(pid, c) {
     const s = S.chapter(pid, c.id), curCh = S.state.activePoem === pid && S.currentChapter(pid) && S.currentChapter(pid).id === c.id;
-    if (s.status === 'review') return { pill: `<span class="pill green">${e('stOld')}</span>`, sub: t('stNextReview', { when: U.inDays(U.diffDays(U.today(), s.card.due)) }) };
-    if (s.status === 'consolidating') return { pill: `<span class="pill gold">${e('stConsol')}</span>`, sub: t('stConsolSub', { days: DAYS - (s.daysDone || 0) }) };
+    if (s.status === 'done') {
+      /* كل فصل مقسَّم إلى أجزاء (٨-١٢ بيتًا)، وكل جزء يتقدّم في التثبيت والمراجعة البعيدة باستقلال */
+      const recs = c.segs.map((sg, i) => (s.segs && s.segs[i]) || { status: 'consolidating', daysDone: 0 });
+      const reviewCount = recs.filter((r) => r.status === 'review').length;
+      if (reviewCount === recs.length) {
+        const nextDue = recs.reduce((min, r) => (!min || r.card.due < min) ? r.card.due : min, null);
+        return { pill: `<span class="pill green">${e('stOld')}</span>`, sub: t('stNextReview', { when: U.inDays(U.diffDays(U.today(), nextDue)) }) };
+      }
+      const remaining = Math.max(...recs.filter((r) => r.status !== 'review').map((r) => DAYS - (r.daysDone || 0)));
+      const label = c.segs.length > 1 ? `${e('stConsol')} ${ar(reviewCount)}/${ar(recs.length)}` : e('stConsol');
+      return { pill: `<span class="pill gold">${label}</span>`, sub: t('stConsolSub', { days: remaining }) };
+    }
     if (s.status === 'learning') return { pill: `<span class="pill gold">${curCh ? e('stNow') : e('stProg')}</span>`, sub: t('learnedOf', { n: s.learned, total: c.len }) };
     return { pill: curCh ? `<span class="pill gold">${e('stNext')}</span>` : `<span class="pill">${e('stNew')}</span>`, sub: U.baytCount(c.len) };
   }
@@ -341,7 +361,7 @@
     const pid = ui.lib.poem, c = cMeta(pid, cid), s = S.chapter(pid, cid), st = chapterStatus(pid, c);
     const acts = [`<button class="btn block quiet" data-act="ch-read" data-cid="${esc(cid)}">${e('readChapter')}</button>`];
     if (s.status === 'new' || s.status === 'learning') acts.push(`<button class="btn block" data-act="ch-current" data-cid="${esc(cid)}">${s.status === 'learning' ? e('continueHere') : e('startHere')}</button>`);
-    if (s.status !== 'review') acts.push(`<button class="btn block quiet" data-act="ch-mark" data-cid="${esc(cid)}">${e('markMemorized')}</button>`);
+    if (s.status !== 'done') acts.push(`<button class="btn block quiet" data-act="ch-mark" data-cid="${esc(cid)}">${e('markMemorized')}</button>`);
     if (s.status !== 'new') acts.push(`<button class="btn block danger" data-act="ch-reset" data-cid="${esc(cid)}">${e('restartChapter')}</button>`);
     openSheet(`<h2${da}>${esc(kicker(pid, cid))}: ${esc(ctitle(c))}</h2><p class="sub">${esc(st.sub)}</p><div class="opts">${acts.join('')}</div>`);
   }
@@ -456,7 +476,7 @@
       /* الحفظ الجديد */
       case 'learn-start': case 'learn-more': {
         const rem = Math.max(0, S.settings().perDay - S.todayNewDone());
-        Object.assign(L, { stage: 'learn', target: name === 'learn-more' ? 1 : Math.max(1, rem), done: 0, hint: false, hidden: false, en: false, completed: [] });
+        Object.assign(L, { stage: 'learn', target: name === 'learn-more' ? 1 : Math.max(1, rem), done: 0, hint: false, hidden: false, en: false, completed: [], completedParts: [] });
         return render();
       }
       case 'learn-home': L.stage = 'home'; return render();
@@ -468,31 +488,36 @@
       case 'learn-known': {
         const cursor = learnCursor(); if (!cursor) { L.stage = 'done'; return render(); }
         const r = S.markLearned(cursor.pid, cursor.chap.id);
-        L.done += 1; L.hint = false; L.hidden = false; if (r.completed) L.completed.push(cursor.chap.id);
+        L.done += 1; L.hint = false; L.hidden = false;
+        if (r.completed) L.completed.push(cursor.chap.id);
+        else if (r.segCompleted) L.completedParts.push({ cid: cursor.chap.id, segIdx: r.segIdx, segCount: r.segCount });
         L.stage = (L.done >= L.target || !learnCursor()) ? 'done' : 'learn';
         return render();
       }
       /* المراجعة القريبة */
-      case 'near-open': Object.assign(N, { stage: 'pager', pid: d.pid, cid: d.cid, page: 0, shown: null, result: null }); return render();
+      case 'near-open': Object.assign(N, { stage: 'pager', pid: d.pid, cid: d.cid, segIdx: Number(d.seg), page: 0, shown: null, result: null }); return render();
       case 'near-prev': N.page -= 1; N.shown = null; return render();
       case 'near-next': N.page += 1; N.shown = null; return render();
-      case 'near-finish': N.result = S.finishNewReview(N.pid, N.cid); N.stage = 'result'; return render();
+      case 'near-finish': N.result = S.finishNewReview(N.pid, N.cid, N.segIdx); N.stage = 'result'; return render();
       case 'near-list': N.stage = 'list'; return render();
       /* المراجعة البعيدة */
-      case 'far-open': startFar(d.pid, d.cid); return render();
+      case 'far-open': startFar(d.pid, d.cid, Number(d.seg)); return render();
       case 'q-toggle': { const k = Number(d.i); if (Q.missed[k]) delete Q.missed[k]; else Q.missed[k] = true; return render({ keep: true }); }
       case 'q-prev': Q.page = Math.max(0, Q.page - 1); Q.shown = 0; return render();
       case 'q-next': Q.page += 1; Q.shown = 0; return render();
       case 'reveal-plus': case 'reveal-minus': {
-        const c = ui.mode === 'near' ? N : Q, chap = chapterOf(c.pid, c.cid);
-        let total = chap.bayts.length;
-        if (ui.mode === 'near') { const st = S.chapter(c.pid, c.cid); if (st.status === 'learning') total = st.learned; }
+        const c = ui.mode === 'near' ? N : Q, sg = cMeta(c.pid, c.cid).segs[c.segIdx];
+        let total = sg.len;
+        if (ui.mode === 'near') {
+          const st = S.chapter(c.pid, c.cid), rec = st.segs && st.segs[c.segIdx];
+          if (rec && rec.status === 'learning') total = Math.max(0, st.learned - sg.start);
+        }
         const n = Math.min(5, total - c.page * 5), now = c.shown == null ? 0 : c.shown;
         c.shown = Math.min(n, Math.max(0, now + (name === 'reveal-plus' ? 1 : -1)));
         return render({ keep: true });
       }
       case 'q-finish': Q.stage = 'rate'; return render();
-      case 'far-rate': { const card = S.applyOldReview(Q.pid, Q.cid, Number(d.g)); Q.rated = U.diffDays(U.today(), card.due); Q.stage = 'done'; return render(); }
+      case 'far-rate': { const card = S.applyOldReview(Q.pid, Q.cid, Q.segIdx, Number(d.g)); Q.rated = U.diffDays(U.today(), card.due); Q.stage = 'done'; return render(); }
       case 'far-list': Q.stage = 'list'; return render();
       /* المكتب */
       case 'lib-section': ui.lib.section = d.id; return render();
