@@ -103,7 +103,9 @@
   function baytHTML(b, idx, opts) {
     opts = opts || {};
     const no = opts.no ? `<span class="bno">${ar(b.n || idx + 1)}</span>` : '';
-    return `<div class="bayt">${no}${hem(b.s, opts.s, opts.nopeek)}${b.e ? `<div class="orn"></div>${hem(b.e, opts.e, opts.nopeek)}` : ''}</div>`;
+    /* في وضعَي المراجعة: اضغط مطوّلًا على البيت لإظهار ترجمته مؤقتًا */
+    const peek = (opts.trans && b.t) ? `<div class="trans-peek" dir="ltr" lang="en"><p>${esc(b.t[0])}</p><p>${esc(b.t[1])}</p></div>` : '';
+    return `<div class="bayt">${no}${hem(b.s, opts.s, opts.nopeek)}${b.e ? `<div class="orn"></div>${hem(b.e, opts.e, opts.nopeek)}` : ''}${peek}</div>`;
   }
   const transHTML = (b) => !b.t ? '' : `<div class="trans en" lang="en" dir="ltr"><p>${esc(b.t[0])}</p><p>${esc(b.t[1])}</p></div>`;
 
@@ -234,7 +236,7 @@
     const slice = bayts.slice(page * 5, Math.min(page * 5 + 5, total));
     const shown = N.shown == null ? 0 : Math.min(N.shown, slice.length);
     const last = page >= pages - 1;
-    const body = slice.map((b, i) => baytHTML(b, page * 5 + i, { no: true, s: i < shown ? 'show' : 'hide', e: i < shown ? 'show' : 'hide', nopeek: true })).join('');
+    const body = slice.map((b, i) => baytHTML(b, page * 5 + i, { no: true, s: i < shown ? 'show' : 'hide', e: i < shown ? 'show' : 'hide', nopeek: true, trans: true })).join('');
     return `${pagerTop(N.pid, N.cid, N.segIdx, segCount, page, pages)}
       <div class="fit-box folio nowrap" dir="rtl" data-min="11" data-max="34" style="padding-inline:34px 20px"><div class="fit-content">${body}</div></div>
       <div class="actions" style="padding-top:10px">${revealCtl(shown, slice.length)}
@@ -281,7 +283,7 @@
     const marked = Object.keys(Q.missed).length;
     const body = slice.map((b, k) => {
       const i = page * 5 + k, m = k < shown ? 'show' : 'hide';
-      return `<div class="tapwrap${Q.missed[i] ? ' missed' : ''}" role="button" tabindex="0" aria-pressed="${!!Q.missed[i]}" data-act="q-toggle" data-i="${i}">${baytHTML(b, i, { no: true, s: m, e: m, nopeek: true })}</div>`;
+      return `<div class="tapwrap${Q.missed[i] ? ' missed' : ''}" role="button" tabindex="0" aria-pressed="${!!Q.missed[i]}" data-act="q-toggle" data-i="${i}">${baytHTML(b, i, { no: true, s: m, e: m, nopeek: true, trans: true })}</div>`;
     }).join('');
     return `${pagerTop(Q.pid, Q.cid, Q.segIdx, segCount, page, pages)}
       <div class="fit-box folio nowrap" dir="rtl" data-min="11" data-max="34" style="padding-inline:34px 20px"><div class="fit-content">${body}</div></div>
@@ -572,7 +574,26 @@
     setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500); toast(t('tBackup'));
   }
 
+  /* اضغط مطوّلًا على بيت في وضعَي المراجعة لإظهار ترجمته مؤقتًا، دون أن يُحتسب ذلك نقرة
+     (فلا يُؤشَّر البيت كصعب في المراجعة البعيدة عند رفع الإصبع) */
+  const LP_MS = 450;
+  let lpTimer = null, lpEl = null, lpFired = false;
+  const lpClear = () => {
+    clearTimeout(lpTimer); lpTimer = null;
+    if (lpEl) { lpEl.classList.remove('show-trans'); lpEl = null; }
+  };
+  view.addEventListener('pointerdown', (ev) => {
+    const b = ev.target.closest('.bayt');
+    if (!b || !b.querySelector('.trans-peek')) return;
+    lpClear(); lpFired = false; lpEl = b;
+    lpTimer = setTimeout(() => { lpFired = true; b.classList.add('show-trans'); }, LP_MS);
+  });
+  ['pointerup', 'pointercancel', 'pointerleave', 'scroll'].forEach((evt) => view.addEventListener(evt, lpClear, { passive: true }));
+  document.addEventListener('pointerup', lpClear);
+  view.addEventListener('contextmenu', (ev) => { if (ev.target.closest('.bayt')?.querySelector('.trans-peek')) ev.preventDefault(); });
+
   document.addEventListener('click', (ev) => {
+    if (lpFired) { lpFired = false; return; }
     const tab = ev.target.closest('[data-tab]');
     if (tab) return go(tab.dataset.tab);
     const peek = ev.target.closest('[data-peek]');

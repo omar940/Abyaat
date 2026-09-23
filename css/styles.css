@@ -115,6 +115,13 @@ html[dir="ltr"] #top .brand{order:2;flex-direction:row-reverse}
 .folio::before,.folio::after{content:"";position:absolute;left:50%;width:9px;height:9px;background:var(--bg);border:1px solid var(--gold-line);transform:translateX(-50%) rotate(45deg)}
 .folio::before{top:-5px}.folio::after{bottom:-5px}
 .bayt{position:relative}
+.trans-peek{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3em;
+  background:var(--surface);border-radius:10px;padding:.3em .5em;opacity:0;pointer-events:none;transition:opacity .12s ease}
+.trans-peek p{margin:0;font-family:var(--font-ui);font-size:.48em;line-height:1.4;color:var(--ink-2);text-align:center}
+.bayt.show-trans{cursor:default}
+.bayt.show-trans>*:not(.trans-peek){opacity:0}
+.bayt.show-trans .trans-peek{opacity:1}
+.bayt:has(.trans-peek){-webkit-touch-callout:none;user-select:none}
 .hem{font-family:var(--font-poem);font-size:1em;line-height:1.7;text-align:center;color:var(--ink)}
 .wrap .hem{text-wrap:balance}
 .nowrap .hem{white-space:nowrap;line-height:1.55}

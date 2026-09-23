@@ -1,6 +1,6 @@
 /* عامل الخدمة: يجعل «أبيات» يعمل بلا اتصال.
    عند نشر تعديل، غيّر رقم VERSION ليصل التحديث إلى المستخدمين. */
-const VERSION = 'abyaat-v23';
+const VERSION = 'abyaat-v24';
 const CORE = [
   './', 'index.html', 'manifest.webmanifest', 'css/styles.css',
   'js/util.js', 'js/i18n.js', 'js/fsrs.js', 'js/store.js', 'js/app.js', 'data/library.json',
