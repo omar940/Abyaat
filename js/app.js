@@ -592,12 +592,24 @@
   document.addEventListener('pointerup', lpClear);
   view.addEventListener('contextmenu', (ev) => { if (ev.target.closest('.bayt')?.querySelector('.trans-peek')) ev.preventDefault(); });
 
+  /* المس البيت مرّتين متتاليتين (خلال نصف ثانية) ليُؤشَّر كصعب في المراجعة البعيدة؛
+     لمسة واحدة لا تفعل شيئًا، حتى لا يُؤشَّر بيت عن طريق الخطأ أثناء التمرير أو القراءة */
+  const DTAP_MS = 400;
+  let dtEl = null, dtTime = 0;
+
   document.addEventListener('click', (ev) => {
-    if (lpFired) { lpFired = false; return; }
+    if (lpFired) { lpFired = false; dtEl = null; return; }
     const tab = ev.target.closest('[data-tab]');
     if (tab) return go(tab.dataset.tab);
     const peek = ev.target.closest('[data-peek]');
     if (peek) { peek.classList.toggle('peek'); return; }
+    const q = ev.target.closest('[data-act="q-toggle"]');
+    if (q) {
+      const now = Date.now();
+      if (q === dtEl && now - dtTime < DTAP_MS) { dtEl = null; dtTime = 0; act('q-toggle', q); }
+      else { dtEl = q; dtTime = now; }
+      return;
+    }
     const a = ev.target.closest('[data-act]');
     if (a) act(a.dataset.act, a);
   });

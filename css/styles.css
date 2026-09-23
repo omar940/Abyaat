@@ -262,7 +262,7 @@ html[dir="ltr"] #top .brand{order:2;flex-direction:row-reverse}
 @media (min-width:700px){#view{padding-inline:max(18px,calc((100vw - 640px)/2))}#view.flush{padding-inline:max(14px,calc((100vw - 640px)/2))}.reader-bar{margin-inline:calc(-1 * max(18px,calc((100vw - 640px)/2)));padding-inline:max(14px,calc((100vw - 640px)/2))}}
 
 /* ---------- الاختبار: لمس الأبيات الخاطئة ---------- */
-.tapwrap{position:relative;padding:.14em .25em;border-radius:8px;border:1.5px solid transparent;cursor:pointer}
+.tapwrap{position:relative;padding:.14em .25em;border-radius:8px;border:1.5px solid transparent;cursor:pointer;touch-action:manipulation}
 .tapwrap.missed{background:var(--rust-soft);border-color:var(--rust)}
 .nowrap .tapwrap+.tapwrap{margin-top:.35em}
 
