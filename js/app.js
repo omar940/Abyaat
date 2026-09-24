@@ -22,7 +22,7 @@
   const ui = {
     tab: 'home', mode: null,   // الحفظ والمراجعة: mode = learn | near | far
     learn: { stage: 'home', target: 0, done: 0, hint: false, hidden: false, en: false, completed: [], completedParts: [] },
-    near: { stage: 'list', pid: null, cid: null, segIdx: null, page: 0, shown: null, result: null },
+    near: { stage: 'list', pid: null, cid: null, segIdx: null, page: 0, shown: null },
     far: { stage: 'list', pid: null, cid: null, segIdx: null, page: 0, shown: 0, missed: {}, rated: null },
     lib: { section: 'qasaid', poem: null, reader: null },
   };
@@ -107,7 +107,9 @@
     const peek = (opts.trans && b.t) ? `<div class="trans-peek" dir="ltr" lang="en"><p>${esc(b.t[0])}</p><p>${esc(b.t[1])}</p></div>` : '';
     /* opts.orn = false: لا فاصل زخرفي بين شطري البيت الواحد (يُستخدم بدل ذلك بين الأبيات، انظر nearPager وfarReview) */
     const mid = b.e ? (opts.orn === false ? '' : '<div class="orn"></div>') : '';
-    return `<div class="bayt${opts.orn === false ? ' no-orn' : ''}">${no}${hem(b.s, opts.s, opts.nopeek)}${b.e ? `${mid}${hem(b.e, opts.e, opts.nopeek)}` : ''}${peek}</div>`;
+    /* رقم البيت عنصر عادي في تخطيط مرن، لا فوق النص، حتى لا يتداخل مع نص طويل يتّسع للعرض كله */
+    const lines = `<div class="lines">${hem(b.s, opts.s, opts.nopeek)}${b.e ? `${mid}${hem(b.e, opts.e, opts.nopeek)}` : ''}</div>`;
+    return `<div class="bayt${opts.orn === false ? ' no-orn' : ''}${opts.no ? ' has-no' : ''}">${no}${lines}${peek}</div>`;
   }
   const transHTML = (b) => !b.t ? '' : `<div class="trans en" lang="en" dir="ltr"><p>${esc(b.t[0])}</p><p>${esc(b.t[1])}</p></div>`;
 
@@ -206,7 +208,6 @@
   function vNear() {
     const N = ui.near;
     if (N.stage === 'pager') return nearPager();
-    if (N.stage === 'result') return nearResult();
     const items = S.newReviewList();
     if (!items.length) return emptyState(t('nearEmptyT'), t('nearEmptyB'), t('startNew'), 'learn');
     const pending = items.filter((x) => !x.done).length;
@@ -240,7 +241,7 @@
     const last = page >= pages - 1;
     const body = slice.map((b, i) => baytHTML(b, page * 5 + i, { no: true, s: i < shown ? 'show' : 'hide', e: i < shown ? 'show' : 'hide', nopeek: true, trans: true, orn: false })).join('<div class="orn"></div>');
     return `${pagerTop(N.pid, N.cid, N.segIdx, segCount, page, pages)}
-      <div class="fit-box folio nowrap" dir="rtl" data-min="11" data-max="34" style="padding-inline:34px 20px"><div class="fit-content">${body}</div></div>
+      <div class="fit-box folio nowrap" dir="rtl" data-min="11" data-max="34" style="padding-inline:20px"><div class="fit-content">${body}</div></div>
       <div class="actions" style="padding-top:10px">${revealCtl(shown, slice.length)}
         <div class="row"><button class="btn quiet" data-act="near-prev" ${page === 0 ? 'disabled' : ''}>${e('prev')}</button>
         ${last ? `<button class="btn" data-act="near-finish">${e('finishReview')}</button>` : `<button class="btn" data-act="near-next">${e('next')}</button>`}</div></div>`;
@@ -250,23 +251,12 @@
     if (r.status === 'consolidating') return t('resConsol', { n: r.daysDone, days: DAYS });
     return t('resLearn');
   }
-  function nearResult() {
-    const N = ui.near, r = N.result, msg = nearMsg(N.pid, N.cid, N.segIdx, r);
-    const next = S.newReviewList().find((x) => !x.done);
-    return `<div class="stack" style="padding-top:16px"><div class="center hero"><div class="empty" style="padding:8px 0"><div class="glyph" aria-hidden="true">أ</div></div>
-      <h2 class="title" style="font-size:30px">${e('reviewComplete')}</h2></div>
-      <div class="notice">${esc(msg)}</div>
-      ${next ? `<button class="btn block" data-act="near-open" data-pid="${esc(next.pid)}" data-cid="${esc(next.cid)}" data-seg="${next.segIdx}">${e('nextReview', { title: withPart(cTitle(next.pid, next.cid), next.segIdx, next.segCount) })}</button>` : ''}
-      <button class="btn block ${next ? 'quiet' : ''}" data-act="near-list">${next ? e('backToList') : e('back')}</button>
-      ${!next ? `<button class="btn block quiet" data-act="goto" data-to="learn">${e('modeLearn')}</button>` : ''}</div>`;
-  }
 
   /* ---------- المراجعة البعيدة ---------- */
   function vFar() {
     const Q = ui.far;
     if (Q.stage === 'review') return farReview();
     if (Q.stage === 'rate') return farRate();
-    if (Q.stage === 'done') return farDone();
     const all = S.oldReviewList(), due = all.filter((x) => x.isDue), up = all.filter((x) => !x.isDue);
     if (!all.length) return emptyState(t('farEmptyT'), t('farEmptyB', { days: DAYS }), t('openLib'), 'lib');
     const row = (x, isDue) => `<li><button class="li" data-act="far-open" data-pid="${esc(x.pid)}" data-cid="${esc(x.cid)}" data-seg="${x.segIdx}">
@@ -289,7 +279,7 @@
       return `<div class="tapwrap${Q.missed[i] ? ' missed' : ''}" role="button" tabindex="0" aria-pressed="${!!Q.missed[i]}" data-act="q-toggle" data-i="${i}">${baytHTML(b, i, { no: true, s: m, e: m, nopeek: true, trans: true, orn: false })}</div>`;
     }).join('<div class="orn"></div>');
     return `${pagerTop(Q.pid, Q.cid, Q.segIdx, segCount, page, pages)}
-      <div class="fit-box folio nowrap" dir="rtl" data-min="11" data-max="34" style="padding-inline:34px 20px"><div class="fit-content">${body}</div></div>
+      <div class="fit-box folio nowrap" dir="rtl" data-min="11" data-max="34" style="padding-inline:20px"><div class="fit-content">${body}</div></div>
       <div class="actions" style="padding-top:10px"><p class="prompt">${e('farPrompt', { marked })}</p>
         ${revealCtl(shown, slice.length)}
         <div class="row"><button class="btn quiet" data-act="q-prev" ${page === 0 ? 'disabled' : ''}>${e('prev')}</button>
@@ -305,13 +295,6 @@
       <h2 class="title" style="font-size:30px">${miss ? e('rateTitle', { n: miss, b: tot }) : e('rateNone')}</h2></div>
       <p class="lede">${e('rateLede')}</p>
       <div class="opts" style="display:flex;flex-direction:column;gap:9px">${btns}</div></div>`;
-  }
-  function farDone() {
-    const Q = ui.far, next = S.dueOld()[0];
-    return `<div class="stack" style="padding-top:16px"><div class="center hero"><div class="empty" style="padding:8px 0"><div class="glyph" aria-hidden="true">أ</div></div>
-      <h2 class="title" style="font-size:30px">${e('reviewDone')}</h2><p class="sub">${e('farDoneNext', { when: U.inDays(Q.rated) })}</p></div>
-      ${next ? `<button class="btn block" data-act="far-open" data-pid="${esc(next.pid)}" data-cid="${esc(next.cid)}" data-seg="${next.segIdx}">${e('nextChapter', { title: withPart(cTitle(next.pid, next.cid), next.segIdx, next.segCount) })}</button>` : ''}
-      <button class="btn block ${next ? 'quiet' : ''}" data-act="far-list">${e('backToList')}</button></div>`;
   }
 
   /* ---------- المكتب ---------- */
@@ -470,7 +453,7 @@
       /* إن كان هناك جزء واحد فقط بانتظار المراجعة: ادخل إليه مباشرة، دون قائمة لا تُظهر إلا خيارًا واحدًا */
       if (tab === 'near') {
         const items = S.newReviewList().filter((x) => !x.done);
-        if (items.length === 1) Object.assign(ui.near, { stage: 'pager', pid: items[0].pid, cid: items[0].cid, segIdx: items[0].segIdx, page: 0, shown: null, result: null });
+        if (items.length === 1) Object.assign(ui.near, { stage: 'pager', pid: items[0].pid, cid: items[0].cid, segIdx: items[0].segIdx, page: 0, shown: null });
         else ui.near.stage = 'list';
       } else if (tab === 'far') {
         const due = S.dueOld();
@@ -511,17 +494,17 @@
         return render();
       }
       /* المراجعة القريبة */
-      case 'near-open': Object.assign(N, { stage: 'pager', pid: d.pid, cid: d.cid, segIdx: Number(d.seg), page: 0, shown: null, result: null }); return render();
+      case 'near-open': Object.assign(N, { stage: 'pager', pid: d.pid, cid: d.cid, segIdx: Number(d.seg), page: 0, shown: null }); return render();
       case 'near-prev': N.page -= 1; N.shown = null; return render();
       case 'near-next': N.page += 1; N.shown = null; return render();
       case 'near-finish': {
         const r = S.finishNewReview(N.pid, N.cid, N.segIdx), next = S.newReviewList().find((x) => !x.done);
-        /* إن بقي جزء آخر: انتقل إليه مباشرة دون شاشة وسيطة، مع تنبيه سريع بنتيجة هذا الجزء */
-        if (next) { toast(nearMsg(N.pid, N.cid, N.segIdx, r)); Object.assign(N, { stage: 'pager', pid: next.pid, cid: next.cid, segIdx: next.segIdx, page: 0, shown: null, result: null }); }
-        else { N.result = r; N.stage = 'result'; }
+        toast(nearMsg(N.pid, N.cid, N.segIdx, r));
+        /* إن بقي جزء آخر: انتقل إليه مباشرة؛ وإلا فارجع إلى الصفحة الرئيسية دون شاشة "تمت المراجعة" */
+        if (next) Object.assign(N, { stage: 'pager', pid: next.pid, cid: next.cid, segIdx: next.segIdx, page: 0, shown: null });
+        else { ui.tab = 'home'; ui.mode = null; }
         return render();
       }
-      case 'near-list': N.stage = 'list'; return render();
       /* المراجعة البعيدة */
       case 'far-open': startFar(d.pid, d.cid, Number(d.seg)); return render();
       case 'q-toggle': { const k = Number(d.i); if (Q.missed[k]) delete Q.missed[k]; else Q.missed[k] = true; return render({ keep: true }); }
@@ -541,12 +524,12 @@
       case 'q-finish': Q.stage = 'rate'; return render();
       case 'far-rate': {
         const card = S.applyOldReview(Q.pid, Q.cid, Q.segIdx, Number(d.g)), rated = U.diffDays(U.today(), card.due), next = S.dueOld()[0];
-        /* إن بقي جزء آخر مستحق: انتقل إليه مباشرة دون شاشة وسيطة، مع تنبيه سريع بموعد المراجعة القادمة */
-        if (next) { toast(t('farDoneNext', { when: U.inDays(rated) })); startFar(next.pid, next.cid, next.segIdx); }
-        else { Q.rated = rated; Q.stage = 'done'; }
+        toast(t('farDoneNext', { when: U.inDays(rated) }));
+        /* إن بقي جزء آخر مستحق: انتقل إليه مباشرة؛ وإلا فارجع إلى الصفحة الرئيسية دون شاشة "تمت المراجعة" */
+        if (next) startFar(next.pid, next.cid, next.segIdx);
+        else { ui.tab = 'home'; ui.mode = null; }
         return render();
       }
-      case 'far-list': Q.stage = 'list'; return render();
       /* المكتب */
       case 'lib-section': ui.lib.section = d.id; return render();
       case 'lib-open': return openPoem(d.pid);

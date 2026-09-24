@@ -137,7 +137,10 @@ html[dir="ltr"] #top .brand{order:2;flex-direction:row-reverse}
 .orn{position:relative;height:18px;margin:2px auto;width:min(58%,240px)}
 .orn::before{content:"";position:absolute;inset:50% 0 auto 0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-line),transparent)}
 .orn::after{content:"";position:absolute;left:50%;top:50%;width:.36em;height:.36em;min-width:6px;min-height:6px;background:var(--gold);transform:translate(-50%,-50%) rotate(45deg)}
-.bno{font-family:var(--font-ui);font-size:.42em;color:var(--gold);border:1px solid var(--gold-line);border-radius:50%;min-width:1.9em;height:1.9em;display:inline-flex;align-items:center;justify-content:center;position:absolute;inset-inline-start:0;top:50%;transform:translateY(-50%);line-height:1}
+.bno{font-family:var(--font-ui);font-size:.42em;color:var(--gold);border:1px solid var(--gold-line);border-radius:50%;min-width:1.9em;height:1.9em;display:inline-flex;align-items:center;justify-content:center;line-height:1;flex:none}
+/* رقم البيت عنصر مرن بجانب النص، لا فوقه، فلا يتداخل مع نص يتّسع للعرض كله (انظر baytHTML) */
+.bayt.has-no{display:flex;align-items:center;gap:.25em}
+.bayt.has-no>.lines{flex:1;min-width:0}
 
 .learn-top{display:flex;justify-content:space-between;align-items:center;padding:6px 4px 12px;color:var(--ink-2);font-size:14px}
 .dots{display:flex;gap:6px;flex:none;align-items:center}
