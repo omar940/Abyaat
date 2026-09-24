@@ -128,6 +128,9 @@ html[dir="ltr"] #top .brand{order:2;flex-direction:row-reverse}
 .wrap .orn{margin:.45em auto}
 .nowrap .orn{height:.7em;margin:.02em auto}
 .nowrap .bayt+.bayt{margin-top:.55em}
+/* في وضعَي المراجعة: الفاصل الزخرفي بين الأبيات بدل داخل البيت الواحد (انظر nearPager وfarReview) */
+.nowrap .bayt+.orn,.nowrap .tapwrap+.orn{height:.7em;margin:.2em auto}
+.bayt.no-orn .hem+.hem{margin-top:.2em}
 .is-hidden{color:transparent;text-decoration:none;cursor:pointer;user-select:none}
 .is-hidden.peek{color:var(--ink);text-decoration:none}
 .hint-first{color:var(--ink)}
