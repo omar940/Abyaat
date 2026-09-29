@@ -114,6 +114,8 @@ html[dir="ltr"] #top .brand{order:2;flex-direction:row-reverse}
 }
 .folio::before,.folio::after{content:"";position:absolute;left:50%;width:9px;height:9px;background:var(--bg);border:1px solid var(--gold-line);transform:translateX(-50%) rotate(45deg)}
 .folio::before{top:-5px}.folio::after{bottom:-5px}
+/* بعض الأبيات لا تتّسع مهما صغُر الخط (شاشة قصيرة، وضع أفقي): يُسمح بالتمرير الرأسي بدل انسكاب النص خارج الصندوق */
+.fit-box.folio{overflow-x:hidden;overflow-y:auto}
 .bayt{position:relative}
 .trans-peek{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3em;
   background:var(--surface);border-radius:10px;padding:.3em .5em;opacity:0;pointer-events:none;transition:opacity .12s ease}
@@ -122,9 +124,9 @@ html[dir="ltr"] #top .brand{order:2;flex-direction:row-reverse}
 .bayt.show-trans>*:not(.trans-peek){opacity:0}
 .bayt.show-trans .trans-peek{opacity:1}
 .bayt:has(.trans-peek){-webkit-touch-callout:none;user-select:none}
-.hem{font-family:var(--font-poem);font-size:1em;line-height:1.7;text-align:center;color:var(--ink)}
+.hem{font-family:var(--font-poem);font-size:1em;line-height:1.85;text-align:center;color:var(--ink)}
 .wrap .hem{text-wrap:balance}
-.nowrap .hem{white-space:nowrap;line-height:1.55}
+.nowrap .hem{white-space:nowrap;line-height:1.7}
 .wrap .orn{margin:.45em auto}
 .nowrap .orn{height:.7em;margin:.02em auto}
 .nowrap .bayt+.bayt{margin-top:.55em}
