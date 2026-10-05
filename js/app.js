@@ -150,7 +150,8 @@
   }
   function vLearn() {
     const pid = S.state.activePoem, L = ui.learn;
-    if (!pid || !POEMS.get(pid)) return emptyState(t('chooseTitle'), t('chooseBody'), t('toLibrary'), 'lib');
+    if (!pid || !POEMS.get(pid) || L.stage === 'pick') return learnPick();
+    if (L.stage === 'chapters') return learnChapters(pid);
     if (L.stage === 'done') return learnDone();
     if (L.stage !== 'home' && learnCursor()) return learnCard();
     L.stage = 'home';
@@ -160,7 +161,7 @@
     <span class="ctl"><button data-act="perday" data-d="-1" aria-label="${e('decrease')}" ${val <= min ? 'disabled' : ''}>−</button><output>${ar(val)}</output><button data-act="perday" data-d="1" aria-label="${e('increase')}" ${val >= max ? 'disabled' : ''}>+</button></span></div>`;
   function learnHome(pid) {
     const cm = S.currentChapter(pid);
-    if (!cm) return emptyState(t('finishedTitle'), t('finishedBody'), t('toLibrary'), 'lib');
+    if (!cm) return learnChapters(pid, true);
     const st = S.chapter(pid, cm.id), perDay = S.settings().perDay, done = S.todayNewDone();
     const rem = Math.max(0, perDay - done), left = cm.len - st.learned, pending = S.pendingNear();
     const pct = Math.round(st.learned * 100 / cm.len);
@@ -174,7 +175,29 @@
       ${stepper(t('baytsToday'), perDay, 1, 10)}
       ${pending ? `<div class="notice warn">${e('nearNotice')} <button class="btn ghost small" data-act="goto" data-to="near">${e('openNear')}</button></div>` : ''}
       ${status}
+      <button class="btn block quiet" data-act="learn-chapters">${e('chaptersBtn')}</button>
     </div>`;
+  }
+  function learnPick() {
+    const cards = LIB.poems.map((p) => `<li style="margin-bottom:12px"><button class="book" data-act="learn-pick" data-pid="${esc(p.id)}"><span class="spine"></span><span class="body">
+        <div class="name"${da}>${esc(pick(p, 'title'))}</div><div class="full"${da}>${esc(pick(p, 'author'))}</div>
+        <div class="meta"><span>${esc(U.baytCount(p.baytCount))}</span><span>${e('chapCount', { n: p.chapterCount })}</span>${S.state.activePoem === p.id ? `<span class="pill green">${e('memorizing')}</span>` : ''}</div></span></button></li>`).join('');
+    const back = S.state.activePoem && POEMS.get(S.state.activePoem) ? `<button class="back" data-act="learn-chapters">${IC.chev}<span>${e('chaptersH')}</span></button>` : '';
+    return `${back}<h2 class="page-title">${e('chooseTitle')}</h2><p class="lede">${e('chooseBody')}</p><ul class="list" style="margin-top:14px">${cards}</ul>`;
+  }
+  function learnChapters(pid, finished) {
+    const poem = POEMS.get(pid), m = S.meta(pid), pr = S.poemProgress(pid);
+    const rows = m.chapters.map((c) => {
+      const st = chapterStatus(pid, c);
+      return `<li><button class="li" data-act="ch-open" data-cid="${esc(c.id)}"><span class="main"><span class="ch-no">${esc(kicker(pid, c.id))}</span><div class="t"${da}>${esc(ctitle(c))}</div><div class="s">${esc(st.sub)}</div></span><span class="end">${st.pill}</span></button></li>`;
+    }).join('');
+    const back = finished ? '' : `<button class="back" data-act="learn-home">${IC.chev}<span>${e('modeLearn')}</span></button>`;
+    return `${back}<div class="hero"><div class="kicker"${da}>${esc(pick(poem, 'author'))}</div><h2 class="title"${da}>${esc(pick(poem, 'fullTitle'))}</h2></div>
+      ${finished ? `<div class="notice" style="margin-top:10px">${e('finishedBody')}</div>` : ''}
+      <div style="margin:10px 0 14px"><div class="bar"><i style="width:${pr.pct}%"></i></div><p class="small muted" style="margin-top:6px">${e('poemProgress', { n: pr.done, b: pr.total })}</p></div>
+      <p class="small muted" style="margin:0 0 4px">${e('chaptersHint')}</p>
+      <ul class="list">${rows}</ul>
+      ${LIB.poems.length > 1 ? `<button class="btn block quiet" style="margin-top:14px" data-act="learn-change">${e('changePoem')}</button>` : ''}`;
   }
   function learnCard() {
     const L = ui.learn, cursor = learnCursor(), b = cursor.bayt;
@@ -258,7 +281,7 @@
     if (Q.stage === 'review') return farReview();
     if (Q.stage === 'rate') return farRate();
     const all = S.oldReviewList(), due = all.filter((x) => x.isDue), up = all.filter((x) => !x.isDue);
-    if (!all.length) return emptyState(t('farEmptyT'), t('farEmptyB', { days: DAYS }), t('openLib'), 'lib');
+    if (!all.length) return emptyState(t('farEmptyT'), t('farEmptyB', { days: DAYS }), t('openLib'), 'learn');
     const row = (x, isDue) => `<li><button class="li" data-act="far-open" data-pid="${esc(x.pid)}" data-cid="${esc(x.cid)}" data-seg="${x.segIdx}">
       <span class="main"><span class="ch-no">${esc(withPart(kicker(x.pid, x.cid), x.segIdx, x.segCount))}</span><div class="t"${da}>${esc(cTitle(x.pid, x.cid))}</div><div class="s">${e('farRowSub', { poem: pTitle(x.pid), b: x.len })}</div></span>
       <span class="end">${isDue ? IC.chevL : esc(U.inDays(x.dueIn, true))}</span></button></li>`;
@@ -305,11 +328,9 @@
     const sections = LIB.sections.map((s) => `<button data-act="lib-section" data-id="${esc(s.id)}" aria-pressed="${L.section === s.id}">${esc(pick(s, 'title'))}</button>`).join('');
     const poems = LIB.poems.filter((p) => p.section === L.section);
     const cards = poems.map((p) => {
-      const pr = S.poemProgress(p.id), active = S.state.activePoem === p.id;
       return `<li style="margin-bottom:12px"><button class="book" data-act="lib-open" data-pid="${esc(p.id)}"><span class="spine"></span><span class="body">
         <div class="name"${da}>${esc(pick(p, 'title'))}</div><div class="full"${da}>${esc(pick(p, 'author'))}</div>
-        <div class="meta"><span>${esc(U.baytCount(p.baytCount))}</span><span>${e('chapCount', { n: p.chapterCount })}</span>${active ? `<span class="pill green">${e('memorizing')}</span>` : ''}</div>
-        <div class="bar" style="margin-top:10px"><i style="width:${pr.pct}%"></i></div></span></button></li>`;
+        <div class="meta"><span>${esc(U.baytCount(p.baytCount))}</span><span>${e('chapCount', { n: p.chapterCount })}</span></div></span></button></li>`;
     }).join('');
     const sec = LIB.sections.find((s) => s.id === L.section);
     const body = poems.length ? `<ul class="list" style="margin-top:14px">${cards}</ul>` : emptyState(t('libEmptyT', { title: pick(sec, 'title') }), t('libEmptyB'));
@@ -333,28 +354,23 @@
     return { pill: curCh ? `<span class="pill gold">${e('stNext')}</span>` : `<span class="pill">${e('stNew')}</span>`, sub: U.baytCount(c.len) };
   }
   function vPoem() {
-    const pid = ui.lib.poem, poem = POEMS.get(pid), m = S.meta(pid), pr = S.poemProgress(pid), active = S.state.activePoem === pid;
-    const rows = m.chapters.map((c) => {
-      const st = chapterStatus(pid, c);
-      return `<li><button class="li" data-act="lib-ch" data-cid="${esc(c.id)}"><span class="main"><span class="ch-no">${esc(kicker(pid, c.id))}</span><div class="t"${da}>${esc(ctitle(c))}</div><div class="s">${esc(st.sub)}</div></span><span class="end">${st.pill}</span></button></li>`;
-    }).join('');
+    const pid = ui.lib.poem, poem = POEMS.get(pid), m = S.meta(pid);
+    const rows = m.chapters.map((c) => `<li><button class="li" data-act="lib-read" data-cid="${esc(c.id)}"><span class="main"><span class="ch-no">${esc(kicker(pid, c.id))}</span><div class="t"${da}>${esc(ctitle(c))}</div><div class="s">${esc(U.baytCount(c.len))}</div></span><span class="end">${IC.chevL}</span></button></li>`).join('');
     return `<button class="back" data-act="lib-back">${IC.chev}<span>${e('navLib')}</span></button>
       <div class="hero"><div class="kicker"${da}>${esc(pick(poem, 'author'))}</div><h2 class="title"${da}>${esc(pick(poem, 'fullTitle'))}</h2></div>
-      <div style="margin:10px 0 14px"><div class="bar"><i style="width:${pr.pct}%"></i></div><p class="small muted" style="margin-top:6px">${e('poemProgress', { n: pr.done, b: pr.total })}</p></div>
-      <div class="row"><button class="btn" data-act="lib-read" data-cid="">${e('readPoem')}</button>
-        <button class="btn quiet" data-act="lib-active" ${active ? 'disabled' : ''}>${active ? e('memorizingNow') : e('memorizeThis')}</button></div>
+      <button class="btn block" style="margin-top:14px" data-act="lib-read" data-cid="">${e('readPoem')}</button>
       <h3 class="section-h">${e('chaptersH')}</h3><ul class="list">${rows}</ul>`;
   }
   function openChapterSheet(cid) {
-    const pid = ui.lib.poem, c = cMeta(pid, cid), s = S.chapter(pid, cid), st = chapterStatus(pid, c);
-    const acts = [`<button class="btn block quiet" data-act="ch-read" data-cid="${esc(cid)}">${e('readChapter')}</button>`];
+    const pid = S.state.activePoem, c = cMeta(pid, cid), s = S.chapter(pid, cid), st = chapterStatus(pid, c);
+    const acts = [];
     if (s.status === 'new' || s.status === 'learning') acts.push(`<button class="btn block" data-act="ch-current" data-cid="${esc(cid)}">${s.status === 'learning' ? e('continueHere') : e('startHere')}</button>`);
     if (s.status !== 'done') acts.push(`<button class="btn block quiet" data-act="ch-mark" data-cid="${esc(cid)}">${e('markMemorized')}</button>`);
     if (s.status !== 'new') acts.push(`<button class="btn block danger" data-act="ch-reset" data-cid="${esc(cid)}">${e('restartChapter')}</button>`);
     openSheet(`<h2${da}>${esc(kicker(pid, cid))}: ${esc(ctitle(c))}</h2><p class="sub">${esc(st.sub)}</p><div class="opts">${acts.join('')}</div>`);
   }
   function openMarkSheet(cid) {
-    const pid = ui.lib.poem, opts = S.previewMark();
+    const pid = S.state.activePoem, opts = S.previewMark();
     const btns = [1, 2, 3, 4].map((g) => `<button class="rate" data-act="ch-mark-rate" data-cid="${esc(cid)}" data-g="${g}"><span><b>${e('r' + g)}</b><small>${e('md' + g)}</small></span><span class="when">${esc(U.inDays(opts[g].interval, true))}</span></button>`).join('');
     openSheet(`<h2${da}>${e('markTitle', { title: cTitle(pid, cid) })}</h2><p class="sub">${e('markSub')}</p><div class="opts">${btns}</div>`);
   }
@@ -396,7 +412,7 @@
 
   /* ---------- الرسم ---------- */
   const cur = () => (ui.tab === 'home' ? (ui.mode || 'home') : ui.tab);
-  const FLUSH = () => (cur() === 'learn' && ui.learn.stage !== 'home' && ui.learn.stage !== 'done' && S.state.activePoem && POEMS.get(S.state.activePoem) && !!learnCursor())
+  const FLUSH = () => (cur() === 'learn' && ui.learn.stage !== 'home' && ui.learn.stage !== 'done' && ui.learn.stage !== 'chapters' && ui.learn.stage !== 'pick' && S.state.activePoem && POEMS.get(S.state.activePoem) && !!learnCursor())
     || (cur() === 'near' && ui.near.stage === 'pager') || (cur() === 'far' && ui.far.stage === 'review');
 
   let lastY = 0;
@@ -479,6 +495,10 @@
         return render();
       }
       case 'learn-home': L.stage = 'home'; return render();
+      case 'learn-chapters': L.stage = 'chapters'; return render();
+      case 'learn-change': L.stage = 'pick'; return render();
+      case 'learn-pick': return loadPoem(d.pid).then(() => { S.setActive(d.pid); L.stage = 'chapters'; toast(t('tNowMem')); render(); });
+      case 'ch-open': return openChapterSheet(d.cid);
       case 'learn-hide': L.hidden = !L.hidden; L.hint = false; return render({ keep: true });
       case 'learn-hint': L.hint = !L.hint; return render({ keep: true });
       case 'learn-reveal': L.stage = 'check'; return render();
@@ -534,15 +554,12 @@
       case 'lib-section': ui.lib.section = d.id; return render();
       case 'lib-open': return openPoem(d.pid);
       case 'lib-back': ui.lib.poem = null; return render();
-      case 'lib-active': S.setActive(ui.lib.poem); L.stage = 'home'; toast(t('tNowMem')); return render();
       case 'lib-read': ui.lib.reader = { pid: ui.lib.poem, cid: d.cid || null, en: S.settings().showEn }; return render();
-      case 'lib-ch': return openChapterSheet(d.cid);
-      case 'ch-read': closeSheet(); ui.lib.reader = { pid: ui.lib.poem, cid: d.cid, en: S.settings().showEn }; return render();
-      case 'ch-current': S.setCurrent(ui.lib.poem, d.cid); L.stage = 'home'; closeSheet(); toast(t('tStartHere')); return render();
+      case 'ch-current': S.setCurrent(S.state.activePoem, d.cid); L.stage = 'home'; closeSheet(); toast(t('tStartHere')); return render();
       case 'ch-mark': return openMarkSheet(d.cid);
-      case 'ch-mark-rate': S.markMemorized(ui.lib.poem, d.cid, Number(d.g)); closeSheet(); L.stage = 'home'; toast(t('tAdded')); return render();
+      case 'ch-mark-rate': S.markMemorized(S.state.activePoem, d.cid, Number(d.g)); closeSheet(); L.stage = 'chapters'; toast(t('tAdded')); return render();
       case 'ch-reset': return confirmSheet(t('restartQ'), t('restartBody'), t('restartYes'), 'ch-reset-yes', { cid: d.cid }, true);
-      case 'ch-reset-yes': S.resetChapter(ui.lib.poem, d.cid); closeSheet(); L.stage = 'home'; toast(t('tReset')); return render();
+      case 'ch-reset-yes': S.resetChapter(S.state.activePoem, d.cid); closeSheet(); L.stage = 'chapters'; toast(t('tReset')); return render();
       case 'reader-close': ui.lib.reader = null; return render();
       case 'reader-font': { const an = rAnchor(); S.setSetting('readerSize', Math.min(44, Math.max(18, S.settings().readerSize + Number(d.d)))); render({ keep: true }); rRestore(an); lastY = view.scrollTop; return; }
       case 'reader-en': { const v = !S.settings().showEn; S.setSetting('showEn', v); ui.lib.reader.en = v; const an = rAnchor(); render({ keep: true }); rRestore(an); lastY = view.scrollTop; return; }
