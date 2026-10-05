@@ -71,6 +71,6 @@ python3 -m http.server 8000
 
 ## Credits and licenses
 
-- Fonts: **Amiri** and **IBM Plex Sans Arabic** (Arabic and Latin subsets), both SIL Open Font License 1.1 (copies in `fonts/`).
+- Fonts: **Scheherazade New**, **Amiri** (fallback) and **IBM Plex Sans Arabic** (Arabic and Latin subsets), both SIL Open Font License 1.1 (copies in `fonts/`).
 - Scheduling: FSRS-5 (open-spaced-repetition), implemented in `js/fsrs.js`.
 - No analytics, no tracking, no network calls other than loading the app's own files.

@@ -1,11 +1,11 @@
 /* عامل الخدمة: يجعل «أبيات» يعمل بلا اتصال.
    عند نشر تعديل، غيّر رقم VERSION ليصل التحديث إلى المستخدمين. */
-const VERSION = 'abyaat-v31';
+const VERSION = 'abyaat-v32';
 const CORE = [
   './', 'index.html', 'manifest.webmanifest', 'css/styles.css',
   'js/util.js', 'js/i18n.js', 'js/fsrs.js', 'js/store.js', 'js/app.js', 'data/library.json',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png', 'icons/apple-touch-icon.png',
-  'fonts/amiri-arabic-400-normal.woff2', 'fonts/amiri-arabic-700-normal.woff2',
+  'fonts/scheherazade-new-arabic-400-normal.woff2', 'fonts/scheherazade-new-arabic-700-normal.woff2', 'fonts/amiri-arabic-400-normal.woff2', 'fonts/amiri-arabic-700-normal.woff2',
   'fonts/ibm-plex-sans-arabic-latin-400-normal.woff2', 'fonts/ibm-plex-sans-arabic-latin-500-normal.woff2', 'fonts/ibm-plex-sans-arabic-latin-600-normal.woff2',
   'fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2', 'fonts/ibm-plex-sans-arabic-arabic-500-normal.woff2', 'fonts/ibm-plex-sans-arabic-arabic-600-normal.woff2',
 ];

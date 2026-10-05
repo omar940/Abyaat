@@ -142,7 +142,7 @@
     langT: 'Interface language', langD: 'Poems always stay in Arabic. Only the buttons and menus change.',
     backupT: 'Backup', backupD: 'Your progress is saved on this device only. Export a copy to move or keep it.', exportBtn: 'Export progress', importBtn: 'Import', eraseBtn: 'Erase all progress',
     updT: 'Update app', updD: 'Clears cached files and loads the latest version. Your progress is not affected.', updBtn: 'Clear cache & update', tUpdating: 'Updating…', tUpdFail: 'Update failed, check your connection',
-    about: 'Abyaat, version 1. Spaced repetition with FSRS, one card per 8–12 verses of a chapter.\nFonts: Amiri and IBM Plex Sans Arabic (OFL license).',
+    about: 'Abyaat, version 1. Spaced repetition with FSRS, one card per 8–12 verses of a chapter.\nFonts: Scheherazade New, Amiri and IBM Plex Sans Arabic (OFL license).',
     tNowMem: 'Now memorizing this poem', tStartHere: 'Memorization will start from this chapter', tAdded: 'Chapter added to old review', tReset: 'Chapter reset',
     restartQ: 'Restart this chapter?', restartBody: 'This chapter’s progress and review schedule will be erased.', restartYes: 'Yes, restart',
     eraseQ: 'Erase all progress?', eraseBody: 'Your memorization and review progress will be deleted from this device and cannot be undone. Export a backup first if you like.', eraseYes: 'Yes, erase everything', tErased: 'Progress erased',
