@@ -341,7 +341,9 @@ body.reader-on.nav-hide .reader-bar{transform:translateY(-110%)}
 
 /* ---------- رأس المراجعة المدمج: عودة (يسار) · اسم الفصل (وسط) · معلومات (يمين) ---------- */
 #top.pager{direction:ltr;gap:8px;padding-top:calc(env(safe-area-inset-top) + 4px);padding-bottom:4px;min-height:0}
-#top.pager #mode-back{order:0;flex:none;margin-inline-start:0;direction:ltr;flex-direction:row}
+#top.pager #mode-back{order:0;flex:none;width:40px;height:40px;min-height:0;padding:0;justify-content:center;margin-inline-start:0;direction:ltr;flex-direction:row}
+#top.pager #mode-back>span{display:none}
+#top.pager #mode-back .ic{width:26px;height:26px}
 #top.pager #mode-back .chev,html[dir="ltr"] #top.pager #mode-back .chev{transform:scaleX(-1)}
 #top-title{order:1;flex:1;min-width:0;text-align:center;line-height:1.2;display:flex;flex-direction:column;align-items:center}
 #top-title[hidden]{display:none}
