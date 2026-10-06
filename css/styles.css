@@ -366,3 +366,5 @@ body.reader-on.nav-hide .reader-bar{transform:translateY(-110%)}
   .fit-box.folio.nowrap{align-items:flex-start}
   .fit-box.folio.nowrap>.fit-content{margin-block:auto}
 }
+
+.fit-box.nowrap{touch-action:manipulation;cursor:pointer}

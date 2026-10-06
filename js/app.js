@@ -287,8 +287,8 @@
   function openPagerInfo() {
     const row = (ic, txt) => `<li><span class="info-ic">${ic}</span><span>${esc(txt)}</span></li>`;
     const far = ui.mode === 'far';
-    openSheet(`<h2>${e('infoTitle')}</h2><ul class="info-list">${row(ARR(1), t('infoShow'))}${row(ARR(1, true), t('infoHide'))}${row(ARR(2), t('infoNext'))}${row(ARR(2, true), t('infoPrev'))}
-      ${far ? row(IC.check, t('farPrompt')) : ''}${row(IC.eye, t('infoTrans'))}${row(IC.check, t('infoDone'))}</ul>
+    openSheet(`<h2>${e('infoTitle')}</h2><ul class="info-list">${row(IC.eye, t('infoTap'))}${row(ARR(1), t('infoShow'))}${row(ARR(1, true), t('infoHide'))}${row(ARR(2), t('infoNext'))}${row(ARR(2, true), t('infoPrev'))}
+      ${far ? row(IC.check, t('farPrompt')) : ''}${row(IC.eye, t('infoTrans'))}${row(IC.eye, t('infoKeys'))}${row(IC.check, t('infoDone'))}</ul>
       <div class="opts"><button class="btn block quiet" data-act="sheet-close">${e('close')}</button></div>`);
   }
   function nearMsg(pid, cid, segIdx, r) {
@@ -645,20 +645,27 @@
   /* المس البيت مرّتين متتاليتين (خلال نصف ثانية) ليُؤشَّر كصعب في المراجعة البعيدة؛
      لمسة واحدة لا تفعل شيئًا، حتى لا يُؤشَّر بيت عن طريق الخطأ أثناء التمرير أو القراءة */
   const DTAP_MS = 400;
-  let dtEl = null, dtTime = 0;
+  let dtKey = null, dtTime = 0, dtPrev = 0;
 
   document.addEventListener('click', (ev) => {
-    if (lpFired) { lpFired = false; dtEl = null; return; }
+    if (lpFired) { lpFired = false; dtKey = null; return; }
     const tab = ev.target.closest('[data-tab]');
     if (tab) return go(tab.dataset.tab);
     const peek = ev.target.closest('[data-peek]');
     if (peek) { peek.classList.toggle('peek'); return; }
-    const q = ev.target.closest('[data-act="q-toggle"]');
-    if (q) {
-      const now = Date.now();
-      if (q === dtEl && now - dtTime < DTAP_MS) { dtEl = null; dtTime = 0; act('q-toggle', q); }
-      else { dtEl = q; dtTime = now; }
-      return;
+    /* صفحة المراجعة: لمسة في نصفها الأيمن تُظهر سطرًا، وفي نصفها الأيسر تُخفي سطرًا (في كل لغات الواجهة).
+       في المراجعة البعيدة: لمستان متتاليتان (خلال 0.4 ث) على بيت تؤشّران عليه كصعب، وتُلغيان أثر اللمسة الأولى */
+    const zone = ev.target.closest('.fit-box.nowrap');
+    if (zone && view.contains(zone) && (ui.mode === 'near' || ui.mode === 'far')) {
+      const r = zone.getBoundingClientRect(), right = ev.clientX >= r.left + r.width / 2;
+      const q = ev.target.closest('[data-act="q-toggle"]'), key = q ? q.dataset.i : null, now = Date.now();
+      const kind = ui.mode === 'near' ? 'near' : 'far';
+      if (q && key === dtKey && now - dtTime < DTAP_MS) {
+        pagerPage(kind).c.shown = dtPrev; dtKey = null; dtTime = 0;
+        return act('q-toggle', q);
+      }
+      dtKey = key; dtTime = now; dtPrev = pagerPage(kind).shown;
+      return act(right ? 'reveal-plus' : 'reveal-minus', zone);
     }
     const a = ev.target.closest('[data-act]');
     if (a) act(a.dataset.act, a);
@@ -681,6 +688,17 @@
   });
   document.addEventListener('keydown', (ev) => {
     if (ev.key === 'Escape') return closeSheet();
+    /* المراجعة على الحاسوب: السهم الأيمن يُظهر سطرًا والأيسر يُخفي سطرًا (مع Shift: المجموعة التالية أو السابقة) */
+    if ((ev.key === 'ArrowRight' || ev.key === 'ArrowLeft') && !ev.ctrlKey && !ev.metaKey && !ev.altKey && ui.tab === 'home' && !$('#sheet-root .sheet')
+        && ((ui.mode === 'near' && ui.near.stage === 'pager') || (ui.mode === 'far' && ui.far.stage === 'review')) && !/^(INPUT|SELECT|TEXTAREA)$/.test(ev.target.tagName || '')) {
+      ev.preventDefault();
+      const fwd = ev.key === 'ArrowRight', near = ui.mode === 'near';
+      if (!ev.shiftKey) return act(fwd ? 'reveal-plus' : 'reveal-minus', document.body);
+      const pg = pagerPage(near ? 'near' : 'far');
+      if (fwd && !pg.last) { pg.c.page += 1; pg.c.shown = near ? null : 0; return render(); }
+      if (!fwd && pg.page > 0) { pg.c.page = pg.page - 1; pg.c.shown = near ? null : 0; return render(); }
+      return;
+    }
     const el = ev.target.closest && ev.target.closest('[role="button"][data-act]');
     if (el && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); act(el.dataset.act, el); }
   });
