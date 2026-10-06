@@ -314,6 +314,21 @@
   }
   const startFar = (pid, cid, segIdx) => Object.assign(ui.far, { stage: 'review', pid, cid, segIdx, page: 0, shown: 0, missed: {}, rated: null });
   /* خمسة أبيات في الصفحة: استظهر، ثم المس البيت مرّتين ليُؤشَّر عليه كصعب */
+  /* لمسة/سهم لوحة المفاتيح: يُظهر سطرًا أو يُخفيه؛ وإن كانت الصفحة ظاهرة كلها فالتقدّم يقلب إلى المجموعة التالية،
+     وإن كانت مخفية كلها فالرجوع يعود إلى المجموعة السابقة (ظاهرةً كلها، فيُخفى منها سطرٌ سطر) */
+  function stepPager(fwd) {
+    const near = ui.mode === 'near', pg = pagerPage(near ? 'near' : 'far'), c = pg.c;
+    if (fwd && pg.shown >= pg.lines) {
+      if (pg.last) return;
+      c.page = pg.page + 1; c.shown = near ? null : 0; return render();
+    }
+    if (!fwd && pg.shown <= 0) {
+      if (pg.page <= 0) return;
+      c.page = pg.page - 1; c.shown = 999; return render();
+    }
+    c.shown = pg.shown + (fwd ? 1 : -1);
+    return render({ keep: true });
+  }
   function farReview() {
     const { c: Q, slice, pages, page, last, lines, shown } = pagerPage('far'), modes = revealModes(slice, shown);
     const marked = Object.keys(Q.missed).length;
@@ -645,27 +660,32 @@
   /* المس البيت مرّتين متتاليتين (خلال نصف ثانية) ليُؤشَّر كصعب في المراجعة البعيدة؛
      لمسة واحدة لا تفعل شيئًا، حتى لا يُؤشَّر بيت عن طريق الخطأ أثناء التمرير أو القراءة */
   const DTAP_MS = 400;
-  let dtKey = null, dtTime = 0, dtPrev = 0;
+  let dt = null;
 
+  /* الضغط المطوّل لإظهار الترجمة يحدّد كلمة عادةً: يُمنع التحديد داخل صفحة المراجعة */
+  document.addEventListener('selectstart', (ev) => {
+    const n = ev.target && (ev.target.nodeType === 3 ? ev.target.parentElement : ev.target);
+    if (n && n.closest && n.closest('.fit-box.nowrap')) ev.preventDefault();
+  });
   document.addEventListener('click', (ev) => {
-    if (lpFired) { lpFired = false; dtKey = null; return; }
+    if (lpFired) { lpFired = false; dt = null; return; }
     const tab = ev.target.closest('[data-tab]');
     if (tab) return go(tab.dataset.tab);
     const peek = ev.target.closest('[data-peek]');
     if (peek) { peek.classList.toggle('peek'); return; }
-    /* صفحة المراجعة: لمسة في نصفها الأيمن تُظهر سطرًا، وفي نصفها الأيسر تُخفي سطرًا (في كل لغات الواجهة).
-       في المراجعة البعيدة: لمستان متتاليتان (خلال 0.4 ث) على بيت تؤشّران عليه كصعب، وتُلغيان أثر اللمسة الأولى */
+    /* صفحة المراجعة مقسومة أثلاثًا (بالاتجاه الفعلي لا اتجاه اللغة): الثلث الأيمن يُظهر سطرًا (أو يقلب إلى المجموعة التالية
+       إن ظهرت الصفحة كلها)، والأيسر يُخفي سطرًا (أو يعود إلى السابقة)، والأوسط لا يتقدّم ولا يرجع،
+       ففيه تُلمس مرّتين (خلال 0.4 ث) أبيات المراجعة البعيدة للتأشير على الصعب منها */
     const zone = ev.target.closest('.fit-box.nowrap');
     if (zone && view.contains(zone) && (ui.mode === 'near' || ui.mode === 'far')) {
-      const r = zone.getBoundingClientRect(), right = ev.clientX >= r.left + r.width / 2;
-      const q = ev.target.closest('[data-act="q-toggle"]'), key = q ? q.dataset.i : null, now = Date.now();
-      const kind = ui.mode === 'near' ? 'near' : 'far';
-      if (q && key === dtKey && now - dtTime < DTAP_MS) {
-        pagerPage(kind).c.shown = dtPrev; dtKey = null; dtTime = 0;
-        return act('q-toggle', q);
-      }
-      dtKey = key; dtTime = now; dtPrev = pagerPage(kind).shown;
-      return act(right ? 'reveal-plus' : 'reveal-minus', zone);
+      const r = zone.getBoundingClientRect(), f = (ev.clientX - r.left) / r.width;
+      if (f > 2 / 3) { dt = null; return stepPager(true); }
+      if (f < 1 / 3) { dt = null; return stepPager(false); }
+      const q = ui.mode === 'far' && ev.target.closest('[data-act="q-toggle"]'), now = Date.now();
+      if (!q) { dt = null; return; }
+      if (dt && dt.key === q.dataset.i && now - dt.time < DTAP_MS) { dt = null; return act('q-toggle', q); }
+      dt = { key: q.dataset.i, time: now };
+      return;
     }
     const a = ev.target.closest('[data-act]');
     if (a) act(a.dataset.act, a);
@@ -693,7 +713,7 @@
         && ((ui.mode === 'near' && ui.near.stage === 'pager') || (ui.mode === 'far' && ui.far.stage === 'review')) && !/^(INPUT|SELECT|TEXTAREA)$/.test(ev.target.tagName || '')) {
       ev.preventDefault();
       const fwd = ev.key === 'ArrowRight', near = ui.mode === 'near';
-      if (!ev.shiftKey) return act(fwd ? 'reveal-plus' : 'reveal-minus', document.body);
+      if (!ev.shiftKey) return stepPager(fwd);
       const pg = pagerPage(near ? 'near' : 'far');
       if (fwd && !pg.last) { pg.c.page += 1; pg.c.shown = near ? null : 0; return render(); }
       if (!fwd && pg.page > 0) { pg.c.page = pg.page - 1; pg.c.shown = near ? null : 0; return render(); }

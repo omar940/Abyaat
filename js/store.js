@@ -4,7 +4,7 @@
   else root.AbyaatStore = factory(root.AbyaatUtil, root.AbyaatFSRS);
 })(typeof self !== 'undefined' ? self : this, function (U, F) {
   const KEY = 'abyaat:v1';
-  const CONSOLIDATION_DAYS = 5;   // أيام التثبيت الفعلية بعد إتمام كل جزء
+  const CONSOLIDATION_DAYS = 7;   // أيام التثبيت الفعلية بعد إتمام كل جزء
   const SEG_MAX = 12;             // أقصى عدد أبيات في الجزء الواحد قبل أن تنتقل بطاقته إلى المراجعة البعيدة
   const memory = {};              // احتياط إن تعذّر localStorage
   const ls = {
