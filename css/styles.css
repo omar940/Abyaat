@@ -277,11 +277,17 @@ html[dir="ltr"] #top .brand{order:2;flex-direction:row-reverse}
 .nowrap .tapwrap+.tapwrap{margin-top:.35em}
 
 /* ---------- زرّا + و − للكشف التدريجي ---------- */
-.rc{display:flex;align-items:center;justify-content:center;gap:18px}
-.rc button{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--green);color:var(--green-2);font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center;background:var(--surface)}
+.rc{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.rc button{width:46px;height:46px;flex:none;border-radius:50%;border:1.5px solid var(--green);color:var(--green-2);display:flex;align-items:center;justify-content:center;background:var(--surface)}
 .rc button:active{background:var(--green-soft)}
 .rc button[disabled]{opacity:.3;pointer-events:none}
-.rc span{min-width:120px;text-align:center;font-weight:500;color:var(--ink-2);font-size:15px}
+.rc .arr{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.rc .arr.flip,.info-ic .arr.flip{transform:scaleX(-1)}
+.rc .rc-finish{width:auto;padding:0 16px 0 12px;gap:6px;border-radius:23px;background:var(--fill);border-color:var(--fill-2);color:var(--on-fill);font-weight:600;font-size:15px;white-space:nowrap}
+.rc .rc-finish:active{background:var(--fill-2)}
+.rc .rc-finish .ic{width:20px;height:20px}
+.rc-mid{direction:ltr;unicode-bidi:isolate;flex:1;min-width:0;text-align:center;font-weight:500;color:var(--ink-2);font-size:14px;white-space:nowrap}
+.rc-mark{display:inline-block;margin-inline-start:6px;min-width:20px;padding:0 6px;border-radius:10px;background:var(--rust-soft);color:var(--rust-ink);font-style:normal;font-size:12px;font-weight:600;line-height:20px}
 
 /* ---------- لوحة الحفظ والمراجعة ---------- */
 .modes{display:flex;flex-direction:column;gap:12px;margin-top:18px}
@@ -331,4 +337,30 @@ body.reader-on.nav-hide #tabs{transform:translateY(110%)}
 body.reader-on #view{padding-bottom:80px}
 body.reader-on .reader-bar{transition:transform .25s ease}
 body.reader-on.nav-hide .reader-bar{transform:translateY(-110%)}
-.stepper .ctl,.rc{direction:ltr}
+.stepper .ctl{direction:ltr}
+
+/* ---------- رأس المراجعة المدمج: عودة (يسار) · اسم الفصل (وسط) · معلومات (يمين) ---------- */
+#top.pager{direction:ltr;gap:8px;padding-top:calc(env(safe-area-inset-top) + 4px);padding-bottom:4px;min-height:0}
+#top.pager #mode-back{order:0;flex:none;margin-inline-start:0;direction:ltr;flex-direction:row}
+#top.pager #mode-back .chev,html[dir="ltr"] #top.pager #mode-back .chev{transform:scaleX(-1)}
+#top-title{order:1;flex:1;min-width:0;text-align:center;line-height:1.2;display:flex;flex-direction:column;align-items:center}
+#top-title[hidden]{display:none}
+#top-title small{font-size:11.5px;color:var(--gold);font-weight:600;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#top-title b{font-size:15px;font-weight:600;color:var(--ink);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.info-btn{order:2;flex:none;width:40px;height:40px;border-radius:50%;color:var(--green-2);display:flex;align-items:center;justify-content:center}
+.info-btn[hidden]{display:none}
+.info-btn svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.info-list{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.info-list li{display:flex;align-items:center;gap:12px;font-size:15px;line-height:1.4}
+.info-ic{flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--green);color:var(--green-2);display:flex;align-items:center;justify-content:center}
+.info-ic svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+/* مساحة أفقية أوسع للنص في صفحة المراجعة */
+.fit-box.folio.nowrap{padding:12px 13px}
+#view.flush{padding:0 8px 6px}
+
+/* ---------- الوضع الأفقي القصير (هاتف): في المراجعة يُخفى شريط التبويبات، وللصفحة تمرير رأسي بدل تصغير النص ---------- */
+@media (orientation:landscape) and (max-height:520px){
+  body.pager-on #tabs{display:none}
+  .fit-box.folio.nowrap{align-items:flex-start}
+  .fit-box.folio.nowrap>.fit-content{margin-block:auto}
+}

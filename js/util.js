@@ -54,11 +54,13 @@
     const availW = box.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
     const availH = box.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
     if (availW <= 0 || availH <= 0) return;
+    const hems = Array.from(content.querySelectorAll('.hem'));
     let lo = opts.min || 12, hi = opts.max || 48, best = lo;
     for (let i = 0; i < 14; i++) {
       const mid = (lo + hi) / 2;
       box.style.setProperty('--fs', mid + 'px');
-      const ok = content.scrollWidth <= availW + 1 && content.offsetHeight <= availH + 1;
+      /* كل شطر يجب أن يتّسع في حاويته (بعد رقم البيت وهوامش التأشير)، لا في الصندوق كله فقط */
+      const ok = content.scrollWidth <= availW + 1 && content.offsetHeight <= availH + 1 && hems.every((h) => h.scrollWidth <= h.clientWidth + 1);
       if (ok) { best = mid; lo = mid; } else hi = mid;
     }
     box.style.setProperty('--fs', best + 'px');

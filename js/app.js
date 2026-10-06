@@ -246,28 +246,50 @@
       <p class="lede">${pending ? e('nearLede', { n: pending }) : e('nearAllDone')}</p>
       <ul class="list" style="margin-top:8px">${rows}</ul>`;
   }
-  /* زرّا + و − : يُظهر البيت التالي أو يُخفي آخر بيت ظاهر */
-  const revealCtl = (shown, n) => `<div class="rc"><button data-act="reveal-minus" aria-label="${e('hideLast')}" ${shown <= 0 ? 'disabled' : ''}>−</button><span>${e('visibleOf', { a: shown, b: n })}</span><button data-act="reveal-plus" aria-label="${e('showNext')}" ${shown >= n ? 'disabled' : ''}>+</button></div>`;
-  const pagerTop = (pid, cid, segIdx, segCount, page, pages) => `<div class="learn-top"><span><b>${esc(withPart(kicker(pid, cid), segIdx, segCount))}</b> <span class="muted small"${da}>${esc(cTitle(pid, cid))}</span></span><span>${ar(page + 1)} / ${ar(pages)}</span></div>`;
+  /* أسهم المراجعة (مواضعها ثابتة بالعربية والإنجليزية): اليمين للتقدّم واليسار للرجوع.
+     سهم واحد = سطر (شطر) واحد، سهمان = المجموعة التالية أو السابقة من الأبيات */
+  const ARR = (n, flip) => `<svg class="arr${flip ? ' flip' : ''}" viewBox="0 0 24 24" aria-hidden="true"><path d="${n === 2 ? 'M5 6l6 6-6 6M12 6l6 6-6 6' : 'M9 6l6 6-6 6'}"/></svg>`;
+  const lineCount = (slice) => slice.reduce((n, b) => n + (b.e ? 2 : 1), 0);
+  /* يوزّع عدد الأسطر الظاهرة على أبيات الصفحة: [{ s, e }] بحالة 'show' أو 'hide' */
+  const revealModes = (slice, shown) => { let rem = shown; return slice.map((b) => { const n = b.e ? 2 : 1, r = Math.min(n, Math.max(0, rem)); rem -= n; return { s: r >= 1 ? 'show' : 'hide', e: r >= 2 ? 'show' : 'hide' }; }); };
+  function pagerBar(o) {
+    const mid = `<span class="rc-mid">${ar(o.page + 1)} / ${ar(o.pages)}${o.marked ? `<i class="rc-mark" aria-hidden="true">${ar(o.marked)}</i>` : ''}</span>`;
+    const fwd = o.last
+      ? `<button class="rc-finish" data-act="${o.finishAct}">${IC.check}<span>${esc(o.finishLabel)}</span></button>`
+      : `<button data-act="${o.nextAct}" aria-label="${e('nextSet')}">${ARR(2)}</button>`;
+    return `<div class="rc" dir="ltr"><button data-act="${o.prevAct}" aria-label="${e('prevSet')}" ${o.page === 0 ? 'disabled' : ''}>${ARR(2, true)}</button>
+      <button data-act="reveal-minus" aria-label="${e('hideLine')}" ${o.shown <= 0 ? 'disabled' : ''}>${ARR(1, true)}</button>${mid}
+      <button data-act="reveal-plus" aria-label="${e('showLine')}" ${o.shown >= o.lines ? 'disabled' : ''}>${ARR(1)}</button>${fwd}</div>`;
+  }
+  /* الصفحة الحالية من الجزء: خمسة أبيات لكل مجموعة */
+  function pagerPage(kind) {
+    const c = kind === 'near' ? ui.near : ui.far, { bayts, sg, segCount } = segSlice(c.pid, c.cid, c.segIdx);
+    let total = sg.len;
+    if (kind === 'near') {
+      const st = S.chapter(c.pid, c.cid), rec = st.segs && st.segs[c.segIdx];
+      if (rec && rec.status === 'learning') total = Math.max(0, st.learned - sg.start);
+    }
+    const pages = Math.max(1, Math.ceil(total / 5)), page = Math.min(Math.max(c.page, 0), pages - 1);
+    const slice = bayts.slice(page * 5, Math.min(page * 5 + 5, total)), lines = lineCount(slice);
+    return { c, slice, segCount, pages, page, last: page >= pages - 1, lines, shown: Math.min(c.shown == null ? 0 : c.shown, lines) };
+  }
   /* شريحة أبيات الجزء الحالي من الفصل، ضمن حدوده فقط */
   const segSlice = (pid, cid, segIdx) => {
     const chap = chapterOf(pid, cid), sg = cMeta(pid, cid).segs[segIdx];
     return { bayts: chap.bayts.slice(sg.start, sg.start + sg.len), sg, segCount: cMeta(pid, cid).segs.length };
   };
   function nearPager() {
-    const N = ui.near, { bayts, sg, segCount } = segSlice(N.pid, N.cid, N.segIdx);
-    const rec = S.chapter(N.pid, N.cid).segs && S.chapter(N.pid, N.cid).segs[N.segIdx];
-    const total = (rec && rec.status === 'learning') ? Math.max(0, S.chapter(N.pid, N.cid).learned - sg.start) : sg.len;
-    const pages = Math.max(1, Math.ceil(total / 5)), page = Math.min(Math.max(N.page, 0), pages - 1);
-    const slice = bayts.slice(page * 5, Math.min(page * 5 + 5, total));
-    const shown = N.shown == null ? 0 : Math.min(N.shown, slice.length);
-    const last = page >= pages - 1;
-    const body = slice.map((b, i) => baytHTML(b, page * 5 + i, { no: true, s: i < shown ? 'show' : 'hide', e: i < shown ? 'show' : 'hide', nopeek: true, trans: true, orn: false })).join('<div class="orn"></div>');
-    return `${pagerTop(N.pid, N.cid, N.segIdx, segCount, page, pages)}
-      <div class="fit-box folio nowrap" dir="rtl" data-min="11" data-max="34" style="padding-inline:20px"><div class="fit-content">${body}</div></div>
-      <div class="actions" style="padding-top:10px">${revealCtl(shown, slice.length)}
-        <div class="row"><button class="btn quiet" data-act="near-prev" ${page === 0 ? 'disabled' : ''}>${e('prev')}</button>
-        ${last ? `<button class="btn" data-act="near-finish">${e('finishReview')}</button>` : `<button class="btn" data-act="near-next">${e('next')}</button>`}</div></div>`;
+    const { c: N, slice, pages, page, last, lines, shown } = pagerPage('near'), modes = revealModes(slice, shown);
+    const body = slice.map((b, i) => baytHTML(b, page * 5 + i, { no: true, s: modes[i].s, e: modes[i].e, nopeek: true, trans: true, orn: false })).join('<div class="orn"></div>');
+    return `<div class="fit-box folio nowrap" dir="rtl" data-min="11" data-max="44"><div class="fit-content">${body}</div></div>
+      <div class="actions">${pagerBar({ page, pages, shown, lines, last, prevAct: 'near-prev', nextAct: 'near-next', finishAct: 'near-finish', finishLabel: t('finishShort') })}</div>`;
+  }
+  function openPagerInfo() {
+    const row = (ic, txt) => `<li><span class="info-ic">${ic}</span><span>${esc(txt)}</span></li>`;
+    const far = ui.mode === 'far';
+    openSheet(`<h2>${e('infoTitle')}</h2><ul class="info-list">${row(ARR(1), t('infoShow'))}${row(ARR(1, true), t('infoHide'))}${row(ARR(2), t('infoNext'))}${row(ARR(2, true), t('infoPrev'))}
+      ${far ? row(IC.check, t('farPrompt')) : ''}${row(IC.eye, t('infoTrans'))}${row(IC.check, t('infoDone'))}</ul>
+      <div class="opts"><button class="btn block quiet" data-act="sheet-close">${e('close')}</button></div>`);
   }
   function nearMsg(pid, cid, segIdx, r) {
     if (r.graduated) return t('resGrad', { title: withPart(cTitle(pid, cid), segIdx, cMeta(pid, cid).segs.length), days: DAYS, when: U.inDays(U.diffDays(U.today(), r.card.due)) });
@@ -291,22 +313,16 @@
       ${up.length ? `<h3 class="section-h">${e('upcoming')}</h3><ul class="list">${up.map((x) => row(x, false)).join('')}</ul>` : ''}`;
   }
   const startFar = (pid, cid, segIdx) => Object.assign(ui.far, { stage: 'review', pid, cid, segIdx, page: 0, shown: 0, missed: {}, rated: null });
-  /* خمسة أبيات في الصفحة: استظهر، ثم المس البيت الذي يصعب عليك ليُؤشَّر عليه */
+  /* خمسة أبيات في الصفحة: استظهر، ثم المس البيت مرّتين ليُؤشَّر عليه كصعب */
   function farReview() {
-    const Q = ui.far, { bayts, sg, segCount } = segSlice(Q.pid, Q.cid, Q.segIdx), total = sg.len;
-    const pages = Math.max(1, Math.ceil(total / 5)), page = Math.min(Math.max(Q.page, 0), pages - 1), last = page >= pages - 1;
-    const slice = bayts.slice(page * 5, page * 5 + 5), shown = Math.min(Q.shown, slice.length);
+    const { c: Q, slice, pages, page, last, lines, shown } = pagerPage('far'), modes = revealModes(slice, shown);
     const marked = Object.keys(Q.missed).length;
     const body = slice.map((b, k) => {
-      const i = page * 5 + k, m = k < shown ? 'show' : 'hide';
-      return `<div class="tapwrap${Q.missed[i] ? ' missed' : ''}" role="button" tabindex="0" aria-pressed="${!!Q.missed[i]}" data-act="q-toggle" data-i="${i}">${baytHTML(b, i, { no: true, s: m, e: m, nopeek: true, trans: true, orn: false })}</div>`;
+      const i = page * 5 + k;
+      return `<div class="tapwrap${Q.missed[i] ? ' missed' : ''}" role="button" tabindex="0" aria-pressed="${!!Q.missed[i]}" data-act="q-toggle" data-i="${i}">${baytHTML(b, i, { no: true, s: modes[k].s, e: modes[k].e, nopeek: true, trans: true, orn: false })}</div>`;
     }).join('<div class="orn"></div>');
-    return `${pagerTop(Q.pid, Q.cid, Q.segIdx, segCount, page, pages)}
-      <div class="fit-box folio nowrap" dir="rtl" data-min="11" data-max="34" style="padding-inline:20px"><div class="fit-content">${body}</div></div>
-      <div class="actions" style="padding-top:10px"><p class="prompt">${e('farPrompt', { marked })}</p>
-        ${revealCtl(shown, slice.length)}
-        <div class="row"><button class="btn quiet" data-act="q-prev" ${page === 0 ? 'disabled' : ''}>${e('prev')}</button>
-        ${last ? `<button class="btn" data-act="q-finish">${e('finishChapter')}</button>` : `<button class="btn" data-act="q-next">${e('next')}</button>`}</div></div>`;
+    return `<div class="fit-box folio nowrap" dir="rtl" data-min="11" data-max="44"><div class="fit-content">${body}</div></div>
+      <div class="actions">${pagerBar({ page, pages, shown, lines, last, marked, prevAct: 'q-prev', nextAct: 'q-next', finishAct: 'q-finish', finishLabel: t('finishShort') })}</div>`;
   }
   /* اختيار الفترة: الخيارات الأربعة من FSRS، وكل زر يبيّن موعد المراجعة القادمة */
   function farRate() {
@@ -452,10 +468,23 @@
     const pid = S.state.activePoem, chip = $('#poem-chip'), p = pid && POEMS.get(pid), inMode = ui.tab === 'home' && !!ui.mode;
     chip.hidden = !p || inMode; if (p) chip.textContent = pTitle(pid);
     $('#mode-back').hidden = !inMode; $('.brand').hidden = inMode;
+    const pg = inMode && ((ui.mode === 'near' && ui.near.stage === 'pager') || (ui.mode === 'far' && ui.far.stage === 'review')) ? (ui.mode === 'near' ? ui.near : ui.far) : null;
+    document.body.classList.toggle('pager-on', !!pg);
+    $('#top').classList.toggle('pager', !!pg); $('#info-btn').hidden = !pg; $('#top-title').hidden = !pg;
+    if (pg) {
+      const tt = $('#top-title'), sc = cMeta(pg.pid, pg.cid).segs.length;
+      tt.firstElementChild.textContent = withPart(kicker(pg.pid, pg.cid), pg.segIdx, sc); tt.lastElementChild.textContent = cTitle(pg.pid, pg.cid);
+      tt.lastElementChild.dir = 'auto';
+    }
     const n = S.pendingNear() + S.dueOld().length, b = $('#tabs [data-tab="home"] .badge');
     b.hidden = !n; b.textContent = ar(n);
   }
-  const fitAll = () => $$('.fit-box', view).forEach((b) => U.fitText(b, { min: +b.dataset.min || 12, max: +b.dataset.max || 48 }));
+  /* هاتف أفقيًا: لا يُصغَّر النص ليتّسع كل البيوت في الارتفاع القصير، بل يبقى مقروءًا ويُمرَّر الصندوق رأسيًا */
+  const shortLand = () => window.matchMedia('(orientation:landscape) and (max-height:520px)').matches;
+  const fitAll = () => $$('.fit-box', view).forEach((b) => {
+    const min = +b.dataset.min || 12;
+    U.fitText(b, { min: b.classList.contains('nowrap') && shortLand() ? Math.max(min, 22) : min, max: +b.dataset.max || 48 });
+  });
   function afterRender() {
     requestAnimationFrame(fitAll);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => requestAnimationFrame(fitAll));
@@ -531,16 +560,11 @@
       case 'q-prev': Q.page = Math.max(0, Q.page - 1); Q.shown = 0; return render();
       case 'q-next': Q.page += 1; Q.shown = 0; return render();
       case 'reveal-plus': case 'reveal-minus': {
-        const c = ui.mode === 'near' ? N : Q, sg = cMeta(c.pid, c.cid).segs[c.segIdx];
-        let total = sg.len;
-        if (ui.mode === 'near') {
-          const st = S.chapter(c.pid, c.cid), rec = st.segs && st.segs[c.segIdx];
-          if (rec && rec.status === 'learning') total = Math.max(0, st.learned - sg.start);
-        }
-        const n = Math.min(5, total - c.page * 5), now = c.shown == null ? 0 : c.shown;
-        c.shown = Math.min(n, Math.max(0, now + (name === 'reveal-plus' ? 1 : -1)));
+        const pg = pagerPage(ui.mode === 'near' ? 'near' : 'far');
+        pg.c.shown = Math.min(pg.lines, Math.max(0, pg.shown + (name === 'reveal-plus' ? 1 : -1)));
         return render({ keep: true });
       }
+      case 'pager-info': return openPagerInfo();
       case 'q-finish': Q.stage = 'rate'; return render();
       case 'far-rate': {
         const card = S.applyOldReview(Q.pid, Q.cid, Q.segIdx, Number(d.g)), rated = U.diffDays(U.today(), card.due), next = S.dueOld()[0];
