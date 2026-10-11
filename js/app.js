@@ -117,7 +117,9 @@
       <button class="btn block ${danger ? 'danger' : ''}" data-act="${act}"${attrs}>${esc(okLabel)}</button>
       <button class="btn block ghost" data-act="sheet-close">${e('cancel')}</button></div>`);
   }
-  const emptyState = (h, p, btn, to) => `<div class="empty"><div class="glyph" aria-hidden="true">أ</div><h2>${esc(h)}</h2><p>${esc(p)}</p>${btn ? `<button class="btn" data-act="goto" data-to="${to}">${esc(btn)}</button>` : ''}</div>`;
+  /* علامة التطبيق (الهاء الوسطى) في الصفحات الفارغة ونهاية الجلسة */
+  const MARK = '<svg class="mark" viewBox="0 0 39.9 37.3" role="img" aria-hidden="true"><path fill="currentColor" d="M39.9 24.1H27.9Q29.4 26.2 29.4 28.8Q29.4 31.6 27.6 34.1Q25.4 37.3 21.8 37.3Q19.5 37.3 17.3 36.1Q15.1 34.9 13.4 32.8Q10.8 29.4 10.2 25Q8.8 25.6 6.9 26.8L7.4 24.1H5Q2.9 24.1 1.5 22.6Q0 21.1 0 19.1Q0 16.9 1.5 15.5Q3.1 14.1 5 14.1H11.4Q12.8 9 16.1 5.3Q18 3.2 19.9 2.1Q21.7 0.9 24.4 0Q26.1 2.4 27 4.3Q27.8 6.2 27.8 8.1Q27.8 11.6 25.4 14.9Q26.9 14.1 28.9 14.1H39.9ZM21.5 6.9Q19.4 8.6 18.3 10.4Q16.9 12.2 16.2 14.2L18.1 13.5Q20.2 12.7 21.5 12Q23.1 11 23.1 10Q23.1 9.2 21.5 6.9ZM15.4 24Q16.2 27 18.9 28.7Q21.6 30.4 25.8 30.6Q25.2 27.5 22.1 25.9Q19.3 24.4 15.4 24Z"/></svg>';
+  const emptyState = (h, p, btn, to) => `<div class="empty"><div class="glyph" aria-hidden="true">${MARK}</div><h2>${esc(h)}</h2><p>${esc(p)}</p>${btn ? `<button class="btn" data-act="goto" data-to="${to}">${esc(btn)}</button>` : ''}</div>`;
 
   /* ---------- عرض الأبيات (يبقى بالعربية ومن اليمين دائمًا) ---------- */
   function hem(text, mode, nopeek) {
@@ -269,7 +271,7 @@
     const finished = L.completed.map((cid) => `<div class="notice">${e('chapterFinished', { title: cTitle(pid, cid), days: DAYS })}</div>`).join('');
     const finishedParts = L.completedParts.map((p) => `<div class="notice">${e('partFinished', { title: withPart(cTitle(pid, p.cid), p.segIdx, p.segCount), days: DAYS })}</div>`).join('');
     return `<div class="stack" style="padding-top:16px">
-      <div class="center hero"><div class="empty" style="padding:8px 0"><div class="glyph" aria-hidden="true">أ</div></div>
+      <div class="center hero"><div class="empty" style="padding:8px 0"><div class="glyph" aria-hidden="true">${MARK}</div></div>
         <h2 class="title" style="font-size:30px">${e('wellDone')}</h2><p class="sub">${e('sessionDone', { n: L.done })}</p></div>
       ${finished}${finishedParts}
       <button class="btn block" data-act="goto" data-to="near">${e('openNear')}</button>

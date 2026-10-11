@@ -191,7 +191,8 @@ html[dir="ltr"] #top .brand{order:2;flex-direction:row-reverse}
 .check .ic{width:16px;height:16px;stroke-width:2.4}
 .section-h{font-size:13.5px;font-weight:600;color:var(--ink-3);margin:20px 0 2px;letter-spacing:0}
 .empty{padding:42px 10px;text-align:center;color:var(--ink-2)}
-.empty .glyph{font-family:var(--font-poem);font-size:54px;color:var(--gold-line);line-height:1;margin-bottom:8px}
+.empty .glyph{color:var(--gold-line);line-height:1;margin-bottom:8px;display:flex;justify-content:center}
+.empty .glyph .mark{height:54px;width:auto}
 .empty h2{font-size:18px;color:var(--ink);margin-bottom:4px}
 .empty .btn{margin-top:16px}
 
