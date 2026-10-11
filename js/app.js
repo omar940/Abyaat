@@ -286,8 +286,11 @@
   const lineCount = (slice) => slice.reduce((n, b) => n + linesOf(b).length, 0);
   /* يوزّع عدد الأسطر الظاهرة على أبيات الصفحة: لكل بيت مصفوفة حالات 'show' أو 'hide' */
   const revealModes = (slice, shown) => { let rem = shown; return slice.map((b) => { const L = linesOf(b), r = Math.min(L.length, Math.max(0, rem)); rem -= L.length; return L.map((_, i) => (i < r ? 'show' : 'hide')); }); };
+  /* ظرف الذكر (عند خلع الثياب مثلًا) فوق نصّه في صفحات المراجعة، ويُكتب مرة واحدة لما تتابع من أذكار بظرف واحد */
+  const whenLabel = (slice, i) => { const b = slice[i]; if (!b.w || (i > 0 && slice[i - 1].w === b.w && slice[i - 1].wEn === b.wEn)) return ''; return `<div class="dh-when"${da}>${esc(pick(b, 'w'))}</div>`; };
   function pagerBar(o) {
-    const mid = `<span class="rc-mid">${ar(o.page + 1)} / ${ar(o.pages)}${o.marked ? `<i class="rc-mark" aria-hidden="true">${ar(o.marked)}</i>` : ''}</span>`;
+    const all = o.shown >= o.lines && o.lines > 0;
+    const mid = `<div class="rc-mid"><button class="rc-eye" data-act="reveal-all" aria-label="${e(all ? 'hideAll' : 'showAll')}" aria-pressed="${all}">${all ? IC.eyeOff : IC.eye}</button><span class="rc-cnt">${ar(o.page + 1)} / ${ar(o.pages)}${o.marked ? `<i class="rc-mark" aria-hidden="true">${ar(o.marked)}</i>` : ''}</span></div>`;
     const fwd = o.last
       ? `<button class="rc-finish" data-act="${o.finishAct}">${IC.check}<span>${esc(o.finishLabel)}</span></button>`
       : `<button data-act="${o.nextAct}" aria-label="${e('nextSet')}">${ARR(2)}</button>`;
@@ -324,7 +327,7 @@
   };
   function nearPager() {
     const { c: N, slice, start, dh, pages, page, last, lines, shown } = pagerPage('near'), modes = revealModes(slice, shown);
-    const body = slice.map((b, i) => baytHTML(b, start + i, { no: true, m: modes[i], nopeek: true, trans: true, orn: false })).join('<div class="orn"></div>');
+    const body = slice.map((b, i) => whenLabel(slice, i) + baytHTML(b, start + i, { no: true, m: modes[i], nopeek: true, trans: true, orn: false })).join('<div class="orn"></div>');
     return `<div class="fit-box folio rev ${dh ? 'wrap' : 'nowrap'}" dir="rtl" data-min="${dh ? 14 : 11}" data-max="${dh ? 34 : 44}"><div class="fit-content">${body}</div></div>
       <div class="actions">${pagerBar({ page, pages, shown, lines, last, prevAct: 'near-prev', nextAct: 'near-next', finishAct: 'near-finish', finishLabel: t('finishShort') })}</div>`;
   }
@@ -332,7 +335,7 @@
     const row = (ic, txt) => `<li><span class="info-ic">${ic}</span><span>${esc(txt)}</span></li>`;
     const far = ui.mode === 'far';
     openSheet(`<h2>${e('infoTitle')}</h2><ul class="info-list">${row(IC.eye, t('infoTap'))}${row(ARR(1), t('infoShow'))}${row(ARR(1, true), t('infoHide'))}${row(ARR(2), t('infoNext'))}${row(ARR(2, true), t('infoPrev'))}
-      ${far ? row(IC.check, t('farPrompt')) : ''}${row(IC.eye, t('infoTrans'))}${row(IC.eye, t('infoKeys'))}${row(IC.check, t('infoDone'))}</ul>
+      ${far ? row(IC.check, t('farPrompt')) : ''}${row(IC.eye, t('infoAll'))}${row(IC.eye, t('infoTrans'))}${row(IC.eye, t('infoKeys'))}${row(IC.check, t('infoDone'))}</ul>
       <div class="opts"><button class="btn block quiet" data-act="sheet-close">${e('close')}</button></div>`);
   }
   function nearMsg(pid, cid, segIdx, r) {
@@ -378,7 +381,7 @@
     const marked = Object.keys(Q.missed).length;
     const body = slice.map((b, k) => {
       const i = start + k;
-      return `<div class="tapwrap${Q.missed[i] ? ' missed' : ''}" role="button" tabindex="0" aria-pressed="${!!Q.missed[i]}" data-act="q-toggle" data-i="${i}">${baytHTML(b, i, { no: true, m: modes[k], nopeek: true, trans: true, orn: false })}</div>`;
+      return `<div class="tapwrap${Q.missed[i] ? ' missed' : ''}" role="button" tabindex="0" aria-pressed="${!!Q.missed[i]}" data-act="q-toggle" data-i="${i}">${whenLabel(slice, k)}${baytHTML(b, i, { no: true, m: modes[k], nopeek: true, trans: true, orn: false })}</div>`;
     }).join('<div class="orn"></div>');
     return `<div class="fit-box folio rev ${dh ? 'wrap' : 'nowrap'}" dir="rtl" data-min="${dh ? 14 : 11}" data-max="${dh ? 34 : 44}"><div class="fit-content">${body}</div></div>
       <div class="actions">${pagerBar({ page, pages, shown, lines, last, marked, prevAct: 'q-prev', nextAct: 'q-next', finishAct: 'q-finish', finishLabel: t('finishShort') })}</div>`;
@@ -633,6 +636,11 @@
       case 'reveal-plus': case 'reveal-minus': {
         const pg = pagerPage(ui.mode === 'near' ? 'near' : 'far');
         pg.c.shown = Math.min(pg.lines, Math.max(0, pg.shown + (name === 'reveal-plus' ? 1 : -1)));
+        return render({ keep: true });
+      }
+      case 'reveal-all': {
+        const pg = pagerPage(ui.mode === 'near' ? 'near' : 'far');
+        pg.c.shown = pg.shown >= pg.lines ? 0 : pg.lines;
         return render({ keep: true });
       }
       case 'pager-info': return openPagerInfo();
