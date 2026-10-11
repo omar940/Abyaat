@@ -400,3 +400,15 @@ html[dir="ltr"] #top .brand{flex-direction:row}
 /* ظرف الذكر في المراجعة */
 .dh-when{font-family:var(--font-ui);font-size:.5em;font-weight:600;line-height:1.3;color:var(--gold);text-align:center;margin:.35em 0 .1em}
 .dh-when:first-child{margin-top:0}
+
+/* ---------- حال اليوم في قائمة الحفظ ---------- */
+.book .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.book .chips .pill{display:inline-flex;align-items:center;gap:5px}
+.book .chips .pill .ic{width:14px;height:14px;stroke-width:2.6}
+.book.is-done{border-color:var(--green);background:linear-gradient(0deg,var(--green-soft),var(--surface))}
+.book.is-done .bar i{background:var(--green)}
+.allclear{display:flex;align-items:center;gap:12px;margin:12px 0 4px;padding:14px 16px;border-radius:14px;background:var(--fill);color:var(--on-fill)}
+.allclear b{font-size:16.5px;font-weight:600}
+.allclear p{margin:2px 0 0;font-size:13.5px;opacity:.88}
+.allclear-ic{flex:none;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center}
+.allclear-ic .ic{width:20px;height:20px;stroke-width:2.6}

@@ -149,12 +149,21 @@
       <span class="mode-body"><span class="mode-top"><span class="mode-title">${e(titleKey)}</span><span class="mode-pill"${da}>${esc(pill)}</span></span><span class="mode-sub">${esc(sub)}</span></span></button>`;
   }
   const poemItems = (pid) => ({ near: S.newReviewList().filter((x) => x.pid === pid), far: S.oldReviewList().filter((x) => x.pid === pid) });
-  const dueCount = (pid) => { const it = poemItems(pid); return it.near.filter((x) => !x.done).length + it.far.filter((x) => x.isDue).length; };
+  /* حال اليوم: اكتمل إذا لم يبقَ حفظ جديد (بلغتَ عدد الأبيات المحدد أو انتهت الفصول) ولا مراجعة قريبة ولا بعيدة */
+  function dayStatus(pid) {
+    const it = poemItems(pid), nearN = it.near.filter((x) => !x.done).length, farN = it.far.filter((x) => x.isDue).length;
+    const hasNew = !!S.currentChapter(pid), newOk = !hasNew || S.newDoneToday(pid) >= S.perDayOf(pid);
+    return { nearN, farN, hasNew, newOk, done: newOk && !nearN && !farN };
+  }
+  const statusChips = (st) => st.done
+    ? `<span class="pill green">${IC.check}${e('allDoneToday')}</span>`
+    : (!st.newOk ? `<span class="pill gold">${e('chipNew')}</span>` : '') + (st.nearN ? `<span class="pill rust">${e('chipNear', { n: st.nearN })}</span>` : '') + (st.farN ? `<span class="pill rust">${e('chipFar', { n: st.farN })}</span>` : '');
   function poemCard(pid, act) {
-    const poem = POEMS.get(pid), pr = S.poemProgress(pid), due = act === 'poem-open' ? dueCount(pid) : 0;
-    return `<li style="margin-bottom:12px"><button class="book" data-act="${act}" data-pid="${esc(pid)}"><span class="spine"></span><span class="body">
+    const poem = POEMS.get(pid), pr = S.poemProgress(pid), st = act === 'poem-open' ? dayStatus(pid) : null;
+    return `<li style="margin-bottom:12px"><button class="book${st && st.done ? ' is-done' : ''}" data-act="${act}" data-pid="${esc(pid)}"><span class="spine"></span><span class="body">
       <div class="name"${da}>${esc(pick(poem, 'title'))}</div><div class="full"${da}>${esc(pick(poem, 'author'))}</div>
-      <div class="meta"><span>${e('memStat', { n: pr.done, b: pr.total, u: unitOf(pid) })}</span>${due ? `<span class="pill rust">${e('cardDue', { n: due })}</span>` : ''}</div>
+      <div class="meta"><span>${e('memStat', { n: pr.done, b: pr.total, u: unitOf(pid) })}</span></div>
+      ${st ? `<div class="chips">${statusChips(st)}</div>` : ''}
       <div class="bar" style="margin-top:10px"><i style="width:${pr.pct}%"></i></div></span></button></li>`;
   }
   function vHome() {
@@ -163,10 +172,14 @@
     ui.poemOpen = false;
     const ids = S.enrolledIds().filter((id) => POEMS.get(id));
     const sec = (title, list) => list.length ? `<h3 class="section-h">${esc(title)}</h3><ul class="list">${list.map((id) => poemCard(id, 'poem-open')).join('')}</ul>` : '';
+    const doneN = ids.filter((id) => dayStatus(id).done).length;
+    const banner = !ids.length ? '' : doneN === ids.length
+      ? `<div class="allclear"><span class="allclear-ic">${IC.check}</span><div><b>${e('homeAllDone')}</b><p>${e('homeAllDoneSub')}</p></div></div>`
+      : `<p class="lede">${e('homeProgress', { a: doneN, b: ids.length })}</p>`;
     const body = ids.length
       ? sec(t('secMem'), ids.filter((id) => S.poemStatus(id) === 'memorizing')) + sec(t('secRev'), ids.filter((id) => S.poemStatus(id) === 'review'))
       : emptyState(t('homeEmptyT'), t('homeEmptyB'));
-    return `<h2 class="page-title">${e('homeTitle')}</h2>${body}<button class="btn block quiet" style="margin-top:16px" data-act="add-poem">+ ${e('addPoem')}</button>`;
+    return `<h2 class="page-title">${e('homeTitle')}</h2>${banner}${body}<button class="btn block quiet" style="margin-top:16px" data-act="add-poem">+ ${e('addPoem')}</button>`;
   }
   function vAdd() {
     const rest = LIB.poems.filter((p) => !S.isEnrolled(p.id));
@@ -177,8 +190,10 @@
   }
   /* شاشة القصيدة: عدد الأبيات وما حُفظ منها، الفصول والتأشير، ثم الحفظ الجديد والمراجعتان لهذه القصيدة وحدها */
   function vPoemHome(pid) {
-    const poem = POEMS.get(pid), pr = S.poemProgress(pid), it = poemItems(pid), cm = S.currentChapter(pid);
-    const learn = cm ? ['todo', kicker(pid, cm.id), ctitle(cm)] : ['done', t('doneM'), t('learnAllSub')];
+    const poem = POEMS.get(pid), pr = S.poemProgress(pid), it = poemItems(pid), cm = S.currentChapter(pid), st = dayStatus(pid);
+    const learn = !cm ? ['done', t('doneM'), t('learnAllSub')]
+      : st.newOk ? ['done', t('doneM'), t('learnDoneSub', { n: S.newDoneToday(pid) })]
+      : ['todo', kicker(pid, cm.id), ctitle(cm)];
     const pending = it.near.filter((x) => !x.done).length;
     const near = !it.near.length ? ['idle', t('nearIdlePill'), t('nearIdleSub')]
       : pending ? ['todo', t('nearLeft', { n: pending }), t('nearTodoSub')]
@@ -188,6 +203,7 @@
       : due ? ['todo', t('farDue', { n: due }), t('farTodoSub')]
       : ['done', t('doneF'), t('farNextSub', { when: U.inDays(it.far[0].dueIn) })];
     return `<div class="hero"><div class="kicker"${da}>${esc(pick(poem, 'author'))}</div><h2 class="title"${da}>${esc(pick(poem, 'fullTitle'))}</h2></div>
+      ${st.done ? `<div class="allclear" style="margin:10px 0 0"><span class="allclear-ic">${IC.check}</span><div><b>${e('poemAllDone')}</b></div></div>` : ''}
       <div style="margin:10px 0 12px"><div class="bar" role="progressbar" aria-valuenow="${pr.pct}" aria-valuemin="0" aria-valuemax="100"><i style="width:${pr.pct}%"></i></div>
         <p class="small muted" style="margin-top:6px">${e('memStat', { n: pr.done, b: pr.total })}</p></div>
       <button class="btn block quiet" data-act="learn-chapters">${e('chaptersBtn')}</button>
@@ -204,7 +220,7 @@
   }
   /* الحفظ الجديد بلا شاشة تمهيدية: تبدأ الجلسة مباشرةً بعدد الأبيات المحفوظ في الإعدادات، ويُعدَّل من الأعلى بزرّي + و − */
   function startLearn() {
-    Object.assign(ui.learn, { stage: 'learn', target: S.settings().perDay, done: 0, hint: false, hidden: false, en: false, completed: [], completedParts: [] });
+    Object.assign(ui.learn, { stage: 'learn', target: S.perDayOf(S.state.activePoem), done: 0, hint: false, hidden: false, en: false, completed: [], completedParts: [] });
   }
   function vLearn() {
     const pid = S.state.activePoem, L = ui.learn;
@@ -598,7 +614,7 @@
       case 'unenroll-yes': S.setEnrolled(S.state.activePoem, false); ui.poemOpen = false; ui.mode = null; closeSheet(); toast(t('tPoemRemoved')); return render();
       /* الحفظ الجديد */
       case 'learn-more': Object.assign(L, { stage: 'learn', target: L.done + 1, hint: false, hidden: false }); return render();
-      case 'learn-target': { const v = Math.min(30, Math.max(L.done + 1, L.target + Number(d.d))); L.target = v; S.setSetting('perDay', v); return render({ keep: true }); }
+      case 'learn-target': { const v = Math.min(30, Math.max(L.done + 1, L.target + Number(d.d))); L.target = v; S.setPerDay(S.state.activePoem, v); return render({ keep: true }); }
       case 'learn-home': ui.mode = null; return render();
       case 'learn-chapters': ui.tab = 'home'; ui.mode = 'learn'; L.stage = 'chapters'; return render();
       case 'ch-open': return openChapterSheet(d.cid);

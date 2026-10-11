@@ -19,6 +19,8 @@
     timesN: (p) => (p.n === 2 ? 'مرتان' : (p.n >= 3 && p.n <= 10) ? n(p.n) + ' مرات' : n(p.n) + ' مرة'), holdTrans: 'اضغط مطوّلًا على النص لترجمته',
     /* لوحة الحفظ والمراجعة */
     homeTitle: 'الحفظ والمراجعة',
+    allDoneToday: 'اكتمل اليوم', chipNew: 'حفظ جديد', chipNear: (p) => `مراجعة قريبة: ${n(p.n)}`, chipFar: (p) => `مراجعة بعيدة: ${n(p.n)}`,
+    homeAllDone: 'أتممت كل شيء اليوم', homeAllDoneSub: 'لا حفظ جديد ولا مراجعات متبقية. بارك الله فيك.', homeProgress: (p) => `اكتمل اليوم: ${n(p.a)} من ${n(p.b)}`, poemAllDone: 'اكتمل كل شيء هنا اليوم',
     secMem: 'قيد الحفظ', secRev: 'قيد المراجعة', addPoem: 'إضافة إلى قائمتي', addNone: 'كل ما في المكتب موجود في قائمتك الآن.',
     homeEmptyT: 'لم تبدأ حفظ شيء بعد', homeEmptyB: 'أضف قصيدة أو أذكارًا لتبدأ، ويمكنك حفظ أكثر من واحد معًا.',
     memStat: (p) => `${bt(p.b, p.u)}، حُفظ منها ${n(p.n)}`, cardDue: (p) => `للمراجعة اليوم: ${n(p.n)}`,
@@ -77,7 +79,7 @@
     /* القراءة */
     jumpTo: 'انتقل إلى فصل', readerBack: 'رجوع', smaller: 'تصغير الخط', larger: 'تكبير الخط', translation: 'الترجمة', smallerLbl: 'أ−', largerLbl: 'أ+',
     /* الإعدادات */
-    setTitle: 'الإعدادات', perDayT: 'عدد الأبيات في كل جلسة حفظ', perDayD: 'يُعدَّل أيضًا من أعلى شاشة الحفظ. كلما زادت الأبيات الجديدة زاد عدد المراجعات.', perDayLbl: 'الأبيات في الجلسة',
+    setTitle: 'الإعدادات', perDayT: 'العدد الافتراضي في جلسة الحفظ', perDayD: 'لكل قصيدة أو أذكار عددها الخاص تضبطه من أعلى شاشة الحفظ؛ وهذا الرقم لما لم تضبطه بعد. كلما زاد الجديد زادت المراجعات.', perDayLbl: 'الافتراضي في الجلسة',
     retT: 'نسبة التذكّر المستهدفة', retD: 'الأعلى تعني مراجعات أكثر تقاربًا.', pct: (p) => n(p.v) + '٪',
     alwaysEnT: 'إظهار الترجمة الإنجليزية دائمًا', alwaysEnD: 'مخفية افتراضيًا، ويمكن إظهارها لكل بيت عند الحاجة.',
     themeT: 'المظهر', themeD: 'اختر الوضع الفاتح أو الداكن، أو اتبع إعداد جهازك.', themeLight: 'فاتح', themeDark: 'داكن', themeAuto: 'تلقائي',
@@ -103,6 +105,8 @@
     showVerse: () => (U.getUnit() === 'dhikr' ? 'Show dhikr' : 'Show verse'), hideVerse: () => (U.getUnit() === 'dhikr' ? 'Hide dhikr' : 'Hide verse'),
     timesN: (p) => `${n(p.n)}×`, holdTrans: 'Press and hold the text for its translation',
     homeTitle: 'Memorize & Review',
+    allDoneToday: 'All done today', chipNew: 'New memorization', chipNear: (p) => `Near review: ${n(p.n)}`, chipFar: (p) => `Old review: ${n(p.n)}`,
+    homeAllDone: 'Everything is done for today', homeAllDoneSub: 'No new memorization or reviews left. Well done.', homeProgress: (p) => `Done today: ${n(p.a)} of ${n(p.b)}`, poemAllDone: 'Everything here is done for today',
     secMem: 'Memorizing', secRev: 'In review', addPoem: 'Add to my list', addNone: 'Everything in the library is already on your list.',
     homeEmptyT: 'You have not started anything yet', homeEmptyB: 'Add a poem or the adhkār to begin. You can memorize several at once.',
     memStat: (p) => `${bt(p.b, p.u)}, ${n(p.n)} memorized`, cardDue: (p) => `${n(p.n)} to review today`,
@@ -155,7 +159,7 @@
     markTitle: (p) => `How well do you know “${p.title}”?`, markSub: 'The chapter enters old review, and your rating sets its first review date.',
     md1: 'I cannot recite it now', md2: 'I recall it with effort and hesitation', md3: 'I recite it with confidence and few slips', md4: 'I recite it quickly without hesitation',
     jumpTo: 'Jump to chapter', readerBack: 'Back', smaller: 'Smaller text', larger: 'Larger text', translation: 'Translation', smallerLbl: 'A−', largerLbl: 'A+',
-    setTitle: 'Settings', perDayT: 'Verses per memorization session', perDayD: 'Also adjustable from the top of the memorization screen. More new verses means more reviews.', perDayLbl: 'Verses per session',
+    setTitle: 'Settings', perDayT: 'Default per memorization session', perDayD: 'Each poem or adhkār remembers its own number, which you set from the top of the memorization screen; this is the starting value. More new items means more reviews.', perDayLbl: 'Default per session',
     retT: 'Target retention', retD: 'Higher means more frequent reviews.', pct: (p) => p.v + '%',
     alwaysEnT: 'Always show the English translation', alwaysEnD: 'Shown under each verse while memorizing. Turn off to hide it.',
     themeT: 'Appearance', themeD: 'Choose light or dark, or follow your device.', themeLight: 'Light', themeDark: 'Dark', themeAuto: 'Auto',

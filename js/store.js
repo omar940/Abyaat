@@ -117,6 +117,9 @@
     const c = chapterMeta(pid, cid), s = chapter(pid, cid);
     if (!c || (s.status !== 'new' && s.status !== 'learning') || s.learned >= c.len) return { completed: false };
     s.learned += 1; s.status = 'learning'; state.day.newDone += 1;
+    const pp = ps(pid), tdy = U.today();
+    if (!pp.day || pp.day.date !== tdy) pp.day = { date: tdy, newDone: 0 };
+    pp.day.newDone += 1;
     const segIdx = c.segs.findIndex((sg) => s.learned > sg.start && s.learned <= sg.start + sg.len);
     let segCompleted = false;
     if (segIdx >= 0) {
@@ -133,6 +136,11 @@
     save();
     return { completed, segCompleted: segCompleted && !completed, segIdx, segCount: c.segs.length };
   }
+
+  /* ---- عدد الأبيات في جلسة الحفظ: لكل قصيدة أو أذكار رقمها الخاص، وإلا فالافتراضي من الإعدادات ---- */
+  const perDayOf = (pid) => Math.max(1, (state.poems[pid] && state.poems[pid].perDay) || state.settings.perDay || 1);
+  function setPerDay(pid, v) { ps(pid).perDay = v; save(); }
+  const newDoneToday = (pid) => { const p = state.poems[pid]; return p && p.day && p.day.date === U.today() ? p.day.newDone : 0; };
 
   /* ---- قائمة القصائد التي تُحفظ معًا ---- */
   const isEnrolled = (pid) => !!(state.poems[pid] && state.poems[pid].enrolled);
@@ -263,7 +271,7 @@
 
   return {
     get state() { return state; }, KEY, CONSOLIDATION_DAYS, SEG_MAX, registerPoem, meta, chapterMeta, chapter,
-    todayNewDone, currentChapter, markLearned, setActive, setCurrent, isEnrolled, enrolledIds, setEnrolled, poemStatus,
+    todayNewDone, currentChapter, markLearned, setActive, setCurrent, isEnrolled, enrolledIds, setEnrolled, poemStatus, perDayOf, setPerDay, newDoneToday,
     newReviewList, pendingNear, finishNewReview, oldReviewList, dueOld, previewOld, applyOldReview,
     previewMark, markMemorized, resetChapter, poemProgress, settings, setSetting, exportJSON, importJSON, resetAll,
   };
