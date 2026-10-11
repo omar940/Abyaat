@@ -26,11 +26,19 @@
     if (!s || typeof s !== 'object' || typeof s.poems !== 'object') return f;
     const st = Object.assign(f.settings, s.settings || {});
     delete st.quizCount;
+    /* قائمة الحفظ: القصائد التي لها تقدّم أو كانت الحالية في النسخ السابقة تُعدّ مضافة تلقائيًا */
+    const poems = s.poems || {};
+    Object.keys(poems).forEach((pid) => {
+      const p = poems[pid];
+      if (!p || p.enrolled !== undefined) return;
+      const chs = Object.keys(p.chapters || {}).map((k) => p.chapters[k]);
+      p.enrolled = pid === s.activePoem || chs.some((c) => c && (c.status !== 'new' || c.learned > 0));
+    });
     return {
       v: 1,
       settings: st,
       activePoem: s.activePoem || null,
-      poems: s.poems || {},
+      poems,
       day: s.day && s.day.date ? s.day : f.day,
     };
   }
@@ -72,12 +80,12 @@
   }
   function registerPoem(p) {
     metas[p.id] = {
-      id: p.id, title: p.title, titleEn: p.titleEn, fullTitle: p.fullTitle, fullTitleEn: p.fullTitleEn,
+      id: p.id, type: p.type || 'poem', title: p.title, titleEn: p.titleEn, fullTitle: p.fullTitle, fullTitleEn: p.fullTitleEn,
       chapters: p.chapters.map((c) => {
         const len = c.bayts.length, existing = state.poems[p.id] && state.poems[p.id].chapters[c.id];
         const legacy = existing && !existing.segs && (existing.learned > 0 || existing.card || existing.daysDone || existing.completedOn);
         if (legacy) { migrateLegacyChapter(existing); save(); }
-        return { id: c.id, title: c.title, titleEn: c.titleEn, optional: !!c.optional, len, segs: legacy ? [{ start: 0, len }] : splitSegments(len) };
+        return { id: c.id, title: c.title, titleEn: c.titleEn, group: c.group, groupEn: c.groupEn, optional: !!c.optional, len, segs: legacy ? [{ start: 0, len }] : splitSegments(len) };
       }),
     };
   }
@@ -90,7 +98,7 @@
   }
   const todayNewDone = () => { rollDay(); return state.day.newDone; };
 
-  const ps = (pid) => state.poems[pid] || (state.poems[pid] = { current: null, chapters: {} });
+  const ps = (pid) => state.poems[pid] || (state.poems[pid] = { current: null, chapters: {}, enrolled: false });
   const chapter = (pid, cid) => { const p = ps(pid); return p.chapters[cid] || (p.chapters[cid] = { learned: 0, status: 'new' }); };
   const segRec = (pid, cid, segIdx) => { const s = chapter(pid, cid); return s.segs && s.segs[segIdx]; };
   const retention = () => state.settings.retention || 0.9;
@@ -126,6 +134,18 @@
     return { completed, segCompleted: segCompleted && !completed, segIdx, segCount: c.segs.length };
   }
 
+  /* ---- قائمة القصائد التي تُحفظ معًا ---- */
+  const isEnrolled = (pid) => !!(state.poems[pid] && state.poems[pid].enrolled);
+  const enrolledIds = () => Object.keys(state.poems).filter((pid) => state.poems[pid].enrolled);
+  function setEnrolled(pid, v) { ps(pid).enrolled = !!v; save(); }
+  /* قيد الحفظ: بقي فصل أساسي لم يكتمل حفظه؛ قيد المراجعة: اكتملت كل الفصول الأساسية */
+  function poemStatus(pid) {
+    const m = metas[pid]; if (!m) return 'memorizing';
+    const p = state.poems[pid];
+    const all = m.chapters.filter((c) => !c.optional).every((c) => p && p.chapters[c.id] && p.chapters[c.id].status === 'done');
+    return all ? 'review' : 'memorizing';
+  }
+
   function setActive(pid) { state.activePoem = pid; ps(pid); save(); }
   function setCurrent(pid, cid) {
     const s = chapter(pid, cid);
@@ -138,7 +158,7 @@
     const out = [], t = U.today();
     const pids = Object.keys(state.poems).sort((a, b) => (a === state.activePoem ? -1 : b === state.activePoem ? 1 : 0));
     pids.forEach((pid) => {
-      const m = metas[pid]; if (!m) return;
+      const m = metas[pid]; if (!m || !state.poems[pid].enrolled) return;
       m.chapters.forEach((c) => {
         const s = state.poems[pid].chapters[c.id];
         if (!s || !s.segs) return;
@@ -179,7 +199,7 @@
   function oldReviewList() {
     const out = [], t = U.today();
     Object.keys(state.poems).forEach((pid) => {
-      const m = metas[pid]; if (!m) return;
+      const m = metas[pid]; if (!m || !state.poems[pid].enrolled) return;
       m.chapters.forEach((c) => {
         const s = state.poems[pid].chapters[c.id];
         if (!s || !s.segs) return;
@@ -243,7 +263,7 @@
 
   return {
     get state() { return state; }, KEY, CONSOLIDATION_DAYS, SEG_MAX, registerPoem, meta, chapterMeta, chapter,
-    todayNewDone, currentChapter, markLearned, setActive, setCurrent,
+    todayNewDone, currentChapter, markLearned, setActive, setCurrent, isEnrolled, enrolledIds, setEnrolled, poemStatus,
     newReviewList, pendingNear, finishNewReview, oldReviewList, dueOld, previewOld, applyOldReview,
     previewMark, markMemorized, resetChapter, poemProgress, settings, setSetting, exportJSON, importJSON, resetAll,
   };

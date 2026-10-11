@@ -121,7 +121,7 @@ html[dir="ltr"] #top .brand{order:2;flex-direction:row-reverse}
 .bayt{position:relative}
 .trans-peek{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3em;
   background:var(--surface);border-radius:10px;padding:.3em .5em;opacity:0;pointer-events:none;transition:opacity .12s ease}
-.trans-peek p{margin:0;font-family:var(--font-ui);font-size:.48em;line-height:1.4;color:var(--ink-2);text-align:center}
+.trans-peek p{margin:0;font-family:var(--font-ui);font-size:max(.5em,13.5px);line-height:1.4;color:var(--ink-2);text-align:center}
 .bayt.show-trans{cursor:default}
 .bayt.show-trans>*:not(.trans-peek){opacity:0}
 .bayt.show-trans .trans-peek{opacity:1}
@@ -357,15 +357,32 @@ body.reader-on.nav-hide .reader-bar{transform:translateY(-110%)}
 .info-ic{flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--green);color:var(--green-2);display:flex;align-items:center;justify-content:center}
 .info-ic svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 /* مساحة أفقية أوسع للنص في صفحة المراجعة */
-.fit-box.folio.nowrap{padding:12px 13px}
+.fit-box.folio.rev{padding:12px 13px}
 #view.flush{padding:0 8px 6px}
 
 /* ---------- الوضع الأفقي القصير (هاتف): في المراجعة يُخفى شريط التبويبات، وللصفحة تمرير رأسي بدل تصغير النص ---------- */
 @media (orientation:landscape) and (max-height:520px){
   body.pager-on #tabs{display:none}
-  .fit-box.folio.nowrap{align-items:flex-start}
-  .fit-box.folio.nowrap>.fit-content{margin-block:auto}
+  .fit-box.folio.rev{align-items:flex-start}
+  .fit-box.folio.rev>.fit-content{margin-block:auto}
 }
 
-.fit-box.nowrap,.fit-box.nowrap *{touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
-.fit-box.nowrap{cursor:pointer}
+.fit-box,.fit-box *{touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.fit-box.rev{cursor:pointer}
+
+/* ---------- عدد أبيات جلسة الحفظ (أعلى شاشة الحفظ) ---------- */
+.lt-step{display:flex;align-items:center;gap:6px;direction:ltr}
+.lt-step button{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--green);color:var(--green-2);font-size:20px;line-height:1;display:flex;align-items:center;justify-content:center;background:var(--surface)}
+.lt-step button[disabled]{opacity:.3}
+.lt-step output{direction:ltr;unicode-bidi:isolate;min-width:52px;text-align:center;font-weight:600;font-size:15px;color:var(--ink)}
+
+/* ---------- الشعار: «عهد» والهاء مُبرزة ---------- */
+.brand .logo{height:34px;width:auto;color:var(--green);display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- الأذكار: نصّ متصل بدل شطرين ---------- */
+.dh-meta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 8px;padding:8px 6px 0;color:var(--ink-2);font-size:13.5px}
+.dh-meta .pill{font-size:12.5px}
+.grp-h{list-style:none;margin:14px 0 2px;padding:0 2px;font-size:12.5px;font-weight:600;color:var(--gold)}
+.rmeta{font-size:12.5px;color:var(--ink-3);margin:2px 0 0;padding-inline-start:36px}
+.rbayt .rs.dh{line-height:2}

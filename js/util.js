@@ -24,8 +24,17 @@
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
   const cap = (x) => x.charAt(0).toUpperCase() + x.slice(1);
-  const baytCount = (n) => lang === 'en' ? `${n} verse${n === 1 ? '' : 's'}`
-    : n === 1 ? 'بيت واحد' : n === 2 ? 'بيتين' : (n >= 3 && n <= 10) ? ar(n) + ' أبيات' : ar(n) + ' بيتًا';
+  /* وحدة العدّ: «بيت» للقصائد و«ذكر» للأذكار؛ تُضبط من الشاشة الحالية أو تُمرَّر صراحةً */
+  let unit = 'bayt';
+  const setUnit = (u) => { unit = u === 'dhikr' ? 'dhikr' : 'bayt'; };
+  const getUnit = () => unit;
+  const baytCount = (n, u) => {
+    u = u || unit;
+    if (u === 'dhikr') return lang === 'en' ? `${n} dhikr${n === 1 ? '' : 's'}`.replace('dhikrs', 'adhkār')
+      : n === 1 ? 'ذكر واحد' : n === 2 ? 'ذكران' : (n >= 3 && n <= 10) ? ar(n) + ' أذكار' : ar(n) + ' ذكرًا';
+    return lang === 'en' ? `${n} verse${n === 1 ? '' : 's'}`
+      : n === 1 ? 'بيت واحد' : n === 2 ? 'بيتين' : (n >= 3 && n <= 10) ? ar(n) + ' أبيات' : ar(n) + ' بيتًا';
+  };
   const dayCount = (n) => lang === 'en' ? `${n} day${n === 1 ? '' : 's'}`
     : n === 1 ? 'يوم واحد' : n === 2 ? 'يومان' : (n >= 3 && n <= 10) ? ar(n) + ' أيام' : ar(n) + ' يومًا';
   const inDays = (n, cp) => {
@@ -66,5 +75,5 @@
     box.style.setProperty('--fs', best + 'px');
   }
 
-  return { ar, setLang, getLang, setNow, today, toDay, dayNum, diffDays, addDays, esc, baytCount, dayCount, inDays, sampleIndices, fitText };
+  return { ar, setLang, getLang, setNow, today, toDay, dayNum, diffDays, addDays, esc, baytCount, setUnit, getUnit, dayCount, inDays, sampleIndices, fitText };
 });

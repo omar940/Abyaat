@@ -9,6 +9,11 @@
    "id": "mutoon",
    "title": "متون",
    "titleEn": "Mutūn"
+  },
+  {
+   "id": "adhkar",
+   "title": "أذكار",
+   "titleEn": "Adhkār"
   }
  ],
  "poems": [
@@ -24,6 +29,20 @@
    "titleEn": "Al-Burdah",
    "fullTitleEn": "Qaṣīdat al-Burdah al-Sharīfah",
    "authorEn": "Imām Sharaf al-Dīn al-Būṣīrī"
+  },
+  {
+   "id": "adhkar",
+   "file": "data/poems/adhkar.json",
+   "section": "adhkar",
+   "type": "dhikr",
+   "title": "الأذكار",
+   "fullTitle": "أذكار اليوم والليلة",
+   "author": "من القرآن والسنة النبوية",
+   "baytCount": 140,
+   "chapterCount": 33,
+   "titleEn": "Adhkār",
+   "fullTitleEn": "Daily adhkār",
+   "authorEn": "From the Qur’an and the Sunnah"
   }
  ]
 }
