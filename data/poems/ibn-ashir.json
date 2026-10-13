@@ -7,8 +7,8 @@
  "fullTitleEn": "Al-Murshid al-Mu‘īn ‘alā al-Ḍarūrī min ‘Ulūm al-Dīn",
  "author": "الإمام عبد الواحد بن عاشر",
  "authorEn": "Imām ‘Abd al-Wāḥid ibn ‘Āshir",
- "source": "النص منقول من نسخة مصوّرة مشكولة، ويُنصح بمراجعته",
- "sourceEn": "Transcribed from a scanned vowelled edition; proofreading recommended.",
+ "source": "النص العربي مطابق لنسخة «المرشد المعين» (متن بالتشكيل مع ترجمة حاشية) من مؤسسة «المرشد المعين» (The Guiding Helper Foundation, 2005)، وقد قورنت به",
+ "sourceEn": "Arabic text checked against, and English literal translation taken from, “al-Murshid al-Mu‘īn: Arabic Text with English Footnote Translation” © The Guiding Helper Foundation 2005 (unaltered duplication and distribution permitted). Used here line by line.",
  "chapters": [
   {
    "id": "intro",
@@ -20,32 +20,52 @@
     {
      "id": "1",
      "n": 1,
-     "s": "يَقُولُ عَبْدُ الْوَاحِدِ بْنُ عَاشِرِ",
-     "e": "مُبْتَدِئًا بِاسْمِ الْإِلَهِ الْقَادِرِ"
+     "s": "يَقُولُ عَبْدُ الْوَاحِدِ ابْنُ عَاشِرِ",
+     "e": "مُبْتَدِئًا بِاسْمِ الْإِلَهِ الْقَادِرِ",
+     "t": [
+      "ʿAbdul Wahid ibn ʿAshir says",
+      "beginning in the name of the One God Who is all-Able."
+     ]
     },
     {
      "id": "2",
      "n": 2,
      "s": "الْحَمْدُ لِلَّهِ الَّذِي عَلَّمَنَا",
-     "e": "مِنَ الْعُلُومِ مَا بِهِ كَلَّفَنَا"
+     "e": "مِنَ الْعُلُومِ مَا بِهِ كَلَّفَنَا",
+     "t": [
+      "Praise be to Allah the One Who taught us",
+      "from the knowledge which He made us responsible for."
+     ]
     },
     {
      "id": "3",
      "n": 3,
      "s": "صَلَّى وَسَلَّمَ عَلَى مُحَمَّدِ",
-     "e": "وَآلِهِ وَصَحْبِهِ وَالْمُقْتَدِي"
+     "e": "وَآلِهِ وَصَحْبِهِ وَالْمُقْتَدِي",
+     "t": [
+      "May (Allah) bless and give peace to Muhammad,",
+      "his family, his Companions, and the follower (of the din which he brought)."
+     ]
     },
     {
      "id": "4",
      "n": 4,
-     "s": "(وَبَعْدُ) فَالْعَوْنُ مِنَ اللَّهِ الْمَجِيدِ",
-     "e": "فِي نَظْمِ أَبْيَاتٍ لِلْأُمِّيِّ تُفِيدِ"
+     "s": "(وَبَعْدُ) فَالْعَوْنُ مِنَ اللَّهِ الْمَجِيدْ",
+     "e": "فِي نَظْمِ أَبْيَاتٍ لِلْأُمِّيِّ تُفِيدْ",
+     "t": [
+      "Afterwards, (I ask) help from Allah, the Majestic",
+      "in writing metered verses which are beneficial to (even) the illiterate"
+     ]
     },
     {
      "id": "5",
      "n": 5,
-     "s": "فِي عَقْدِ الْأَشْعَرِيِّ وَفِقْهِ مَالِكِ",
-     "e": "وَفِي طَرِيقَةِ الْجُنَيْدِ السَّالِكِ"
+     "s": "فِي عَقْدِ الْأَشْعَرِي وَفِقْهِ مَالِكِ",
+     "e": "وَفِي طَرِيقَةِ الْجُنَيْدِ السَّالِكِ",
+     "t": [
+      "Concerning the tenets of belief of (Imam) al-Ashʿari, the jurisprudence of (Imam) Malik,",
+      "and the path of Junayd, the (spiritual) traveler."
+     ]
     }
    ]
   },
@@ -59,50 +79,82 @@
     {
      "id": "6",
      "n": 6,
-     "s": "وَحُكْمُنَا الْعَقْلِيَّ قَضِيَّةٌ بِلَا",
-     "e": "وَقْفٍ عَلَى عَادَةٍ أَوْ وَضْعٍ جَلَا"
+     "s": "وَحُكْمُنَا الْعَقْلِي قَضِيَّةٌ بِلَا",
+     "e": "وَقْفٍ عَلَى عَادَةٍ أَوْ وَضْعٍ جَلَا",
+     "t": [
+      "Our rational proposition is a statement (subject-predicate pair) (for which one does) not",
+      "(need to) stop (and verify its truth) using empirical evidence, or a divinely-revealed text."
+     ]
     },
     {
      "id": "7",
      "n": 7,
      "s": "أَقْسَامُ مُقْتَضَاهُ بِالْحَصْرِ تُمَازْ",
-     "e": "وَهْيَ الْوُجُوبُ الِاسْتِحَالَةُ الْجَوَازْ"
+     "e": "وَهِيَ الْوُجُوبُ الِاسْتِحَالَةُ الْجَوَازْ",
+     "t": [
+      "The types of its instances in encompassment are distinguished",
+      "(as three) and they are the necessary, the impossible, and the possible."
+     ]
     },
     {
      "id": "8",
      "n": 8,
      "s": "فَوَاجِبٌ لَا يَقْبَلُ النَّفْيَ بِحَالْ",
-     "e": "وَمَا أَبَى الثُّبُوتَ عَقْلًا الْمُحَالْ"
+     "e": "وَمَا أَبَى الثُّبُوتَ عَقْلًا الْمُحَالْ",
+     "t": [
+      "The necessary is what cannot accept negation in any condition.",
+      "What refuses rational affirmation is the impossible."
+     ]
     },
     {
      "id": "9",
      "n": 9,
      "s": "وَجَائِزًا مَا قَابَلَ الْأَمْرَيْنِ سِمْ",
-     "e": "لِلضَّرُورِيِّ وَالنَّظَرِيِّ كُلٌّ قُسِمْ"
+     "e": "لِلضَّرُورِي وَالنَّظَرِي كُلٌّ قُسِمْ",
+     "t": [
+      "And mark as possible that which can accept both these affairs (i.e. negation and affirmation).",
+      "Each of these types is divided into both the immediately known and reflectively known (classes)."
+     ]
     },
     {
      "id": "10",
      "n": 10,
      "s": "أَوَّلُ وَاجِبٍ عَلَى مَنْ كُلِّفَا",
-     "e": "مُمَكَّنًا مِنْ نَظَرٍ أَنْ يَعْرِفَا"
+     "e": "مُمَكَّنًا مِنْ نَظَرٍ أَنْ يَعْرِفَا",
+     "t": [
+      "The first obligation on him who is given responsibility",
+      "if he has the ability to search (and reflect) is to know"
+     ]
     },
     {
      "id": "11",
      "n": 11,
-     "s": "اللَّهَ وَالرُّسْلَ بِالصِّفَاتِ",
-     "e": "بِمَا عَلَيْهِ نَصَبَ الْآيَاتِ"
+     "s": "اللَّهَ وَالرُّسُلَ بِالصِّفَاتِ",
+     "e": "مِمَّا عَلَيْهَا نَصَبَ الْآيَاتِ",
+     "t": [
+      "Allah and the Messengers with the attributes",
+      "for which He has erected signs."
+     ]
     },
     {
      "id": "12",
      "n": 12,
      "s": "وَكُلُّ تَكْلِيفٍ بِشَرْطِ الْعَقْلِ",
-     "e": "مَعَ الْبُلُوغِ بِدَمٍ أَوْ حَمْلِ"
+     "e": "مَعَ الْبُلُوغِ بِدَمٍ أَوْ حَمْلِ",
+     "t": [
+      "And every placement of responsibility has the precondition of sanity",
+      "along with puberty (reached) by (the appearance of) menstrual blood, pregnancy,"
+     ]
     },
     {
      "id": "13",
      "n": 13,
      "s": "أَوْ بِمَنِيٍّ أَوْ بِإِنْبَاتِ الشَّعَرْ",
-     "e": "أَوْ بِثَمَانِ عَشْرَةٍ حَوْلًا ظَهَرْ"
+     "e": "أَوْ بِثَمَانِ عَشْرَةٍ حَوْلًا ظَهَرْ",
+     "t": [
+      "Reproductive fluid, or thick pubic hair.",
+      "Or (if none of the previous signs of puberty are seen, then responsibility is reached) by the completion of eighteen years (along with sanity)."
+     ]
     }
    ]
   },
@@ -117,163 +169,271 @@
      "id": "14",
      "n": 14,
      "s": "يَجِبُ لِلَّهِ الْوُجُودُ وَالْقِدَمْ",
-     "e": "كَذَا الْبَقَاءُ وَالْغِنَى الْمُطْلَقُ عَمْ"
+     "e": "كَذَا الْبَقَاءُ وَالْغِنَى الْمُطْلَقُ عَمْ",
+     "t": [
+      "(The following attributes) are necessary for Allah: (1) existence, (2) beginninglessness,",
+      "(3) likewise permanence in continued existence, (4) absolute and universal independence,"
+     ]
     },
     {
      "id": "15",
      "n": 15,
      "s": "وَخُلْفُهُ لِخَلْقِهِ بِلَا مِثَالْ",
-     "e": "وَوَحْدَةُ الذَّاتِ وَوَصْفٍ وَالْفِعَالْ"
+     "e": "وَوَحْدَةُ الذَّاتِ وَوَصْفٍ وَالْفِعَالْ",
+     "t": [
+      "(5) Being different from His creation without a similitude,",
+      "(6) oneness in His Entity, attribute(s), and actions,"
+     ]
     },
     {
      "id": "16",
      "n": 16,
      "s": "وَقُدْرَةٌ إِرَادَةٌ عِلْمٌ حَيَاةْ",
-     "e": "سَمْعٌ كَلَامٌ بَصَرٌ ذِي وَاجِبَاتْ"
+     "e": "سَمْعٌ كَلَامٌ بَصَرٌ ذِي وَاجِبَاتْ",
+     "t": [
+      "(7) Power, (8) volition, (9) knowledge, (10) life,",
+      "(11) hearing, (12) speech, and (13) sight. These are the necessary (attributes of Allah)."
+     ]
     },
     {
      "id": "17",
      "n": 17,
      "s": "وَيَسْتَحِيلُ ضِدُّ هَذِهِ الصِّفَاتْ",
-     "e": "الْعَدَمُ الْحُدُوثُ ذَا لِلْحَادِثَاتْ"
+     "e": "الْعَدَمُ الْحُدُوثُ ذَا لِلْحَادِثَاتْ",
+     "t": [
+      "And the opposite of these attributes are impossible (for Allah):",
+      "(1) non-existence, (2) having a beginning - these are only for created things,"
+     ]
     },
     {
      "id": "18",
      "n": 18,
      "s": "كَذَا الْفَنَا وَالِافْتِقَارُ عُدَّهْ",
-     "e": "وَأَنْ يُمَاثِلَ وَنَفْيُ الْوَحْدَهْ"
+     "e": "وَأَنْ يُمَاثِلَ وَنَفْيُ الْوَحْدَهْ",
+     "t": [
+      "(3) Likewise fading into non-existence and (4) being in need (of others) are also counted,",
+      "(5) that He have a similar, (6) the negation of His oneness,"
+     ]
     },
     {
      "id": "19",
      "n": 19,
      "s": "عَجْزٌ كَرَاهَةٌ وَجَهْلٌ وَمَمَاتْ",
-     "e": "وَصَمَمٌ وَبَكَمٌ عَمًى صُمَاتْ"
+     "e": "وَصَمَمٌ وَبَكَمٌ عَمًى صُمَاتْ",
+     "t": [
+      "(7) Inability (to perform contingent actions), (8) being forced (to act), (9) ignorance, (10) death,",
+      "(11) deafness, (12) dumbness, (13) blindness and silence."
+     ]
     },
     {
      "id": "20",
      "n": 20,
      "s": "يَجُوزُ فِي حَقِّهِ فِعْلُ الْمُمْكِنَاتْ",
-     "e": "بِأَسْرِهَا وَتَرْكُهَا فِي الْعَدَمَاتْ"
+     "e": "بِأَسْرِهَا وَتَرْكُهَا فِي الْعَدَمَاتْ",
+     "t": [
+      "It is possible (for Allah) in His right to perform contingent actions",
+      "- all of them - and to leave them (unperformed) in non-existence."
+     ]
     },
     {
      "id": "21",
      "n": 21,
      "s": "وُجُودُهُ لَهُ دَلِيلٌ قَاطِعْ",
-     "e": "حَاجَةُ كُلِّ مُحْدَثٍ لِلصَّانِعْ"
+     "e": "حَاجَةُ كُلِّ مُحْدَثٍ لِلصَّانِعْ",
+     "t": [
+      "His existence has a conclusive proof:",
+      "The need of everything that is created in time for a Maker."
+     ]
     },
     {
      "id": "22",
      "n": 22,
      "s": "لَوْ حَدَثَتْ بِنَفْسِهَا الْأَكْوَانُ",
-     "e": "لَاجْتَمَعَ التَّسَاوِي وَالرُّجْحَانُ"
+     "e": "لَاجْتَمَعَ التَّسَاوِي وَالرُّجْحَانُ",
+     "t": [
+      "If the universe began by itself",
+      "equality and preponderance would meet (at the same time (i.e. the metaphor here alludes to the two-sided ancient scale falling to one side (signifying existence) and also be in equality (signifying non- existence) in the same instance. The idea here is that someone must place weight on the two sided scale in order for it to show preponderance. In other words, someone must choose the state of existence for a particular physical phenomenon at a particular time since this physical phenomenon could not choose its own existence since it was not present before it was created.))."
+     ]
     },
     {
      "id": "23",
      "n": 23,
      "s": "وَذَا مُحَالٌ وَحُدُوثُ الْعَالَمِ",
-     "e": "مِنْ حَدَثِ الْأَعْرَاضِ مَعْ تَلَازُمِ"
+     "e": "مِنْ حَدَثِ الْأَعْرَاضِ مَعْ تَلَازُمِ",
+     "t": [
+      "But, that is impossible. And the beginning of the universe",
+      "is derived from (looking) at the changes of the attributes (which describe the parts of the universe) and (knowing that attributes are) intrinsically tied (to essences)."
+     ]
     },
     {
      "id": "24",
      "n": 24,
      "s": "لَوْ لَمْ يَكُ الْقِدَمُ وَصْفَهُ لَزِمْ",
-     "e": "حُدُوثُهُ دَوْرٌ تَسَلْسُلٌ حُتِمْ"
+     "e": "حُدُوثُهُ دَوْرٌ تَسَلْسُلٌ حُتِمْ",
+     "t": [
+      "If beginninglessness were not His necessary attribute,",
+      "His having a beginning would obligate an infinite loop or regress."
+     ]
     },
     {
      "id": "25",
      "n": 25,
      "s": "لَوْ أَمْكَنَ الْفَنَاءُ لَانْتَفَى الْقِدَمْ",
-     "e": "لَوْ مَاثَلَ الْخَلْقَ حُدُوثُهُ انْحَتَمْ"
+     "e": "لَوْ مَاثَلَ الْخَلْقَ حُدُوثُهُ انْحَتَمْ",
+     "t": [
+      "If He were able to pass into non-existence, His attribute of beginninglessness would be negated.",
+      "If He were similar to creation, His having a beginning would definitely be true."
+     ]
     },
     {
      "id": "26",
      "n": 26,
      "s": "لَوْ لَمْ يَجِبْ وَصْفُ الْغِنَى لَهُ افْتَقَرْ",
-     "e": "لَوْ لَمْ يَكُنْ بِوَاحِدٍ لَمَا قَدَرْ"
+     "e": "لَوْ لَمْ يَكُنْ بِوَاحِدٍ لَمَا قَدَرْ",
+     "t": [
+      "If independence were not His necessary attribute, He would be in need (of a Maker Himself).",
+      "If He were not one, then He would not be able (to perform actions)."
+     ]
     },
     {
      "id": "27",
      "n": 27,
      "s": "لَوْ لَمْ يَكُنْ حَيًّا مُرِيدًا عَالِمَا",
-     "e": "وَقَادِرًا لَمَا رَأَيْتَ عَالَمَا"
+     "e": "وَقَادِرًا لَمَا رَأَيْتَ عَالَمَا",
+     "t": [
+      "If He were not Living, Willing, Knowing,",
+      "and Powerful, you would not see a world (full of wondrous creation)."
+     ]
     },
     {
      "id": "28",
      "n": 28,
      "s": "وَالتَّالِي فِي السِّتِّ الْقَضَايَا بَاطِلُ",
-     "e": "قَطْعًا مُقَدَّمٌ إِذَا مُمَاثِلُ"
+     "e": "قَطْعًا مُقَدَّمٌ إِذًا مُمَاثِلُ",
+     "t": [
+      "The second part of the six if-then clauses above are false.",
+      "So, (it follows that) the first part is also similar (in being false)."
+     ]
     },
     {
      "id": "29",
      "n": 29,
      "s": "وَالسَّمْعُ وَالْبَصَرُ وَالْكَلَامْ",
-     "e": "بِالنَّقْلِ مَعْ كَمَالِهِ تُرَامْ"
+     "e": "بِالنَّقْلِ مَعْ كَمَالِهِ تُرَامْ",
+     "t": [
+      "Hearing, Sight, and Speech",
+      "are taken from the transmission (in the primary texts) and also properly fit in with His perfection."
+     ]
     },
     {
      "id": "30",
      "n": 30,
      "s": "لَوِ اسْتَحَالَ مُمْكِنٌ أَوْ وَجَبَا",
-     "e": "قَلْبُ الْحَقَائِقِ لُزُومًا أَوْجَبَا"
+     "e": "قَلْبُ الْحَقَائِقِ لُزُومًا أَوْجَبَا",
+     "t": [
+      "If a contingently possible affair were impossible or necessary,",
+      "it would obligate a change in the realities (of the physical world)."
+     ]
     },
     {
      "id": "31",
      "n": 31,
      "s": "يَجِبُ لِلرُّسْلِ الْكِرَامِ الصِّدْقُ",
-     "e": "أَمَانَةٌ تَبْلِيغُهُمْ يَحِقُّ"
+     "e": "أَمَانَةٌ تَبْلِيغُهُمْ يَحِقُّ",
+     "t": [
+      "(The following attributes) are necessary for the noble messengers: (1) truthfulness,",
+      "(2) trustworthiness in obedience, and (3) conveyance of the message in truth,"
+     ]
     },
     {
      "id": "32",
      "n": 32,
      "s": "مُحَالٌ الْكَذِبُ وَالْمَنْهِيْ",
-     "e": "كَعَدَمِ التَّبْلِيغِ يَا ذَكِي"
+     "e": "كَعَدَمِ التَّبْلِيغِ يَا ذَكِي",
+     "t": [
+      "(The following attributes) are impossible (for the messengers): (2) lying/dishonesty, (2) acting in disobedience,",
+      "and (3) not conveying. (So, understand this) O intelligent one (and intelligence is also counted by many as a necessary attribute of the messengers)."
+     ]
     },
     {
      "id": "33",
      "n": 33,
      "s": "يَجُوزُ فِي حَقِّهِمْ كُلُّ عَرَضْ",
-     "e": "لَيْسَ مُؤَدِّيًا لِنَقْصٍ كَالْمَرَضْ"
+     "e": "لَيْسَ مُؤَدِّيًا لِنَقْصٍ كَالْمَرَضْ",
+     "t": [
+      "It is possible in their right to be described by every (normal human) attribute",
+      "which does not diminish (from their role of conveyance), such as mild illness."
+     ]
     },
     {
      "id": "34",
      "n": 34,
      "s": "لَوْ لَمْ يَكُونُوا صَادِقِينَ لَلَزِمْ",
-     "e": "أَنْ يَكْذِبَ الْإِلَهُ فِي تَصْدِيقِهِمْ"
+     "e": "أَنْ يَكْذِبَ الْإِلَهُ فِي تَصْدِيقِهِمْ",
+     "t": [
+      "If they were not truthful, it would be necessary",
+      "that the God had lied in verifying them -"
+     ]
     },
     {
      "id": "35",
      "n": 35,
      "s": "إِذْ مُعْجِزَاتُهُمْ كَقَوْلِهِ وَبَرّ",
-     "e": "صَدَقَ هَذَا الْعَبْدُ فِي كُلِّ خَبَرْ"
+     "e": "صَدَقَ هَذَا الْعَبْدُ فِي كُلِّ خَبَرْ",
+     "t": [
+      "Since their miracles are like His statement which is true,",
+      "\"This slave (of Mine) has spoken the truth in all his reports.\""
+     ]
     },
     {
      "id": "36",
      "n": 36,
      "s": "لَوِ انْتَفَى التَّبْلِيغُ أَوْ خَانُوا حُتِمْ",
-     "e": "أَنْ يَنْقَلِبَ الْمَنْهِيُّ طَاعَةً لَهُمْ"
+     "e": "أَنْ يَنْقَلِبَ الْمَنْهِيُّ طَاعَةً لَهُمْ",
+     "t": [
+      "If conveyance were negated or they betrayed the trust (by disobeying), it would obligate",
+      "that the prohibited act be turned into an act of obedience for them (since we are asked to imitate them and all acts are arbitrary)."
+     ]
     },
     {
      "id": "37",
      "n": 37,
      "s": "جَوَازُ الْأَعْرَاضِ عَلَيْهِمْ حُجَّتُهْ",
-     "e": "وُقُوعُهَا بِهِمْ تَسَلٍّ حِكْمَتُهْ"
+     "e": "وُقُوعُهَا بِهِمْ تَسَلٍّ حِكْمَتُهْ",
+     "t": [
+      "The permissibility of normal human afflictions befalling them is the argument against those (who deny the prophets based on their meek humanness).",
+      "And these normal states actually befalling them (is the proof that they are possible for them) and the wisdom behind this is to console the messengers (and inform others of the low value of this world as compared to the next world)."
+     ]
     },
     {
      "id": "38",
      "n": 38,
      "s": "وَقَوْلُ لَا إِلَهَ إِلَّا اللَّهُ",
-     "e": "مُحَمَّدٌ أَرْسَلَهُ الْإِلَهُ"
+     "e": "مُحَمَّدٌ أَرْسَلَهُ الْإِلَهُ",
+     "t": [
+      "And the statement: There is no god but Allah",
+      "(and) Muhammad was sent by the One God -"
+     ]
     },
     {
      "id": "39",
      "n": 39,
      "s": "يَجْمَعُ كُلَّ هَذِهِ الْمَعَانِي",
-     "e": "كَانَتْ لِذَا عَلَامَةَ الْإِيمَانِ"
+     "e": "كَانَتْ لِذَا عَلَامَةَ الْإِيمَانِ",
+     "t": [
+      "Gathers all of these meanings (mentioned above).",
+      "For this reason, it is considered the sign of faith."
+     ]
     },
     {
      "id": "40",
      "n": 40,
-     "s": "وَهْيَ أَفْضَلُ وُجُوهِ الذِّكْرِ",
-     "e": "فَاشْغَلْ بِهَا الْعُمْرَ تَفُزْ بِالذُّخْرِ"
+     "s": "وَهِيَ أَفْضَلُ وُجُوهِ الذِّكْرِ",
+     "e": "فَاشْغَلْ بِهَا الْعُمْرَ تَفُزْ بِالذُّخْرِ",
+     "t": [
+      "And this statement is the best of all types of verbal remembrances.",
+      "So, busy yourself with it throughout your life and you will be victorious in gaining the treasure."
+     ]
     }
    ]
   },
@@ -288,43 +448,71 @@
      "id": "41",
      "n": 41,
      "s": "(فَصْلٌ) وَطَاعَةُ الْجَوَارِحِ الْجَمِيعْ",
-     "e": "قَوْلًا وَفِعْلًا هُوَ الْإِسْلَامُ الرَّفِيعْ"
+     "e": "قَوْلًا وَفِعْلًا هُوَ الْإِسْلَامُ الرَّفِيعْ",
+     "t": [
+      "Section (On the Pillars of Islam) And obedience of all the body limbs",
+      "in speech and actions is what is Islam, the High (way of life)"
+     ]
     },
     {
      "id": "42",
      "n": 42,
      "s": "قَوَاعِدُ الْإِسْلَامِ خَمْسٌ وَاجِبَاتْ",
-     "e": "وَهْيَ الشَّهَادَتَانِ شَرْطُ الْبَاقِيَاتْ"
+     "e": "وَهِيَ الشَّهَادَتَانِ شَرْطُ الْبَاقِيَاتْ",
+     "t": [
+      "The pillars of Islam are five necessary acts.",
+      "And they are: (1) the two testifications which is a precondition for the rest (of the pillars)."
+     ]
     },
     {
      "id": "43",
      "n": 43,
      "s": "ثُمَّ الصَّلَاةُ وَالزَّكَاةُ فِي الْقِطَاعْ",
-     "e": "وَالصَّوْمُ وَالْحَجُّ عَلَى مَنِ اسْتَطَاعْ"
+     "e": "وَالصَّوْمُ وَالْحَجُّ عَلَى مَنِ اسْتَطَاعْ",
+     "t": [
+      "Then (also among the pillars) are (2) the formal prayer, (3) Zakat (fixed share alms) from livestock and cash savings,",
+      "(4) fasting (in Ramadan), and (5) performing Hajj for whoever is able (to find physical and material means)."
+     ]
     },
     {
      "id": "44",
      "n": 44,
      "s": "الْإِيمَانُ جَزْمٌ بِالْإِلَهِ وَالْكُتُبْ",
-     "e": "وَالرُّسْلِ وَالْأَمْلَاكِ مَعْ بَعْثٍ قَرُبْ"
+     "e": "وَالرُّسْلِ وَالْأَمْلَاكِ مَعْ بَعْثٍ قَرُبْ",
+     "t": [
+      "'Īmān is a firm belief in the One God, the divinely revealed books,",
+      "the messengers, the angels, along with the resurrection (of the dead from their graves) - which has come near -,"
+     ]
     },
     {
      "id": "45",
      "n": 45,
      "s": "وَقَدَرٍ كَذَا صِرَاطٌ مِيزَانْ",
-     "e": "حَوْضِ النَّبِيِّ جَنَّةٍ وَنِيرَانْ"
+     "e": "حَوْضُ النَّبِيِّ جَنَّةٌ وَنِيرَانْ",
+     "t": [
+      "And belief in divine destiny. Likewise (is treated the belief in) the bridge over the Hellfire, the balance set up to weigh actions,",
+      "the cistern of the Prophet (May Allah bless him and give him peace), the Paradise (in the next world), and the Hellfire."
+     ]
     },
     {
      "id": "46",
      "n": 46,
      "s": "وَأَمَّا الْإِحْسَانُ فَقَالَ مَنْ دَرَاهْ",
-     "e": "أَنْ تَعْبُدَ اللَّهَ كَأَنَّكَ تَرَاهْ"
+     "e": "أَنْ تَعْبُدَ اللَّهَ كَأَنَّكَ تَرَاهْ",
+     "t": [
+      "As for I#sān, then the one who fully grasped it (i.e. the Prophet Muhammad) said:",
+      "(It is) that you worship Allah as if you see Him -"
+     ]
     },
     {
      "id": "47",
      "n": 47,
      "s": "إِنْ لَمْ تَكُنْ تَرَاهُ إِنَّهُ يَرَاكْ",
-     "e": "وَالدِّينُ ذِي الثَّلَاثُ خُذْ أَقْوَى عُرَاكْ"
+     "e": "وَالدِّينُ ذِي الثَّلَاثُ خُذْ أَقْوَى عُرَاكْ",
+     "t": [
+      "If you do not see Him, then (you should know) that He verily sees you.",
+      "And the dīn is (comprised of) these three aspects. So, grab on to it like your firmest handhold."
+     ]
     }
    ]
   },
@@ -339,37 +527,61 @@
      "id": "48",
      "n": 48,
      "s": "الْحُكْمُ فِي الشَّرْعِ خِطَابُ رَبِّنَا",
-     "e": "الْمُقْتَضِي فِعْلَ الْمُكَلَّفِ افْطُنَا"
+     "e": "الْمُقْتَضِي فِعْلَ الْمُكَلَّفِ افْطُنَا",
+     "t": [
+      "A ruling in the Shariʿah is the speech of our Lord",
+      "which determines (the rank) of the action of the person who is responsible (for his actions). So, understand this well."
+     ]
     },
     {
      "id": "49",
      "n": 49,
      "s": "بِطَلَبٍ أَوْ إِذْنٍ أَوْ بِوَضْعِ",
-     "e": "لِسَبَبٍ أَوْ شَرْطٍ أَوْ ذِي مَنْعِ"
+     "e": "لِسَبَبٍ أَوْ شَرْطٍ أَوْ ذِي مَنْعِ",
+     "t": [
+      "(This ruling is either) a request, a permission, or a stipulation -",
+      "with a triggering cause, precondition, or that of prevention."
+     ]
     },
     {
      "id": "50",
      "n": 50,
      "s": "أَقْسَامُ حُكْمِ الشَّرْعِ خَمْسَةٌ تُرَامْ",
-     "e": "فَرْضٌ وَنَدْبٌ وَكَرَاهَةٌ حَرَامْ"
+     "e": "فَرْضٌ وَنَدْبٌ وَكَرَاهَةٌ حَرَامْ",
+     "t": [
+      "The divisions of legal rulings are five desired:",
+      "(1) obligatory, (2) recommended, (3) disliked, (4) unlawful,"
+     ]
     },
     {
      "id": "51",
      "n": 51,
      "s": "ثُمَّ إِبَاحَةٌ فَمَأْمُورٌ جَزَمْ",
-     "e": "فَرْضٌ وَدُونَ الْجَزْمِ مَنْدُوبٌ وَسِمْ"
+     "e": "فَرْضٌ وَدُونَ الْجَزْمِ مَنْدُوبٌ وَسِمْ",
+     "t": [
+      "And lastly (5) neutral and allowed. So the command which is strict",
+      "is called a far!/wājib. And if it is of a lower level of strictness, it is marked as mandūb."
+     ]
     },
     {
      "id": "52",
      "n": 52,
      "s": "ذُو النَّهْيِ مَكْرُوهٌ وَمَعْ حَتْمٍ حَرَامْ",
-     "e": "مَأْذُونٌ وَجْهَيْهِ مُبَاحٌ ذَا تَمَامْ"
+     "e": "مَأْذُونٌ وَجْهَيْهِ مُبَاحٌ ذَا تَمَامْ",
+     "t": [
+      "The ruling which contains a (light) prohibition is called makrūh and if the prohibition is strict, it is called #arām.",
+      "If both (performing it and leaving it undone) are permissible, it is called mubā#. And that completes (the list of legal ruling categories)."
+     ]
     },
     {
      "id": "53",
      "n": 53,
      "s": "وَالْفَرْضُ قِسْمَانِ كِفَايَةٌ وَعَيْنْ",
-     "e": "وَيَشْمَلُ الْمَنْدُوبُ سُنَّةً بِذَيْنْ"
+     "e": "وَيَشْمَلُ الْمَنْدُوبُ سُنَّةً بِذَيْنْ",
+     "t": [
+      "Fard is of two types: (1) communal and (2) individual.",
+      "And the mandub category contains the sunnah ruling and (also) contains these two types (i.e. communal and individual)."
+     ]
     }
    ]
   },
@@ -383,20 +595,32 @@
     {
      "id": "54",
      "n": 54,
-     "s": "فَصْلٌ وَتَحْصُلُ الطَّهَارَةُ بِمَا",
-     "e": "مِنَ التَّغَيُّرِ بِشَيْءٍ سَلِمَا"
+     "s": "(فَصْلٌ) وَتَحْصُلُ الطَّهَارَةُ بِمَا",
+     "e": "مِنَ التَّغَيُّرِ بِشَيْءٍ سَلِمَا",
+     "t": [
+      "Purity is obtained from water",
+      "which is safe from being changed with anything (e.g., which fell into it or was mixed with it)."
+     ]
     },
     {
      "id": "55",
      "n": 55,
      "s": "إِذَا تَغَيَّرَ بِنَجَسٍ طُرِحَا",
-     "e": "أَوْ طَاهِرٍ لِعَادَةٍ قَدْ صَلُحَا"
+     "e": "أَوْ طَاهِرٍ لِعَادَةٍ قَدْ صَلُحَا",
+     "t": [
+      "When water is changed with an impurity it is thrown away",
+      "and (if it is changed) with something pure, then it is still proper to use for regular daily tasks -"
+     ]
     },
     {
      "id": "56",
      "n": 56,
      "s": "إِلَّا إِذَا لَازَمَهُ فِي الْغَالِبِ",
-     "e": "كَمُغْرَةٍ فَمُطْلَقٌ كَالذَّائِبِ"
+     "e": "كَمُغْرَةٍ فَمُطْلَقٌ كَالذَّائِبِ",
+     "t": [
+      "Except if (what changed it was pure and is) found along with water in most cases (regionally)",
+      "like red dirt. Such water (changed with something pure normally found alongside water) can be considered pure and purifying similar to (water obtained from) melting (ice/snow)."
+     ]
     }
    ]
   },
@@ -411,31 +635,51 @@
      "id": "57",
      "n": 57,
      "s": "فَرَائِضُ الْوُضُوءِ سَبْعَةٌ وَهِيْ",
-     "e": "دَلْكٌ وَفَوْرٌ نِيَّةٌ فِي بَدْئِهِ"
+     "e": "دَلْكٌ وَفَوْرٌ نِيَّةٌ فِي بَدْئِهِ",
+     "t": [
+      "The wajibs of wet ablution are seven and they are:",
+      "(1) passing (the underside of) one's hand (over the washed part), (2) doing one action of ablution immediately after the other (without a large break), (3) starting with an intention -"
+     ]
     },
     {
      "id": "58",
      "n": 58,
      "s": "وَلْيَنْوِ رَفْعَ حَدَثٍ أَوْ مُفْتَرَضْ",
-     "e": "أَوِ اسْتِبَاحَةً لِمَمْنُوعٍ عَرَضْ"
+     "e": "أَوِ اسْتِبَاحَةً لِمَمْنُوعٍ عَرَضْ",
+     "t": [
+      "And the person can intend to lift a state of ritual impurity, intend to perform ablution as a necessary obligation (before performing an act),",
+      "or intend to remove a preventive barrier (between him) and an act which requires one to be in ritual purity for -"
+     ]
     },
     {
      "id": "59",
      "n": 59,
      "s": "وَغَسْلُ وَجْهٍ غَسْلُهُ الْيَدَيْنِ",
-     "e": "وَمَسْحُ رَأْسٍ غَسْلُهُ الرِّجْلَيْنِ"
+     "e": "وَمَسْحُ رَأْسٍ غَسْلُهُ الرِّجْلَيْنِ",
+     "t": [
+      "(4) Washing the face, (5) and his washing of the two hands/arms,",
+      "(6) wiping the head, (7) and washing the two feet."
+     ]
     },
     {
      "id": "60",
      "n": 60,
      "s": "وَالْفَرْضُ عَمَّ مَجْمَعَ الْأُذُنَيْنِ",
-     "e": "وَالْمِرْفَقَيْنِ عَمَّ وَالْكَعْبَيْنِ"
+     "e": "وَالْمِرْفَقَيْنِ عَمَّ وَالْكَعْبَيْنِ",
+     "t": [
+      "And the wajib washed area includes what is between the two ears.",
+      "It also includes the two elbows and the two ankles."
+     ]
     },
     {
      "id": "61",
      "n": 61,
      "s": "خَلِّلْ أَصَابِعَ الْيَدَيْنِ وَشَعَرْ",
-     "e": "وَجْهٍ إِذَا مِنْ تَحْتِهِ الْجِلْدُ ظَهَرْ"
+     "e": "وَجْهٍ إِذَا مِنْ تَحْتِهِ الْجِلْدُ ظَهَرْ",
+     "t": [
+      "Comb in between the fingers of the two hands and the hair",
+      "of the face if from beneath (the hair) the facial skin shows."
+     ]
     }
    ]
   },
@@ -450,61 +694,101 @@
      "id": "62",
      "n": 62,
      "s": "سُنَنُهُ السَّبْعُ ابْتِدَا غَسْلِ الْيَدَيْنِ",
-     "e": "وَرَدُّ مَسْحِ الرَّأْسِ مَسْحُ الْأُذُنَيْنِ"
+     "e": "وَرَدُّ مَسْحِ الرَّأْسِ مَسْحُ الْأُذُنَيْنِ",
+     "t": [
+      "The sunnahs are seven: (1) beginning with washing the two hands,",
+      "(2) making a return pass when wiping the head, (3) wiping the ears,"
+     ]
     },
     {
      "id": "63",
      "n": 63,
      "s": "مَضْمَضَةٌ اسْتِنْشَاقٌ اسْتِنْثَارْ",
-     "e": "تَرْتِيبُ فَرْضِهِ وَذَا الْمُخْتَارْ"
+     "e": "تَرْتِيبُ فَرْضِهِ وَذَا الْمُخْتَارْ",
+     "t": [
+      "(4) Rinsing the mouth, (5) inhaling water in the nose, (6) blowing the inhaled water out,",
+      "and (7) performing the wajib parts in the proper order. This is what is preferred."
+     ]
     },
     {
      "id": "64",
      "n": 64,
      "s": "وَأَحَدَ عَشَرَ الْفَضَائِلُ أَتَتْ",
-     "e": "تَسْمِيَةٌ وَبُقْعَةٌ قَدْ طَهُرَتْ"
+     "e": "تَسْمِيَةٌ وَبُقْعَةٌ قَدْ طَهُرَتْ",
+     "t": [
+      "And eleven fa!ilahs have come:",
+      "(1) saying Bismillah (at start), (2) (choosing) a pure location,"
+     ]
     },
     {
      "id": "65",
      "n": 65,
      "s": "تَقْلِيلُ مَاءٍ وَتَيَامُنُ الْإِنَا",
-     "e": "وَالشَّفْعُ وَالتَّثْلِيثُ فِي مَغْسُولِنَا"
+     "e": "وَالشَّفْعُ وَالتَّثْلِيثُ فِي مَغْسُولِنَا",
+     "t": [
+      "(3) Minimizing one's wasting of water, (4) putting the water container (in which one dips one's hands into) on the right side,",
+      "(5) washing the parts two or three times,"
+     ]
     },
     {
      "id": "66",
      "n": 66,
      "s": "بَدْءُ الْمَيَامِنِ سِوَاكٌ وَنُدِبْ",
-     "e": "تَرْتِيبُ مَسْنُونِهِ أَوْ مَعْ مَا يَجِبْ"
+     "e": "تَرْتِيبُ مَسْنُونِهِ أَوْ مَعْ مَا يَجِبْ",
+     "t": [
+      "(6) Starting with the right limbs before the left, (7) using a natural wood toothstick, and also recommended is",
+      "(8) performing the sunnah parts in the proper order and (9) along with (and in between) the wajib parts,"
+     ]
     },
     {
      "id": "67",
      "n": 67,
      "s": "وَبَدْءُ مَسْحِ الرَّأْسِ مِنْ مُقَدَّمِهْ",
-     "e": "تَخْلِيلُهُ أَصَابِعًا بِقَدَمِهْ"
+     "e": "تَخْلِيلُهُ أَصَابِعًا بِقَدَمِهْ",
+     "t": [
+      "(10) Starting the wipe of the head from the forehead,",
+      "and (11) his combing between the toes of his foot."
+     ]
     },
     {
      "id": "68",
      "n": 68,
      "s": "وَكُرِهَ الزَّيْدُ عَلَى الْفَرْضِ لَدَى",
-     "e": "مَسْحٍ وَفِي الْغُسْلِ عَلَى مَا حُدِّدَا"
+     "e": "مَسْحٍ وَفِي الْغَسْلِ عَلَى مَا حُدِّدَا",
+     "t": [
+      "And it is disliked to exceed the wajib area (or exceed the number of) prescribed (repetitions) for",
+      "wiping and washing."
+     ]
     },
     {
      "id": "69",
      "n": 69,
      "s": "وَعَاجِزُ الْفَوْرِ بَنَى مَا لَمْ يَطُلْ",
-     "e": "بِيُبْسِ الْأَعْضَا فِي زَمَانٍ مُعْتَدِلْ"
+     "e": "بِيُبْسِ الْأَعْضَا فِي زَمَانٍ مُعْتَدِلْ",
+     "t": [
+      "The person who is unable to perform one part of ablution right after the other can pick up where he left off if the gap is not long -",
+      "meaning that the limbs would not dry in a moderate climate."
+     ]
     },
     {
      "id": "70",
      "n": 70,
      "s": "ذَاكِرُ فَرْضِهِ بِطُولٍ يَفْعَلُهْ",
-     "e": "فَقَطْ وَفِي الْقُرْبِ الْمُوَالِي يُكْمِلُهْ"
+     "e": "فَقَطْ وَفِي الْقُرْبِ الْمُوَالِي يُكْمِلُهْ",
+     "t": [
+      "The person who remembers a missed wajib part after a long gap should do it",
+      "alone (when he remembers). But if he remembers shortly afterwards (or while performing ablution), he should do the missed part and all of the parts after it."
+     ]
     },
     {
      "id": "71",
      "n": 71,
      "s": "إِنْ كَانَ صَلَّى بَطَلَتْ وَمَنْ ذَكَرْ",
-     "e": "سُنَّتَهُ يَفْعَلُهَا لِمَا حَضَرْ"
+     "e": "سُنَّتَهُ يَفْعَلُهَا لِمَا حَضَرْ",
+     "t": [
+      "If this person (who forgot a wajib of ablution) prayed, his prayer is now invalid. And he who remembers",
+      "his sunnah (of ablution) should do it (when he remembers to be better prepared) for the next prayer which enters."
+     ]
     }
    ]
   },
@@ -518,38 +802,62 @@
     {
      "id": "72",
      "n": 72,
-     "s": "فَصْلٌ نَوَاقِضُ الْوُضُوءِ سِتَّةَ عَشَرْ",
-     "e": "بَوْلٌ وَرِيحٌ سَلَسٌ إِذَا نَدَرْ"
+     "s": "(فَصْلٌ) نَوَاقِضُهُ سِتَّةَ عَشَرْ",
+     "e": "بَوْلٌ وَرِيحٌ سَلَسٌ إِذَا نَدَرْ",
+     "t": [
+      "The acts which break ablution are sixteen:",
+      "(1) urinating, (2) flatulating, (3) uncontrolled emissions when they occur rarely,"
+     ]
     },
     {
      "id": "73",
      "n": 73,
      "s": "وَغَائِطٌ نَوْمٌ ثَقِيلٌ مَذْيُ",
-     "e": "سُكْرٌ وَإِغْمَاءٌ جُنُونٌ وَدْيُ"
+     "e": "سُكْرٌ وَإِغْمَاءٌ جُنُونٌ وَدْيُ",
+     "t": [
+      "(4) Ejection of feces, (5) heavy sleep, (6) pre-seminal discharge,",
+      "(7) drunkenness, (8) fainting, (9) possession by jinn, (10) post-urinary discharge,"
+     ]
     },
     {
      "id": "74",
      "n": 74,
      "s": "لَمْسٌ وَقُبْلَةٌ وَذَا إِنْ وُجِدَتْ",
-     "e": "لَذَّةٌ عَادَةً كَذَا إِنْ قُصِدَتْ"
+     "e": "لَذَّةٌ عَادَةً كَذَا إِنْ قُصِدَتْ",
+     "t": [
+      "(11) Caressing and (12) kissing if one finds",
+      "normal sensual pleasure in it or one desired such pleasure,"
+     ]
     },
     {
      "id": "75",
      "n": 75,
      "s": "إِلْطَافُ مَرْأَةٍ كَذَا مَسُّ الذَّكَرْ",
-     "e": "وَالشَّكُّ فِي الْحَدَثِ كُفْرٌ مَنْ كَفَرْ"
+     "e": "وَالشَّكُّ فِي الْحَدَثِ كُفْرٌ مَنْ كَفَرْ",
+     "t": [
+      "(13) A woman gently inserting (her finger(s)/hand in her vagina), likewise (14) a man touching his penis,",
+      "(15) doubting about committing an act which makes one lose pureness, and (16) disbelieving for he who becomes an apostate (after being Muslim)."
+     ]
     },
     {
      "id": "76",
      "n": 76,
      "s": "وَيَجِبُ اسْتِبْرَاءُ الْأَخْبَثَيْنِ مَعْ",
-     "e": "سَلْتٍ وَنَتْرِ ذَكَرٍ وَالشَّدِّ دَعْ"
+     "e": "سَلْتٍ وَنَتْرِ ذَكَرٍ وَالشَّدَّ دَعْ",
+     "t": [
+      "And it is wajib to properly discharge and clean the two waste openings (i.e. anus and urethra) along with",
+      "stretching out and shaking the penis (to empty its contents); but, do not do this harshly."
+     ]
     },
     {
      "id": "77",
      "n": 77,
      "s": "وَجَازَ الِاسْتِجْمَارُ مِنْ بَوْلٍ ذَكَرْ",
-     "e": "كَغَائِطٍ لَا مَا كَثِيرًا انْتَشَرْ"
+     "e": "كَغَائِطٍ لَا مَا كَثِيرًا انْتَشَرْ",
+     "t": [
+      "It is permissible to use non-water methods for cleaning the urine of the penis",
+      "and also feces but not for that which is much and spread out."
+     ]
     }
    ]
   },
@@ -563,20 +871,32 @@
     {
      "id": "78",
      "n": 78,
-     "s": "فَصْلٌ فُرُوضُ الْغُسْلِ قَصْدٌ يَحْتَضِرْ",
-     "e": "فَوْرٌ عُمُومُ الدَّلْكِ تَخْلِيلُ الشَّعَرْ"
+     "s": "(فَصْلٌ) فُرُوضُ الْغُسْلِ قَصْدٌ يَحْتَضِرْ",
+     "e": "فَوْرٌ عُمُومُ الدَّلْكِ تَخْلِيلُ الشَّعَرْ",
+     "t": [
+      "The wajibs of bathing for purification are: (1) bringing to mind one's intention (at the beginning),",
+      "(2) performing the various parts of the bath one after the other (without a large break), (3) passing (one's hand or an instrument) over the entire surface of the body, and (4) combing in between the hair."
+     ]
     },
     {
      "id": "79",
      "n": 79,
-     "s": "وَتَابِعِ الْخَفِيَّ مِثْلَ الرُّكْبَتَيْنْ",
-     "e": "وَالْإِبْطِ وَالرُّفْغِ وَبَيْنَ الْأَلْيَتَيْنْ"
+     "s": "فَتَابِعِ الْخَفِيَّ مِثْلَ الرُّكْبَتَيْنْ",
+     "e": "وَالْإِبْطِ وَالرُّفْغِ وَبَيْنَ الْأَلْيَتَيْنْ",
+     "t": [
+      "So, follow up with the hidden parts (of the body) like (under the) two knees,",
+      "the armpit, the crotch, and between the buttocks."
+     ]
     },
     {
      "id": "80",
      "n": 80,
      "s": "وَصِلْ لِمَا عَسُرَ بِالْمِنْدِيلِ",
-     "e": "وَنَحْوِهِ كَالْحَبْلِ وَالتَّوْكِيلِ"
+     "e": "وَنَحْوِهِ كَالْحَبْلِ وَالتَّوْكِيلِ",
+     "t": [
+      "Reach that which is difficult by using a towel",
+      "or something similar, like a rope - or appoint someone (to rub for you)."
+     ]
     }
    ]
   },
@@ -591,31 +911,51 @@
      "id": "81",
      "n": 81,
      "s": "سُنَنُهُ مَضْمَضَةٌ غَسْلُ الْيَدَيْنْ",
-     "e": "بَدْءًا وَالِاسْتِنْشَاقُ ثُقْبُ الْأُذُنَيْنْ"
+     "e": "بَدْءًا وَالِاسْتِنْشَاقُ ثُقْبُ الْأُذُنَيْنْ",
+     "t": [
+      "Its sunnahs are (1) rinsing the mouth, (2) washing the two hands",
+      "in the beginning, (3) inhaling water in the nose, and (4) wetting the holes of the two ears."
+     ]
     },
     {
      "id": "82",
      "n": 82,
      "s": "مَنْدُوبُهُ الْبَدْءُ بِغَسْلِهِ الْأَذَى",
-     "e": "تَسْمِيَةٌ تَثْلِيثُ رَأْسِهِ كَذَا"
+     "e": "تَسْمِيَةٌ تَثْلِيثُ رَأْسِهِ كَذَا",
+     "t": [
+      "Its mandubs are (1) beginning by washing the impurities,",
+      "(2) (starting with saying) Bismillah, (3) washing the head three times, likewise"
+     ]
     },
     {
      "id": "83",
      "n": 83,
-     "s": "تَقْدِيمُ أَعْضَاءِ الْوُضُوءِ قِلَّةُ مَا",
-     "e": "بَدْءٌ بِأَعْلَى وَيَمِينٍ خُذْهُمَا"
+     "s": "تَقْدِيمُ أَعْضَاءِ الْوُضُو قِلَّةُ مَا",
+     "e": "بَدْءٌ بِأَعْلَى وَيَمِينٍ خُذْهُمَا",
+     "t": [
+      "(4) Washing the limbs of ablution first, (5) minimizing the wasting of water,",
+      "and (6) starting with the top and right portions of the body - take these two (recommendations)."
+     ]
     },
     {
      "id": "84",
      "n": 84,
-     "s": "تَبْدَأُ فِي الْغُسْلِ بِفَرْجٍ ثُمَّ كُفْ",
-     "e": "عَنْ مَسِّهِ بِبَطْنٍ أَوْ جَنْبِ الْأَكُفْ"
+     "s": "تَبْدَأُ فِي الْغَسْلِ بِفَرْجٍ ثُمَّ كُفْ",
+     "e": "عَنْ مَسِّهِ بِبَطْنٍ أَوْ جَنْبِ الْأَكُفْ",
+     "t": [
+      "You begin with washing your private part and then refrain",
+      "from touching it with the inside or side of the palms -"
+     ]
     },
     {
      "id": "85",
      "n": 85,
-     "s": "بِإِصْبَعٍ ثُمَّ إِذَا مَسَسْتَهْ",
-     "e": "أَعِدْ مِنَ الْوُضُوءِ مَا فَعَلْتَهْ"
+     "s": "أَوْ إِصْبَعٍ ثُمَّ إِذَا مَسَسْتَهْ",
+     "e": "أَعِدْ مِنَ الْوُضُوءِ مَا فَعَلْتَهْ",
+     "t": [
+      "Or finger(s). Then if you touch it,",
+      "repeat the ablution which you performed."
+     ]
     }
    ]
   },
@@ -630,19 +970,31 @@
      "id": "86",
      "n": 86,
      "s": "مُوجِبُهُ حَيْضٌ نِفَاسٌ إِنْزَالْ",
-     "e": "مَغِيبُ كَمَرَةٍ بِفَرْجٍ اسْجَالْ"
+     "e": "مَغِيبُ كَمَرَةٍ بِفَرْجٍ اسْجَالْ",
+     "t": [
+      "The acts which obligate it are (1) menstruation, (2) post-natal bleeding, (3) ejaculation with pleasure,",
+      "and (4) the disappearance of the head of the penis in a lower bodily hole in whatever way it happens."
+     ]
     },
     {
      "id": "87",
      "n": 87,
      "s": "وَالْأَوَّلَانِ مَنَعَا الْوَطْءَ إِلَى",
-     "e": "غُسْلٍ وَالْآخَرَانِ قُرْآنًا حَلَا"
+     "e": "غُسْلٍ وَالْآخَرَانِ قُرْآنًا حَلَا",
+     "t": [
+      "The first two make vaginal intercourse unlawful until",
+      "bathing and the last two prevent (one from reciting) the sweet Arabic Qur'an."
+     ]
     },
     {
      "id": "88",
      "n": 88,
      "s": "وَالْكُلَّ مَسْجِدًا وَسَهْوُ الِاغْتِسَالْ",
-     "e": "مِثْلُ وُضُوئِكَ وَلَمْ تُعِدْ مُوَالْ"
+     "e": "مِثْلُ وُضُوئِكَ وَلَمْ تُعِدْ مُوَالْ",
+     "t": [
+      "All (four) prevent one from entering the masjid. And forgetting to perform parts of a bath of purification",
+      "is similar to forgetting to performs parts of wet ablution except that you do not need to perform all parts after a missed part (if you remember shortly afterwards)."
+     ]
     }
    ]
   },
@@ -656,20 +1008,32 @@
     {
      "id": "89",
      "n": 89,
-     "s": "فَصْلٌ لِخَوْفِ ضُرٍّ أَوْ عَدَمِ مَا",
-     "e": "عِوَضٌ مِنَ الطَّهَارَةِ التَّيَمُّمَا"
+     "s": "(فَصْلٌ) لِخَوْفِ ضُرٍّ أَوْ عَدَمِ مَا",
+     "e": "عِوَضٌ مِنَ الطَّهَارَةِ التَّيَمُّمَا",
+     "t": [
+      "For fear of incurring harm or absence of water",
+      "replace regaining pureness (by normal water means) with dry ablution."
+     ]
     },
     {
      "id": "90",
      "n": 90,
      "s": "وَصَلِّ فَرْضًا وَاحِدًا وَإِنْ تَصِلْ",
-     "e": "جَنَازَةً وَسُنَّةً بِهِ تَحِلّ"
+     "e": "جَنَازَةً وَسُنَّةً بِهِ يَحِلْ",
+     "t": [
+      "Pray one wajib prayer and if you connect (afterwards)",
+      "a Funeral Prayer or sunnah prayer to it, it is lawful."
+     ]
     },
     {
      "id": "91",
      "n": 91,
      "s": "وَجَازَ لِلنَّفْلِ ابْتِدَا وَيَسْتَبِيحْ",
-     "e": "الْفَرْضَ لَا الْجُمْعَةَ حَاضِرٌ صَحِيحْ"
+     "e": "الْفَرْضَ لَا الْجُمْعَةَ حَاضِرٌ صَحِيحْ",
+     "t": [
+      "You can also perform a mandub prayer all alone (starting with it - then you must repeat the dry ablution before praying the next wajib prayer) and dry ablution allows",
+      "you to perform wajib prayers but (does not allow you to perform) the Friday Prayer if you are at home (not travelling) and healthy (not sick)."
+     ]
     }
    ]
   },
@@ -684,19 +1048,31 @@
      "id": "92",
      "n": 92,
      "s": "فُرُوضُهُ مَسْحُكَ وَجْهًا وَالْيَدَيْنْ",
-     "e": "لِلْكُوعِ وَالنِّيَّةُ أُولَى الضَّرْبَتَيْنْ"
+     "e": "لِلْكُوعِ وَالنِّيَّةُ أُولَى الضَّرْبَتَيْنْ",
+     "t": [
+      "Its wajibs are (1) your wiping the face, (2) the two hands",
+      "to the wrists, (3) the intention accompanying the (4) first strike (on the earth material),"
+     ]
     },
     {
      "id": "93",
      "n": 93,
      "s": "ثُمَّ الْمُوَالَاةُ صَعِيدٌ طَهُرَا",
-     "e": "وَوَصْلُهَا بِهِ وَوَقْتٌ حَضَرَا"
+     "e": "وَوَصْلُهَا بِهِ وَوَقْتٌ حَضَرَا",
+     "t": [
+      "(5) Performing all of the parts without a large break, (6) the pure earth crust material,",
+      "(7) performing the act of worship shortly afterwards, and (8) performing dry ablution after the time of prayer has entered (for a wajib prayer)."
+     ]
     },
     {
      "id": "94",
      "n": 94,
      "s": "آخِرُهُ لِلرَّاجِ آيِسٍ فَقَطْ",
-     "e": "أَوَّلُهُ وَالْمُتَرَدِّدِ الْوَسَطْ"
+     "e": "أَوَّلُهُ وَالْمُتَرَدِّدِ الْوَسَطْ",
+     "t": [
+      "(Praying in) the end of the first time is for the one who has hope of obtaining water. The one who does not have hope is the only one",
+      "(recommended) to pray in the beginning of the first time. And the one who is not sure about whether he will obtain water or not is (recommended) to pray in the middle of the first time."
+     ]
     }
    ]
   },
@@ -711,25 +1087,41 @@
      "id": "95",
      "n": 95,
      "s": "سُنَنُهُ مَسْحُهُمَا لِلْمِرْفَقِ",
-     "e": "وَضَرْبَةُ الْيَدَيْنِ تَرْتِيبٌ بَقِي"
+     "e": "وَضَرْبَةُ الْيَدَيْنِ تَرْتِيبٌ بَقِي",
+     "t": [
+      "Its sunnahs are (1) wiping the two arms to the elbows,",
+      "(2) making a second strike before wiping the two arms, and (3) keeping to the proper order (i.e. face before hands)."
+     ]
     },
     {
      "id": "96",
      "n": 96,
      "s": "مَنْدُوبُهُ تَسْمِيَةٌ وَصْفٌ حَمِيدْ",
-     "e": "نَاقِضُهُ مِثْلُ الْوُضُوءِ وَيَزِيدْ"
+     "e": "نَاقِضُهُ مِثْلُ الْوُضُوءِ وَيَزِيدْ",
+     "t": [
+      "Its mandubs are (1) (beginning with saying) Bismillah and (2) performing it in the praiseworthy transmitted manner.",
+      "The acts which break dry ablution are similar to the acts which break wet ablution plus one more act:"
+     ]
     },
     {
      "id": "97",
      "n": 97,
      "s": "وُجُودُ مَاءٍ قَبْلَ أَنْ صَلَّى وَإِنْ",
-     "e": "بَعْدُ يَجِدْ يُعِدْ بِوَقْتٍ إِنْ يَكُنْ"
+     "e": "بَعْدُ يَجِدْ يُعِدْ بِوَقْتٍ إِنْ يَكُنْ",
+     "t": [
+      "(1) Finding water before praying (with ample time to both perform we ablution and pray) and if",
+      "one finds water afterwards, then it is (mandub) to repeat the prayer within the (mandub repetition) time if such time remains."
+     ]
     },
     {
      "id": "98",
      "n": 98,
      "s": "كَخَائِفِ اللِّصِّ وَرَاجٍ قَدَّمَا",
-     "e": "وَزَمِنٍ مُنَاوِلًا قَدْ عَدِمَا"
+     "e": "وَزَمِنٍ مُنَاوِلًا قَدْ عَدِمَا",
+     "t": [
+      "(This ruling of finding water is similar to the situations of) he who was fearing a thief, a person who had hope of finding water but prayed in the beginning of the first time anyway,",
+      "the chronically ill person in bed-rest who did not have someone to help him perform wet ablution."
+     ]
     }
    ]
   },
@@ -744,79 +1136,131 @@
      "id": "99",
      "n": 99,
      "s": "فَرَائِضُ الصَّلَاةِ سِتَّ عَشَرَهْ",
-     "e": "شُرُوطُهَا أَرْبَعَةٌ مُفْتَقِرَهْ"
+     "e": "شُرُوطُهَا أَرْبَعَةٌ مُفْتَقِرَهْ",
+     "t": [
+      "The wajibs of the formal prayer are sixteen.",
+      "Its preconditions are four which are needed."
+     ]
     },
     {
      "id": "100",
      "n": 100,
      "s": "تَكْبِيرَةُ الْإِحْرَامِ وَالْقِيَامُ",
-     "e": "لَهَا وَنِيَّةٌ بِهَا تُرَامْ"
+     "e": "لَهَا وَنِيَّةٌ بِهَا تُرَامْ",
+     "t": [
+      "(The wajibs are:) (1) the initial takbir, (2) standing",
+      "for this initial takbir, (3) the intention which is desired to accompany this takbir,"
+     ]
     },
     {
      "id": "101",
      "n": 101,
      "s": "فَاتِحَةٌ مَعَ الْقِيَامِ وَالرُّكُوعْ",
-     "e": "وَالرَّفْعِ مِنْهُ وَالسُّجُودِ بِالْخُضُوعْ"
+     "e": "وَالرَّفْعُ مِنْهُ وَالسُّجُودُ بِالْخُضُوعْ",
+     "t": [
+      "(4) Reciting the Fati#ah, (5) along with standing for this recitation, (6) bowing,",
+      "(7) rising up from bowing, (8) prostration with humbleness,"
+     ]
     },
     {
      "id": "102",
      "n": 102,
-     "s": "وَالرَّفْعِ مِنْهُ وَالسَّلَامِ وَالْجُلُوسْ",
-     "e": "لَهُ وَتَرْتِيبُ أَدَاءٍ فِي الْأُسُوسْ"
+     "s": "وَالرَّفْعُ مِنْهُ وَالسَّلَامُ وَالْجُلُوسْ",
+     "e": "لَهُ وَتَرْتِيبُ أَدَاءٍ فِي الْأُسُوسْ",
+     "t": [
+      "(9) Rising up from prostration, (10) making the terminating salam, (11) sitting",
+      "for this salam, (12) keeping to the mandated order of the foundational wajib parts,"
+     ]
     },
     {
      "id": "103",
      "n": 103,
      "s": "وَالِاعْتِدَالُ مُطْمَئِنًّا بِالْتِزَامْ",
-     "e": "تَبَعُ مَأْمُومٍ بِإِحْرَامٍ سَلَامْ"
+     "e": "تَابِعُ مَأْمُومٍ بِإِحْرَامٍ سَلَامْ",
+     "t": [
+      "(13) standing and sitting upright, (14) stopping in each posture for a moment as a duty.",
+      "(15) The follower should utter the initial takbir and final salam (after his imam)."
+     ]
     },
     {
      "id": "104",
      "n": 104,
      "s": "نِيَّتُهُ اقْتِدَا كَذَا الْإِمَامُ فِي",
-     "e": "خَوْفٍ وَجَمْعٍ جُمُعَةٍ مُسْتَخْلِفْ"
+     "e": "خَوْفٍ وَجَمْعٍ جُمُعَةٍ مُسْتَخْلِفْ",
+     "t": [
+      "(16) His intention should be to follow (from the start) and the imam must make a similar intention (to lead)",
+      "for the Prayer of Fear, when combining prayers in group (in a night of rain or torrential weather), for the Friday Prayer, and if he is replacing an imam who had to leave (during the middle of the prayer)."
+     ]
     },
     {
      "id": "105",
      "n": 105,
      "s": "شَرْطُهَا الِاسْتِقْبَالُ طُهْرُ الْخَبَثْ",
-     "e": "وَسِتْرُ عَوْرَةٍ وَطُهْرُ الْحَدَثْ"
+     "e": "وَسِتْرُ عَوْرَةٍ وَطُهْرُ الْحَدَثْ",
+     "t": [
+      "Its preconditions are (1) facing the direction of the Kaʿbah, (2) being pure from physical impurities,",
+      "(3) covering one's nakedness, and (4) ritual purity (with ablution or a bath for purification)."
+     ]
     },
     {
      "id": "106",
      "n": 106,
      "s": "بِالذِّكْرِ وَالْقُدْرَةِ فِي غَيْرِ الْأَخِيرْ",
-     "e": "تَفْرِيعُ نَاسِيهَا وَعَاجِزٌ كَثِيرْ"
+     "e": "تَفْرِيعُ نَاسِيهَا وَعَاجِزٌ كَثِيرْ",
+     "t": [
+      "All but the last are only preconditions if one remembers and is able.",
+      "The branch rulings of those who forget or are unable are many."
+     ]
     },
     {
      "id": "107",
      "n": 107,
      "s": "نَدْبًا يُعِيدَانِ بِوَقْتٍ كَالْخَطَا",
-     "e": "فِي قِبْلَةٍ لَا عَجْزِهَا أَوِ الْغَطَا"
+     "e": "فِي قِبْلَةٍ لَا عَجْزِهَا أَوِ الْغَطَا",
+     "t": [
+      "It is mandub for those who forgot to cover properly or prayed with impurities by mistake to repeat their prayers within the allowed time like (the person who made) a mistake",
+      "with the direction of Kaʿbah but not the person who is unable to face its direction nor the person who is unable to cover his nakedness."
+     ]
     },
     {
      "id": "108",
      "n": 108,
-     "s": "وَمَا عَدَا وَجْهٍ وَكَفَّ الْحُرَّةِ",
-     "e": "يَجِبُ سَتْرُهُ كَمَا فِي الْعَوْرَةِ"
+     "s": "وَمَا عَدَا وَجْهَ وَكَفَّ الْحُرَّةِ",
+     "e": "يَجِبُ سَتْرُهُ كَمَا فِي الْعَوْرَةِ",
+     "t": [
+      "What is other than the face and hands of a free woman",
+      "must be covered during prayer just like the nakedness must be covered (while out in public)."
+     ]
     },
     {
      "id": "109",
      "n": 109,
      "s": "لَكِنْ لَدَى كَشْفٍ لِصَدْرٍ أَوْ شَعَرْ",
-     "e": "أَوْ طَرَفٍ تُعِيدُ فِي الْوَقْتِ الْمُقَرّ"
+     "e": "أَوْ طَرَفٍ تُعِيدُ فِي الْوَقْتِ الْمُقَرّ",
+     "t": [
+      "But if parts of the chest, hair,",
+      "or end body parts are revealed, she repeats her prayer (as a mandub recommendation) in the apportioned repetition time."
+     ]
     },
     {
      "id": "110",
      "n": 110,
      "s": "شَرْطُ وُجُوبِهَا النَّقَا مِنَ الدَّمِ",
-     "e": "بِقَصَّةٍ أَوِ الْجُفُوفِ فَاعْلَمِ"
+     "e": "بِقَصَّةٍ أَوِ الْجُفُوفِ فَاعْلَمِ",
+     "t": [
+      "The precondition for the formal prayer becoming wajib on her is becoming clean from menstrual/post-natal bleeding",
+      "with either a clear mucus emission or the drying of the area (on which absorbent cloth is placed); so, know this."
+     ]
     },
     {
      "id": "111",
      "n": 111,
-     "s": "فَلَا قَضَا أَيَّامِهِ ثُمَّ دُخُولْ",
-     "e": "وَقْتٍ فَأَدِّهَا بِهِ حَتْمًا أَقُولْ"
+     "s": "فَلَا قَضَى أَيَّامَهُ ثُمَّ دُخُولْ",
+     "e": "وَقْتٍ فَأَدِّهَا بِهِ حَتْمًا أَقُولْ",
+     "t": [
+      "There is no obligation to make up the missed prayers during menstrual/post-natal bleeding. Then, a final precondition is that",
+      "the time of prayer has entered. \"So, discharge the formal prayer at its time as an obligation.\", I say."
+     ]
     }
    ]
   },
@@ -830,74 +1274,122 @@
     {
      "id": "112",
      "n": 112,
-     "s": "سُنَّتُهَا السُّورَةُ بَعْدَ الْوَاقِيَهْ",
-     "e": "مَعَ الْقِيَامِ أُولَا وَالثَّانِيَهْ"
+     "s": "سُنَّتُهَا السُّورَةُ بَعْدَ الْوَافِيَةْ",
+     "e": "مَعَ الْقِيَامِ أَوَّلًا وَالثَّانِيَةْ",
+     "t": [
+      "Its sunnahs are (1) reciting a surah after the Fatihah",
+      "(2) while standing in the first and second unit (of the formal prayer)."
+     ]
     },
     {
      "id": "113",
      "n": 113,
      "s": "جَهْرٌ وَسِرٌّ بِمَحَلٍّ لَهُمَا",
-     "e": "تَكْبِيرُهُ إِلَّا الَّذِي تَقَدَّمَا"
+     "e": "تَكْبِيرُهُ إِلَّا الَّذِي تَقَدَّمَا",
+     "t": [
+      "(3) Reciting out loud and quietly at their proper places,",
+      "(4) the (worshipper's) takbirs except the one mentioned before (i.e. the initial takbir is wajib and not sunnah),"
+     ]
     },
     {
      "id": "114",
      "n": 114,
      "s": "كُلُّ تَشَهُّدٍ جُلُوسٌ أَوَّلُ",
-     "e": "وَالثَّانِ لَا مَا لِلسَّلَامِ يَحْصُلُ"
+     "e": "وَالثَّانِ لَا مَا لِلسَّلَامِ يَحْصُلُ",
+     "t": [
+      "(5) Each of the Greeting and Testifications, (6) the first sitting,",
+      "(7) the second one (also) but not (the amount of sitting required at the end) for the salam (i.e. sitting while making the salam is wajib and not sunnah),"
+     ]
     },
     {
      "id": "115",
      "n": 115,
      "s": "وَسَمِعَ اللَّهُ لِمَنْ حَمِدَهْ",
-     "e": "فِي الرَّفْعِ مِنْ رُكُوعِهِ أَوْرَدَهْ"
+     "e": "فِي الرَّفْعِ مِنْ رُكُوعِهِ أَوْرَدَهْ",
+     "t": [
+      "And (8) the ta#mīd",
+      "when rising up from bowing which the person praying utters."
+     ]
     },
     {
      "id": "116",
      "n": 116,
      "s": "الْفَذُّ وَالْإِمَامُ هَذَا أُكِّدَا",
-     "e": "وَالْبَاقِي كَالْمَنْدُوبِ فِي الْحُكْمِ بَدَا"
+     "e": "وَالْبَاقِي كَالْمَنْدُوبِ فِي الْحُكْمِ بَدَا",
+     "t": [
+      "(These sunnahs are) for the person praying alone and the imam. These are what are stressed.",
+      "The rest (of the sunnahs) are apparently treated like (regular less-stressed) mandubs in their legal ruling."
+     ]
     },
     {
      "id": "117",
      "n": 117,
      "s": "إِقَامَةٌ سُجُودُهُ عَلَى الْيَدَيْنْ",
-     "e": "وَطَرَفِ الرِّجْلَيْنِ مِثْلُ الرُّكْبَتَيْنْ"
+     "e": "وَطَرَفِ الرِّجْلَيْنِ مِثْلُ الرُّكْبَتَيْنْ",
+     "t": [
+      "(Among these less-stressed sunnahs are) the Call to Commence, prostrating while the (bottom of the) hands are in contact with the floor",
+      "like the ends of the feet (i.e. toes) and knees,"
+     ]
     },
     {
      "id": "118",
      "n": 118,
      "s": "إِنْصَاتُ مُقْتَدٍ بِجَهْرٍ ثُمَّ رَدّْ",
-     "e": "عَلَى الْإِمَامِ وَالْيَسَارِ إِنْ أَحَدْ"
+     "e": "عَلَى الْإِمَامِ وَالْيَسَارِ وَأَحَدْ",
+     "t": [
+      "And for the follower to quietly listen to the out loud recitation (of his imam). Then, also return",
+      "the salam of the imam, the person praying on the left (if) such a person"
+     ]
     },
     {
      "id": "119",
      "n": 119,
-     "s": "بِهِ وَزَائِدٌ سُكُونٌ لِلْحُضُورْ",
-     "e": "سُتْرَةُ غَيْرِ مُقْتَدٍ خَافَ الْمُرُورْ"
+     "s": "بِهِ وَزَائِدُ سُكُونٍ لِلْحُضُورْ",
+     "e": "سُتْرَةُ غَيْرِ مُقْتَدٍ خَافَ الْمُرُورْ",
+     "t": [
+      "is on the left. (Also among the less-stressed sunnahs are) exceeding the minimum stopping time (in each posture) to feel the presence of Allah,",
+      "erecting an object (to pray towards) for other than the follower for him who fears that someone will pass,"
+     ]
     },
     {
      "id": "120",
      "n": 120,
-     "s": "جَهْرُ السَّلَامِ كُلُّ التَّشَهُّدِ",
-     "e": "وَأَنْ يُصَلِّيَ عَلَى مُحَمَّدِ"
+     "s": "جَهْرُ السَّلَامِ كَلِمُ التَّشَهُّدِ",
+     "e": "وَأَنْ يُصَلِّيَ عَلَى مُحَمَّدِ",
+     "t": [
+      "Saying out loud the (first) salam, using the words of the Greeting and Testification (narrated by ʿUmar ibn al-Khattab in the Muwatta'),",
+      "and that the person praying send Allah's peace and blessings on the Prophet."
+     ]
     },
     {
      "id": "121",
      "n": 121,
      "s": "سَنُّ الْأَذَانِ لِجَمَاعَةٍ أَتَتْ",
-     "e": "فَرْضًا بِوَقْتِهِ وَغَيْرًا طَلَبَتْ"
+     "e": "فَرْضًا بِوَقْتِهِ وَغَيْرًا طَلَبَتْ",
+     "t": [
+      "Adhan is sunnah for a group that comes",
+      "to a wajib prayer at its time and wishes that others join also."
+     ]
     },
     {
      "id": "122",
      "n": 122,
      "s": "وَقَصْرُ مَنْ سَافَرَ أَرْبَعَ بُرُدْ",
-     "e": "ظُهْرًا عِشَا عَصْرًا إِلَى حِينَ يَعُدْ"
+     "e": "ظُهْرًا عِشَا عَصْرًا إِلَى حِينَ يَعُدْ",
+     "t": [
+      "Shortening prayers is for him who travels four barīds (12 miles are in 1 barīd)",
+      "for Dhuhr, ʿIsha', ʿA&r until the time he returns (home) -"
+     ]
     },
     {
      "id": "123",
      "n": 123,
-     "s": "بِمَا وَرَا السُّكْنَى إِلَيْهِ إِنْ قَدِمْ",
-     "e": "مُقِيمٌ أَرْبَعَةُ أَيَّامٍ يَتِمْ"
+     "s": "مِمَّا وَرَا السُّكْنَى إِلَيْهِ إِنْ قَدِمْ",
+     "e": "مُقِيمُ أَرْبَعَةِ أَيَّامٍ يُتِمْ",
+     "t": [
+      "From (the time of) leaving the last built structures (of his home village until the time) of arriving back (to this place).",
+      "The person who resides in a location for four days should complete (the four unit prayers as four units and not pray two like for shortening)."
+     ]
     }
    ]
   },
@@ -912,67 +1404,110 @@
      "id": "124",
      "n": 124,
      "s": "مَنْدُوبُهَا تَيَامُنٌ مَعَ السَّلَامْ",
-     "e": "تَأْمِينُ مَنْ صَلَّى عَدَا جَهْرَ الْإِمَامْ"
+     "e": "تَأْمِينُ مَنْ صَلَّى عَدَا جَهْرَ الْإِمَامْ",
+     "t": [
+      "Its mandubs are: turning (the head) to the right upon making the (terminating) salam,",
+      "saying Āmīn for him who prays except the imam in out loud recitations,"
+     ]
     },
     {
      "id": "125",
      "n": 125,
      "s": "وَقَوْلُ رَبَّنَا لَكَ الْحَمْدُ عَدَا",
-     "e": "مِنْ أَمَّ وَالْقُنُوتُ فِي الصُّبْحِ بَدَا"
+     "e": "مِنْ أَمَّ وَالْقُنُوتُ فِي الصُّبْحِ بَدَا",
+     "t": [
+      "Saying \"rabbana laka l-hamdu\" except",
+      "by the person who is leading, saying the qunūt (special supplication) in Ṣubḥ is also apparent (in being mandub),"
+     ]
     },
     {
      "id": "126",
      "n": 126,
      "s": "رَدًّا وَتَسْبِيحُ السُّجُودِ وَالرُّكُوعْ",
-     "e": "سَدْلُ يَدٍ تَكْبِيرُهُ مَعَ الشُّرُوعْ"
+     "e": "سَدْلُ يَدٍ تَكْبِيرُهُ مَعَ الشُّرُوعْ",
+     "t": [
+      "Wearing a loose outer garment/cloak, glorifying Allah while prostrating and bowing,",
+      "leaving the hands to dangle (to the sides during the standing postures), (for the person praying to say) his takbirs when beginning (to move to a new posture),"
+     ]
     },
     {
      "id": "127",
      "n": 127,
      "s": "وَبَعْدَ أَنْ يَقُومَ مِنْ وُسْطَاهُ",
-     "e": "وَعَقْدُهُ الثَّلَاثَ مِنْ يُمْنَاهُ"
+     "e": "وَعَقْدُهُ الثَّلَاثَ مِنْ يُمْنَاهُ",
+     "t": [
+      "(Delaying) it to after he stands (up straight when getting up) from his middle (sitting),",
+      "folding three fingers of his right hand"
+     ]
     },
     {
      "id": "128",
      "n": 128,
      "s": "لَدَى التَّشَهُّدِ وَبَسْطُ مَا خَلَاهْ",
-     "e": "تَحْرِيكُ سَبَّابَتِهَا حِينَ تَلَاهْ"
+     "e": "تَحْرِيكُ سَبَّابَتِهَا حِينَ تَلَاهْ",
+     "t": [
+      "While reciting the Greeting and Testification, leaving spread out (straight) the other (two fingers of the right hand),",
+      "and moving the right hand's forefinger when reciting (the Greeting and Testification)."
+     ]
     },
     {
      "id": "129",
      "n": 129,
      "s": "وَالْبَطْنُ مِنْ فَخِذٍ رِجَالٌ يُبْعِدُونْ",
-     "e": "وَمِرْفَقًا مِنْ رُكْبَةٍ إِذْ يَسْجُدُونْ"
+     "e": "وَمِرْفَقًا مِنْ رُكْبَةٍ إِذْ يَسْجُدُونْ",
+     "t": [
+      "The stomach from the thighs men keep apart",
+      "and the elbows from the knees when prostrating."
+     ]
     },
     {
      "id": "130",
      "n": 130,
      "s": "وَصِفَةُ الْجُلُوسِ تَمْكِينُ الْيَدْ",
-     "e": "مِنْ رُكْبَتَيْهِ فِي الرُّكُوعِ وَزِدْ"
+     "e": "مِنْ رُكْبَتَيْهِ فِي الرُّكُوعِ وَزِدْ",
+     "t": [
+      "(And also among the mandubs) is the specific sitting posture adopted, making the hands established",
+      "on the knees while bowing, and also add"
+     ]
     },
     {
      "id": "131",
      "n": 131,
      "s": "نَصْبُهُمَا قِرَاءَةُ الْمَأْمُومِ فِي",
-     "e": "سِرِّيَّةٍ وَضْعُ الْيَدَيْنِ فَاقْتَفِي"
+     "e": "سِرِّيَّةٍ وَضْعُ الْيَدَيْنِ فَاقْتَفِي",
+     "t": [
+      "Putting the knees out a little bit (when bowing), the recitation of the follower in",
+      "prayers with quiet recitations, and follow (with) placing the hands"
+     ]
     },
     {
      "id": "132",
      "n": 132,
      "s": "لَدَى السُّجُودِ حَذْوَ أُذُنٍ وَكَذَا",
-     "e": "رَفْعُ الْيَدَيْنِ عِنْدَ الْإِحْرَامِ خُذَا"
+     "e": "رَفْعُ الْيَدَيْنِ عِنْدَ الْإِحْرَامِ خُذَا",
+     "t": [
+      "While prostrating in line with the ear, and likewise",
+      "raising the two hands during the initial takbir take (as a ruling)."
+     ]
     },
     {
      "id": "133",
      "n": 133,
      "s": "تَطْوِيلُهُ صُبْحًا وَظُهْرًا سُورَتَيْنْ",
-     "e": "تَوَسُّطُ الْعِشَا وَقَصْرُ الْبَاقِيَيْنْ"
+     "e": "تَوَسُّطُ الْعِشَا وَقَصْرُ الْبَاقِيَيْنْ",
+     "t": [
+      "(And also among the mandubs are) choosing a long surah recitation (any surah from al-Hujurāt to an-Nāziʿāt) for Ṣubḥ and Dhuhr in the first two units,",
+      "choosing a medium-sized surah recitation (any surah from ʿAbasa to al-Layl) in ʿIsha', choosing a small-sized surah recitation (any surah from al-#u#ā to an-Nās) in the other two prayers (i.e. ʿAsr and Maghrib),"
+     ]
     },
     {
      "id": "134",
      "n": 134,
      "s": "كَالسُّورَةِ الْأُخْرَى كَذَا الْوُسْطَى اسْتُحِبّْ",
-     "e": "سَبْقُ يَدٍ وَضْعًا وَفِي الرَّفْعِ الرُّكَبْ"
+     "e": "سَبْقُ يَدٍ وَضْعًا وَفِي الرَّفْعِ الرُّكَبْ",
+     "t": [
+      "Likewise (it is mandub for) the second surah to be shorter (in the second unit than the first one in the first unit), for the middle sitting posture (to be shorter than the last sitting posture), and for the hands to be the first to touch the ground when going down (to prostrate) and when getting up to use them for support (making them the last to leave the ground)."
+     ]
     }
    ]
   },
@@ -987,31 +1522,51 @@
      "id": "135",
      "n": 135,
      "s": "وَكَرِهُوا بَسْمَلَةً تَعَوُّذَا",
-     "e": "فِي الْفَرْضِ وَالسُّجُودِ فِي الثَّوْبِ كَذَا"
+     "e": "فِي الْفَرْضِ وَالسُّجُودِ فِي الثَّوْبِ كَذَا",
+     "t": [
+      "And they have disliked (saying) Bismillah and ʿAʿūdhubillah",
+      "in wajib prayers (before the recitations), prostrating on cloth material. Likewise"
+     ]
     },
     {
      "id": "136",
      "n": 136,
      "s": "كَوْرُ عِمَامَةٍ وَبَعْضُ كُمِّهِ",
-     "e": "وَحَمْلُ شَيْءٍ فِيهِ أَوْ فِي فَمِهِ"
+     "e": "وَحَمْلُ شَيْءٍ فِيهِ أَوْ فِي فَمِهِ",
+     "t": [
+      "Is treated (prostrating on) a band from (one's) turban or part of one's sleeve,",
+      "carrying something in prayer (in one's hand) or in one's mouth,"
+     ]
     },
     {
      "id": "137",
      "n": 137,
      "s": "قِرَاءَةٌ لَدَى السُّجُودِ وَالرُّكُوعْ",
-     "e": "تَفَكُّرُ الْقَلْبِ بِمَا نَافَى الْخُشُوعْ"
+     "e": "تَفَكُّرُ الْقَلْبِ بِمَا نَافَى الْخُشُوعْ",
+     "t": [
+      "Reciting Qur'an while prostrating and bowing,",
+      "thinking in one's heart about affairs which contradict the feeling of servility/humbleness,"
+     ]
     },
     {
      "id": "138",
      "n": 138,
      "s": "وَعَبَثٌ وَالِالْتِفَاتُ وَالدُّعَا",
-     "e": "أَثْنَا قِرَاءَةٍ كَذَا إِنْ رَكَعَا"
+     "e": "أَثْنَا قِرَاءَةٍ كَذَا إِنْ رَكَعَا",
+     "t": [
+      "Playing around (with one's hands), turning (the head) to the side, supplicating",
+      "during the recitation also when he is bowing,"
+     ]
     },
     {
      "id": "139",
      "n": 139,
      "s": "تَشْبِيكٌ أَوْ فَرْقَعَةُ الْأَصَابِعِ",
-     "e": "تَخَصُّرٌ تَغْمِيضُ عَيْنٍ تَابِعِ"
+     "e": "تَخَصُّرٌ تَغْمِيضُ عَيْنٍ تَابِعِ",
+     "t": [
+      "Interlacing or cracking/popping the fingers,",
+      "placing hands on the waist (with elbows pointing out to the side), and closing ones eyes follows (in being among the things which the Maliki Scholars have disliked)."
+     ]
     }
    ]
   },
@@ -1025,38 +1580,62 @@
     {
      "id": "140",
      "n": 140,
-     "s": "فَصْلٌ وَخَمْسُ صَلَوَاتٍ فَرْضُ عَيْنْ",
-     "e": "وَهْيَ كِفَايَةٌ لِمَيْتٍ دُونَ مَيْنْ"
+     "s": "(فَصْلٌ) وَخَمْسُ صَلَوَاتٍ فَرْضُ عَيْنْ",
+     "e": "وَهِيَ كِفَايَةٌ لِمَيْتٍ دُونَ مَيْنْ",
+     "t": [
+      "The five daily prayers are wajib on each individual",
+      "and the prayer for the deceased is a communal obligation without a doubt."
+     ]
     },
     {
      "id": "141",
      "n": 141,
      "s": "فُرُوضُهَا التَّكْبِيرُ أَرْبَعًا دُعَا",
-     "e": "وَنِيَّةٌ سَلَامٌ سِرٌّ تَبِعَا"
+     "e": "وَنِيَّةٌ سَلَامٌ سِرٌّ تَبِعَا",
+     "t": [
+      "The wajibs if the Funeral Prayer are (1) four takbirs, (2) supplication (for the deceased),",
+      "(3) (starting with) an intention, and (4) quietly making salam follows (however, the imam may say it slightly out loud and the followers should all confine themselves to one quietly uttered salam)."
+     ]
     },
     {
      "id": "142",
      "n": 142,
      "s": "وَكَالصَّلَاةِ الْغُسْلُ دَفْنٌ وَكَفَنْ",
-     "e": "وِتْرٌ كُسُوفٌ عِيدٌ اسْتِسْقَا سُنَنْ"
+     "e": "وِتْرٌ كُسُوفٌ عِيدٌ اسْتِسْقَا سُنَنْ",
+     "t": [
+      "Similar to the Funeral Prayer, (it is also a communal obligation) to wash the dead body. bury it, and enshroud it.",
+      "(1) Witr prayer, (2) the Solar Eclipse Prayer, (3 & 4) the two ʿId Prayers, and (5) the Prayer for Water are sunnahs."
+     ]
     },
     {
      "id": "143",
      "n": 143,
      "s": "فَجْرٌ رَغِيبَةٌ وَتُقْضَى لِلزَّوَالْ",
-     "e": "وَالْفَرْضُ يُقْضَى أَبَدًا وَبِالتَّوَالْ"
+     "e": "وَالْفَرْضُ يُقْضَى أَبَدًا وَبِالتَّوَالْ",
+     "t": [
+      "Fajr is a Raghībah and it is made up until high noon.",
+      "Wajib prayers are made up without any end time limit and in succession (in the proper order)."
+     ]
     },
     {
      "id": "144",
      "n": 144,
      "s": "نُدِبَ نَفْلٌ مُطْلَقًا وَأُكِّدَتْ",
-     "e": "تَحِيَّةٌ ضُحًى تَرَاوِيحُ تَلَتْ"
+     "e": "تَحِيَّةٌ ضُحًى تَرَاوِيحُ تَلَتْ",
+     "t": [
+      "Mandub prayers are recommended without limit (during allowed times) but the following are more stressed:",
+      "(1) the Prayer to Greet the Masjid, (2) the Midmorning Prayer, (3) Tarāwī# in Ramadan read,"
+     ]
     },
     {
      "id": "145",
      "n": 145,
      "s": "وَقَبْلَ وِتْرٍ مِثْلَ ظُهْرٍ عَصْرِ",
-     "e": "وَبَعْدَ مَغْرِبٍ وَبَعْدَ ظُهْرِ"
+     "e": "وَبَعْدَ مَغْرِبٍ وَبَعْدَ ظُهْرِ",
+     "t": [
+      "(4) (Two Shafʿ units) before Witr, (5) similarly (before) Dhuhr, (6) (before) ʿA&r,",
+      "(7) after Maghrib, and (8) after Dhuhr."
+     ]
     }
    ]
   },
@@ -1070,80 +1649,132 @@
     {
      "id": "146",
      "n": 146,
-     "s": "فَصْلٌ لِنَقْصِ سُنَّةٍ سَهْوًا يُسَنْ",
-     "e": "قَبْلَ السَّلَامِ سَجْدَتَانِ أَوْ سُنَنْ"
+     "s": "(فَصْلٌ) لِنَقْصِ سُنَّةٍ سَهْوًا يُسَنْ",
+     "e": "قَبْلَ السَّلَامِ سَجْدَتَانِ أَوْ سُنَنْ",
+     "t": [
+      "For missing a sunnah by mistake (or out of forgetfulness), it is sunnah",
+      "to make before the terminating salam two prostrations - and also for missing more than one sunnah."
+     ]
     },
     {
      "id": "147",
      "n": 147,
      "s": "إِنْ أُكِّدَتْ وَمَنْ يَزِدْ سَهْوًا سَجَدْ",
-     "e": "بَعْدُ كَذَا وَالنَّقْصَ غَلِّبْ إِنْ وَرَدْ"
+     "e": "بَعْدُ كَذَا وَالنَّقْصَ غَلِّبْ إِنْ وَرَدْ",
+     "t": [
+      "(This is) if the sunnah is stressed. And he who adds to his prayer by mistake should prostrate",
+      "after (the salam) likewise (with two prostrations followed by a salam). And give missing (a sunnah) more weight if it happens (along with adding)."
+     ]
     },
     {
      "id": "148",
      "n": 148,
      "s": "وَاسْتَدْرِكِ الْقَبْلِيَّ مَعْ قُرْبِ السَّلَامْ",
-     "e": "وَالْبَعْدِيَّ وَلَوْ مِنْ بَعْدِ عَامْ"
+     "e": "وَاسْتَدْرِكِ الْبَعْدِيَّ وَلَوْ مِنْ بَعْدِ عَامْ",
+     "t": [
+      "And do forgotten prostrations which had to be before the salam shortly afterwards",
+      "and do forgotten prostrations which had to be after the salam even if after one year."
+     ]
     },
     {
      "id": "149",
      "n": 149,
      "s": "عَنْ مُقْتَدٍ يَحْمِلُ هَذَيْنِ الْإِمَامْ",
-     "e": "وَبَطَلَتْ بِعَمْدِ نَفْخٍ أَوْ كَلَامْ"
+     "e": "وَبَطَلَتْ بِعَمْدِ نَفْخٍ أَوْ كَلَامْ",
+     "t": [
+      "The imam carries the responsibility for both these types of prostrations off of the follower.",
+      "Formal Prayer is invalidated with intentional hard breathing or talking"
+     ]
     },
     {
      "id": "150",
      "n": 150,
      "s": "لِغَيْرِ إِصْلَاحٍ وَبِالْمُشْغِلِ عَنْ",
-     "e": "فَرْضٍ وَفِي الْوَقْتِ أَعِدْ إِذَا يُسَنّ"
+     "e": "فَرْضٍ وَفِي الْوَقْتِ أَعِدْ إِذَا يُسَنْ",
+     "t": [
+      "Without an intention to correct (one's imam). (It is also invalidated) by being busied away",
+      "from a wajib action (of prayer). And if you missed a sunnah from being busied away, then repeat the prayer (as a mandub action) within the allowed repetition time."
+     ]
     },
     {
      "id": "151",
      "n": 151,
-     "s": "وَحَدَثٍ وَسَهْوٍ زِيدَ الْمِثْلُ",
-     "e": "قَهْقَهَةٍ وَعَمْدِ شُرْبٍ أَكْلُ"
+     "s": "وَحَدَثٍ وَسَهْوِ زِيدِ الْمِثْلْ",
+     "e": "قَهْقَهَةٍ وَعَمْدِ شُرْبٍ أَكْلْ",
+     "t": [
+      "(Formal Prayer is also invalidated) by losing one's ritual purity, adding as many units as the prayer originally should have contained,",
+      "laughing out loud, intentionally drinking and eating,"
+     ]
     },
     {
      "id": "152",
      "n": 152,
-     "s": "وَسَجْدَةٍ فِي وَذِكْرِ فَرْضِ",
-     "e": "أَقَلَّ مِنْ سِتٍّ كَذِكْرِ الْبَعْضِ"
+     "s": "وَسَجْدَةٍ قَيْءٍ وَذِكْرِ فَرْضِ",
+     "e": "أَقَلَّ مِنْ سِتٍّ كَذِكْرِ الْبَعْضِ",
+     "t": [
+      "Intentionally adding (an extra wajib physical action such as) a prostration, intentionally vomiting, remembering a missed wajib prayer",
+      "(if the number of missed prayers is) less than six or remembering (that one did not perform a necessary) part of a previous prayer."
+     ]
     },
     {
      "id": "153",
      "n": 153,
-     "s": "وَفَوْتِ قَبْلِيٍّ ثَلَاثَ سُنَنِ",
-     "e": "بِفَضْلِ مَسْجِدٍ كَطُولِ الزَّمَنِ"
+     "s": "وَفَوْتِ قَبْلِيٍّ ثَلَاثِ سُنَنْ",
+     "e": "بِفَصْلِ مَسْجِدٍ كَطُولِ الزَّمَنْ",
+     "t": [
+      "(Formal Prayer is also invalidated by) missing a prostration which had to be performed before the salam (in a previous prayer) due to missing three (or more stressed) sunnahs",
+      "if one exits the masjid (or place of prayer) or a long time passes (before one makes the necessary prostrations of forgetfulness)."
+     ]
     },
     {
      "id": "154",
      "n": 154,
      "s": "وَاسْتَدْرِكِ الرُّكْنَ فَإِنْ حَالَ رُكُوعْ",
-     "e": "فَأَلْغِ ذَاتَ السَّهْوِ وَالْبِنَا يَطُوعْ"
+     "e": "فَأَلْغِ ذَاتَ السَّهْوِ وَالْبِنَا يَطُوعْ",
+     "t": [
+      "Perform a missed wajib part of the prayer (when you remember) but if an act of bowing comes in between (your remembering and the missed action)",
+      "cancel the unit with the missed wajib part and building on the units is now allowed."
+     ]
     },
     {
      "id": "155",
      "n": 155,
      "s": "كَفِعْلِ مَنْ سَلَّمَ لَكِنْ يُحْرِمُ",
-     "e": "لِلْبَاقِي وَالطُّولُ الْفَسَادُ مُلْزِمُ"
+     "e": "لِلْبَاقِي وَالطُّولُ الْفَسَادُ مُلْزِمُ",
+     "t": [
+      "This is similar to how a person who made salam too early acts, but he should re-enter prayer with another initial takbir",
+      "for the rest of the units. (And know that if) a long time passes (between the prayer and his remembering), it will obligate invalidation (of the previous prayer and he must begin anew)."
+     ]
     },
     {
      "id": "156",
      "n": 156,
      "s": "مَنْ شَكَّ فِي رُكْنٍ بَنَى عَلَى الْيَقِينْ",
-     "e": "وَلْيَسْجُدِ الْبَعْدِيَّ لَكِنْ قَدْ يَبِينْ"
+     "e": "وَلْيَسْجُدِ الْبَعْدِيَّ لَكِنْ قَدْ يَبِينْ",
+     "t": [
+      "Whoever doubts about doing a wajib essential should build on what he is sure of",
+      "and prostrate after the salam. Then there are (some rules of recitation) which are different (and must be clarified for the person who missed a wajib action in the first two units but only realized it after the bowing of the third unit.)"
+     ]
     },
     {
      "id": "157",
      "n": 157,
      "s": "لِأَنْ بَنَوْا فِي فِعْلِهِمْ وَالْقَوْلِ",
-     "e": "نَقْصٍ بِفَوْتِ سُورَةٍ فَالْقَبْلِي"
+     "e": "نَقْصٍ بِفَوْتِ سُورَةٍ فَالْقَبْلِي",
+     "t": [
+      "As they build on the actions of prayer and also (keep to the normal) recitations (in this case what will happen is the third unit which was recited without a surah will now be considered the second unit).",
+      "(And for this reason the second unit is now said to be) missing a surah and thus the person must make prostrations of forgetfulness before the salam (in this case)."
+     ]
     },
     {
      "id": "158",
      "n": 158,
      "s": "كَذَاكِرِ الْوُسْطَى وَالْأَيْدِي قَدْ رَفَعْ",
-     "e": "وَرُكَّعًا لَا قَبْلَ ذَا لَكِنْ رَجَعْ"
+     "e": "وَرُكَّعًا لَا قَبْلَ ذَا لَكِنْ رَجَعْ",
+     "t": [
+      "Also, the person who remembers the middle sitting after his hands have already left the ground (is requested to perform prostrations before the salam)",
+      "but not if he remembers (the middle sitting) while his hands are still in contact with the ground; rather, he should sit back down (and there is no need to prostrate prostrations of forgetfulness later)."
+     ]
     }
    ]
   },
@@ -1157,38 +1788,62 @@
     {
      "id": "159",
      "n": 159,
-     "s": "فَصْلٌ بِمَوْطِنِ الْقُرَى قَدْ فُرِضَتْ",
-     "e": "صَلَاةُ جُمْعَةٍ لِخُطْبَةٍ تَلَتْ"
+     "s": "(فَصْلٌ) بِمَوْطِنِ الْقُرَى قَدْ فُرِضَتْ",
+     "e": "صَلَاةُ جُمْعَةٍ لِخُطْبَةٍ تَلَتْ",
+     "t": [
+      "In the place of large villages, it is wajib",
+      "to pray the Friday Prayer with a sermon read"
+     ]
     },
     {
      "id": "160",
      "n": 160,
      "s": "بِجَامِعٍ عَلَى مُقِيمٍ مَا انْعَذَرْ",
-     "e": "حُرٍّ قَرِيبٍ بِكَفَرْسَخٍ ذُكِرْ"
+     "e": "حُرٍّ قَرِيبٍ بِكَفَرْسَخٍ ذُكِرْ",
+     "t": [
+      "Performed in a built masjid for the person who is not travelling, has no other excuses,",
+      "is free, is within one farsakh (5.565 kilometers) of the minaret (from where the adhan is called), and is male."
+     ]
     },
     {
      "id": "161",
      "n": 161,
      "s": "وَأَجْزَأَتْ غَيْرًا نَعَمْ قَدْ تُنْدَبُ",
-     "e": "عِنْدَ النِّدَا السَّعْيُ إِلَيْهَا يَجِبُ"
+     "e": "عِنْدَ النِّدَا السَّعْيُ إِلَيْهَا يَجِبُ",
+     "t": [
+      "Others who pray it fulfill the requirement (for Dhuhr) and yes it is even mandub for them to pray it.",
+      "When the call is made, one must hasten towards it."
+     ]
     },
     {
      "id": "162",
      "n": 162,
      "s": "وَسُنَّ غُسْلٌ بِالرَّوَاحِ اتَّصَلَا",
-     "e": "نَدْبٌ تَهْجِيرٌ وَحَالٌ جُمِّلَا"
+     "e": "نَدْبٌ تَهْجِيرٌ وَحَالٌ جُمِّلَا",
+     "t": [
+      "It is sunnah to take a bath connected with one's departure (towards the masjid).",
+      "It is mandub to go when it is sufficiently hot and to go in an appearance which is fair (e.g., clean good-looking clothes and sweet natural scents for men)."
+     ]
     },
     {
      "id": "163",
      "n": 163,
      "s": "بِجُمْعَةٍ جَمَاعَةٌ قَدْ وَجَبَتْ",
-     "e": "سُنَّتْ بِفَرْضٍ وَبِرَكْعَةٍ رَسَتْ"
+     "e": "سُنَّتْ بِفَرْضٍ وَبِرَكْعَةٍ رَسَتْ",
+     "t": [
+      "For the Friday Prayer, a congregation is a wajib (precondition)",
+      "and for other wajib prayers, it is a sunnah (to pray in congregation). One gets credit for praying in congregations from catching at least one unit with the imam."
+     ]
     },
     {
      "id": "164",
      "n": 164,
      "s": "وَنُدِبَتْ إِعَادَةُ الْفَذِّ بِهَا",
-     "e": "لَا مَغْرِبًا كَذَا عِشَا مُوتِرُهَا"
+     "e": "لَا مَغْرِبًا كَذَا عِشَا مُوتِرُهَا",
+     "t": [
+      "For the regular daily wajib prayers, it is mandub for the person who prayed alone to repeat the prayer along with a congregation",
+      "but not Maghrib prayer nor ʿIsha' if one has already prayed Witr."
+     ]
     }
    ]
   },
@@ -1203,103 +1858,170 @@
      "id": "165",
      "n": 165,
      "s": "شَرْطُ الْإِمَامِ ذَكَرٌ مُكَلَّفُ",
-     "e": "آتٍ بِالْأَرْكَانِ وَحُكْمًا يَعْرِفُ"
+     "e": "آتٍ بِالْأَرْكَانِ وَحُكْمًا يَعْرِفُ",
+     "t": [
+      "The preconditions of the imam are that he is (1) male, (2) considered responsible for his actions,",
+      "(3) able to perform the wajib essentials, (4) knowledgeable of the rulings of the formal prayer,"
+     ]
     },
     {
      "id": "166",
      "n": 166,
      "s": "وَغَيْرُ ذِي فِسْقٍ وَلَحْنٍ وَاقْتِدَا",
-     "e": "فِي جُمُعَةٍ حُرٌّ مُقِيمٌ عَدَدَا"
+     "e": "فِي جُمْعَةٍ حُرٌّ مُقِيمٌ عَدَدَا",
+     "t": [
+      "(5) Not one of open disobedience (to Allah), (6) not one who alters the meanings of the Arabic words, and (7) not a follower of another imam (rather, he should lead the prayer alone independently and not follow any one).",
+      "For the Friday Prayer that he must be a free man and be residing in his home locality is also counted (among the preconditions)."
+     ]
     },
     {
      "id": "167",
      "n": 167,
      "s": "وَيُكْرَهُ السَّلَسُ وَالْقُرُوحُ مَعْ",
-     "e": "بَلَدِيٍّ لِغَيْرِهِمْ وَمَنْ يُكْرِهُ دَعْ"
+     "e": "بَادٍ لِغَيْرِهِمْ وَمَنْ يُكْرَهُ دَعْ",
+     "t": [
+      "And disliked (in their being imams) are: (1) the person who has a continuous problem in keeping ablution, (2) has a wound which flows with impurities,",
+      "(3) is from a rural background when the followers are city dwellers - and he whose imamate is disliked, leave off -"
+     ]
     },
     {
      "id": "168",
      "n": 168,
      "s": "وَكَالْأَشَلِّ وَإِمَامَةٌ بِلَا",
-     "e": "رِدَا بِمَسْجِدٍ صَلَاةٌ تَجْتَلَى"
+     "e": "رِدَا بِمَسْجِدٍ صَلَاةٌ تَجْتَلَى",
+     "t": [
+      "(4) is a paraplegic, (5) is leading without",
+      "a loose outer garment in a masjid - also it is disliked to have a row of people praying"
+     ]
     },
     {
      "id": "169",
      "n": 169,
      "s": "بَيْنَ الْأَسَاطِينِ وَقُدَّامَ الْإِمَامْ",
-     "e": "جَمَاعَةٌ بَعْدَ صَلَاةِ ذِي الْتِزَامْ"
+     "e": "جَمَاعَةٌ بَعْدَ صَلَاةِ ذِي الْتِزَامْ",
+     "t": [
+      "Cut by pillars, positioned in front of the imam, or to have a second group for the same prayer (after the imam is done) as a continual and regular practice -"
+     ]
     },
     {
      "id": "170",
      "n": 170,
-     "s": "وَرَاتِبٍ مَجْهُولٍ أَوْ مَنِ ابْتَنَى",
-     "e": "وَأَغْلَفَ عَبْدٍ خَصِيٍّ ابْنِ زِنَا"
+     "s": "وَرَاتِبٌ مَجْهُولٌ أَوْ مَنْ أُبِنَا",
+     "e": "وَأَغْلَفَ عَبْدٍ خَصِيٍّ ابْنِ زِنَا",
+     "t": [
+      "(Now continuing with the list of disliked imams) (6) to choose a regular imam who is unknown (to people), (7) is accused (and looked upon with suspicion),",
+      "(8) is uncircumcised, (9) is a slave, (10) is castrated, or (11) is a child of fornication."
+     ]
     },
     {
      "id": "171",
      "n": 171,
-     "s": "وَجَازَ عِنِّينٌ وَأَعْمَى الْكُنْ",
-     "e": "مَجْذُومٍ خَفَّ وَهَذَا الْمُمْكِنْ"
+     "s": "وَجَازَ عِنِّينٌ وَأَعْمَى أَلْكَنُ",
+     "e": "مُجَذَّمٌ خَفَّ وَهَذَا الْمُمْكِنِ",
+     "t": [
+      "(The following people are permissible to choose as imam): (1) the impotent person, (2) the blind person, (3) the person with speech impediments (which do not alter the meaning of the Arabic words),",
+      "and (4) the person with light leprosy. And this amount (of detail) is all that is possible (for a short text such as this)."
+     ]
     },
     {
      "id": "172",
      "n": 172,
-     "s": "وَالْمُقْتَدِي الْإِمَامَ يَتْبَعُ خَلَلًا",
-     "e": "زِيَادَةٌ قَدْ حُقِّقَتْ عَنْهَا اعْدِلَا"
+     "s": "وَالْمُقْتَدِي الْإِمَامَ يَتْبَعُ خَلَا",
+     "e": "زِيَادَةً قَدْ حُقِّقَتْ عَنْهَا اعْدِلَا",
+     "t": [
+      "The follower of the imam follows (in everything) except",
+      "an action which is added; so, swerve away from such (following)."
+     ]
     },
     {
      "id": "173",
      "n": 173,
      "s": "وَأَحْرِمِ الْمَسْبُوقَ فَوْرًا وَدَخَلْ",
-     "e": "مَعَ الْإِمَامِ كَيْفَمَا كَانَ الْعَمَلْ"
+     "e": "مَعَ الْإِمَامِ كَيْفَمَا كَانَ الْعَمَلْ",
+     "t": [
+      "The latecomer makes the initial takbir immediately and enters the prayer",
+      "with the imam regardless of what the current action is (that the imam is performing)."
+     ]
     },
     {
      "id": "174",
      "n": 174,
      "s": "مُكَبِّرًا إِنْ سَاجِدًا أَوْ رَاكِعَا",
-     "e": "أَلْغَاهُ لَا فِي جِلْسَةٍ وَتَابِعَا"
+     "e": "أَلْفَاهُ لَا فِي جِلْسَةٍ وَتَابِعَا",
+     "t": [
+      "The latecomer makes an extra takbir (after the initial takbir) if he finds the imam prostrating or bowing",
+      "but not if he find the imam sitting. And then he follows the imam (until the end of the prayer)."
+     ]
     },
     {
      "id": "175",
      "n": 175,
      "s": "إِنْ سَلَّمَ الْإِمَامُ قَامَ قَاضِيَا",
-     "e": "أَقْوَالَهُ وَفِي الْفِعَالِ بَانِيَا"
+     "e": "أَقْوَالَهُ وَفِي الْفِعَالِ بَانِيَا",
+     "t": [
+      "When the imam makes his terminating salam, the latecomer stands up to make up",
+      "the missed verbal recitations and in the physical actions he builds off (what he prayed with the imam)."
+     ]
     },
     {
      "id": "176",
      "n": 176,
-     "s": "كَبِّرْ إِنْ حَصَلَ شَفْعًا أَوْ أَقَلّْ",
-     "e": "مِنْ رَكْعَةٍ وَالسَّهْوَ إِذْ ذَاكَ احْتَمَلْ"
+     "s": "كَبِّرْ إِنْ حَصَّلَ شَفْعًا أَوْ أَقَلّْ",
+     "e": "مِنْ رَكْعَةٍ وَالسَّهْوَ إِذْ ذَاكَ احْتَمَلْ",
+     "t": [
+      "(When standing up after the imam's salam), the latecomer says takbir if he obtained a pair of units or less",
+      "than one unit (with the imam). And the correctable mistakes which the imam makes while the latecomer is following are the imam's responsibility and the correctable mistakes which the latecomer makes after the imam's terminating salam are the latecomer's responsibility."
+     ]
     },
     {
      "id": "177",
      "n": 177,
      "s": "وَيَسْجُدُ الْمَسْبُوقُ قَبْلِيَّ الْإِمَامْ",
-     "e": "مَعَهُ وَبَعْدِيًّا يَقْضِي بَعْدَ السَّلَامْ"
+     "e": "مَعَهُ وَبَعْدِيًّا قَضَى بَعْدَ السَّلَامْ",
+     "t": [
+      "The latecomer should prostrate the imam's prostrations of forgetfulness made before the salam",
+      "along with the imam and he should make up those the imam makes after the salam after his own terminating salam."
+     ]
     },
     {
      "id": "178",
      "n": 178,
      "s": "أَدْرَكَ ذَاكَ السَّهْوَ أَوْلَا قَيَّدُوا",
-     "e": "مَنْ لَمْ يُحَصِّلْ رَكْعَةً لَا يَسْجُدُ"
+     "e": "مَنْ لَمْ يُحَصِّلْ رَكْعَةً لَا يَسْجُدُ",
+     "t": [
+      "It does not matter whether the latecomer was present during the imam's mistake but they have stipulated",
+      "that he who does not obtain even a single unit along with the imam should not prostrate the imam's prostrations of forgetfulness."
+     ]
     },
     {
      "id": "179",
      "n": 179,
      "s": "وَبَطَلَتْ لِمُقْتَدٍ بِمُبْطِلِ",
-     "e": "عَلَى الْإِمَامِ غَيْرِ فَرْعٍ مُنْجَلِي"
+     "e": "عَلَى الْإِمَامِ غَيْرِ فَرْعٍ مُنْجَلِي",
+     "t": [
+      "The prayer of the follower is invalidated by that which ruins",
+      "the imam's prayer except some apparent branch cases,"
+     ]
     },
     {
      "id": "180",
      "n": 180,
      "s": "مَنْ ذَكَرَ الْحَدَثَ أَوْ بِهِ غُلِبْ",
-     "e": "إِنْ بَادَرَ الْخُرُوجَ مِنْهَا وَنُدِبْ"
+     "e": "إِنْ بَادَرَ الْخُرُوجَ مِنْهَا وَنُدِبْ",
+     "t": [
+      "Such as if the imam remembers that he is not pure or is overcome with ritual impurity (while praying).",
+      "He should in such a case immediately leave the prayer (to allow the followers' prayers to remain valid) and it is mandub for him"
+     ]
     },
     {
      "id": "181",
      "n": 181,
-     "s": "تَقْدِيمُ مُؤْتَمٍّ يَتِمُّ بِهِمُو",
-     "e": "بِأَنْ أَبَاهُ انْفَرَدُوا أَوْ قَدَّمُوا"
+     "s": "تَقْدِيمُ مُؤْتَمٍّ يُتِمُّ بِهِمُو",
+     "e": "فَإِنْ أَبَاهُ انْفَرَدُوا أَوْ قَدَّمُوا",
+     "t": [
+      "To appoint one of the followers (as his successor) to finish the prayer with the other followers.",
+      "If the imam does not do this (before leaving), then the followers may finish their prayers alone or send one of them forward (as the replacement imam who will finish the prayer with them)."
+     ]
     }
    ]
   },
@@ -1313,50 +2035,82 @@
     {
      "id": "182",
      "n": 182,
-     "s": "فُرِضَتِ الزَّكَاةُ فِيمَا يَرْتَسِمْ",
-     "e": "عَيْنٍ وَحَبٍّ وَثِمَارٍ وَنَعَمْ"
+     "s": "فُرِضَتِ الزَّكَاةُ فِيمَا يُرْتَسَمْ",
+     "e": "عَيْنٍ وَحَبٍّ وَثِمَارٍ وَنَعَمْ",
+     "t": [
+      "Zakāt is wajib on that which inscribed (in the primary texts)",
+      "of gold and silver, cereal and crop harvests, and grazing livestock."
+     ]
     },
     {
      "id": "183",
      "n": 183,
      "s": "فِي الْعَيْنِ وَالْأَنْعَامِ حَقَّتْ كُلَّ عَامْ",
-     "e": "يُكْمِلُ وَالْحَبُّ بِالْإِفْرَاكِ يُرَامْ"
+     "e": "يَكْمُلُ وَالْحَبُّ بِالْإِفْرَاكِ يُرَامْ",
+     "t": [
+      "For gold, silver, and grazing animals, it is due every year",
+      "and for crops it is desired when they are ready for harvest."
+     ]
     },
     {
      "id": "184",
      "n": 184,
      "s": "وَالتَّمْرُ وَالزَّبِيبُ بِالطِّيبِ وَفِي",
-     "e": "ذِي الزَّيْتِ مِنْ زَيْتِهِ وَالْحَبُّ يَفِي"
+     "e": "ذِي الزَّيْتِ مِنْ زَيْتِهِ وَالْحَبُّ يَفِي",
+     "t": [
+      "(It is due for) dates and grapes when they are ripe (close to sweetness) and for",
+      "that which gives oil, it is due when it is ready to give oil. And (it is due for) fruits (i.e. dates and grapes) and crops when they are ready for gathering as long as the yield is past the minimum threshold."
+     ]
     },
     {
      "id": "185",
      "n": 185,
-     "s": "وَهْيَ فِي الثِّمَارِ وَالْحَبِّ الْعُشُرْ",
-     "e": "أَوْ نِصْفُهُ إِنْ آلَةُ السَّقْيِ يَجُرّْ"
+     "s": "وَهِيَ فِي الثِّمَارِ وَالْحَبِّ الْعُشُرْ",
+     "e": "أَوْ نِصْفُهُ إِنْ آلَةُ السَّقْيِ يَجُرْ",
+     "t": [
+      "The amount due for fruits and crops is one tenth",
+      "or half of that if (the farmer) used an instrument of irrigation."
+     ]
     },
     {
      "id": "186",
      "n": 186,
      "s": "خَمْسَةُ أَوْسُقٍ نِصَابٌ فِيهِمَا",
-     "e": "فِي فِضَّةٍ قُلْ مِائَتَانِ دِرْهَمَا"
+     "e": "فِي فِضَّةٍ قُلْ مِائَتَانِ دِرْهَمَا",
+     "t": [
+      "Five wasqs (60 ṣāʿ or ~609 volumetric liters) is the minimum threshold value for both types of harvests.",
+      "For silver, say \"(The minimum threshold is) 200 dirhams.\""
+     ]
     },
     {
      "id": "187",
      "n": 187,
      "s": "عِشْرُونَ دِينَارًا نِصَابٌ فِي الذَّهَبْ",
-     "e": "وَرُبْعُ الْعُشْرِ فِيهِمَا وَجَبْ"
+     "e": "وَرُبْعُ الْعُشْرِ فِيهِمَا وَجَبْ",
+     "t": [
+      "20 dinārs is the minimum threshold for gold",
+      "and one-fourth of one-tenth is wajib on both gold and silver."
+     ]
     },
     {
      "id": "188",
      "n": 188,
-     "s": "وَالْعَرْضُ ذُو التِّجْرِ وَدَيْنٍ مَنْ أَدَارْ",
-     "e": "قِيمَتُهَا كَالْعَيْنِ ثُمَّ ذُو احْتِكَارْ"
+     "s": "وَالْعَرْضُ ذُو التِّجْرِ وَدَيْنُ مَنْ أَدَارْ",
+     "e": "قِيمَتُهَا كَالْعَيْنِ ثُمَّ ذُو احْتِكَارْ",
+     "t": [
+      "Merchandise for immediate trade (also has Zakat on it) and also the debts of the one (who constantly loans and receives).",
+      "The value of these should be estimated according to the equivalent amount of gold or silver. Then, the person who hoards (gives loans for long periods or sells merchandise only after the market price has risen)"
+     ]
     },
     {
      "id": "189",
      "n": 189,
      "s": "زَكَّى لِقَبْضِ ثَمَنٍ أَوْ دَيْنِ",
-     "e": "عَيْنًا بِشَرْطِ الْحَوْلِ لِلْأَصْلَيْنِ"
+     "e": "عَيْنًا بِشَرْطِ الْحَوْلِ لِلْأَصْلَيْنِ",
+     "t": [
+      "Pays Zakat when he receives the price of the merchandise or loan",
+      "(again) according to the price of gold/silver as long an entire year passed for these two cases."
+     ]
     }
    ]
   },
@@ -1371,67 +2125,111 @@
      "id": "190",
      "n": 190,
      "s": "فِي كُلِّ خَمْسَةِ جِمَالٍ جَذَعَهْ",
-     "e": "مِنْ غَنَمٍ بِنْتُ الْمَخَاضِ مُقْنِعَهْ"
+     "e": "مِنْ غَنَمٍ بِنْتُ الْمَخَاضِ مُقْنِعَهْ",
+     "t": [
+      "(Now speaking about Zakat on livestock, we say that the representative of the imam should take) one one-year-old sheep for every five camels.",
+      "A one-year-old she-camel fulfills the requirement"
+     ]
     },
     {
      "id": "191",
      "n": 191,
-     "s": "فِي الْخَمْسِ وَالْعِشْرِينَ وَابْنَةُ اللَّبُونْ",
-     "e": "فِي سِتَّةٍ مَعَ الثَّلَاثِينَ تَكُونْ"
+     "s": "فِي الْخَمْسِ وَالْعِشْرِينَ وَابْنَةَ اللَّبُونْ",
+     "e": "فِي سِتَّةٍ مَعَ الثَّلَاثِينَ تَكُونْ",
+     "t": [
+      "For twenty-five camels owned. A two-year-old she camel",
+      "is for thirty-six camels owned."
+     ]
     },
     {
      "id": "192",
      "n": 192,
      "s": "سِتًّا وَأَرْبَعِينَ حِقَّةٌ كَفَتْ",
-     "e": "جَذَعَةٌ إِحْدَى وَسِتِّينَ وَفَتْ"
+     "e": "جَذَعَةٌ إِحْدَى وَسِتِّينَ وَفَتْ",
+     "t": [
+      "For forty-six, a three-year-old she-camel is enough.",
+      "A four-year-old she-camel discharges the requirement for sixty- one camels owned."
+     ]
     },
     {
      "id": "193",
      "n": 193,
      "s": "بِنْتَا لَبُونٍ سِتَّةٌ وَسَبْعِينْ",
-     "e": "وَحِقَّتَانِ وَاحِدًا وَتِسْعِينْ"
+     "e": "وَحِقَّتَانِ وَاحِدًا وَتِسْعِينْ",
+     "t": [
+      "Two two-year-old she-camels are for seventy-six camels owned and",
+      "two three-year-old she-camels are for ninety-one camels owned."
+     ]
     },
     {
      "id": "194",
      "n": 194,
      "s": "وَمَعَ ثَلَاثِينَ ثَلَاثٌ أَيْ بَنَاتْ",
-     "e": "لَبُونٍ أَوْ خُذْ حِقَّتَيْنِ بِافْتِيَاتْ ؟؟"
+     "e": "لَبُونٍ أَوْ خُذْ حِقَّتَيْنِ بِافْتِيَاتْ",
+     "t": [
+      "(When there are ninety-one) along with thirty (more camels owned, take) three",
+      "two-year-old she-camels or take two three-year-old she-camels according to the opinion (of Imam Malik)."
+     ]
     },
     {
      "id": "195",
      "n": 195,
      "s": "إِذَا الثَّلَاثِينَ تَلَتْهَا الْمِائَةْ",
-     "e": "فِي كُلِّ خَمْسِينَ كَذَا حِقَّةْ ؟؟"
+     "e": "فِي كُلِّ خَمْسِينَ كَمَالًا حِقَّةْ",
+     "t": [
+      "When there are thirty plus one hundred (camels owned),",
+      "(then) for each fifty full units there is a three-year-old she- camel"
+     ]
     },
     {
      "id": "196",
      "n": 196,
      "s": "وَكُلُّ أَرْبَعِينَ بِنْتُ لَبُونْ",
-     "e": "وَهَكَذَا مَا زَادَ أَمْرُهُ يَهُونْ"
+     "e": "وَهَكَذَا مَا زَادَ أَمْرُهُ يَهُونْ",
+     "t": [
+      "And for each forty full units there is a two-year-old she-camel.",
+      "And this is how it is for numbers that are greater. Its ruling is easy."
+     ]
     },
     {
      "id": "197",
      "n": 197,
-     "s": "عِجْلٌ تُبِيعُ فِي ثَلَاثِينَ بَقَرْ",
-     "e": "مُسِنَّةٌ فِي أَرْبَعِينَ تُسْتَطَرْ"
+     "s": "عِجْلٌ تَبِيعٌ فِي ثَلَاثِينَ بَقَرْ",
+     "e": "مُسِنَّةٌ فِي أَرْبَعِينَ تُسْتَطَرْ",
+     "t": [
+      "There is a two-year-old male cattle animal for each thirty cattle owned",
+      "and a three-year-old female cattle animal for every forty is written."
+     ]
     },
     {
      "id": "198",
      "n": 198,
      "s": "وَهَكَذَا مَا ارْتَفَعَتْ ثُمَّ الْغَنَمْ",
-     "e": "شَاةٌ لِأَرْبَعِينَ مَعْ أُخْرَى تُضَمّْ"
+     "e": "شَاةٌ لِأَرْبَعِينَ مَعْ أُخْرَى تُضَمْ",
+     "t": [
+      "And this rule holds for numbers which are higher. Then, for sheep/goats,",
+      "give one one-year-old for forty sheep/goats owned (and continue to give one one-year-old) even if you have more than forty (up until and including one-hundred- twenty)."
+     ]
     },
     {
      "id": "199",
      "n": 199,
      "s": "فِي وَاحِدٍ عِشْرِينَ يَتْلُو وَمِئَهْ",
-     "e": "وَمَعَ ثَمَانِينَ ثَلَاثٌ مُجْزِئَهْ"
+     "e": "وَمَعَ ثَمَانِينَ ثَلَاثٌ مُجْزِئَهْ",
+     "t": [
+      "For twenty-one followed by one hundred",
+      "(two one-year-olds are due) and for eighty more, three are enough to fulfill the requirement (until just under four-hundred are owned)."
+     ]
     },
     {
      "id": "200",
      "n": 200,
      "s": "وَأَرْبَعًا خُذْ مِنْ مِئَتَيْنِ أَرْبَعِ",
-     "e": "شَاةٌ لِكُلِّ مِائَةٍ إِنْ تَرْتَفِعْ"
+     "e": "شَاةٌ لِكُلِّ مِائَةٍ إِنْ تُرْفَعِ",
+     "t": [
+      "And for four instances of one hundred, take four (one-year-olds).",
+      "There is one one-year-old for each hundred sheep if (the number owned is) higher."
+     ]
     }
    ]
   },
@@ -1446,49 +2244,81 @@
      "id": "201",
      "n": 201,
      "s": "وَحَوْلُ الْأَرْبَاحِ وَنَسْلٍ كَالْأُصُولْ",
-     "e": "وَالطَّارِ لَا عَمَّا يُزَكَّى أَنْ يَحُولْ"
+     "e": "وَالطَّارِ لَا عَمَّا يُزَكَّى أَنْ يَحُولْ",
+     "t": [
+      "The Zakat fiscal year for profit and offspring (of livestock) is the same as that of the original base capital or the animals' parents.",
+      "This is also true for new wealth or animals bought/received as long as the original amount was passed the minimum threshold value for both cases."
+     ]
     },
     {
      "id": "202",
      "n": 202,
      "s": "وَلَا يُزَكَّى وَقَصٌ مِنَ النَّعَمْ",
-     "e": "كَذَاكَ مَا دُونَ النِّصَابِ وَلْيَعُمّْ"
+     "e": "كَذَاكَ مَا دُونَ النِّصَابِ وَلْيَعُمْ",
+     "t": [
+      "If the number of animals owned is between two tiers, then no partial Zakat is due (on the extra animals)",
+      "similar to how there is no Zakat due on wealth that is below the minimum threshold value. And also encompass (in this ruling of being exempt from Zakat)"
+     ]
     },
     {
      "id": "203",
      "n": 203,
      "s": "وَعَسَلٌ فَاكِهَةٌ مَعَ الْخُضَرْ",
-     "e": "إِذْ هِيَ فِي الْمُقْتَاتِ فِيمَا يُدَّخَرْ"
+     "e": "إِذْ هِيَ فِي الْمُقْتَاتِ مِمَّا يُدَّخَرْ",
+     "t": [
+      "Honey, fruits (other than dates and grapes), and vegetables (other than certain string beans)",
+      "since all of these sources of nourishment can be stored up (and still be exempt from Zakat)."
+     ]
     },
     {
      "id": "204",
      "n": 204,
      "s": "وَيَحْصُلُ النِّصَابُ مِنْ صِنْفَيْنِ",
-     "e": "كَذَهَبٍ وَفِضَّةٍ مِنْ عَيْنِ"
+     "e": "كَذَهَبٍ وَفِضَّةٍ مِنْ عَيْنِ",
+     "t": [
+      "The minimum threshold for cash currency can be achieved from both types",
+      "like gold and silver, which are both from (what is considered) cash."
+     ]
     },
     {
      "id": "205",
      "n": 205,
      "s": "وَالضَّأْنُ لِلْمَعْزِ وَبُخْتٌ لِلْعِرَابْ",
-     "e": "وَبَقَرٌ إِلَى الْجَوَامِيسِ اصْطِحَابْ"
+     "e": "وَبَقَرٌ إِلَى الْجَوَامِيسِ اصْطِحَابْ",
+     "t": [
+      "Sheep are grouped with goats and large two-humped camels are grouped with regular-sized one-humped camels.",
+      "Similarly, cows/bulls with buffaloes are (counted) together."
+     ]
     },
     {
      "id": "206",
      "n": 206,
-     "s": "الْقَمْحُ لِلشَّعِيرِ لِلسُّلْتِ يَصَارْ",
-     "e": "كَذَا الْقِطَانِي وَالزَّبِيبُ وَالثِّمَارْ"
+     "s": "الْقَمْحُ لِلشَّعِيرِ لِلسُّلْتِ يُصَارْ",
+     "e": "كَذَا الْقِطَانِي وَالزَّبِيبُ وَالثِّمَارْ",
+     "t": [
+      "Wheat, barley, and multi-grain cereal crops are gathered together (for measurement).",
+      "Similarly, different string bean crops can be grouped together as can different grades of grapes. Lastly, different grades of dates can also be grouped together."
+     ]
     },
     {
      "id": "207",
      "n": 207,
      "s": "مَصْرِفُهَا الْفَقِيرُ وَالْمِسْكِينُ",
-     "e": "غَازٍ وَعِتْقٌ عَامِلٌ مَدِينُ"
+     "e": "غَازٍ وَعِتْقٌ عَامِلٌ مَدِينُ",
+     "t": [
+      "Zakat may be spent on the moderately poor, the extremely poor,",
+      "the person fighting (for Allah's cause), (slaves) to free (them), the person who works to collect/distribute/manage Zakat, the person in debt,"
+     ]
     },
     {
      "id": "208",
      "n": 208,
      "s": "مُؤَلَّفُ الْقَلْبِ وَمُحْتَاجٌ غَرِيبْ",
-     "e": "أَحْرَارُ إِسْلَامٍ وَلَمْ يَقْبَلْ مُرِيبْ"
+     "e": "أَحْرَارُ إِسْلَامٍ وَلَمْ يُقْبَلْ مُرِيبْ",
+     "t": [
+      "The person whose heart is to be mended (towards Islam), and the person who is away from home and is in need.",
+      "These people must be free Muslims (except it is valid to give a non-Muslim Zakat to mend his heart towards Islam) and one does not accept (giving Zakat) to a person who causes one to have (great) doubts (about whether or not he fulfills the requirements of being a target for Zakat)."
+     ]
     }
    ]
   },
@@ -1502,14 +2332,22 @@
     {
      "id": "209",
      "n": 209,
-     "s": "فَصْلٌ زَكَاةُ الْفِطْرِ صَاعٌ وَتَجِبْ",
-     "e": "عَنْ مُسْلِمٍ وَمَنْ بِرِزْقِهِ طُلِبْ"
+     "s": "(فَصْلٌ) زَكَاةُ الْفِطْرِ صَاعٌ وَتَجِبْ",
+     "e": "عَنْ مُسْلِمٍ وَمَنْ بِرِزْقِهِ طُلِبْ",
+     "t": [
+      "Section(Zakat al-Fi(r) Zākat al-Fi(r is a \"āʿ (about two liters) and is wajib",
+      "on every able Muslim and those whom he is responsible for financially"
+     ]
     },
     {
      "id": "210",
      "n": 210,
-     "s": "مِنْ مُسْلِمٍ بِحِلِّ عَيْشِ الْقَوْمِ",
-     "e": "لِتُغْنِ حُرًّا مُسْلِمًا فِي الْيَوْمِ"
+     "s": "مِنْ مُسْلِمٍ بِجُلِّ عَيْشِ الْقَوْمِ",
+     "e": "لِتُغْنِ حُرًّا مُسْلِمًا فِي الْيَوْمِ",
+     "t": [
+      "Who are Muslims. (It is given) from the common staple food of a people",
+      "to fulfill the (nourishment) needs of a free Muslim for an entire day."
+     ]
     }
    ]
   },
@@ -1524,43 +2362,71 @@
      "id": "211",
      "n": 211,
      "s": "صِيَامُ شَهْرِ رَمَضَانَ وَجَبَا",
-     "e": "فِي رَجَبٍ شَعْبَانَ صَوْمٌ نُدِبَا"
+     "e": "فِي رَجَبٍ شَعْبَانَ صَوْمٌ نُدِبَا",
+     "t": [
+      "Fasting in the month of Ramā!ān is wajib.",
+      "In Rajab and Shaʿbān, fasting is mandub."
+     ]
     },
     {
      "id": "212",
      "n": 212,
      "s": "كَتِسْعِ حِجَّةٍ وَأَحْرَى الْآخِرُ",
-     "e": "كَذَا الْمُحَرَّمُ وَأَحْرَى الْعَاشِرُ"
+     "e": "كَذَا الْمُحَرَّمُ وَأَحْرَى الْعَاشِرُ",
+     "t": [
+      "Like the first nine days of Dhu al-Hijjah and even more the last of these days (i.e. the 9th of Dhu al-Hijjah, the day of ʿArafah for other than the person performing Hajj),",
+      "likewise the month of Muḥarram and even more recommended is the tenth (of Muharram, the day of ʿĀshūrah in which the people of Mūsā crossed through the red sea and escaped from Pharaoh)."
+     ]
     },
     {
      "id": "213",
      "n": 213,
      "s": "وَيَثْبُتُ الشَّهْرُ بِرُؤْيَةِ الْهِلَالْ",
-     "e": "أَوْ بِثَلَاثِينَ قُبَيْلَ فِي كَمَالْ"
+     "e": "أَوْ بِثَلَاثِينَ قُبَيْلًا فِي كَمَالْ",
+     "t": [
+      "A lunar month is established by seeing the crescent moon",
+      "or by completing thirty days from the previous month in total."
+     ]
     },
     {
      "id": "214",
      "n": 214,
      "s": "فَرْضُ الصِّيَامِ نِيَّةٌ بِلَيْلِهِ",
-     "e": "وَتَرْكُ وَطْءٍ شُرْبِهِ وَأَكْلِهِ"
+     "e": "وَتَرْكُ وَطْءٍ شُرْبِهِ وَأَكْلِهِ",
+     "t": [
+      "The wajibs of fasting are: (1) making an intention in its preceding night,",
+      "(2) leaving sexual intercourse, (3) (leaving) drinking (fluids), (4) (leaving) eating,"
+     ]
     },
     {
      "id": "215",
      "n": 215,
-     "s": "وَالْقَيْءُ مَعَ إِيصَالِ شَيْءٍ لِلْمَعِدْ",
-     "e": "مِنْ أُذُنٍ أَوْ عَيْنٍ أَوْ أَنْفٍ وَرَدْ"
+     "s": "وَالْقَيْءِ مَعْ إِيصَالِ شَيْءٍ لِلْمَعِدْ",
+     "e": "مِنْ أُذُنٍ أَوْ عَيْنٍ أَوْ أَنْفٍ وَرَدْ",
+     "t": [
+      "(Avoiding intentional) (5) vomiting and (6) making substances reach the stomach",
+      "from the ear, eye, or nose as it has come (in some reports within the Maliki School)."
+     ]
     },
     {
      "id": "216",
      "n": 216,
-     "s": "وَقْتُ طُلُوعِ فَجْرِهِ إِلَى الْغُرُوبْ",
-     "e": "وَالْعَقْلُ فِي أَوَّلِهِ شَرْطُ الْوُجُوبْ"
+     "s": "وَقْتَ طُلُوعِ فَجْرِهِ إِلَى الْغُرُوبْ",
+     "e": "وَالْعَقْلُ فِي أَوَّلِهِ شَرْطُ الْوُجُوبْ",
+     "t": [
+      "The time for the fast is from the rising of dawn until the setting of the sun",
+      "and having consciousness (for other than the person asleep) in the beginning of it is a precondition for it to be obligatory (and acceptable)."
+     ]
     },
     {
      "id": "217",
      "n": 217,
      "s": "وَلْيَقْضِ فَاقِدُهُ وَالْحَيْضُ مَنَعْ",
-     "e": "صَوْمًا وَتَقْضِي الْفَرْضَ إِنْ بِهِ ارْتَفَعْ"
+     "e": "صَوْمًا وَتَقْضِي الْفَرْضَ إِنْ بِهِ ارْتَفَعْ",
+     "t": [
+      "And let the person who does not have consciousness (e.g., due to a fainting spell) make it up. (Know that) menstruation prevents",
+      "one from fasting and she makes up her wajib fasts (missed while menstruating including the fast in which the menstruation started during the day) and the fast in which the menstruation stopped and was lifted."
+     ]
     }
    ]
   },
@@ -1575,67 +2441,111 @@
      "id": "218",
      "n": 218,
      "s": "وَيُكْرَهُ اللَّمْسُ وَفِكْرٌ سُلِّمَا",
-     "e": "دَأَبًا مِنَ الْمَذْيِ وَإِلَّا حُرِّمَا"
+     "e": "دَأْبًا مِنَ الْمَذْيِ وَإِلَّا حُرِّمَا",
+     "t": [
+      "It is disliked to caress (the other gender) and think about (sensual matters) if one is safe",
+      "usually from emitting pre- seminal discharge; otherwise, these two acts are unlawful."
+     ]
     },
     {
      "id": "219",
      "n": 219,
      "s": "وَكَرِهُوا ذَوْقَ كَقِدْرٍ وَهَذَرْ",
-     "e": "غَالِبُ قَيْءٍ وَذُبَابٌ مُغْتَفَرْ"
+     "e": "غَالِبُ قَيْءٍ وَذُبَابٌ مُغْتَفَرْ",
+     "t": [
+      "And they have disliked tasting substances like from a cooking pot and useless talking.",
+      "Being overcome by vomit or swallowing flies/gnats by mistake is forgiven -"
+     ]
     },
     {
      "id": "220",
      "n": 220,
      "s": "غُبَارُ صَانِعٍ وَطُرْقٍ وَسِوَاكْ",
-     "e": "بِيَابِسٍ أَصْبَاحُ جَنَابَةٍ كَذَاكْ"
+     "e": "يَابِسٌ إِصْبَاحُ جَنَابَةٍ كَذَاكْ",
+     "t": [
+      "As is the dust of the laborer (e.g., wood carpenter) or of the road. (Also forgiven is) using a wood toothstick",
+      "which is dry likewise waking up in a state of greater ritual impurity (from a pre-dawn penetration or ejaculation with pleasure)."
+     ]
     },
     {
      "id": "221",
      "n": 221,
      "s": "وَنِيَّةٌ تَكْفِي لِمَا تَتَابَعُهْ",
-     "e": "يَجِبُ إِلَّا إِنْ نَفَاهُ مَانِعَهْ"
+     "e": "يَجِبُ إِلَّا إِنْ نَفَاهُ مَانِعُهْ",
+     "t": [
+      "And one intention is enough for fasts which must be kept on successive days",
+      "(but a new intention must be made) if some preventive factor (e.g., sickness or menstruation) breaks the succession of fasts."
+     ]
     },
     {
      "id": "222",
      "n": 222,
      "s": "نَدْبٌ تَعْجِيلٌ لِفِطْرٍ رَفْعَهْ",
-     "e": "كَذَاكَ تَأْخِيرُ سُحُورٍ تَبِعَهْ"
+     "e": "كَذَاكَ تَأْخِيرُ سُحُورٍ تَبِعَهْ",
+     "t": [
+      "It is mandub to hasten the breaking of the fasts (after sunset) and lifting (of the restrictions).",
+      "Just like that, it is mandub to delay the pre-dawn meal at night (e.g., to end twenty minutes before dawn)."
+     ]
     },
     {
      "id": "223",
      "n": 223,
      "s": "مَنْ أَفْطَرَ الْفَرْضَ قَضَاهُ وَلْيَزِدْ",
-     "e": "كَفَّارَةً فِي رَمَضَانَ إِنْ عَمَدْ"
+     "e": "كَفَّارَةً فِي رَمَضَانَ إِنْ عَمَدْ",
+     "t": [
+      "Whoever breaks a wajib fast must make it up and must add",
+      "an expiation if it was broken during the days of Ramadan intentionally."
+     ]
     },
     {
      "id": "224",
      "n": 224,
      "s": "لِأَكْلٍ أَوْ شُرْبٍ فَمٍ أَوْ لِلْمَنِي",
-     "e": "وَلَوْ بِفِكْرٍ أَوْ لِرَفْضٍ مَا بُنِي"
+     "e": "وَلَوْ بِفِكْرٍ أَوْ لِرَفْضٍ مَا بُنِي",
+     "t": [
+      "(One expiates, if one breaks the fast intentionally) with eating or drinking from one's mouth, or from reaching ejaculation/orgasm",
+      "even if it is reached from imaginative thought, or by abandoning what the fast is built upon (i.e. one's intention)"
+     ]
     },
     {
      "id": "225",
      "n": 225,
      "s": "بِلَا تَأَوُّلٍ قَرِيبٍ وَيُبَاحْ",
-     "e": "لِلضُّرِّ أَوْ سَفَرِ قَصْرٍ أَيْ مُبَاحْ"
+     "e": "لِلضُّرِّ أَوْ سَفَرِ قَصْرٍ أَيْ مُبَاحْ",
+     "t": [
+      "Without making a common false assumption. But, it is permissible (to break fasts)",
+      "due to fear of incurring harm or while travelling a distance which allows one to shorten prayers - meaning it is allowed."
+     ]
     },
     {
      "id": "226",
      "n": 226,
      "s": "وَعَمْدُهُ فِي النَّفْلِ دُونَ ضُرِّ",
-     "e": "مُحَرَّمٌ وَلْيَقْضِ لَا فِي الْغَيْرِ"
+     "e": "مُحَرَّمٌ وَلْيَقْضِ لَا فِي الْغَيْرِ",
+     "t": [
+      "Intentionally breaking a mandub fast without excuse",
+      "is unlawful and let such a person make it up. But, breaking a mandub fast in other circumstances (with a valid excuse or out of forgetfulness) does not necessitate that one make it up. (Also, mandub fast broken out of forgetfulness remain valid.)"
+     ]
     },
     {
      "id": "227",
      "n": 227,
      "s": "وَكَفِّرَنْ بِصَوْمِ شَهْرَيْنِ وَلَا",
-     "e": "أَوْ عِتْقِ مَمْلُوكٍ بِالْإِسْلَامِ حَلَا"
+     "e": "أَوْ عِتْقِ مَمْلُوكٍ بِالْإِسْلَامِ حَلَا",
+     "t": [
+      "Expiate by fasting two lunar months consecutively or",
+      "by freeing a slave who has been decorated with Islam (i.e. a slave who is Muslim)."
+     ]
     },
     {
      "id": "228",
      "n": 228,
      "s": "وَفَضَّلُوا إِطْعَامَ سِتِّينَ فَقِيرْ",
-     "e": "مُدًّا لِمِسْكِينٍ مِنَ الْعَيْشِ الْكَثِيرْ"
+     "e": "مُدًّا لِمِسْكِينٍ مِنَ الْعَيْشِ الْكَثِيرْ",
+     "t": [
+      "And they have preferred that the person expiate by feeding sixty poor people",
+      "one mudd (~0.5 liters) for each poor person from a common staple food found abundantly (in one's region)."
+     ]
     }
    ]
   },
@@ -1650,25 +2560,41 @@
      "id": "229",
      "n": 229,
      "s": "الْحَجُّ فَرْضٌ مَرَّةً فِي الْعُمُرِ",
-     "e": "أَرْكَانُهُ إِنْ تُرِكَتْ لَمْ تُجْبَرِ"
+     "e": "أَرْكَانُهُ إِنْ تُرِكَتْ لَمْ تُجْبَرِ",
+     "t": [
+      "Hajj is wajib once in a lifetime.",
+      "If its wajib-essentials are left, they cannot be fixed (i.e. made up for):"
+     ]
     },
     {
      "id": "230",
      "n": 230,
-     "s": "الْإِحْرَامُ وَالسَّعْيُ وَوُقُوفُ عَرَفَهْ",
-     "e": "لَيْلَةَ الْأَضْحَى وَالطَّوَافُ رِدْفَهْ"
+     "s": "الْإِحْرَامُ وَالسَّعْيُ وُقُوفُ عَرَفَهْ",
+     "e": "لَيْلَةَ الْأَضْحَى وَالطَّوَافُ رِدْفَهْ",
+     "t": [
+      "(1) Entering into sacredness, (2) running/walking the Safa-Marwah circuits, (3) remaining in ʿArafah",
+      "during (a portion) of the night of ʿĪd al-Aḍḥā (i.e. the tenth of Dhu l-Hijjah), and (4) the circumambulation which follows (after Muzdalifah)."
+     ]
     },
     {
      "id": "231",
      "n": 231,
      "s": "وَالْوَاجِبَاتُ غَيْرُ الْأَرْكَانِ بِدَمْ",
-     "e": "قَدْ جُبِرَتْ مِنْهَا طَوَافٌ مَنْ قَدِمْ"
+     "e": "قَدْ جُبِرَتْ مِنْهَا طَوَافٌ مَنْ قَدِمْ",
+     "t": [
+      "The wajib non-essentials are with blood sacrifice",
+      "fixed and among these are: (1) the circumambulation of he who enters Makkah,"
+     ]
     },
     {
      "id": "232",
      "n": 232,
      "s": "وَوَصْلُهُ بِالسَّعْيِ مَشْيٌ فِيهِمَا",
-     "e": "وَرَكْعَتَا الطَّوَافِ إِنْ تَحَتَّمَا"
+     "e": "وَرَكْعَتَا الطَّوَافِ إِنْ تَحَتَّمَا",
+     "t": [
+      "(2) performing the Safa-Marwah circuits shortly after (a wajib circumambulation), (3) walking on one's feet for (the circumambulation and following Safa-Marwah circuits (if able),",
+      "(4) the two post-circumambulation units of formal prayer if the circumambulation was a wajib one,"
+     ]
     }
    ]
   },
@@ -1683,31 +2609,51 @@
      "id": "233",
      "n": 233,
      "s": "نُزُولُ مُزْدَلِفٍ فِي رُجُوعِنَا",
-     "e": "فَبَيْتُ لَيْلَاتٍ ثَلَاثٍ بِمِنَى"
+     "e": "مَبِيتُ لَيْلَاتٍ ثَلَاثٍ بِمِنَى",
+     "t": [
+      "(5) Descending in Muzdalifah when coming back from ʿArafah,",
+      "(6) spending three nights in Mina,"
+     ]
     },
     {
      "id": "234",
      "n": 234,
      "s": "إِحْرَامُ مِيقَاتٍ فَذُو الْحُلَيْفَهْ",
-     "e": "لِطِيبَ لِلشَّامِ وَمِصْرَ الْجُحْفَهْ"
+     "e": "لِطِيبَ لِلشَّامِ وَمِصْرَ الْجُحْفَهْ",
+     "t": [
+      "(7) Entering sacredness at the appointed stations - so Dhu al-Hulayfah is",
+      "for Madinah and Syria. Juhfah is for Egypt."
+     ]
     },
     {
      "id": "235",
      "n": 235,
      "s": "قَرْنٌ لِنَجْدٍ ذَاتُ عِرْقٍ لِلْعِرَاقْ",
-     "e": "يَلَمْلَمٌ لِلْيَمَنِ آتِيهَا وَفَاقْ"
+     "e": "يَلَمْلَمُ الْيَمَنُ آتِيهَا وِفَاقْ",
+     "t": [
+      "Qarn al-Manazil is for Najd. Dhatu ʿIrq is for ʿIraq.",
+      "Yalamlam is for Yemen. (And these stations are for all those) who come from these directions -"
+     ]
     },
     {
      "id": "236",
      "n": 236,
      "s": "تَجَرُّدٌ مِنَ الْمَخِيطِ تَلْبِيَهْ",
-     "e": "وَالْحَلْقُ مَعْ رَمْيِ الْجِمَارِ تَوْفِيَهْ"
+     "e": "وَالْحَلْقُ مَعْ رَمْيِ الْجِمَارِ تَوْفِيَهْ",
+     "t": [
+      "(8) Not wearing sewn clothes (for men), (9) saying the talbiyah,",
+      "(10) shaving (or cutting) one's hair (after stoning the biggest pillar the first time), and (11) stoning the pillars (in the days of Mina) - and that completes the list. (We added one wajib non-essential to this list in the Guiding Helper (i.e. being present in ʿArafah in the afternoon or evening of the ninth of Dhu al-Hijjah) because of general agreement in the Maliki School and strong words which have come about it in the primary texts.)"
+     ]
     },
     {
      "id": "237",
      "n": 237,
      "s": "وَإِنْ تُرِدْ تَرْتِيبَ حَجِّكَ اسْمَعَا",
-     "e": "بَيَانَهُ وَالذِّهْنَ مِنْكَ اسْتَجْمِعَا"
+     "e": "بَيَانَهُ وَالذِّهْنَ مِنْكَ اسْتَجْمِعَا",
+     "t": [
+      "If you wish to know the order of the actions in your Hajj, listen carefully",
+      "to its explanation and bring your mind to concentration:"
+     ]
     }
    ]
   },
@@ -1722,43 +2668,71 @@
      "id": "238",
      "n": 238,
      "s": "إِنْ جِئْتَ رَابِغًا تَنَظَّفْ وَاغْتَسِلْ",
-     "e": "كَوَاجِبٍ وَبِالشُّرُوعِ يَتَّصِلْ"
+     "e": "كَوَاجِبٍ وَبِالشُّرُوعِ يَتَّصِلْ",
+     "t": [
+      "When you (leave Morocco and) come to Rābigh (which is near Juhfah), cleanse yourself (e.g., by shaving your pubic hair, clipping you nails, trimming your moustache/beard, etc.) and bathe",
+      "like you do for a wajib bath for purification and this is connected to the beginning of your Hajj."
+     ]
     },
     {
      "id": "239",
      "n": 239,
      "s": "وَالْبَسْ رِدًا وَإِزْرَةً نَعْلَيْنِ",
-     "e": "وَاسْتَصْحِبِ الْهَدْيَ وَرَكْعَتَيْنِ"
+     "e": "وَاسْتَصْحِبِ الْهَدْيَ وَرَكْعَتَيْنِ",
+     "t": [
+      "Men, wear a clean (white) upper sheet (as a shirt), a lower sheet (as a long skirt), and two slippers.",
+      "Bring along your sacrificial animal and pray a two unit formal prayer -"
+     ]
     },
     {
      "id": "240",
      "n": 240,
      "s": "بِالْكَافِرُونَ ثُمَّ الْإِخْلَاصِ هُمَا",
-     "e": "فَإِنْ رَكِبْتَ أَوْ مَشَيْتَ أَحْرِمَا"
+     "e": "فَإِنْ رَكِبْتَ أَوْ مَشَيْتَ أَحْرِمَا",
+     "t": [
+      "With Surah al-Kāfirun in the first unit (recited after the Fatihah) and Surah al-Ikhlā& in the second unit (after the Fatihah); these are the two (recommended surahs for this prayer).",
+      "Regardless of whether you rode or walked (to reach your appointed station), you should now enter the state of sacredness"
+     ]
     },
     {
      "id": "241",
      "n": 241,
      "s": "بِنِيَّةٍ تَصْحَبُ قَوْلًا أَوْ عَمَلْ",
-     "e": "كَمَشْيٍ أَوْ تَلْبِيَةٍ مِمَّا اتَّصَلْ"
+     "e": "كَمَشْيٍ أَوْ تَلْبِيَةٍ مِمَّا اتَّصَلْ",
+     "t": [
+      "by making an intention (to perform Hajj and be in the state of sacredness) accompanied by some words or some action",
+      "like starting to walk towards Makkah or saying talbiyah - all connected to this initial intention."
+     ]
     },
     {
      "id": "242",
      "n": 242,
      "s": "وَجَدِّدَنْهَا كُلَّمَا تَجَدَّدَتْ",
-     "e": "حَالٌ وَإِنْ صَلَّيْتَ ثُمَّ إِنْ دَنَتْ"
+     "e": "حَالٌ وَإِنْ صَلَّيْتَ ثُمَّ إِنْ دَنَتْ",
+     "t": [
+      "And start repeating the talbiyah again each time your condition changes",
+      "like after you finish a formal prayer. Then, when Makkah comes near,"
+     ]
     },
     {
      "id": "243",
      "n": 243,
      "s": "مَكَّةُ فَاغْتَسِلْ بِذِي طُوًى بِلَا",
-     "e": "دَلْكٍ وَمِنْ كَدَا الثَّنِيَّةَ ادْخُلَا"
+     "e": "دَلْكٍ وَمِنْ كَدَا الثَّنِيَّةَ ادْخُلَا",
+     "t": [
+      "Take another bath by Dhu $uwā but do not",
+      "rub your body in this bath (lest you pluck away hair or the like which is forbidden while sacred). And then from Kadā' ath-Thaniyyah, enter the Sacred City."
+     ]
     },
     {
      "id": "244",
      "n": 244,
      "s": "إِذَا وَصَلْتَ لِلْبُيُوتِ فَاتْرُكَا",
-     "e": "تَلْبِيَةً وَكُلَّ شُغْلٍ وَاسْلُكَا"
+     "e": "تَلْبِيَةً وَكُلَّ شُغْلٍ وَاسْلُكَا",
+     "t": [
+      "When you reach the outer boundary edifice of the Sacred Mosque, leave",
+      "the uttering of the talbiyah (and become silent in awe) and leave all distractions and head"
+     ]
     }
    ]
   },
@@ -1773,67 +2747,110 @@
      "id": "245",
      "n": 245,
      "s": "لِلْبَيْتِ مِنْ بَابِ السَّلَامِ وَاسْتَلِمْ",
-     "e": "الْحَجَرَ الْأَسْوَدَ كَبِّرْ وَأَتِمّْ"
+     "e": "الْحَجَرَ الْأَسْوَدَ كَبِّرْ وَأَتِمْ",
+     "t": [
+      "Towards the House (i.e. the Kaʿbah) entering from the door labeled \"Bāb as-Salām\". Then, greet",
+      "the Black Stone (by touching it or kissing it) and then utter takbīr and then complete"
+     ]
     },
     {
      "id": "246",
      "n": 246,
      "s": "سَبْعَةَ أَشْوَاطٍ بِهِ وَقَدْ يُسَرْ",
-     "e": "وَكَبِّرَنْ مُقَبِّلًا ذَاكَ الْحَجَرْ"
+     "e": "وَكَبِّرَنْ مُقَبِّلًا ذَاكَ الْحَجَرْ",
+     "t": [
+      "Seven rounds around the House while it is on your left.",
+      "And repeat the takbir and kiss that Stone"
+     ]
     },
     {
      "id": "247",
      "n": 247,
      "s": "مَتَى تُحَاذِيهِ كَذَا الْيَمَانِي",
-     "e": "لَكِنْ ذَا بِالْيَدِ خُذْ بَيَانِي"
+     "e": "لَكِنَّ ذَا بِالْيَدِ خُذْ بَيَانِي",
+     "t": [
+      "Each time you come in line with it. Similarly, (say takbir) for the Yamāni Corner.",
+      "But, the Yamāni corner is only to be touched (and not kissed). So, receive my clarification."
+     ]
     },
     {
      "id": "248",
      "n": 248,
      "s": "إِنْ لَمْ تَصِلْ لِلْحَجَرِ الْمَسْ بِالْيَدِ",
-     "e": "وَضَعْ عَلَى الْفَمِ وَكَبِّرْ تَقْتَدِ"
+     "e": "وَضَعْ عَلَى الْفَمِ وَكَبِّرْ تَقْتَدِ",
+     "t": [
+      "If you cannot reach the Stone (and kiss it), then suffice yourself with touching it and then you may bring (the underside of) your hand up to and in contact with your mouth (without actually kissing your hand)."
+     ]
     },
     {
      "id": "249",
      "n": 249,
      "s": "وَارْمُلْ ثَلَاثًا وَامْشِ بَعْدُ أَرْبَعَا",
-     "e": "خَلْفَ الْمَقَامِ رَكْعَتَيْنِ أَوْقِعَا"
+     "e": "خَلْفَ الْمَقَامِ رَكْعَتَيْنِ أَوْقِعَا",
+     "t": [
+      "And walk in a hastened manner lifting your feet up higher for three rounds and then walk normally for four rounds.",
+      "Then, behind the Standing Place of Ibrahim, pray two units (of formal prayer)."
+     ]
     },
     {
      "id": "250",
      "n": 250,
      "s": "وَادْعُ بِمَا شِئْتَ لَدَى الْمُلْتَزَمِ",
-     "e": "وَالْحَجَرَ الْأَسْوَدَ بَعْدُ اسْتَلِمِ"
+     "e": "وَالْحَجَرَ الْأَسْوَدَ بَعْدُ اسْتَلِمِ",
+     "t": [
+      "Then, you can supplicate with what you wish in the Multazam area (to the left of the door of the Kaʿbah).",
+      "And the Black Stone touch/kiss afterwards."
+     ]
     },
     {
      "id": "251",
      "n": 251,
      "s": "وَاخْرُجْ إِلَى الصَّفَا فَقِفْ مُسْتَقْبِلَا",
-     "e": "عَلَيْهِ ثُمَّ كَبِّرَنْ وَهَلِّلَا"
+     "e": "عَلَيْهِ ثُمَّ كَبِّرَنْ وَهَلِّلَا",
+     "t": [
+      "Then, go out to Safa and stop on it facing the Kaʿbah.",
+      "Then, utter the takbīr and tahlīl (la ilaha illa l-lah)."
+     ]
     },
     {
      "id": "252",
      "n": 252,
      "s": "وَاسْعَ لِمَرْوَةٍ فَقِفْ مِثْلَ الصَّفَا",
-     "e": "وَخُبَّ فِي بَطْنِ الْمَسِيلِ ذَا اقْتُفَا"
+     "e": "وَخُبَّ فِي بَطْنِ الْمَسِيلِ ذَا اقْتُفَا",
+     "t": [
+      "Then, hasten on to Marwah and stop (for verbal remembrances and supplications) like you stopped on Safa",
+      "and jog in the middle of the valley (between Safa and Marwah) and in this you will be following (Ismāʿīl's mother Hājirah)."
+     ]
     },
     {
      "id": "253",
      "n": 253,
      "s": "أَرْبَعَ وَقْفَاتٍ بِكُلٍّ مِنْهُمَا",
-     "e": "تَقِفْ وَالْأَشْوَاطَ سَبْعًا تَمَّمَا"
+     "e": "تَقِفُ وَالْأَشْوَاطَ سَبْعًا تَمَّمَا",
+     "t": [
+      "You will stop four times on each of the two hills",
+      "and complete seven legs pacing between them."
+     ]
     },
     {
      "id": "254",
      "n": 254,
      "s": "وَادْعُ بِمَا شِئْتَ بِسَعْيٍ وَطَوَافْ",
-     "e": "وَبِالصَّفَا وَمَرْوَةٍ مَعْ اعْتِرَافْ"
+     "e": "وَبِالصَّفَا وَمَرْوَةٍ مَعْ اعْتِرَافْ",
+     "t": [
+      "Supplicate as you wish while performing the Safa-Marwah circuits, circumambulation,",
+      "and while on Safa and Marwah with what is recognized (to be recommended)."
+     ]
     },
     {
      "id": "255",
      "n": 255,
      "s": "وَيَجِبُ الطُّهْرَانِ وَالسِّتْرُ عَلَى",
-     "e": "مَنْ طَافَ نَدْبُهَا بِسَعْيٍ يُجْتَلَى"
+     "e": "مَنْ طَافَ نَدْبُهَا بِسَعْيٍ يُجْتَلَى",
+     "t": [
+      "Both ritual purity and purity from physical impurities and also covering one's nakedness are wajib for",
+      "the person performing circumambulation. And these things being recommended for the Safa-Marwah circuits is apparent."
+     ]
     }
    ]
   },
@@ -1848,55 +2865,91 @@
      "id": "256",
      "n": 256,
      "s": "وَعُدْ فَلَبِّ لِمُصَلَّى عَرَفَهْ",
-     "e": "وَخُطْبَةَ السَّابِعِ تَأْتِي لِلصِّفَهْ"
+     "e": "وَخُطْبَةُ السَّابِعِ تَأْتِي لِلصِّفَهْ",
+     "t": [
+      "Then, return to saying the talbiyah (after completing the Safa-Marwah circuits) and continue to utter it until reaching the Masjid of ʿArafah (after high noon on the 9th of Dhu al-Hijjah).",
+      "The sermon (at the Sacred Mosque) on the 7th is given to describe (to people the method of performing Hajj)."
+     ]
     },
     {
      "id": "257",
      "n": 257,
      "s": "وَثَامِنَ الشَّهْرِ اخْرُجَنَّ لِمِنَى",
-     "e": "بِعَرَفَاتٍ تَاسِعًا نُزُولَنَا"
+     "e": "بِعَرَفَاتٍ تَاسِعًا نُزُولُنَا",
+     "t": [
+      "On the 8th of the month, you should go out towards Minā.",
+      "On the 9th, in ʿArafah will be our descent."
+     ]
     },
     {
      "id": "258",
      "n": 258,
      "s": "وَاغْتَسِلَنْ قُرْبَ الزَّوَالِ وَاحْضُرَا",
-     "e": "الْخُطْبَتَيْنِ وَاجْمَعَنْ وَاقْصُرَا"
+     "e": "الْخُطْبَتَيْنِ وَاجْمَعَنَّ وَاقْصُرَا",
+     "t": [
+      "(So, on the 9th), take a bath shortly before noon and attend",
+      "the two speeches (after high-noon) and then join and shorten"
+     ]
     },
     {
      "id": "259",
      "n": 259,
      "s": "ظُهْرَيْكَ ثُمَّ الْجَبَلَ اصْعَدْ رَاكِبَا",
-     "e": "عَلَى وُضُوءٍ ثُمَّ كُنْ مُوَاظِبَا"
+     "e": "عَلَى وُضُوءٍ ثُمَّ كُنْ مُوَاظِبَا",
+     "t": [
+      "The two day prayers (i.e. Dhuhr and ʿAsr along with the imam of the ʿArafah masjid if possible). Then, the mountain (of ʿArafah) climb riding (on an animal or vehicle)",
+      "while in a state of ritual purity. Then, be constant"
+     ]
     },
     {
      "id": "260",
      "n": 260,
      "s": "عَلَى الدُّعَا مُهَلِّلًا مُبْتَهِلَا",
-     "e": "مُصَلِّيًا عَلَى النَّبِيِّ مُسْتَقْبِلَا"
+     "e": "مُصَلِّيًا عَلَى النَّبِيِّ مُسْتَقْبِلَا",
+     "t": [
+      "In supplication saying the tahlil, fervently praying,",
+      "(and) sending blessings on the Prophet while facing the qiblah."
+     ]
     },
     {
      "id": "261",
      "n": 261,
      "s": "هُنَيَّةً بَعْدَ غُرُوبِهَا تَقِفْ",
-     "e": "وَانْفِرْ لِمُزْدَلِفَةٍ وَتَنْصَرِفْ"
+     "e": "وَانْفِرْ لِمُزْدَلِفَةٍ وَتَنْصَرِفْ",
+     "t": [
+      "There, for a while you remain (in ʿArafah) after the sun has set.",
+      "Then, you head (West) towards Muzdalifah and go between"
+     ]
     },
     {
      "id": "262",
      "n": 262,
-     "s": "فِي الْمَازِمَيْنِ الْعَلَمَيْنِ نَكِّبِ",
-     "e": "وَاقْصُرْ بِهَا وَاجْمَعْ عِشَا لِمَغْرِبِ"
+     "s": "فِي الْمَأْزِمَيْنِ الْعَلَمَيْنِ نَكِّبِ",
+     "e": "وَاقْصُرْ بِهَا وَاجْمَعْ عِشَا لِمَغْرِبِ",
+     "t": [
+      "The pathway formed between two large mountains named al-Ma'zamayn which are landmarks (on the route).",
+      "In Muzdalifah, you shorten and join Maghrib and ʿIsha together."
+     ]
     },
     {
      "id": "263",
      "n": 263,
      "s": "وَاحْطُطْ وَبِتْ بِهَا وَأَحْيِ لَيْلَتَكْ",
-     "e": "وَصَلِّ صُبْحَكَ وَغَلِّسْ رِحْلَتَكْ"
+     "e": "وَصَلِّ صُبْحَكْ وَغَلِّسْ رِحْلَتَكْ",
+     "t": [
+      "Descend and spend the night in Muzdalifah and keep alive your night (with worship).",
+      "(At dawn) pray the Ṣubḥ prayer while it is still dark and move on"
+     ]
     },
     {
      "id": "264",
      "n": 264,
      "s": "قِفْ وَادْعُ بِالْمَشْعَرِ لِلْإِسْفَارِ",
-     "e": "وَأَسْرِعَنْ فِي بَطْنِ وَادِي النَّارِ"
+     "e": "وَأَسْرِعَنْ فِي بَطْنِ وَادِي النَّارِ",
+     "t": [
+      "To the area known as al-Mashʿar al-Haram and stop there and supplicate until there is sufficiently bright (before sunrise)",
+      "Then, you must return to Mina speeding through the middle of the Valley of Fire (\"where the elephants died\")."
+     ]
     }
    ]
   },
@@ -1911,43 +2964,71 @@
      "id": "265",
      "n": 265,
      "s": "وَسِرْ كَمَا تَكُونُ لِلْعَقَبَهْ",
-     "e": "فَارْمِ لَدَيْهَا بِحِجَارٍ سَبْعَهْ"
+     "e": "فَارْمِ لَدَيْهَا بِحِجَارٍ سَبْعَهْ",
+     "t": [
+      "Proceed as you are to the biggest pillar in Mina",
+      "and pelt it with seven stones"
+     ]
     },
     {
      "id": "266",
      "n": 266,
      "s": "مِنْ أَسْفَلٍ تُسَاقُ مِنْ مُزْدَلِفَهْ",
-     "e": "كَالْفُولِ وَانْحَرْ هَدْيًا إِنْ بِعَرَفَهْ"
+     "e": "كَالْفُولِ وَانْحَرْ هَدْيًا إِنْ بِعَرَفَهْ",
+     "t": [
+      "(And you can choose to stand) in a low location while pelting and these seven stones should have come from Muzdalifah",
+      "each the size of a bean. Then, slaughter your sacrificial animal (in Mina) if at ʿArafah"
+     ]
     },
     {
      "id": "267",
      "n": 267,
      "s": "أَوْقَفْتَهُ وَاحْلِقْ وَسِرْ لِلْبَيْتِ",
-     "e": "فَطُفْ وَصَلِّ مِثْلَ ذَاكَ النَّعْتِ"
+     "e": "فَطُفْ وَصَلِّ مِثْلَ ذَاكَ النَّعْتِ",
+     "t": [
+      "You brought it with you. Shave/cut your hair and travel on back to the Kaʿbah.",
+      "Perform a circumambulation in a way similar to that which was described before."
+     ]
     },
     {
      "id": "268",
      "n": 268,
      "s": "وَارْجِعْ فَصَلِّ الظُّهْرَ فِي مِنًى وَبِتْ",
-     "e": "إِثْرَ زَوَالٍ غَدِهِ ارْمِ لَا تَفُتْ"
+     "e": "إِثْرَ زَوَالٍ غَدِهِ ارْمِ لَا تَفُتْ",
+     "t": [
+      "Then, return to Mina and pray Dhuhr there and spend the night.",
+      "After high-noon the next day, do not omit the pelting"
+     ]
     },
     {
      "id": "269",
      "n": 269,
      "s": "ثَلَاثَ جَمَرَاتٍ بِسَبْعِ حَصَيَاتْ",
-     "e": "لِكُلِّ جَمْرَةٍ وَقِفْ لِلدَّعَوَاتْ"
+     "e": "لِكُلِّ جَمْرَةٍ وَقِفْ لِلدَّعَوَاتْ",
+     "t": [
+      "of the three pillars with seven pebbles",
+      "each and stop for the long supplications"
+     ]
     },
     {
      "id": "270",
      "n": 270,
-     "s": "طَوِيلًا إِثْرَ الْأُولَيَيْنِ أُخْرَا",
-     "e": "عَقَبَةً وَكُلَّ رَمْيٍ كَبِّرَا"
+     "s": "طَوِيلًا إِثْرَ الْأُولَيَيْنِ أُخِّرَا",
+     "e": "عَقَبَةً وَكُلَّ رَمْيٍ كَبِّرَا",
+     "t": [
+      "After the first two and make the last one you pelt",
+      "the biggest one. And utter the takbir with each pebble throw."
+     ]
     },
     {
      "id": "271",
      "n": 271,
      "s": "وَافْعَلْ كَذَاكَ ثَالِثَ النَّحْرِ وَزِدْ",
-     "e": "إِنْ شِئْتَ رَابِعًا وَتَمَّ مَا قُصِدْ"
+     "e": "إِنْ شِئْتَ رَابِعًا وَتَمَّ مَا قُصِدْ",
+     "t": [
+      "Do similarly on the third day (counting from the Sacrificial ʿId) and add",
+      "if you want a fourth day (i.e. up to the 13th of Dhu al-Hijjah) and now what was desired is complete."
+     ]
     }
    ]
   },
@@ -1961,62 +3042,102 @@
     {
      "id": "272",
      "n": 272,
-     "s": "وَمَنْعُ الْإِحْرَامِ صَيْدُ الْبَرِّ",
-     "e": "فِي قَتْلِهِ الْجَزَاءُ لَا كَالْفَأْرِ"
+     "s": "وَمَنَعَ الْإِحْرَامُ صَيْدَ الْبَرِّ",
+     "e": "فِي قَتْلِهِ الْجَزَاءُ لَا كَالْفَأْرِ",
+     "t": [
+      "The state of sacredness prevents one from hunting land animals.",
+      "For killing such animals, a fine/ransom is due but not animals like mice/rats"
+     ]
     },
     {
      "id": "273",
      "n": 273,
      "s": "وَعَقْرَبٍ مَعْ الْحِدَا كَلْبٍ عَقُورْ",
-     "e": "وَحَيَّةٍ مَعْ الْغُرَابِ إِذْ يَجُورْ"
+     "e": "وَحَيَّةٍ مَعْ الْغُرَابِ إِذْ يَجُورْ",
+     "t": [
+      "Scorpions, hawks, voracious dogs,",
+      "snakes, along with crows since these animals transgress (against people often)."
+     ]
     },
     {
      "id": "274",
      "n": 274,
-     "s": "وَمَنْعُ الْمُحِيطِ بِالْعُضْوِ وَلَوْ",
-     "e": "بِنَسْجٍ أَوْ عَقْدٍ كَخَاتَمٍ حَكَوْا"
+     "s": "وَمَنَعَ الْمُحِيطَ بِالْعُضْوِ وَلَوْ",
+     "e": "بِنَسْجٍ أَوْ عَقْدٍ كَخَاتَمٍ حَكَوْا",
+     "t": [
+      "(The state of sacredness) prevents men from wearing a closed loop around their limbs even if",
+      "it is a flexible knit cloth (e.g., knit bracelet) or a closed rigid article like a ring - they have narrated."
+     ]
     },
     {
      "id": "275",
      "n": 275,
-     "s": "وَالسَّتْرُ لِلْوَجْهِ أَوِ الرَّأْسِ بِمَا",
-     "e": "يُعَدُّ سَاتِرًا وَلَكِنْ إِنَّمَا"
+     "s": "وَالسَّتْرَ لِلْوَجْهِ أَوِ الرَّأْسِ بِمَا",
+     "e": "يُعَدُّ سَاتِرًا وَلَكِنْ إِنَّمَا",
+     "t": [
+      "(The state of sacredness prevents one) from covering one's face or head (for men) with something",
+      "which is considered a cover (e.g., veil or hat). But,"
+     ]
     },
     {
      "id": "276",
      "n": 276,
      "s": "تُمْنَعُ الْأُنْثَى لُبْسَ قُفَّازٍ كَذَا",
-     "e": "سَتْرٌ لِوَجْهٍ لَا لِسَتْرٍ أُخِذَا"
+     "e": "سَتْرٌ لِوَجْهٍ لَا لِسَتْرٍ أُخِذَا",
+     "t": [
+      "The woman is only prevented from wearing gloves and",
+      "covering her face but exempt from this is a facial cover (which hangs from above and does not stick to the skin of the face) adopted for reasons of modesty."
+     ]
     },
     {
      "id": "277",
      "n": 277,
-     "s": "وَمَنْعُ الطِّيبِ وَدُهْنًا وَضَرَرْ",
-     "e": "قَمْلٌ وَإِلْقَا وَسَخٍ ظُفْرٍ شَعَرْ"
+     "s": "وَمَنَعَ الطِّيبَ وَدُهْنًا وَضَرَرْ",
+     "e": "قَمْلٍ وَإِلْقَا وَسَخٍ ظُفْرٍ شَعَرْ",
+     "t": [
+      "(The state of sacredness prevents) one from applying perfume, oil, or removing",
+      "lice, dirty skin, nails, or hair."
+     ]
     },
     {
      "id": "278",
      "n": 278,
      "s": "وَيُفْتَدَى لِفِعْلِ بَعْضِ مَا ذُكِرْ",
-     "e": "مِنَ الْمُحِيطِ لِهُنَا وَإِنْ عُذِرْ"
+     "e": "مِنَ الْمُحِيطِ لِهُنَا وَإِنْ عُذِرْ",
+     "t": [
+      "One pays a price for doing some of the things which were mentioned",
+      "from the prohibition of closed loop articles of clothing to here even if one has a valid excuse for engaging in such."
+     ]
     },
     {
      "id": "279",
      "n": 279,
-     "s": "وَمَنْعُ النِّسَا وَأَفْسَدَ الْجِمَاعْ",
-     "e": "إِلَى الْإِفَاضَةِ يَبْقَى الِامْتِنَاعْ"
+     "s": "وَمَنَعَ النِّسَا وَأَفْسَدَ الْجِمَاعْ",
+     "e": "إِلَى الْإِفَاضَةِ يُبَقَّى الِامْتِنَاعْ",
+     "t": [
+      "(The state of sacredness prevents one) from engaging in intimate relations with women and sexual intercourse ruins the Hajj.",
+      "Up until the circumambulation of the 10th of Dhu al-Hijjah the restriction remains -"
+     ]
     },
     {
      "id": "280",
      "n": 280,
      "s": "كَالصَّيْدِ ثُمَّ بَاقِي مَا قَدْ مُنِعَا",
-     "e": "بِالْجَمْرَةِ الْأُولَى يَحِلُّ فَاسْمَعَا"
+     "e": "بِالْجَمْرَةِ الْأُولَى يَحِلُّ فَاسْمَعَا",
+     "t": [
+      "Similar to the restriction on hunting. Then know that everything else which is prevented",
+      "is allowed after stoning the biggest pillar (for the first time); so, listen (and understand)."
+     ]
     },
     {
      "id": "281",
      "n": 281,
      "s": "وَجَازَ الِاسْتِظْلَالُ بِالْمُرْتَفِعْ",
-     "e": "لَا فِي الْمَحَامِلِ وَشُقْدُفٍ فَعْ"
+     "e": "لَا فِي الْمَحَامِلِ وَشُقْدُفٍ فَعِ",
+     "t": [
+      "It is permissible to seek shade with something that is erected from the ground (e.g., like a tent)",
+      "but not from something which is carried (and is movable) like a covered stagecoach (carried on a camel or by people)."
+     ]
     }
    ]
   },
@@ -2031,55 +3152,91 @@
      "id": "282",
      "n": 282,
      "s": "وَسُنَّةُ الْعُمْرَةِ فَافْعَلْهَا كَمَا",
-     "e": "حَجٍّ وَفِي التَّنْعِيمِ نَدْبًا أُحْرِمَا"
+     "e": "حَجٍّ وَفِي التَّنْعِيمِ نَدْبًا أَحْرِمَا",
+     "t": [
+      "And the sunnah of ʿUmrah do it like",
+      "Hajj and go out to Tanʿīm to enter sacredness as a mandub location (to fulfill the requirement of joining between sacred territory and unsacred territory in each act of ʿUmrah or Hajj)."
+     ]
     },
     {
      "id": "283",
      "n": 283,
      "s": "وَإِثْرَ سَعْيِكَ احْلِقَنْ وَقَصِّرَا",
-     "e": "تَحَلَّلْ مِنْهَا وَالطَّوَافَ كَثِّرَا"
+     "e": "تَحِلُّ مِنْهَا وَالطَّوَافَ كَثِّرَا",
+     "t": [
+      "Following your Safa-Marwah circuits (after the preceding circumambulation and two-unit formal prayer), shave or cut your hair",
+      "to break out of the state of sacredness. And make much (mandub) circumambulation"
+     ]
     },
     {
      "id": "284",
      "n": 284,
      "s": "مَا دُمْتَ فِي مَكَّةَ وَارْعَ الْحُرْمَهْ",
-     "e": "لِجَانِبِ الْبَيْتِ وَزِدْ فِي الْخِدْمَهْ"
+     "e": "لِجَانِبِ الْبَيْتِ وَزِدْ فِي الْخِدْمَهْ",
+     "t": [
+      "As long as you are in Makkah, give the respect (deserved)",
+      "in the presence of the House, and increase in service/worship (to Allah)."
+     ]
     },
     {
      "id": "285",
      "n": 285,
      "s": "وَلَازِمِ الصَّفَّ فَإِنْ عَزَمْتَ",
-     "e": "عَلَى الْخُرُوجِ طُفْ كَمَا عَلِمْتَ"
+     "e": "عَلَى الْخُرُوجِ طُفْ كَمَا عَلِمْتَ",
+     "t": [
+      "Stick to the rows (of the five daily group prayers at the Sacred Masjid) and if you resolve",
+      "on leaving (Makkah), perform a circumambulation according to the method you know."
+     ]
     },
     {
      "id": "286",
      "n": 286,
      "s": "وَسِرْ لِقَبْرِ الْمُصْطَفَى بِأَدَبْ",
-     "e": "وَنِيَّةٌ تَجِبْ لِكُلِّ مَطْلَبْ"
+     "e": "وَنِيَّةٍ تَجِبْ لِكُلِّ مَطْلَبْ",
+     "t": [
+      "Travel towards the grave of the Chosen One (i.e. Prophet Muhammad in Madinah) with proper manners",
+      "accompanying a good intention and you will be answered for all of your requests."
+     ]
     },
     {
      "id": "287",
      "n": 287,
-     "s": "سَلِّمْ عَلَيْهِ ثُمَّ زِدْ لِلصِّدِّيقِ",
-     "e": "ثُمَّ إِلَى عُمَرَ نِلْتَ التَّوْفِيقْ"
+     "s": "سَلِّمْ عَلَيْهِ ثُمَّ زِدْ لِلصِّدِّيقْ",
+     "e": "ثُمَّ إِلَى عُمَرَ نِلْتَ التَّوْفِيقْ",
+     "t": [
+      "Send your greeting to him, add one for Abu Bakr as-Siddiq,",
+      "and then to ʿUmar ibn al-Khattab and you will have obtained divine success."
+     ]
     },
     {
      "id": "288",
      "n": 288,
      "s": "وَاعْلَمْ بِأَنَّ ذَا الْمَقَامَ يُسْتَجَابْ",
-     "e": "فِيهِ الدُّعَا فَلَا تَمِلْ مِنْ طِلَابْ"
+     "e": "فِيهِ الدُّعَا فَلَا تَمَلَّ مِنْ طِلَابْ",
+     "t": [
+      "Know that that place is a location in which one is answered.",
+      "So, do not become tired of asking (for what benefits you)."
+     ]
     },
     {
      "id": "289",
      "n": 289,
      "s": "وَسَلْ شَفَاعَةً وَخَتْمًا حَسَنَا",
-     "e": "وَعَجِّلِ الْأَوْبَةَ إِذْ نِلْتَ الْمُنَى"
+     "e": "وَعَجِّلِ الْأَوْبَةَ إِذْ نِلْتَ الْمُنَى",
+     "t": [
+      "Ask for the Prophet's intercession and a death in a good state (i.e. while believing)",
+      "and hurry up your return when you have fulfilled your objectives."
+     ]
     },
     {
      "id": "290",
      "n": 290,
      "s": "وَادْخُلْ ضُحًى وَاصْحَبْ هَدِيَّةَ السُّرُورْ",
-     "e": "إِلَى الْأَقَارِبِ وَمَنْ بِكَ يَدُورْ"
+     "e": "إِلَى الْأَقَارِبِ وَمَنْ بِكَ يَدُورْ",
+     "t": [
+      "Enter (back home) in the midmorning and carry with you gifts of joy",
+      "for your relatives and those who come around (to visit) you."
+     ]
     }
    ]
   },
@@ -2094,25 +3251,41 @@
      "id": "291",
      "n": 291,
      "s": "وَتَوْبَةٌ مِنْ كُلِّ ذَنْبٍ يُجْتَرَمْ",
-     "e": "تَجِبُ فَوْرًا مُطْلَقًا وَهْيَ النَّدَمْ"
+     "e": "تَجِبُ فَوْرًا مُطْلَقًا وَهِيَ النَّدَمْ",
+     "t": [
+      "Repentance from all misdeeds which are committed",
+      "is wajib right away without stipulations and is known as feeling sorry (for what one did)."
+     ]
     },
     {
      "id": "292",
      "n": 292,
      "s": "بِشَرْطِ الْإِقْلَاعِ وَنَفْيِ الْإِصْرَارْ",
-     "e": "وَلِيَتَلَافَ مُمَكَّنًا ذَا اسْتِغْفَارْ"
+     "e": "وَلْيَتَلَافَ مُمْكِنًا ذَا اسْتِغْفَارْ",
+     "t": [
+      "(Repentance) has the preconditions of ceasing the act of disobedience and intending not to persist.",
+      "Let the person cancel out the misdeed with as much asking for forgiveness as is possible (for him)."
+     ]
     },
     {
      "id": "293",
      "n": 293,
      "s": "وَحَاصِلُ التَّقْوَى اجْتِنَابٌ وَامْتِثَالْ",
-     "e": "فِي ظَاهِرٍ وَبَاطِنٍ بِذَا تُنَالْ"
+     "e": "فِي ظَاهِرٍ وَبَاطِنٍ بِذَا تُنَالْ",
+     "t": [
+      "The upshot of god-fearingness is the avoidance (of prohibitions) and the following (of commands)",
+      "externally and internally and with this it is obtained."
+     ]
     },
     {
      "id": "294",
      "n": 294,
      "s": "فَجَاءَتِ الْأَقْسَامُ حَقًّا أَرْبَعَهْ",
-     "e": "وَهْيَ لِلسَّالِكِ سُبْلُ الْمَنْفَعَهْ"
+     "e": "وَهِيَ لِلسَّالِكِ سُبْلُ الْمَنْفَعَهْ",
+     "t": [
+      "So, the divisions (of necessary actions in the Path) have come as four in number",
+      "and they are for the spiritual traveler the ways which lead to benefit."
+     ]
     }
    ]
   },
@@ -2127,31 +3300,51 @@
      "id": "295",
      "n": 295,
      "s": "يَغُضُّ عَيْنَيْهِ عَنِ الْمَحَارِمِ",
-     "e": "يَكُفُّ سَمْعَهُ عَنِ الْمَآثِمِ"
+     "e": "يَكُفُّ سَمْعَهُ عَنِ الْمَآثِمِ",
+     "t": [
+      "He must lower his gaze away from the unlawful.",
+      "He must restrain his ears away from verbal misdeeds,"
+     ]
     },
     {
      "id": "296",
      "n": 296,
      "s": "كَغِيبَةٍ نَمِيمَةٍ زُورٍ كَذِبْ",
-     "e": "لِسَانُهُ أَحْرَى بِتَرْكِ مَا جُلِبْ"
+     "e": "لِسَانُهُ أَحْرَى بِتَرْكِ مَا جُلِبْ",
+     "t": [
+      "Such as backbiting, tale-carrying, false witnessing, and lying.",
+      "And it is more proper that he restrain his own tongue from engaging in these acts."
+     ]
     },
     {
      "id": "297",
      "n": 297,
      "s": "يَحْفَظُ بَطْنَهُ مِنَ الْحَرَامِ",
-     "e": "يَتْرُكُ مَا شُبِّهَ بِاهْتِمَامِ"
+     "e": "يَتْرُكُ مَا شُبِّهَ بِاهْتِمَامِ",
+     "t": [
+      "He must guard his stomach from intaking the unlawful.",
+      "He must leave what is doubtful considering it significant."
+     ]
     },
     {
      "id": "298",
      "n": 298,
      "s": "يَحْفَظُ فَرْجَهُ وَيَتَّقِي الشَّهِيدْ",
-     "e": "فِي الْبَطْشِ وَالسَّعْيِ لِمَمْنُوعٍ يُرِيدْ"
+     "e": "فِي الْبَطْشِ وَالسَّعْيِ لِمَمْنُوعٍ يُرِيدْ",
+     "t": [
+      "He must guard over his front private part and fear the ever-present Witness (i.e. Allah)",
+      "in what he reaches out towards (with his hand) and what he hastens towards (with his feet) of what is forbidden."
+     ]
     },
     {
      "id": "299",
      "n": 299,
      "s": "وَيُوقِفُ الْأُمُورَ حَتَّى يَعْلَمَا",
-     "e": "مَا اللَّهُ فِيهِنَّ بِهِ قَدْ حَكَمَا"
+     "e": "مَا اللَّهُ فِيهِنَّ بِهِ قَدْ حَكَمَا",
+     "t": [
+      "He must avoid engaging in affairs until he knows",
+      "what Allah has ruled about them."
+     ]
     }
    ]
   },
@@ -2166,19 +3359,31 @@
      "id": "300",
      "n": 300,
      "s": "يُطَهِّرُ الْقَلْبَ مِنَ الرِّيَاءِ",
-     "e": "وَحَسَدٍ عُجْبٍ وَكُلِّ دَاءِ"
+     "e": "وَحَسَدٍ عُجْبٍ وَكُلِّ دَاءِ",
+     "t": [
+      "He must cleanse his heart from showing off (for people),",
+      "resentful envy, conceit, and all (other) diseases."
+     ]
     },
     {
      "id": "301",
      "n": 301,
      "s": "وَاعْلَمْ بِأَنَّ أَصْلَ ذِي الْآفَاتِ",
-     "e": "حُبُّ الرِّيَاسَةِ وَطَرْحُ الْآتِي"
+     "e": "حُبُّ الرِّيَاسَةِ وَطَرْحُ الْآتِي",
+     "t": [
+      "Know that the root of all calamities of the heart",
+      "is loving leadership and forgetting about the Coming Life."
+     ]
     },
     {
      "id": "302",
      "n": 302,
      "s": "رَأْسُ الْخَطَايَا هُوَ حُبُّ الْعَاجِلَهْ",
-     "e": "لَيْسَ الدَّوَا إِلَّا فِي الِاضْطِرَارِ لَهْ"
+     "e": "لَيْسَ الدَّوَا إِلَّا فِي الِاضْطِرَارِ لَهْ",
+     "t": [
+      "The head of all misdeeds is loving the present world.",
+      "There is no (real) cure (for these diseases) except calling to Allah while feeling extreme need."
+     ]
     }
    ]
   },
@@ -2193,61 +3398,101 @@
      "id": "303",
      "n": 303,
      "s": "يَصْحَبُ شَيْخًا عَارِفَ الْمَسَالِكْ",
-     "e": "يَقِيهِ فِي طَرِيقِهِ الْمَهَالِكْ"
+     "e": "يَقِيهِ فِي طَرِيقِهِ الْمَهَالِكْ",
+     "t": [
+      "He must keep the company of a Shaykh, a knower of the various paths.",
+      "The Shaykh will save him from the destructive points in his Path."
+     ]
     },
     {
      "id": "304",
      "n": 304,
      "s": "يُذَكِّرُهُ اللَّهَ إِذَا رَآهُ",
-     "e": "وَيُوصِلُ الْعَبْدَ إِلَى مَوْلَاهُ"
+     "e": "وَيُوصِلُ الْعَبْدَ إِلَى مَوْلَاهُ",
+     "t": [
+      "The Shaykh will remind the disciple of Allah when he sees him",
+      "and will make the servant reach his Master."
+     ]
     },
     {
      "id": "305",
      "n": 305,
      "s": "يُحَاسِبُ النَّفْسَ عَلَى الْأَنْفَاسِ",
-     "e": "وَيَزِنُ الْخَاطِرَ بِالْقِسْطَاسِ"
+     "e": "وَيَزِنُ الْخَاطِرَ بِالْقِسْطَاسِ",
+     "t": [
+      "He must reckon and take to account the lower self with each breath.",
+      "He must weigh his thoughts with the correct balance."
+     ]
     },
     {
      "id": "306",
      "n": 306,
      "s": "وَيَحْفَظُ الْمَفْرُوضَ رَأْسَ الْمَالِ",
-     "e": "وَالنَّفْلُ رِبْحُهُ بِهِ يُوَالِي"
+     "e": "وَالنَّفْلُ رِبْحُهُ بِهِ يُوَالِي",
+     "t": [
+      "He must guard over the wajib acts (of the din) which serve as his base capital.",
+      "The mandub deeds are their profit which he successively obtains."
+     ]
     },
     {
      "id": "307",
      "n": 307,
      "s": "وَيُكْثِرُ الذِّكْرَ بِصَفْوِ لُبِّهِ",
-     "e": "وَالْعَوْنُ فِي جَمِيعِ ذَا بِرَبِّهِ"
+     "e": "وَالْعَوْنُ فِي جَمِيعِ ذَا بِرَبِّهِ",
+     "t": [
+      "He must do plenteous Arabic verbal remembrance with a clear mind",
+      "and the help in doing all of this is from his Lord."
+     ]
     },
     {
      "id": "308",
      "n": 308,
      "s": "يُجَاهِدُ النَّفْسَ لِرَبِّ الْعَالَمِينْ",
-     "e": "وَيَتَحَلَّى بِمَقَامَاتِ الْيَقِينْ"
+     "e": "وَيَتَحَلَّى بِمَقَامَاتِ الْيَقِينْ",
+     "t": [
+      "He must strive against the lower self for the Lord of the worlds.",
+      "He must embellish himself with the stations of certainty:"
+     ]
     },
     {
      "id": "309",
      "n": 309,
      "s": "خَوْفٌ رَجَا شُكْرٌ وَصَبْرٌ تَوْبَهْ",
-     "e": "زُهْدٌ تَوَكُّلٌ رِضًا مَحَبَّهْ"
+     "e": "زُهْدٌ تَوَكُّلٌ رِضًا مَحَبَّهْ",
+     "t": [
+      "Fear, hope, thankfulness, patience, repentance,",
+      "abstinence, dependence (on Allah), contentment, and love."
+     ]
     },
     {
      "id": "310",
      "n": 310,
      "s": "يَصْدُقُ شَاهِدَهُ فِي الْمُعَامَلَهْ",
-     "e": "يَرْضَى بِمَا قَدَّرَهُ الْإِلَهُ لَهْ"
+     "e": "يَرْضَى بِمَا قَدَّرَهُ الْإِلَهُ لَهْ",
+     "t": [
+      "He must be true to Him Who sees him in all of his dealings.",
+      "He must become happy with what the One God decrees for him."
+     ]
     },
     {
      "id": "311",
      "n": 311,
      "s": "يَصِيرُ عِنْدَ ذَاكَ عَارِفًا بِهْ",
-     "e": "حُرًّا وَغَيْرُهُ خَلَا مِنْ قَلْبِهْ"
+     "e": "حُرًّا وَغَيْرُهُ خَلَا مِنْ قَلْبِهْ",
+     "t": [
+      "He will become with this a knower of Allah",
+      "who is free and those other than Allah will vacate (leave) his heart."
+     ]
     },
     {
      "id": "312",
      "n": 312,
      "s": "فَحَبَّهُ الْإِلَهُ وَاصْطَفَاهْ",
-     "e": "لِحَضْرَةِ الْقُدُّوسِ وَاجْتَبَاهْ"
+     "e": "لِحَضْرَةِ الْقُدُّوسِ وَاجْتَبَاهْ",
+     "t": [
+      "So, the One God will love him and choose him",
+      "for His sanctified presence and make him among the elect."
+     ]
     }
    ]
   },
@@ -2262,31 +3507,51 @@
      "id": "313",
      "n": 313,
      "s": "ذَا الْقَدْرُ نَظْمًا لَا يَفِي بِالْغَايَهْ",
-     "e": "وَفِي الَّذِي ذَكَرْتُهُ كِفَايَهْ"
+     "e": "وَفِي الَّذِي ذَكَرْتُهُ كِفَايَهْ",
+     "t": [
+      "That is the end of our metered verses and it does not do full justice (to the subjects);",
+      "but, in what I have mentioned is a sufficient (teaching for him who is sincere)."
+     ]
     },
     {
      "id": "314",
      "n": 314,
-     "s": "أَبْيَاتُهُ أَرْبَعَةَ عَشْرَةَ تَصِلْ",
-     "e": "مَعَ ثَلَاثِمِائَةٍ عَدَّ الرُّسْلْ"
+     "s": "أَبْيَاتُهُ أَرْبَعَةٌ عَشْرٌ تَصِلْ",
+     "e": "مَعَ ثَلَاثِمِئَةٍ عَدُّ الرُّسُلْ",
+     "t": [
+      "Its verses are four plus ten connected to",
+      "three hundred, which is the number of messengers (sent by Allah from Nu# to Mu#ammad (May Allah bless them all and give them peace))."
+     ]
     },
     {
      "id": "315",
      "n": 315,
      "s": "سَمَّيْتُهُ بِالْمُرْشِدِ الْمُعِينِ",
-     "e": "عَلَى الضَّرُورِيِّ مِنْ عُلُومِ الدِّينِ"
+     "e": "عَلَى الضَّرُورِيِّ مِنْ عُلُومِ الدِّينِ",
+     "t": [
+      "I have named it the Helping Guide",
+      "Covering the Necessary Knowledge of the Dīn."
+     ]
     },
     {
      "id": "316",
      "n": 316,
-     "s": "فَاسْأَلِ النَّفْعَ بِهِ عَلَى الدَّوَامْ",
-     "e": "مِنْ رَبِّنَا بِجَاهِ سَيِّدِ الْأَنَامْ"
+     "s": "فَأَسْأَلُ النَّفْعَ بِهِ عَلَى الدَّوَامْ",
+     "e": "مِنْ رَبِّنَا بِجَاهِ سَيِّدِ الْأَنَامْ",
+     "t": [
+      "So, I ask that it benefit continuously (throughout time)",
+      "from our Lord (in view of) the noble rank of the leader of all people (i.e. Prophet Muhammad)."
+     ]
     },
     {
      "id": "317",
      "n": 317,
      "s": "قَدْ انْتَهَى وَالْحَمْدُ لِلَّهِ الْعَظِيمْ",
-     "e": "صَلَّى وَسَلَّمَ عَلَى الْهَادِي الْكَرِيمْ"
+     "e": "صَلَّى وَسَلَّمَ عَلَى الْهَادِي الْكَرِيمْ",
+     "t": [
+      "This work has now reached its completion. Praise be to Allah, the Tremendous.",
+      "Peace and blessings be on the Noble Guide (i.e. Prophet Muhammad)."
+     ]
     }
    ]
   }

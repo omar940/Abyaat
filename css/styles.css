@@ -413,3 +413,5 @@ html[dir="ltr"] #top .brand{flex-direction:row}
 .allclear p{margin:2px 0 0;font-size:13.5px;opacity:.88}
 .allclear-ic{flex:none;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center}
 .allclear-ic .ic{width:20px;height:20px;stroke-width:2.6}
+
+.li.susp .t,.li.susp .s{opacity:.55}

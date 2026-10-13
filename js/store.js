@@ -107,7 +107,7 @@
   function currentChapter(pid) {
     const m = metas[pid]; if (!m) return null;
     const p = ps(pid);
-    const open = (c) => { const s = chapter(pid, c.id).status; return s === 'new' || s === 'learning'; };
+    const open = (c) => { const r = chapter(pid, c.id); return !r.suspended && (r.status === 'new' || r.status === 'learning'); };
     if (p.current) { const c = m.chapters.find((x) => x.id === p.current); if (c && open(c)) return c; }
     return m.chapters.find((c) => !c.optional && open(c)) || null;
   }
@@ -150,14 +150,14 @@
   function poemStatus(pid) {
     const m = metas[pid]; if (!m) return 'memorizing';
     const p = state.poems[pid];
-    const all = m.chapters.filter((c) => !c.optional).every((c) => p && p.chapters[c.id] && p.chapters[c.id].status === 'done');
+    const all = m.chapters.filter((c) => !c.optional && !(p && p.chapters[c.id] && p.chapters[c.id].suspended)).every((c) => p && p.chapters[c.id] && p.chapters[c.id].status === 'done');
     return all ? 'review' : 'memorizing';
   }
 
   function setActive(pid) { state.activePoem = pid; ps(pid); save(); }
   function setCurrent(pid, cid) {
     const s = chapter(pid, cid);
-    if (s.status !== 'new' && s.status !== 'learning') return false;
+    if ((s.status !== 'new' && s.status !== 'learning') || s.suspended) return false;
     ps(pid).current = cid; state.activePoem = pid; save(); return true;
   }
 
@@ -169,7 +169,7 @@
       const m = metas[pid]; if (!m || !state.poems[pid].enrolled) return;
       m.chapters.forEach((c) => {
         const s = state.poems[pid].chapters[c.id];
-        if (!s || !s.segs) return;
+        if (!s || !s.segs || s.suspended) return;
         c.segs.forEach((sg, i) => {
           const rec = s.segs[i];
           if (!rec || (rec.status !== 'learning' && rec.status !== 'consolidating')) return;
@@ -238,11 +238,22 @@
   const previewMark = () => F.options(null, U.today(), retention());
   function markMemorized(pid, cid, g) {
     const c = chapterMeta(pid, cid), s = chapter(pid, cid), t = U.today();
-    s.learned = c.len; s.status = 'done'; s.segs = {};
+    s.learned = c.len; s.status = 'done'; s.segs = {}; delete s.suspended;
     c.segs.forEach((sg, i) => { s.segs[i] = { status: 'review', completedOn: t, daysDone: CONSOLIDATION_DAYS, card: F.review(null, g, t, retention()) }; });
     if (ps(pid).current === cid) ps(pid).current = null;
     save(); return s.segs;
   }
+  /* تعليق فصل: لا يُعرض في الحفظ الجديد ولا في المراجعة القريبة ولا في التقدّم، ويمكن استئنافه لاحقًا (للفصول التي لم يكتمل حفظها فقط) */
+  function setSuspended(pid, cids, v) {
+    [].concat(cids).forEach((cid) => {
+      const s = chapter(pid, cid);
+      if (s.status !== 'new' && s.status !== 'learning') return;
+      if (v) s.suspended = true; else delete s.suspended;
+      if (v && ps(pid).current === cid) ps(pid).current = null;
+    });
+    save();
+  }
+  const isSuspended = (pid, cid) => !!(state.poems[pid] && state.poems[pid].chapters[cid] && state.poems[pid].chapters[cid].suspended);
   function resetChapter(pid, cid) { delete ps(pid).chapters[cid]; save(); }
 
   /* ---- تقدّم القصيدة (الفصول الأساسية فقط) ---- */
@@ -251,8 +262,9 @@
     let done = 0, total = 0;
     m.chapters.forEach((c) => {
       if (c.optional) return;
-      total += c.len;
       const s = state.poems[pid] && state.poems[pid].chapters[c.id];
+      if (s && s.suspended) return;
+      total += c.len;
       if (s) done += (s.status === 'done') ? c.len : (s.learned || 0);
     });
     return { done, total, pct: total ? Math.round(done * 100 / total) : 0 };
@@ -271,7 +283,7 @@
 
   return {
     get state() { return state; }, KEY, CONSOLIDATION_DAYS, SEG_MAX, registerPoem, meta, chapterMeta, chapter,
-    todayNewDone, currentChapter, markLearned, setActive, setCurrent, isEnrolled, enrolledIds, setEnrolled, poemStatus, perDayOf, setPerDay, newDoneToday,
+    todayNewDone, currentChapter, setSuspended, isSuspended, markLearned, setActive, setCurrent, isEnrolled, enrolledIds, setEnrolled, poemStatus, perDayOf, setPerDay, newDoneToday,
     newReviewList, pendingNear, finishNewReview, oldReviewList, dueOld, previewOld, applyOldReview,
     previewMark, markMemorized, resetChapter, poemProgress, settings, setSetting, exportJSON, importJSON, resetAll,
   };

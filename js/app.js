@@ -242,7 +242,7 @@
   function vLearn() {
     const pid = S.state.activePoem, L = ui.learn;
     if (!pid || !POEMS.get(pid)) { ui.mode = null; return vHome(); }
-    if (L.stage === 'chapters') return learnChapters(pid, !S.currentChapter(pid));
+    if (L.stage === 'chapters') return learnChapters(pid, !S.currentChapter(pid) && !S.meta(pid).chapters.some((c) => S.isSuspended(pid, c.id)));
     if (L.stage === 'test' && ui.test) return testPage();
     if (learnCursor()) { if (L.stage !== 'learn') startLearn(); return learnCard(); }
     return learnChapters(pid, true);
@@ -255,7 +255,7 @@
     const poem = POEMS.get(pid), m = S.meta(pid), pr = S.poemProgress(pid);
     const rows = m.chapters.map((c, ci) => {
       const st = chapterStatus(pid, c);
-      return groupHead(m, ci) + `<li><button class="li" data-act="ch-open" data-cid="${esc(c.id)}"><span class="main">${m.type === 'dhikr' ? '' : `<span class="ch-no">${esc(kicker(pid, c.id))}</span>`}<div class="t"${da}>${esc(ctitle(c))}</div><div class="s">${esc(st.sub)}</div></span><span class="end">${st.pill}</span></button></li>`;
+      return groupHead(m, ci) + `<li><button class="li${st.susp ? ' susp' : ''}" data-act="ch-open" data-cid="${esc(c.id)}"><span class="main">${m.type === 'dhikr' ? '' : `<span class="ch-no">${esc(kicker(pid, c.id))}</span>`}<div class="t"${da}>${esc(ctitle(c))}</div><div class="s">${esc(st.sub)}</div></span><span class="end">${st.pill}</span></button></li>`;
     }).join('');
     return `<div class="hero"><div class="kicker"${da}>${esc(pick(poem, 'author'))}</div><h2 class="title"${da}>${esc(pick(poem, 'fullTitle'))}</h2></div>
       ${finished ? `<div class="notice" style="margin-top:10px">${e('finishedBody')}</div>` : ''}
@@ -461,6 +461,7 @@
       const label = c.segs.length > 1 ? `${e('stConsol')} ${ar(reviewCount)}/${ar(recs.length)}` : e('stConsol');
       return { pill: `<span class="pill gold">${label}</span>`, sub: t('stConsolSub', { days: remaining }) };
     }
+    if (s.suspended) return { pill: `<span class="pill">${e('stSusp')}</span>`, sub: s.status === 'learning' ? t('learnedOf', { n: s.learned, total: c.len }) : U.baytCount(c.len), susp: true };
     if (s.status === 'learning') return { pill: `<span class="pill gold">${curCh ? e('stNow') : e('stProg')}</span>`, sub: t('learnedOf', { n: s.learned, total: c.len }) };
     return { pill: curCh ? `<span class="pill gold">${e('stNext')}</span>` : `<span class="pill">${e('stNew')}</span>`, sub: U.baytCount(c.len) };
   }
@@ -475,10 +476,19 @@
   function openChapterSheet(cid) {
     const pid = S.state.activePoem, c = cMeta(pid, cid), s = S.chapter(pid, cid), st = chapterStatus(pid, c);
     const acts = [];
-    if (s.status === 'new' || s.status === 'learning') acts.push(`<button class="btn block" data-act="ch-current" data-cid="${esc(cid)}">${s.status === 'learning' ? e('continueHere') : e('startHere')}</button>`);
+    const open = s.status === 'new' || s.status === 'learning';
+    if (open && !s.suspended) acts.push(`<button class="btn block" data-act="ch-current" data-cid="${esc(cid)}">${s.status === 'learning' ? e('continueHere') : e('startHere')}</button>`);
+    if (open) {
+      acts.push(`<button class="btn block quiet" data-act="ch-susp" data-cid="${esc(cid)}" data-v="${s.suspended ? 0 : 1}">${e(s.suspended ? 'resumeCh' : 'suspendCh')}</button>`);
+      const m = S.meta(pid), mates = c.group ? m.chapters.filter((x) => x.group === c.group && x.id !== cid && ['new', 'learning'].includes(S.chapter(pid, x.id).status)) : [];
+      if (mates.length) {
+        const allSusp = mates.every((x) => S.isSuspended(pid, x.id)) && !!s.suspended;
+        acts.push(`<button class="btn block quiet" data-act="grp-susp" data-cid="${esc(cid)}" data-v="${allSusp ? 0 : 1}"${da}>${esc(t(allSusp ? 'resumeGrp' : 'suspendGrp', { g: pick(c, 'group') }))}</button>`);
+      }
+    }
     if (s.status !== 'done') acts.push(`<button class="btn block quiet" data-act="ch-mark" data-cid="${esc(cid)}">${e('markMemorized')}</button>`);
     if (s.status !== 'new') acts.push(`<button class="btn block danger" data-act="ch-reset" data-cid="${esc(cid)}">${e('restartChapter')}</button>`);
-    openSheet(`<h2${da}>${esc([kicker(pid, cid), ctitle(c)].filter(Boolean).join(': '))}</h2><p class="sub">${esc(st.sub)}</p><div class="opts">${acts.join('')}</div>`);
+    openSheet(`<h2${da}>${esc([kicker(pid, cid), ctitle(c)].filter(Boolean).join(': '))}</h2><p class="sub">${esc(st.sub)}</p>${s.suspended ? `<p class="small muted">${e('suspHint')}</p>` : ''}<div class="opts">${acts.join('')}</div>`);
   }
   function openMarkSheet(cid) {
     const pid = S.state.activePoem, opts = S.previewMark();
@@ -698,6 +708,11 @@
       case 'lib-back': ui.lib.poem = null; return render();
       case 'lib-read': ui.lib.reader = { pid: ui.lib.poem, cid: d.cid || null, en: S.settings().showEn }; return render();
       case 'ch-current': S.setCurrent(S.state.activePoem, d.cid); startLearn(); closeSheet(); toast(t('tStartHere')); return render();
+      case 'ch-susp': S.setSuspended(S.state.activePoem, d.cid, d.v === '1'); closeSheet(); toast(t(d.v === '1' ? 'tSuspended' : 'tResumed')); return render();
+      case 'grp-susp': {
+        const pid = S.state.activePoem, m = S.meta(pid), g = cMeta(pid, d.cid).group;
+        S.setSuspended(pid, m.chapters.filter((x) => x.group === g).map((x) => x.id), d.v === '1'); closeSheet(); toast(t(d.v === '1' ? 'tSuspended' : 'tResumed')); return render();
+      }
       case 'ch-mark': return openMarkSheet(d.cid);
       case 'ch-mark-rate': S.markMemorized(S.state.activePoem, d.cid, Number(d.g)); closeSheet(); L.stage = 'chapters'; toast(t('tAdded')); return render();
       case 'ch-reset': return confirmSheet(t('restartQ'), t('restartBody'), t('restartYes'), 'ch-reset-yes', { cid: d.cid }, true);
