@@ -21,6 +21,7 @@
 
   const ui = {
     tab: 'home', mode: null, poemOpen: false,   // الحفظ والمراجعة: القائمة، ثم شاشة القصيدة (poemOpen)، ثم mode = learn | near | far | add
+    test: null,   // اختبار آخر الأبيات بعد الحفظ: { pid, cid, start, end, shown }
     learn: { stage: 'home', target: 0, done: 0, hint: false, hidden: false, en: false, completed: [], completedParts: [] },
     near: { stage: 'list', pid: null, cid: null, segIdx: null, page: 0, shown: null },
     far: { stage: 'list', pid: null, cid: null, segIdx: null, page: 0, shown: 0, missed: {}, rated: null },
@@ -86,7 +87,8 @@
   }
   const linesOf = (b) => b.ls || (b.ls = b.e ? [b.s, b.e] : [b.s]);
   const isDhikr = (pid) => !!(S.meta(pid) && S.meta(pid).type === 'dhikr');
-  const unitOf = (pid) => (isDhikr(pid) ? 'dhikr' : 'bayt');
+  const isWird = (pid) => !!(S.meta(pid) && S.meta(pid).type === 'wird');
+  const unitOf = (pid) => (isDhikr(pid) ? 'dhikr' : (S.meta(pid) && S.meta(pid).type === 'wird' ? 'line' : 'bayt'));
   const chapterOf = (pid, cid) => { const p = POEMS.get(pid); return p && p.chapters.find((c) => c.id === cid); };
   const cMeta = (pid, cid) => S.meta(pid).chapters.find((c) => c.id === cid);
   const cTitle = (pid, cid) => ctitle(cMeta(pid, cid));
@@ -102,9 +104,9 @@
   const withPart = (label, segIdx, segCount) => segCount > 1 ? `${label} · ${partLabel(segIdx, segCount)}` : label;
 
   /* ---------- أدوات الواجهة ---------- */
-  function toast(msg) {
+  function toast(msg, ms) {
     const box = $('#toast'); box.innerHTML = '<div>' + esc(msg) + '</div>';
-    clearTimeout(toast.h); toast.h = setTimeout(() => { box.innerHTML = ''; }, 2600);
+    clearTimeout(toast.h); toast.h = setTimeout(() => { box.innerHTML = ''; }, ms || 2600);
   }
   function openSheet(html) {
     $('#sheet-root').innerHTML = '<div class="scrim" data-act="sheet-close"></div><div class="sheet" role="dialog" aria-modal="true"><div class="grab"></div>' + html + '</div>';
@@ -187,7 +189,7 @@
     const rest = LIB.poems.filter((p) => !S.isEnrolled(p.id));
     const cards = rest.map((p) => `<li style="margin-bottom:12px"><button class="book" data-act="enroll" data-pid="${esc(p.id)}"><span class="spine"></span><span class="body">
       <div class="name"${da}>${esc(pick(p, 'title'))}</div><div class="full"${da}>${esc(pick(p, 'author'))}</div>
-      <div class="meta"><span>${esc(U.baytCount(p.baytCount, p.type === 'dhikr' ? 'dhikr' : 'bayt'))}</span><span>${e('chapCount', { n: p.chapterCount })}</span></div></span></button></li>`).join('');
+      <div class="meta"><span>${esc(U.baytCount(p.baytCount, p.type === 'dhikr' ? 'dhikr' : (p.type === 'wird' ? 'line' : 'bayt')))}</span><span>${e('chapCount', { n: p.chapterCount })}</span></div></span></button></li>`).join('');
     return `<h2 class="page-title">${e('chooseTitle')}</h2><p class="lede">${e('chooseBody')}</p>${rest.length ? `<ul class="list" style="margin-top:14px">${cards}</ul>` : `<p class="muted" style="margin-top:14px">${e('addNone')}</p>`}`;
   }
   /* شاشة القصيدة: عدد الأبيات وما حُفظ منها، الفصول والتأشير، ثم الحفظ الجديد والمراجعتان لهذه القصيدة وحدها */
@@ -221,6 +223,19 @@
     return chap && chap.bayts[idx] ? { pid, chap, idx, bayt: chap.bayts[idx] } : null;
   }
   /* الحفظ الجديد بلا شاشة تمهيدية: تبدأ الجلسة مباشرةً بعدد الأبيات المحفوظ في الإعدادات، ويُعدَّل من الأعلى بزرّي + و − */
+  /* بعد كل بيت (وبعد اختباره): بيت تالٍ، أو نهاية الجلسة فيرجع إلى شاشة القصيدة دون شاشة وسيطة */
+  function afterLearnStep() {
+    const L = ui.learn;
+    if (L.done >= L.target || !learnCursor()) return finishLearn();
+    L.stage = 'learn'; return render();
+  }
+  function finishLearn() {
+    const L = ui.learn, pid = S.state.activePoem, msgs = [];
+    L.completed.forEach((cid) => msgs.push(t('chapterFinished', { title: cTitle(pid, cid), days: DAYS })));
+    L.completedParts.forEach((p) => msgs.push(t('partFinished', { title: withPart(cTitle(pid, p.cid), p.segIdx, p.segCount), days: DAYS })));
+    toast(msgs.length ? msgs.join(' ') : t('sessionDoneT', { n: L.done }), msgs.length ? 6500 : 3200);
+    ui.test = null; ui.mode = null; L.stage = 'home'; return render();
+  }
   function startLearn() {
     Object.assign(ui.learn, { stage: 'learn', target: S.perDayOf(S.state.activePoem), done: 0, hint: false, hidden: false, en: false, completed: [], completedParts: [] });
   }
@@ -228,7 +243,7 @@
     const pid = S.state.activePoem, L = ui.learn;
     if (!pid || !POEMS.get(pid)) { ui.mode = null; return vHome(); }
     if (L.stage === 'chapters') return learnChapters(pid, !S.currentChapter(pid));
-    if (L.stage === 'done') return learnDone();
+    if (L.stage === 'test' && ui.test) return testPage();
     if (learnCursor()) { if (L.stage !== 'learn') startLearn(); return learnCard(); }
     return learnChapters(pid, true);
   }
@@ -257,28 +272,15 @@
     const trans = (b.t && showEn) ? `<div class="trans-row">${transHTML(b)}</div>` : '';
     const dh = isDhikr(cursor.pid);
     /* الذكر: الظرف والعدد والمصدر تحت النص، والترجمة بالضغط المطوّل على النص */
-    const meta = dh ? `<div class="dh-meta">${b.w ? `<span class="pill gold"${da}>${esc(pick(b, 'w'))}</span>` : ''}${b.c > 1 ? `<span class="pill green">${e('timesN', { n: b.c })}</span>` : ''}${b.r ? `<span${da}>${esc(b.r)}</span>` : ''}${b.t ? `<span class="muted">${e('holdTrans')}</span>` : ''}</div>` : '';
+    const meta = (dh || isWird(cursor.pid)) ? `<div class="dh-meta">${b.w ? `<span class="pill gold"${da}>${esc(pick(b, 'w'))}</span>` : ''}${b.c > 1 ? `<span class="pill green">${e('timesN', { n: b.c })}</span>` : ''}${b.r ? `<span${da}>${esc(b.r)}</span>` : ''}${b.t ? `<span class="muted">${e('holdTrans')}</span>` : ''}</div>` : '';
     const actions = `<div class="row"><button class="btn quiet" data-act="learn-hide">${hidden ? e('showVerse') : e('hideVerse')}</button>
         <button class="btn quiet" data-act="learn-hint" ${hidden ? '' : 'disabled'}>${L.hint ? e('hideHint') : e('hint')}</button></div>
       <button class="btn block" data-act="learn-known">${e('memorized')}</button>`;
     return `<div class="learn-top"><span><b>${e('baytN', { n: cursor.bayt.n || cursor.idx + 1 })}</b> <span class="muted small"${da}>${esc(ctitle(cMeta(cursor.pid, cursor.chap.id)))}</span></span>${step}</div>
-      <div class="fit-box folio wrap" dir="rtl" data-min="${dh ? 14 : 16}" data-max="${dh ? 36 : 48}"><div class="fit-content">${baytHTML(b, cursor.idx, { s: mode, e: mode, trans: dh })}</div></div>
-      ${meta}${trans}
+      <div class="fit-box folio wrap" dir="rtl" data-min="${dh ? 14 : 16}" data-max="${dh ? 36 : 48}"><div class="fit-content">${baytHTML(b, cursor.idx, { s: mode, e: mode, trans: true })}</div></div>
+      ${meta || (b.t ? `<div class="dh-meta"><span class="muted">${e('holdTrans')}</span></div>` : '')}${trans}
       <div class="actions">${actions}</div>`;
   }
-  function learnDone() {
-    const L = ui.learn, pid = S.state.activePoem;
-    const finished = L.completed.map((cid) => `<div class="notice">${e('chapterFinished', { title: cTitle(pid, cid), days: DAYS })}</div>`).join('');
-    const finishedParts = L.completedParts.map((p) => `<div class="notice">${e('partFinished', { title: withPart(cTitle(pid, p.cid), p.segIdx, p.segCount), days: DAYS })}</div>`).join('');
-    return `<div class="stack" style="padding-top:16px">
-      <div class="center hero"><div class="empty" style="padding:8px 0"><div class="glyph" aria-hidden="true">${MARK}</div></div>
-        <h2 class="title" style="font-size:30px">${e('wellDone')}</h2><p class="sub">${e('sessionDone', { n: L.done })}</p></div>
-      ${finished}${finishedParts}
-      <button class="btn block" data-act="goto" data-to="near">${e('openNear')}</button>
-      <button class="btn block quiet" data-act="learn-more">${e('learnMore')}</button>
-      <button class="btn block ghost" data-act="learn-home">${e('back')}</button></div>`;
-  }
-
   /* ---------- المراجعة القريبة ---------- */
   function vNear() {
     const N = ui.near;
@@ -308,7 +310,7 @@
   const whenLabel = (slice, i) => { const b = slice[i]; if (!b.w || (i > 0 && slice[i - 1].w === b.w && slice[i - 1].wEn === b.wEn)) return ''; return `<div class="dh-when"${da}>${esc(pick(b, 'w'))}</div>`; };
   function pagerBar(o) {
     const all = o.shown >= o.lines && o.lines > 0;
-    const mid = `<div class="rc-mid"><button class="rc-eye" data-act="reveal-all" aria-label="${e(all ? 'hideAll' : 'showAll')}" aria-pressed="${all}">${all ? IC.eyeOff : IC.eye}</button><span class="rc-cnt">${ar(o.page + 1)} / ${ar(o.pages)}${o.marked ? `<i class="rc-mark" aria-hidden="true">${ar(o.marked)}</i>` : ''}</span></div>`;
+    const mid = `<div class="rc-mid"><button class="rc-eye" data-act="reveal-all" aria-label="${e(all ? 'hideAll' : 'showAll')}" aria-pressed="${all}">${all ? IC.eyeOff : IC.eye}</button><span class="rc-cnt">${o.label ? esc(o.label) : `${ar(o.page + 1)} / ${ar(o.pages)}`}${o.marked ? `<i class="rc-mark" aria-hidden="true">${ar(o.marked)}</i>` : ''}</span></div>`;
     const fwd = o.last
       ? `<button class="rc-finish" data-act="${o.finishAct}">${IC.check}<span>${esc(o.finishLabel)}</span></button>`
       : `<button data-act="${o.nextAct}" aria-label="${e('nextSet')}">${ARR(2)}</button>`;
@@ -316,18 +318,24 @@
       <button data-act="reveal-minus" aria-label="${e('hideLine')}" ${o.shown <= 0 ? 'disabled' : ''}>${ARR(1, true)}</button>${mid}
       <button data-act="reveal-plus" aria-label="${e('showLine')}" ${o.shown >= o.lines ? 'disabled' : ''}>${ARR(1)}</button>${fwd}</div>`;
   }
-  /* حدود الصفحات: خمسة أبيات في كل مجموعة للقصائد؛ والأذكار تُجمَّع حتى نحو تسعة أسطر في الصفحة */
+  /* حدود الصفحات: خمسة أبيات في كل مجموعة للقصائد والأوراد؛ والأذكار بطاقة واحدة لكل ذكر */
   function pageBounds(bayts, total, dh) {
     const out = []; let i = 0;
     while (i < total) {
       let j = i;
       if (!dh) j = Math.min(i + 5, total);
-      else { let n = 0; while (j < total && (j === i || n + linesOf(bayts[j]).length <= 9)) { n += linesOf(bayts[j]).length; j++; } }
+      else j = i + 1;   // الأذكار: بطاقة لكل ذكر
       out.push([i, j]); i = j;
     }
     return out.length ? out : [[0, 0]];
   }
+  /* أي صفحة استظهار مفتوحة الآن: القريبة، البعيدة، أو اختبار آخر الأبيات بعد الحفظ */
+  const pagerKind = () => (ui.mode === 'near' && ui.near.stage === 'pager' ? 'near' : ui.mode === 'far' && ui.far.stage === 'review' ? 'far' : ui.mode === 'learn' && ui.learn.stage === 'test' && ui.test ? 'test' : null);
   function pagerPage(kind) {
+    if (kind === 'test') {
+      const c = ui.test, slice = chapterOf(c.pid, c.cid).bayts.slice(c.start, c.end), lines = lineCount(slice);
+      return { c, slice, start: c.start, segCount: 1, pages: 1, page: 0, last: true, lines, shown: Math.min(c.shown == null ? 0 : c.shown, lines), dh: false };
+    }
     const c = kind === 'near' ? ui.near : ui.far, { bayts, sg, segCount } = segSlice(c.pid, c.cid, c.segIdx);
     let total = sg.len;
     if (kind === 'near') {
@@ -343,6 +351,13 @@
     const chap = chapterOf(pid, cid), sg = cMeta(pid, cid).segs[segIdx];
     return { bayts: chap.bayts.slice(sg.start, sg.start + sg.len), sg, segCount: cMeta(pid, cid).segs.length };
   };
+  /* اختبار ختامي بعد حفظ كل بيت: البيت الحالي والبيتان السابقان (للقصائد والمتون والأوراد) */
+  function testPage() {
+    const { c: T, slice, start, pages, page, lines, shown } = pagerPage('test'), modes = revealModes(slice, shown);
+    const body = slice.map((b, i) => baytHTML(b, start + i, { no: true, m: modes[i], nopeek: true, trans: true, orn: false })).join('<div class="orn"></div>');
+    return `<div class="fit-box folio rev nowrap" dir="rtl" data-min="11" data-max="44"><div class="fit-content">${body}</div></div>
+      <div class="actions">${pagerBar({ page, pages, shown, lines, last: true, label: t('testShort'), prevAct: 'noop', nextAct: 'noop', finishAct: 'test-done', finishLabel: t('testDone') })}</div>`;
+  }
   function nearPager() {
     const { c: N, slice, start, dh, pages, page, last, lines, shown } = pagerPage('near'), modes = revealModes(slice, shown);
     const body = slice.map((b, i) => whenLabel(slice, i) + baytHTML(b, start + i, { no: true, m: modes[i], nopeek: true, trans: true, orn: false })).join('<div class="orn"></div>');
@@ -382,7 +397,7 @@
   /* لمسة/سهم لوحة المفاتيح: يُظهر سطرًا أو يُخفيه؛ وإن كانت الصفحة ظاهرة كلها فالتقدّم يقلب إلى المجموعة التالية،
      وإن كانت مخفية كلها فالرجوع يعود إلى المجموعة السابقة (ظاهرةً كلها، فيُخفى منها سطرٌ سطر) */
   function stepPager(fwd) {
-    const near = ui.mode === 'near', pg = pagerPage(near ? 'near' : 'far'), c = pg.c;
+    const kind = pagerKind(), near = kind === 'near', pg = pagerPage(kind), c = pg.c;
     if (fwd && pg.shown >= pg.lines) {
       if (pg.last) return;
       c.page = pg.page + 1; c.shown = near ? null : 0; return render();
@@ -426,7 +441,7 @@
     const cards = poems.map((p) => {
       return `<li style="margin-bottom:12px"><button class="book" data-act="lib-open" data-pid="${esc(p.id)}"><span class="spine"></span><span class="body">
         <div class="name"${da}>${esc(pick(p, 'title'))}</div><div class="full"${da}>${esc(pick(p, 'author'))}</div>
-        <div class="meta"><span>${esc(U.baytCount(p.baytCount, p.type === 'dhikr' ? 'dhikr' : 'bayt'))}</span><span>${e('chapCount', { n: p.chapterCount })}</span></div></span></button></li>`;
+        <div class="meta"><span>${esc(U.baytCount(p.baytCount, p.type === 'dhikr' ? 'dhikr' : (p.type === 'wird' ? 'line' : 'bayt')))}</span><span>${e('chapCount', { n: p.chapterCount })}</span></div></span></button></li>`;
     }).join('');
     const sec = LIB.sections.find((s) => s.id === L.section);
     const body = poems.length ? `<ul class="list" style="margin-top:14px">${cards}</ul>` : emptyState(t('libEmptyT', { title: pick(sec, 'title') }), t('libEmptyB'));
@@ -479,7 +494,7 @@
     const chapters = poem.chapters.map((c) => {
       const dh = poem.type === 'dhikr';
       const bs = c.bayts.map((b, i) => {
-        const meta = dh ? [b.w ? pick(b, 'w') : '', b.c > 1 ? t('timesN', { n: b.c }) : '', b.r || ''].filter(Boolean).join(' · ') : '';
+        const meta = (dh || poem.type === 'wird') ? [b.w ? pick(b, 'w') : '', b.c > 1 ? t('timesN', { n: b.c }) : '', b.r || ''].filter(Boolean).join(' · ') : '';
         return `<article class="rbayt" dir="rtl" data-k="${esc(c.id)}:${i}"><span class="rno">${ar(b.n || i + 1)}</span><div class="rlines"><div class="rs${dh ? ' dh' : ''}">${esc(b.s)}</div>${b.e ? `<div class="re">${esc(b.e)}</div>` : ''}</div>${meta ? `<p class="rmeta"${da}>${esc(meta)}</p>` : ''}${en && b.t ? `<div class="rtrans en" lang="en" dir="ltr">${transParas(b)}</div>` : ''}</article>`;
       }).join('');
       return `<section id="rch-${esc(c.id)}"><div class="rch">${kicker(R.pid, c.id) ? `<span class="ch-no"${da}>${esc(kicker(R.pid, c.id))}</span>` : ''}<h3 dir="rtl">${esc(c.title)}</h3>${enTitle(c)}</div>${bs}</section>`;
@@ -513,7 +528,7 @@
   /* ---------- الرسم ---------- */
   const cur = () => (ui.tab === 'home' ? (ui.mode || 'home') : ui.tab);
   const FLUSH = () => (cur() === 'learn' && ui.learn.stage === 'learn' && S.state.activePoem && POEMS.get(S.state.activePoem) && !!learnCursor())
-    || (cur() === 'near' && ui.near.stage === 'pager') || (cur() === 'far' && ui.far.stage === 'review');
+    || (cur() === 'learn' && ui.learn.stage === 'test' && !!ui.test) || (cur() === 'near' && ui.near.stage === 'pager') || (cur() === 'far' && ui.far.stage === 'review');
 
   let lastY = 0;
   const barH = () => { const b = $('.reader-bar'); return b ? b.offsetHeight : 0; };
@@ -554,12 +569,12 @@
     const chip = $('#poem-chip'), inMode = ui.tab === 'home' && (!!ui.mode || ui.poemOpen);
     chip.hidden = true;
     $('#mode-back').hidden = !inMode; $('.brand').hidden = inMode;
-    const pg = inMode && ((ui.mode === 'near' && ui.near.stage === 'pager') || (ui.mode === 'far' && ui.far.stage === 'review')) ? (ui.mode === 'near' ? ui.near : ui.far) : null;
+    const pk = inMode ? pagerKind() : null, pg = pk === 'near' ? ui.near : pk === 'far' ? ui.far : pk === 'test' ? Object.assign(ui.test, { segIdx: 0 }) : null;
     document.body.classList.toggle('pager-on', !!pg);
     $('#top').classList.toggle('pager', !!pg); $('#info-btn').hidden = !pg; $('#top-title').hidden = !pg;
     if (pg) {
       const tt = $('#top-title'), sc = cMeta(pg.pid, pg.cid).segs.length;
-      tt.firstElementChild.textContent = withPart(kicker(pg.pid, pg.cid), pg.segIdx, sc); tt.lastElementChild.textContent = cTitle(pg.pid, pg.cid);
+      tt.firstElementChild.textContent = pk === 'test' ? t('testKicker') : withPart(kicker(pg.pid, pg.cid), pg.segIdx, sc); tt.lastElementChild.textContent = cTitle(pg.pid, pg.cid);
       tt.lastElementChild.dir = 'auto';
     }
     const n = S.pendingNear() + S.dueOld().length, b = $('#tabs [data-tab="home"] .badge');
@@ -615,7 +630,8 @@
       case 'unenroll-ask': return confirmSheet(t('removeQ'), t('removeBody'), t('removeYes'), 'unenroll-yes', {}, true);
       case 'unenroll-yes': S.setEnrolled(S.state.activePoem, false); ui.poemOpen = false; ui.mode = null; closeSheet(); toast(t('tPoemRemoved')); return render();
       /* الحفظ الجديد */
-      case 'learn-more': Object.assign(L, { stage: 'learn', target: L.done + 1, hint: false, hidden: false }); return render();
+      case 'test-done': ui.test = null; return afterLearnStep();
+      case 'noop': return;
       case 'learn-target': { const v = Math.min(30, Math.max(L.done + 1, L.target + Number(d.d))); L.target = v; S.setPerDay(S.state.activePoem, v); return render({ keep: true }); }
       case 'learn-home': ui.mode = null; return render();
       case 'learn-chapters': ui.tab = 'home'; ui.mode = 'learn'; L.stage = 'chapters'; return render();
@@ -626,13 +642,18 @@
       case 'learn-unknown': L.stage = 'learn'; return render();
       case 'toggle-en': L.en = !L.en; return render({ keep: true });
       case 'learn-known': {
-        const cursor = learnCursor(); if (!cursor) { L.stage = 'done'; return render(); }
+        const cursor = learnCursor(); if (!cursor) return finishLearn();
         const r = S.markLearned(cursor.pid, cursor.chap.id);
         L.done += 1; L.hint = false; L.hidden = false;
         if (r.completed) L.completed.push(cursor.chap.id);
         else if (r.segCompleted) L.completedParts.push({ cid: cursor.chap.id, segIdx: r.segIdx, segCount: r.segCount });
-        L.stage = (L.done >= L.target || !learnCursor()) ? 'done' : 'learn';
-        return render();
+        /* الخطوة الأخيرة: اختبار على البيت الحالي والبيتين السابقين في الفصل (القصائد والمتون والأوراد، لا الأذكار) */
+        const learnedNow = S.chapter(cursor.pid, cursor.chap.id).learned;
+        if (!isDhikr(cursor.pid) && learnedNow >= 2) {
+          ui.test = { pid: cursor.pid, cid: cursor.chap.id, start: Math.max(0, learnedNow - 3), end: learnedNow, shown: 0, page: 0, segIdx: 0 };
+          L.stage = 'test'; return render();
+        }
+        return afterLearnStep();
       }
       /* المراجعة القريبة */
       case 'near-open': Object.assign(N, { stage: 'pager', pid: d.pid, cid: d.cid, segIdx: Number(d.seg), page: 0, shown: null }); return render();
@@ -652,12 +673,12 @@
       case 'q-prev': Q.page = Math.max(0, Q.page - 1); Q.shown = 0; return render();
       case 'q-next': Q.page += 1; Q.shown = 0; return render();
       case 'reveal-plus': case 'reveal-minus': {
-        const pg = pagerPage(ui.mode === 'near' ? 'near' : 'far');
+        const pg = pagerPage(pagerKind());
         pg.c.shown = Math.min(pg.lines, Math.max(0, pg.shown + (name === 'reveal-plus' ? 1 : -1)));
         return render({ keep: true });
       }
       case 'reveal-all': {
-        const pg = pagerPage(ui.mode === 'near' ? 'near' : 'far');
+        const pg = pagerPage(pagerKind());
         pg.c.shown = pg.shown >= pg.lines ? 0 : pg.lines;
         return render({ keep: true });
       }
@@ -759,7 +780,7 @@
        إن ظهرت الصفحة كلها)، والأيسر يُخفي سطرًا (أو يعود إلى السابقة)، والأوسط لا يتقدّم ولا يرجع،
        ففيه تُلمس مرّتين (خلال 0.4 ث) أبيات المراجعة البعيدة للتأشير على الصعب منها */
     const zone = ev.target.closest('.fit-box.rev');
-    if (zone && view.contains(zone) && (ui.mode === 'near' || ui.mode === 'far')) {
+    if (zone && view.contains(zone) && pagerKind()) {
       const r = zone.getBoundingClientRect(), f = (ev.clientX - r.left) / r.width;
       if (f > 2 / 3) { dt = null; return stepPager(true); }
       if (f < 1 / 3) { dt = null; return stepPager(false); }
@@ -792,11 +813,11 @@
     if (ev.key === 'Escape') return closeSheet();
     /* المراجعة على الحاسوب: السهم الأيمن يُظهر سطرًا والأيسر يُخفي سطرًا (مع Shift: المجموعة التالية أو السابقة) */
     if ((ev.key === 'ArrowRight' || ev.key === 'ArrowLeft') && !ev.ctrlKey && !ev.metaKey && !ev.altKey && ui.tab === 'home' && !$('#sheet-root .sheet')
-        && ((ui.mode === 'near' && ui.near.stage === 'pager') || (ui.mode === 'far' && ui.far.stage === 'review')) && !/^(INPUT|SELECT|TEXTAREA)$/.test(ev.target.tagName || '')) {
+        && pagerKind() && !/^(INPUT|SELECT|TEXTAREA)$/.test(ev.target.tagName || '')) {
       ev.preventDefault();
-      const fwd = ev.key === 'ArrowRight', near = ui.mode === 'near';
+      const fwd = ev.key === 'ArrowRight', kind = pagerKind(), near = kind === 'near';
       if (!ev.shiftKey) return stepPager(fwd);
-      const pg = pagerPage(near ? 'near' : 'far');
+      const pg = pagerPage(kind);
       if (fwd && !pg.last) { pg.c.page += 1; pg.c.shown = near ? null : 0; return render(); }
       if (!fwd && pg.page > 0) { pg.c.page = pg.page - 1; pg.c.shown = near ? null : 0; return render(); }
       return;

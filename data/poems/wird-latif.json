@@ -1,0 +1,762 @@
+{
+ "id": "wird-latif",
+ "type": "wird",
+ "section": "awraad",
+ "title": "الورد اللطيف",
+ "titleEn": "Al-Wird al-Laṭīf",
+ "fullTitle": "الورد اللطيف للإمام الحداد",
+ "fullTitleEn": "Al-Wird al-Laṭīf of Imām al-Ḥaddād",
+ "author": "الإمام عبد الله بن علوي الحداد",
+ "authorEn": "Imām ‘Abd Allāh b. ‘Alawī al-Ḥaddād",
+ "source": "النص من نسخة PDF مرفقة (التشكيل مضاف في التطبيق)، والترجمة الإنجليزية منها",
+ "sourceEn": "Arabic and English transcribed from the PDF editions supplied by the user; vowelling of the Wird al-Laṭīf was added and should be proofread.",
+ "chapters": [
+  {
+   "id": "ikhlas",
+   "title": "سورة الإخلاص (٣ مرات)",
+   "titleEn": "Sūrat al-Ikhlāṣ (3×)",
+   "bayts": [
+    {
+     "id": "1",
+     "n": 1,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+     "t": [
+      "In the name of God, the Lord of Mercy, the Giver of Mercy!"
+     ]
+    },
+    {
+     "id": "2",
+     "n": 2,
+     "s": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+     "t": [
+      "Say, ‘He is God the One,"
+     ]
+    },
+    {
+     "id": "3",
+     "n": 3,
+     "s": "اللَّهُ الصَّمَدُ",
+     "t": [
+      "God the eternal."
+     ]
+    },
+    {
+     "id": "4",
+     "n": 4,
+     "s": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+     "t": [
+      "He begot no one nor was He begotten."
+     ]
+    },
+    {
+     "id": "5",
+     "n": 5,
+     "s": "وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+     "t": [
+      "No one is comparable to Him.’"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "falaq",
+   "title": "سورة الفلق (٣ مرات)",
+   "titleEn": "Sūrat al-Falaq (3×)",
+   "bayts": [
+    {
+     "id": "6",
+     "n": 6,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+     "t": [
+      "In the name of God, the Lord of Mercy, the Giver of Mercy!"
+     ]
+    },
+    {
+     "id": "7",
+     "n": 7,
+     "s": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+     "t": [
+      "Say [Prophet], ‘I seek refuge with the Lord of daybreak"
+     ]
+    },
+    {
+     "id": "8",
+     "n": 8,
+     "s": "مِنْ شَرِّ مَا خَلَقَ",
+     "t": [
+      "against the harm in what He has created,"
+     ]
+    },
+    {
+     "id": "9",
+     "n": 9,
+     "s": "وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+     "t": [
+      "the harm in the night when darkness gathers,"
+     ]
+    },
+    {
+     "id": "10",
+     "n": 10,
+     "s": "وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
+     "t": [
+      "the harm in witches when they blow on knots,"
+     ]
+    },
+    {
+     "id": "11",
+     "n": 11,
+     "s": "وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+     "t": [
+      "the harm in the envier when he envies.’"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nas",
+   "title": "سورة الناس (٣ مرات)",
+   "titleEn": "Sūrat al-Nās (3×)",
+   "bayts": [
+    {
+     "id": "12",
+     "n": 12,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+     "t": [
+      "In the name of God, the Lord of Mercy, the Giver of Mercy!"
+     ]
+    },
+    {
+     "id": "13",
+     "n": 13,
+     "s": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
+     "t": [
+      "Say, ‘I seek refuge with the Lord of people,"
+     ]
+    },
+    {
+     "id": "14",
+     "n": 14,
+     "s": "مَلِكِ النَّاسِ",
+     "t": [
+      "the Controller of people,"
+     ]
+    },
+    {
+     "id": "15",
+     "n": 15,
+     "s": "إِلَهِ النَّاسِ",
+     "t": [
+      "the God of people,"
+     ]
+    },
+    {
+     "id": "16",
+     "n": 16,
+     "s": "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
+     "t": [
+      "against the harm of the slinking whisperer—"
+     ]
+    },
+    {
+     "id": "17",
+     "n": 17,
+     "s": "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ",
+     "t": [
+      "who whispers into the hearts of people—"
+     ]
+    },
+    {
+     "id": "18",
+     "n": 18,
+     "s": "مِنَ الْجِنَّةِ وَالنَّاسِ",
+     "t": [
+      "whether they be jinn or people.’"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ayat1",
+   "title": "آيات من سورة المؤمنون",
+   "titleEn": "Verses from Sūrat al-Mu’minūn",
+   "bayts": [
+    {
+     "id": "19",
+     "n": 19,
+     "s": "رَبِّ أَعُوذُ بِكَ مِنْ هَمَزَاتِ الشَّيَاطِينِ",
+     "t": [
+      "‘Lord, I take refuge with You from the goadings of the evil ones;"
+     ],
+     "c": 3
+    },
+    {
+     "id": "20",
+     "n": 20,
+     "s": "وَأَعُوذُ بِكَ رَبِّ أَنْ يَحْضُرُونِ",
+     "t": [
+      "I seek refuge with You, Lord, so that they may not come near me.’"
+     ]
+    },
+    {
+     "id": "21",
+     "n": 21,
+     "s": "أَفَحَسِبْتُمْ أَنَّمَا خَلَقْنَاكُمْ عَبَثًا وَأَنَّكُمْ إِلَيْنَا لَا تُرْجَعُونَ",
+     "t": [
+      "Did you think We had created you in vain, and that you would not be brought back to Us?"
+     ]
+    },
+    {
+     "id": "22",
+     "n": 22,
+     "s": "فَتَعَالَى اللَّهُ الْمَلِكُ الْحَقُّ لَا إِلَهَ إِلَّا هُوَ رَبُّ الْعَرْشِ الْكَرِيمِ",
+     "t": [
+      "Exalted be God, the true King, there is no god but Him, the Lord of the Glorious Throne!"
+     ]
+    },
+    {
+     "id": "23",
+     "n": 23,
+     "s": "وَمَنْ يَدْعُ مَعَ اللَّهِ إِلَهًا آخَرَ لَا بُرْهَانَ لَهُ بِهِ فَإِنَّمَا حِسَابُهُ عِنْدَ رَبِّهِ إِنَّهُ لَا يُفْلِحُ الْكَافِرُونَ",
+     "t": [
+      "Whoever prays to another god alongside Him—a god for whose existence he has no evidence—will face his reckoning with his Lord. Those who reject the truth will not prosper."
+     ]
+    },
+    {
+     "id": "24",
+     "n": 24,
+     "s": "وَقُلْ رَبِّ اغْفِرْ وَارْحَمْ وَأَنْتَ خَيْرُ الرَّاحِمِينَ",
+     "t": [
+      "Say [Prophet], ‘Lord, forgive and have mercy: You are the most merciful of all.’"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ayat2",
+   "title": "آيات من سور الروم والحشر والصافات",
+   "titleEn": "Verses from al-Rūm, al-Ḥashr and al-Ṣāffāt",
+   "bayts": [
+    {
+     "id": "25",
+     "n": 25,
+     "s": "فَسُبْحَانَ اللَّهِ حِينَ تُمْسُونَ وَحِينَ تُصْبِحُونَ",
+     "t": [
+      "So celebrate God’s glory in the evening, in the morning—"
+     ]
+    },
+    {
+     "id": "26",
+     "n": 26,
+     "s": "وَلَهُ الْحَمْدُ فِي السَّمَاوَاتِ وَالْأَرْضِ وَعَشِيًّا وَحِينَ تُظْهِرُونَ",
+     "t": [
+      "praise is due to Him in the heavens and the earth—in the late afternoon, and at midday."
+     ]
+    },
+    {
+     "id": "27",
+     "n": 27,
+     "s": "يُخْرِجُ الْحَيَّ مِنَ الْمَيِّتِ وَيُخْرِجُ الْمَيِّتَ مِنَ الْحَيِّ وَيُحْيِي الْأَرْضَ بَعْدَ مَوْتِهَا وَكَذَلِكَ تُخْرَجُونَ",
+     "t": [
+      "He brings the living out of the dead and the dead out of the living. He gives life to the earth after death, and you will be brought out in the same way."
+     ]
+    },
+    {
+     "id": "28",
+     "n": 28,
+     "s": "أَعُوذُ بِاللَّهِ السَّمِيعِ الْعَلِيمِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+     "t": [
+      "I seek refuge in Allah, the All-Hearing, the All-Knowing, from the rejected Devil."
+     ],
+     "c": 3
+    },
+    {
+     "id": "29",
+     "n": 29,
+     "s": "لَوْ أَنْزَلْنَا هَذَا الْقُرْآنَ عَلَى جَبَلٍ لَرَأَيْتَهُ خَاشِعًا مُتَصَدِّعًا مِنْ خَشْيَةِ اللَّهِ",
+     "t": [
+      "If We had sent this Qur’an down to a mountain, you [Prophet] would have seen it humbled and split apart in its awe of God:"
+     ]
+    },
+    {
+     "id": "30",
+     "n": 30,
+     "s": "وَتِلْكَ الْأَمْثَالُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ",
+     "t": [
+      "We offer people such illustrations so that they may reflect."
+     ]
+    },
+    {
+     "id": "31",
+     "n": 31,
+     "s": "هُوَ اللَّهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ هُوَ الرَّحْمَنُ الرَّحِيمُ",
+     "t": [
+      "He is God: there is no god other than Him. It is He who knows what is hidden as well as what is in the open, He is the Lord of Mercy, the Giver of Mercy."
+     ]
+    },
+    {
+     "id": "32",
+     "n": 32,
+     "s": "هُوَ اللَّهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ سُبْحَانَ اللَّهِ عَمَّا يُشْرِكُونَ",
+     "t": [
+      "He is God: there is no god other than Him, the Controller, the Holy One, Source of Peace, Granter of Security, Guardian over all, the Almighty, the Compeller, the Truly Great; God is far above anything they consider to be His partner."
+     ]
+    },
+    {
+     "id": "33",
+     "n": 33,
+     "s": "هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ لَهُ الْأَسْمَاءُ الْحُسْنَى يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ وَهُوَ الْعَزِيزُ الْحَكِيمُ",
+     "t": [
+      "He is God: the Creator, the Originator, the Shaper. The best names belong to Him. Everything in the heavens and earth glorifies Him: He is the Almighty, the Wise."
+     ]
+    },
+    {
+     "id": "34",
+     "n": 34,
+     "s": "سَلَامٌ عَلَى نُوحٍ فِي الْعَالَمِينَ",
+     "t": [
+      "‘Peace be upon Noah among all the nations!’"
+     ]
+    },
+    {
+     "id": "35",
+     "n": 35,
+     "s": "إِنَّا كَذَلِكَ نَجْزِي الْمُحْسِنِينَ",
+     "t": [
+      "This is how We reward those who do good:"
+     ]
+    },
+    {
+     "id": "36",
+     "n": 36,
+     "s": "إِنَّهُ مِنْ عِبَادِنَا الْمُؤْمِنِينَ",
+     "t": [
+      "he was truly one of Our faithful servants."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "morning1",
+   "title": "أذكار الصباح (١)",
+   "titleEn": "Morning adhkār (1)",
+   "bayts": [
+    {
+     "id": "37",
+     "n": 37,
+     "s": "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+     "t": [
+      "I seek refuge in the complete words of Allah from the evil in what He has created."
+     ],
+     "c": 3
+    },
+    {
+     "id": "38",
+     "n": 38,
+     "s": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+     "t": [
+      "In the Name of Allah, with whose Name nothing on earth or in heaven can harm, and He is the All-Hearing, the All-Knowing."
+     ],
+     "c": 3
+    },
+    {
+     "id": "39",
+     "n": 39,
+     "s": "اللَّهُمَّ إِنِّي أَصْبَحْتُ مِنْكَ فِي نِعْمَةٍ وَعَافِيَةٍ وَسِتْرٍ، فَأَتْمِمْ نِعْمَتَكَ عَلَيَّ وَعَافِيَتَكَ وَسِتْرَكَ فِي الدُّنْيَا وَالْآخِرَةِ",
+     "t": [
+      "O Allah! As morning comes upon me, I dwell in Your favor, well-being, and protection; so complete Your favor upon me, Your well-being, and Your protection, in this world and the next."
+     ],
+     "c": 3
+    },
+    {
+     "id": "40",
+     "n": 40,
+     "s": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ وَمَلَائِكَتَكَ وَجَمِيعَ خَلْقِكَ أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيكَ لَكَ وَأَنَّ سَيِّدَنَا مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ",
+     "t": [
+      "O Allah! As morning comes upon me, I bear witness before You, the Bearers of Your Throne, Your angels, and all Your creation—that You are Allah, there is no god but You, alone with no partners, and that our master Muhammad is Your slave and messenger."
+     ],
+     "c": 4
+    },
+    {
+     "id": "41",
+     "n": 41,
+     "s": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ حَمْدًا يُوَافِي نِعَمَهُ وَيُكَافِئُ مَزِيدَهُ",
+     "t": [
+      "Praise belongs to Allah, Lord of the Worlds—praise that is adequate to His favors and equal to His increase."
+     ],
+     "c": 3
+    },
+    {
+     "id": "42",
+     "n": 42,
+     "s": "آمَنْتُ بِاللَّهِ الْعَظِيمِ وَكَفَرْتُ بِالْجِبْتِ وَالطَّاغُوتِ وَاسْتَمْسَكْتُ بِالْعُرْوَةِ الْوُثْقَى لَا انْفِصَامَ لَهَا وَاللَّهُ سَمِيعٌ عَلِيمٌ",
+     "t": [
+      "I believe in Allah the Almighty, and I denounce all idols and false gods, and I grasp the firmest handhold that never breaks, and Allah is All-Hearing, All-Knowing."
+     ],
+     "c": 3
+    },
+    {
+     "id": "43",
+     "n": 43,
+     "s": "رَضِيتُ بِاللَّهِ رَبًّا وَبِالْإِسْلَامِ دِينًا وَبِسَيِّدِنَا مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ نَبِيًّا وَرَسُولًا",
+     "t": [
+      "I am content with Allah as Lord, with Islam as religion, and with our master Muhammad (Allah’s peace and mercy be upon him) as Prophet and Messenger."
+     ],
+     "c": 3
+    },
+    {
+     "id": "44",
+     "n": 44,
+     "s": "حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",
+     "t": [
+      "Allah is enough for me: there is no god but Him; I put my trust in Him; He is Lord of the Mighty Throne. (Qur’ān 9:129)"
+     ],
+     "c": 7
+    },
+    {
+     "id": "45",
+     "n": 45,
+     "s": "اللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَآلِهِ وَصَحْبِهِ وَسَلِّمْ",
+     "t": [
+      "O Allah! Bestow mercy upon our master Muhammad, his Family and Companions, and give them peace."
+     ],
+     "c": 10
+    }
+   ]
+  },
+  {
+   "id": "dua1",
+   "title": "الأدعية (١)",
+   "titleEn": "Supplications (1)",
+   "bayts": [
+    {
+     "id": "46",
+     "n": 46,
+     "s": "اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فُجَاءَةِ الْخَيْرِ، وَأَعُوذُ بِكَ مِنْ فُجَاءَةِ الشَّرِّ",
+     "t": [
+      "O Allah! I ask You for sudden good and seek Your protection from sudden evil."
+     ]
+    },
+    {
+     "id": "47",
+     "n": 47,
+     "s": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ",
+     "t": [
+      "O Allah! You are my Lord, there is no god but You, You created me and I am Your slave. I uphold Your pledge and promise as well as I can;"
+     ]
+    },
+    {
+     "id": "48",
+     "n": 48,
+     "s": "أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ بِذَنْبِي",
+     "t": [
+      "I seek Your protection against the evil that I have done; I acknowledge Your favors upon me and I acknowledge my sin,"
+     ]
+    },
+    {
+     "id": "49",
+     "n": 49,
+     "s": "فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
+     "t": [
+      "so forgive me, for none forgives sin except You."
+     ]
+    },
+    {
+     "id": "50",
+     "n": 50,
+     "s": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، عَلَيْكَ تَوَكَّلْتُ وَأَنْتَ رَبُّ الْعَرْشِ الْعَظِيمِ",
+     "t": [
+      "O Allah! You are my Lord, there is no god but You. Upon You I rely, and You are the Lord of the Glorious Throne."
+     ]
+    },
+    {
+     "id": "51",
+     "n": 51,
+     "s": "مَا شَاءَ اللَّهُ كَانَ وَمَا لَمْ يَشَأْ لَمْ يَكُنْ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ",
+     "t": [
+      "Whatever Allah wills is, and what He does not will is not; and there is no power or ability except by Allah, the Most High, the Almighty."
+     ]
+    },
+    {
+     "id": "52",
+     "n": 52,
+     "s": "أَعْلَمُ أَنَّ اللَّهَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ وَأَنَّ اللَّهَ قَدْ أَحَاطَ بِكُلِّ شَيْءٍ عِلْمًا",
+     "t": [
+      "I know that Allah has power over all things and that Allah encompasses all things in His knowledge."
+     ]
+    },
+    {
+     "id": "53",
+     "n": 53,
+     "s": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي وَمِنْ شَرِّ كُلِّ دَابَّةٍ أَنْتَ آخِذٌ بِنَاصِيَتِهَا، إِنَّ رَبِّي عَلَى صِرَاطٍ مُسْتَقِيمٍ",
+     "t": [
+      "O Allah! I seek Your protection from the evil of my own self and from the evil of every creature on earth You have taken by the forelock; my Lord is on a straight path."
+     ]
+    },
+    {
+     "id": "54",
+     "n": 54,
+     "s": "يَا حَيُّ يَا قَيُّومُ، بِرَحْمَتِكَ أَسْتَغِيثُ، وَمِنْ عَذَابِكَ أَسْتَجِيرُ، أَصْلِحْ لِي شَأْنِي كُلَّهُ، وَلَا تَكِلْنِي إِلَى نَفْسِي وَلَا إِلَى أَحَدٍ مِنْ خَلْقِكَ طَرْفَةَ عَيْنٍ",
+     "t": [
+      "O Ever-Living, O Sustainer! I call upon Your mercy for help and I seek refuge from Your punishment. Rectify all my affairs and do not entrust me to myself or to any of Your creation for even the blink of an eye."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dua2",
+   "title": "الأدعية (٢)",
+   "titleEn": "Supplications (2)",
+   "bayts": [
+    {
+     "id": "55",
+     "n": 55,
+     "s": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَأَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ",
+     "t": [
+      "O Allah! I seek refuge in You from sorrow and grief, from incapacity and sloth,"
+     ]
+    },
+    {
+     "id": "56",
+     "n": 56,
+     "s": "وَأَعُوذُ بِكَ مِنَ الْجُبْنِ وَالْبُخْلِ، وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ وَقَهْرِ الرِّجَالِ",
+     "t": [
+      "from cowardice and miserliness, and I seek Your protection from overwhelming debt and the tyranny of men."
+     ]
+    },
+    {
+     "id": "57",
+     "n": 57,
+     "s": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ",
+     "t": [
+      "O Allah! I ask You for well-being in this world and the hereafter."
+     ]
+    },
+    {
+     "id": "58",
+     "n": 58,
+     "s": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ وَالْمُعَافَاةَ الدَّائِمَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي",
+     "t": [
+      "O Allah! I ask You for pardoning, well-being, and constant safety in my religion, worldly life, family, and possessions."
+     ]
+    },
+    {
+     "id": "59",
+     "n": 59,
+     "s": "اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي",
+     "t": [
+      "O Allah! Cover my shame and calm my fears."
+     ]
+    },
+    {
+     "id": "60",
+     "n": 60,
+     "s": "اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي",
+     "t": [
+      "O Allah! Protect me from [the evil] in front of me and behind me, on my right and my left, and from above me—and I take refuge in Your Greatness from the unexpected harm from below me."
+     ]
+    },
+    {
+     "id": "61",
+     "n": 61,
+     "s": "اللَّهُمَّ أَنْتَ خَلَقْتَنِي وَأَنْتَ تَهْدِينِي وَأَنْتَ تُطْعِمُنِي وَأَنْتَ تَسْقِينِي وَأَنْتَ تُمِيتُنِي وَأَنْتَ تُحْيِينِي، وَأَنْتَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+     "t": [
+      "O Allah! You created me and You guide me, and You feed me and provide me with drink, and You cause me to die and You give me life, and You have power over all things."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "morning2",
+   "title": "أذكار الصباح (٢)",
+   "titleEn": "Morning adhkār (2)",
+   "bayts": [
+    {
+     "id": "62",
+     "n": 62,
+     "s": "أَصْبَحْنَا عَلَى فِطْرَةِ الْإِسْلَامِ وَعَلَى كَلِمَةِ الْإِخْلَاصِ وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِينَ",
+     "t": [
+      "We have risen this morning on the original pattern of Islam, upon the Word of Sincerity, on the religion of our Prophet Muhammad (Allah’s mercy and peace be upon him and his family), and upon the confession of Ibrāhīm, who was upright, a Muslim, and not an idolator."
+     ]
+    },
+    {
+     "id": "63",
+     "n": 63,
+     "s": "اللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَعَلَيْكَ نَتَوَكَّلُ وَإِلَيْكَ النُّشُورُ",
+     "t": [
+      "O Allah! By You we live to morning, and by You we live to evening, and by You we live and by You we die, and upon You we rely, and to You is the Resurrection."
+     ]
+    },
+    {
+     "id": "64",
+     "n": 64,
+     "s": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+     "t": [
+      "Morning has risen upon us and all sovereignty is Allah’s, and all praise belongs to Allah, Lord of the Worlds."
+     ]
+    },
+    {
+     "id": "65",
+     "n": 65,
+     "s": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ فَتْحَهُ وَنَصْرَهُ وَنُورَهُ وَبَرَكَتَهُ وَهُدَاهُ",
+     "t": [
+      "O Allah! I ask You for the good of this day, its openings, victories, lights, blessings, and right-guidance."
+     ]
+    },
+    {
+     "id": "66",
+     "n": 66,
+     "s": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ وَخَيْرَ مَا فِيهِ وَخَيْرَ مَا قَبْلَهُ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ هَذَا الْيَوْمِ وَشَرِّ مَا فِيهِ وَشَرِّ مَا قَبْلَهُ وَشَرِّ مَا بَعْدَهُ",
+     "t": [
+      "O Allah! I ask You for the good of this day and the best of what is in it, and the best of what came before it and the best of what comes after it; and I seek refuge in You from the evil of this day and the worst of what is in it, and the worst of what came before it and the worst of what comes after it."
+     ]
+    },
+    {
+     "id": "67",
+     "n": 67,
+     "s": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ عَلَى ذَلِكَ",
+     "t": [
+      "O Allah! Whatever favors I, or any of Your creatures, received this morning, they come only from You; You have no partners, so to You belongs all praise and to You belongs all thanks."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "adad1",
+   "title": "الأذكار بالعدد (١)",
+   "titleEn": "Adhkār by number (1)",
+   "bayts": [
+    {
+     "id": "68",
+     "n": 68,
+     "s": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَاءَ نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ",
+     "t": [
+      "Transcendent is Allah and praise belongs to Him—equal to the number of His creation, the degree of His good pleasure, the weight of His Throne, and the number of His words."
+     ],
+     "c": 3
+    },
+    {
+     "id": "69",
+     "n": 69,
+     "s": "سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَاءَ نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ",
+     "t": [
+      "Transcendent is Allah the Almighty, and praise belongs to Him—equal to the number of His creation, the degree of His good pleasure, the weight of His Throne, and the number of His words."
+     ],
+     "c": 3
+    },
+    {
+     "id": "70",
+     "n": 70,
+     "s": "سُبْحَانَ اللَّهِ عَدَدَ مَا خَلَقَ فِي السَّمَاءِ، سُبْحَانَ اللَّهِ عَدَدَ مَا خَلَقَ فِي الْأَرْضِ",
+     "t": [
+      "“Transcendent is Allah” equal to what He created in the heavens; “transcendent is Allah” equal to what He created on earth;"
+     ]
+    },
+    {
+     "id": "71",
+     "n": 71,
+     "s": "سُبْحَانَ اللَّهِ عَدَدَ مَا بَيْنَ ذَلِكَ، سُبْحَانَ اللَّهِ عَدَدَ مَا هُوَ خَالِقٌ",
+     "t": [
+      "“Transcendent is Allah” equal to what is between them both; “transcendent is Allah” equal to whatever He creates."
+     ]
+    },
+    {
+     "id": "72",
+     "n": 72,
+     "s": "الْحَمْدُ لِلَّهِ عَدَدَ مَا خَلَقَ فِي السَّمَاءِ، الْحَمْدُ لِلَّهِ عَدَدَ مَا خَلَقَ فِي الْأَرْضِ",
+     "t": [
+      "“All praise belongs to Allah” equal to what He created in the heavens; “all praise belongs to Allah” equal to what He created on earth;"
+     ]
+    },
+    {
+     "id": "73",
+     "n": 73,
+     "s": "الْحَمْدُ لِلَّهِ عَدَدَ مَا بَيْنَ ذَلِكَ، الْحَمْدُ لِلَّهِ عَدَدَ مَا هُوَ خَالِقٌ",
+     "t": [
+      "“All praise belongs to Allah” equal to what is between them both; “all praise belongs to Allah” equal to whatever He creates."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "adad2",
+   "title": "الأذكار بالعدد (٢)",
+   "titleEn": "Adhkār by number (2)",
+   "bayts": [
+    {
+     "id": "74",
+     "n": 74,
+     "s": "لَا إِلَهَ إِلَّا اللَّهُ عَدَدَ مَا خَلَقَ فِي السَّمَاءِ، لَا إِلَهَ إِلَّا اللَّهُ عَدَدَ مَا خَلَقَ فِي الْأَرْضِ",
+     "t": [
+      "“There is no god except Allah” equal to what He created in the heavens; “there is no god except Allah” equal to what He created on earth;"
+     ]
+    },
+    {
+     "id": "75",
+     "n": 75,
+     "s": "لَا إِلَهَ إِلَّا اللَّهُ عَدَدَ مَا بَيْنَ ذَلِكَ، لَا إِلَهَ إِلَّا اللَّهُ عَدَدَ مَا هُوَ خَالِقٌ",
+     "t": [
+      "“There is no god except Allah” equal to what is between them both; “there is no god except Allah” equal to whatever He creates."
+     ]
+    },
+    {
+     "id": "76",
+     "n": 76,
+     "s": "اللَّهُ أَكْبَرُ عَدَدَ مَا خَلَقَ فِي السَّمَاءِ، اللَّهُ أَكْبَرُ عَدَدَ مَا خَلَقَ فِي الْأَرْضِ",
+     "t": [
+      "“Allah is Greater” equal to what He created in the heavens; “Allah is Greater” equal to what He created on earth;"
+     ]
+    },
+    {
+     "id": "77",
+     "n": 77,
+     "s": "اللَّهُ أَكْبَرُ عَدَدَ مَا بَيْنَ ذَلِكَ، اللَّهُ أَكْبَرُ عَدَدَ مَا هُوَ خَالِقٌ",
+     "t": [
+      "“Allah is Greater” equal to what is between them both; “Allah is Greater” equal to whatever He creates."
+     ]
+    },
+    {
+     "id": "78",
+     "n": 78,
+     "s": "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ عَدَدَ مَا خَلَقَ فِي السَّمَاءِ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ عَدَدَ مَا خَلَقَ فِي الْأَرْضِ",
+     "t": [
+      "“There is no power or ability except by Allah, the Most High, the Almighty” equal to what He created in the heavens; “There is no power or ability except by Allah, the Most High, the Almighty” equal to what He created on earth;"
+     ]
+    },
+    {
+     "id": "79",
+     "n": 79,
+     "s": "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ عَدَدَ مَا بَيْنَ ذَلِكَ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ عَدَدَ مَا هُوَ خَالِقٌ",
+     "t": [
+      "“There is no power or ability except by Allah, the Most High, the Almighty” equal to what is between them both; “There is no power or ability except by Allah, the Most High, the Almighty” equal to whatever He creates."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "khatm",
+   "title": "الختام",
+   "titleEn": "Closing",
+   "bayts": [
+    {
+     "id": "80",
+     "n": 80,
+     "s": "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، عَدَدَ كُلِّ ذَرَّةٍ أَلْفَ مَرَّةٍ",
+     "t": [
+      "“There is no god except Allah, One without partner, all control and praise belong to Him, He gives life and death, and He has power over all things”—equal to every atom one thousand times over."
+     ],
+     "c": 3
+    },
+    {
+     "id": "81",
+     "n": 81,
+     "s": "اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ مِفْتَاحِ بَابِ رَحْمَةِ اللَّهِ عَدَدَ مَا فِي عِلْمِ اللَّهِ صَلَاةً وَسَلَامًا دَائِمَيْنِ بِدَوَامِ مُلْكِ اللَّهِ، وَعَلَى آلِهِ وَصَحْبِهِ عَدَدَ كُلِّ ذَرَّةٍ أَلْفَ مَرَّةٍ",
+     "t": [
+      "“O Allah! Bestow mercy and peace upon our master Muhammad, the key to Allah’s Gates of Mercy—equal to that which is in Allah’s knowledge—a mercy and peace that last as eternally as Allah’s sovereignty, and upon his family and companions”—equal to every atom one thousand times over."
+     ],
+     "c": 3
+    }
+   ]
+  }
+ ]
+}

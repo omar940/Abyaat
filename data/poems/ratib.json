@@ -1,0 +1,631 @@
+{
+ "id": "ratib",
+ "type": "wird",
+ "section": "awraad",
+ "title": "الراتب الشهير",
+ "titleEn": "Al-Rātib al-Shahīr",
+ "fullTitle": "الراتب الشهير للإمام الحداد",
+ "fullTitleEn": "Al-Rātib al-Shahīr of Imām al-Ḥaddād",
+ "author": "الإمام عبد الله بن علوي الحداد",
+ "authorEn": "Imām ‘Abd Allāh b. ‘Alawī al-Ḥaddād",
+ "source": "النص من نسخة PDF مرفقة، والترجمة الإنجليزية منها",
+ "sourceEn": "Arabic text and English translation from the supplied PDF edition.",
+ "chapters": [
+  {
+   "id": "fatiha",
+   "title": "سورة الفاتحة",
+   "titleEn": "Sūrat al-Fātiḥah",
+   "bayts": [
+    {
+     "id": "1",
+     "n": 1,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+     "t": [
+      "In the name of God, the Lord of Mercy, the Giver of Mercy!"
+     ]
+    },
+    {
+     "id": "2",
+     "n": 2,
+     "s": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+     "t": [
+      "Praise belongs to God, Lord of the Worlds,"
+     ]
+    },
+    {
+     "id": "3",
+     "n": 3,
+     "s": "الرَّحْمَنِ الرَّحِيمِ",
+     "t": [
+      "the Lord of Mercy, the Giver of Mercy,"
+     ]
+    },
+    {
+     "id": "4",
+     "n": 4,
+     "s": "مَالِكِ يَوْمِ الدِّينِ",
+     "t": [
+      "Master of the Day of Judgment."
+     ]
+    },
+    {
+     "id": "5",
+     "n": 5,
+     "s": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+     "t": [
+      "It is You we worship; it is You we ask for help."
+     ]
+    },
+    {
+     "id": "6",
+     "n": 6,
+     "s": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+     "t": [
+      "Guide us to the straight path:"
+     ]
+    },
+    {
+     "id": "7",
+     "n": 7,
+     "s": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+     "t": [
+      "the path of those You have blessed, those who incur no anger and who have not gone astray."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kursi",
+   "title": "آية الكرسي",
+   "titleEn": "Āyat al-Kursī (2:255)",
+   "bayts": [
+    {
+     "id": "8",
+     "n": 8,
+     "s": "اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",
+     "t": [
+      "God: there is no god but Him, the Ever Living, the Ever Watchful."
+     ]
+    },
+    {
+     "id": "9",
+     "n": 9,
+     "s": "لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ",
+     "t": [
+      "Neither slumber nor sleep overtakes Him."
+     ]
+    },
+    {
+     "id": "10",
+     "n": 10,
+     "s": "لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ",
+     "t": [
+      "All that is in the heavens and in the earth belongs to Him."
+     ]
+    },
+    {
+     "id": "11",
+     "n": 11,
+     "s": "مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ",
+     "t": [
+      "Who is there that can intercede with Him except by His leave?"
+     ]
+    },
+    {
+     "id": "12",
+     "n": 12,
+     "s": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",
+     "t": [
+      "He knows what is before them and what is behind them,"
+     ]
+    },
+    {
+     "id": "13",
+     "n": 13,
+     "s": "وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ",
+     "t": [
+      "but they do not comprehend any of His knowledge except what He wills."
+     ]
+    },
+    {
+     "id": "14",
+     "n": 14,
+     "s": "وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ",
+     "t": [
+      "His throne extends over the heavens and the earth;"
+     ]
+    },
+    {
+     "id": "15",
+     "n": 15,
+     "s": "وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ",
+     "t": [
+      "it does not weary Him to preserve them both. He is the Most High, the Tremendous."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "baqara",
+   "title": "خواتيم سورة البقرة",
+   "titleEn": "Last two verses of al-Baqarah (2:285–286)",
+   "bayts": [
+    {
+     "id": "16",
+     "n": 16,
+     "s": "آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ",
+     "t": [
+      "The Messenger believes in what has been sent down to him from his Lord, as do the faithful."
+     ]
+    },
+    {
+     "id": "17",
+     "n": 17,
+     "s": "كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ",
+     "t": [
+      "They all believe in God, His angels, His scriptures, and His messengers."
+     ]
+    },
+    {
+     "id": "18",
+     "n": 18,
+     "s": "لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِنْ رُسُلِهِ",
+     "t": [
+      "‘We make no distinction between any of His messengers,’"
+     ]
+    },
+    {
+     "id": "19",
+     "n": 19,
+     "s": "وَقَالُوا سَمِعْنَا وَأَطَعْنَا غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ",
+     "t": [
+      "they say, ‘We hear and obey. Grant us Your forgiveness, our Lord. To You we all return!’"
+     ]
+    },
+    {
+     "id": "20",
+     "n": 20,
+     "s": "لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا",
+     "t": [
+      "God does not burden any soul with more than it can bear:"
+     ]
+    },
+    {
+     "id": "21",
+     "n": 21,
+     "s": "لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ",
+     "t": [
+      "each gains whatever good it has done, and suffers its bad—"
+     ]
+    },
+    {
+     "id": "22",
+     "n": 22,
+     "s": "رَبَّنَا لَا تُؤَاخِذْنَا إِنْ نَسِينَا أَوْ أَخْطَأْنَا",
+     "t": [
+      "‘Lord, do not take us to task if we forget or make mistakes."
+     ]
+    },
+    {
+     "id": "23",
+     "n": 23,
+     "s": "رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِنْ قَبْلِنَا",
+     "t": [
+      "Lord, do not burden us as You burdened those before us."
+     ]
+    },
+    {
+     "id": "24",
+     "n": 24,
+     "s": "رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ",
+     "t": [
+      "Lord, do not burden us with more than we have strength to bear."
+     ]
+    },
+    {
+     "id": "25",
+     "n": 25,
+     "s": "وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا",
+     "t": [
+      "Pardon us, forgive us, and have mercy on us."
+     ]
+    },
+    {
+     "id": "26",
+     "n": 26,
+     "s": "أَنْتَ مَوْلَانَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
+     "t": [
+      "You are our Protector, so help us against the disbelievers.’"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "adhkar1",
+   "title": "الأذكار (١–٦)",
+   "titleEn": "The adhkār (1–6)",
+   "bayts": [
+    {
+     "id": "27",
+     "n": 27,
+     "s": "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+     "t": [
+      "There is no god but God; One without partner. All dominion is His and all praise. He gives life and He causes death, and He is Powerful over all things."
+     ],
+     "c": 3
+    },
+    {
+     "id": "28",
+     "n": 28,
+     "s": "سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ",
+     "t": [
+      "Glory belongs to God; praise belongs to God; there is no god but God; God is Greater."
+     ],
+     "c": 3
+    },
+    {
+     "id": "29",
+     "n": 29,
+     "s": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ",
+     "t": [
+      "Glory belongs to God with His Praise; Glory belongs to God, the Tremendous."
+     ],
+     "c": 3
+    },
+    {
+     "id": "30",
+     "n": 30,
+     "s": "رَبَّنَا اغْفِرْ لَنَا وَتُبْ عَلَيْنَا، إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ",
+     "t": [
+      "Our Lord, forgive us and relent towards us; truly, You are the Forgiver, the Merciful."
+     ],
+     "c": 3
+    },
+    {
+     "id": "31",
+     "n": 31,
+     "s": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، اللَّهُمَّ صَلِّ عَلَيْهِ وَسَلِّمْ",
+     "t": [
+      "O God, bestow mercy upon Muḥammad; O God bestow mercy upon him and peace!"
+     ],
+     "c": 3
+    },
+    {
+     "id": "32",
+     "n": 32,
+     "s": "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+     "t": [
+      "I seek refuge in God’s complete words from the evil of what He has created."
+     ],
+     "c": 3
+    }
+   ]
+  },
+  {
+   "id": "adhkar2",
+   "title": "الأذكار (٧–١٢)",
+   "titleEn": "The adhkār (7–12)",
+   "bayts": [
+    {
+     "id": "33",
+     "n": 33,
+     "s": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+     "t": [
+      "In the name of God whose name no harm comes together with in earth or in heaven—for He is All-Hearing, All-Knowing."
+     ],
+     "c": 3
+    },
+    {
+     "id": "34",
+     "n": 34,
+     "s": "رَضِينَا بِاللَّهِ رَبًّا وَبِالْإِسْلَامِ دِينًا وَبِمُحَمَّدٍ نَبِيًّا",
+     "t": [
+      "We are content with God as [our] Lord, with Islam as [our] religion, and with Muḥammad as [our] Prophet."
+     ],
+     "c": 3
+    },
+    {
+     "id": "35",
+     "n": 35,
+     "s": "بِسْمِ اللَّهِ وَالْحَمْدُ لِلَّهِ وَالْخَيْرُ وَالشَّرُّ بِمَشِيئَةِ اللَّهِ",
+     "t": [
+      "In the name of God, praise belongs to God, and good and evil are by the permission of God."
+     ],
+     "c": 3
+    },
+    {
+     "id": "36",
+     "n": 36,
+     "s": "آمَنَّا بِاللَّهِ وَالْيَوْمِ الْآخِرِ، تُبْنَا إِلَى اللَّهِ بَاطِنًا وَظَاهِرًا",
+     "t": [
+      "We believe in God and the Last Day; we repent to God inwardly and outwardly."
+     ],
+     "c": 3
+    },
+    {
+     "id": "37",
+     "n": 37,
+     "s": "يَا رَبَّنَا اعْفُ عَنَّا وَامْحُ الَّذِي كَانَ مِنَّا",
+     "t": [
+      "O Our Lord, pardon us, and wipe out whatever [sins] we have committed."
+     ],
+     "c": 3
+    },
+    {
+     "id": "38",
+     "n": 38,
+     "s": "يَا ذَا الْجَلَالِ وَالْإِكْرَامِ أَمِتْنَا عَلَى دِينِ الْإِسْلَامِ",
+     "t": [
+      "O Possessor of Majesty and Honor, cause us to die upon the religion of Islām."
+     ],
+     "c": 7
+    }
+   ]
+  },
+  {
+   "id": "adhkar3",
+   "title": "الأذكار (١٣–١٧)",
+   "titleEn": "The adhkār (13–17)",
+   "bayts": [
+    {
+     "id": "39",
+     "n": 39,
+     "s": "يَا قَوِيُّ يَا مَتِينُ، اكْفِ شَرَّ الظَّالِمِينَ",
+     "t": [
+      "O Most Mighty, Most Authoritative One, protect us from the evil of the unjust!"
+     ],
+     "c": 3
+    },
+    {
+     "id": "40",
+     "n": 40,
+     "s": "أَصْلَحَ اللَّهُ أُمُورَ الْمُسْلِمِينَ، صَرَفَ اللَّهُ شَرَّ الْمُؤْذِينَ",
+     "t": [
+      "May God rectify the affairs of the Muslims, may God turn away the evil of the harmful."
+     ],
+     "c": 3
+    },
+    {
+     "id": "41",
+     "n": 41,
+     "s": "يَا عَلِيُّ يَا كَبِيرُ، يَا عَلِيمُ يَا قَدِيرُ، يَا سَمِيعُ يَا بَصِيرُ، يَا لَطِيفُ يَا خَبِيرُ",
+     "t": [
+      "O Most High, O the Most Great! O All-Knowing, O All-Powerful! O All-Hearing, O All-Seeing! O Most Gentle, O Most Aware!"
+     ],
+     "c": 3
+    },
+    {
+     "id": "42",
+     "n": 42,
+     "s": "يَا فَارِجَ الْهَمِّ يَا كَاشِفَ الْغَمِّ، يَا مَنْ لِعَبْدِهِ يَغْفِرُ وَيَرْحَمُ",
+     "t": [
+      "O dispeller of anxiety; O remover of grief; O One Who, to His servant, is Forgiving and Merciful."
+     ],
+     "c": 3
+    },
+    {
+     "id": "43",
+     "n": 43,
+     "s": "أَسْتَغْفِرُ اللَّهَ رَبَّ الْبَرَايَا، أَسْتَغْفِرُ اللَّهَ مِنَ الْخَطَايَا",
+     "t": [
+      "I seek God’s forgiveness, Lord of creation. I seek God’s forgiveness from all mistakes."
+     ],
+     "c": 4
+    }
+   ]
+  },
+  {
+   "id": "tahlil",
+   "title": "التهليل والصلاة على النبي ﷺ",
+   "titleEn": "The tahlīl and the prayer upon the Prophet ﷺ",
+   "bayts": [
+    {
+     "id": "44",
+     "n": 44,
+     "s": "لَا إِلَهَ إِلَّا اللَّهُ",
+     "t": [
+      "There is no god but God."
+     ],
+     "c": 50
+    },
+    {
+     "id": "45",
+     "n": 45,
+     "s": "مُحَمَّدٌ رَسُولُ اللَّهِ، صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ، وَشَرَّفَ وَكَرَّمَ، وَمَجَّدَ وَعَظَّمَ",
+     "t": [
+      "Muḥammad is the Messenger of God, may God send His mercy and peace upon him, and honor and ennoble him, and glorify and exalt him—"
+     ]
+    },
+    {
+     "id": "46",
+     "n": 46,
+     "s": "وَرَضِيَ اللَّهُ عَنْ أَهْلِ بَيْتِهِ الطَّيِّبِينَ الطَّاهِرِينَ، وَأَصْحَابِهِ الْأَخْيَارِ الْمُهْتَدِينَ، وَالتَّابِعِينَ لَهُمْ بِإِحْسَانٍ إِلَى يَوْمِ الدِّينِ",
+     "t": [
+      "and upon his family, the pure and good, and his chosen and guided companions, and those who follow them with excellence until the Day of Judgment."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ikhlas",
+   "title": "سورة الإخلاص (٣ مرات)",
+   "titleEn": "Sūrat al-Ikhlāṣ (3×)",
+   "bayts": [
+    {
+     "id": "47",
+     "n": 47,
+     "s": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+     "t": [
+      "Say, ‘He is God the One,"
+     ]
+    },
+    {
+     "id": "48",
+     "n": 48,
+     "s": "اللَّهُ الصَّمَدُ",
+     "t": [
+      "God the eternal."
+     ]
+    },
+    {
+     "id": "49",
+     "n": 49,
+     "s": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+     "t": [
+      "He begot no one nor was He begotten."
+     ]
+    },
+    {
+     "id": "50",
+     "n": 50,
+     "s": "وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+     "t": [
+      "No one is comparable to Him.’"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "falaq",
+   "title": "سورة الفلق",
+   "titleEn": "Sūrat al-Falaq",
+   "bayts": [
+    {
+     "id": "51",
+     "n": 51,
+     "s": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+     "t": [
+      "Say [Prophet], ‘I seek refuge with the Lord of daybreak"
+     ]
+    },
+    {
+     "id": "52",
+     "n": 52,
+     "s": "مِنْ شَرِّ مَا خَلَقَ",
+     "t": [
+      "against the harm in what He has created,"
+     ]
+    },
+    {
+     "id": "53",
+     "n": 53,
+     "s": "وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+     "t": [
+      "the harm in the night when darkness gathers,"
+     ]
+    },
+    {
+     "id": "54",
+     "n": 54,
+     "s": "وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
+     "t": [
+      "the harm in witches when they blow on knots,"
+     ]
+    },
+    {
+     "id": "55",
+     "n": 55,
+     "s": "وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+     "t": [
+      "the harm in the envier when he envies.’"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nas",
+   "title": "سورة الناس",
+   "titleEn": "Sūrat al-Nās",
+   "bayts": [
+    {
+     "id": "56",
+     "n": 56,
+     "s": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
+     "t": [
+      "Say, ‘I seek refuge with the Lord of people,"
+     ]
+    },
+    {
+     "id": "57",
+     "n": 57,
+     "s": "مَلِكِ النَّاسِ",
+     "t": [
+      "the Controller of people,"
+     ]
+    },
+    {
+     "id": "58",
+     "n": 58,
+     "s": "إِلَهِ النَّاسِ",
+     "t": [
+      "the God of people,"
+     ]
+    },
+    {
+     "id": "59",
+     "n": 59,
+     "s": "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
+     "t": [
+      "against the harm of the slinking whisperer—"
+     ]
+    },
+    {
+     "id": "60",
+     "n": 60,
+     "s": "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ",
+     "t": [
+      "who whispers into the hearts of people—"
+     ]
+    },
+    {
+     "id": "61",
+     "n": 61,
+     "s": "مِنَ الْجِنَّةِ وَالنَّاسِ",
+     "t": [
+      "whether they be jinn or people.’"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dua",
+   "title": "الدعاء الجامع والختام",
+   "titleEn": "The comprehensive prayer and closing",
+   "bayts": [
+    {
+     "id": "62",
+     "n": 62,
+     "s": "الْفَاتِحَةُ إِلَى كَافَّةِ عِبَادِ اللَّهِ الصَّالِحِينَ، وَلِوَالِدِينَا، وَجَمِيعِ الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ وَالْمُسْلِمِينَ وَالْمُسْلِمَاتِ",
+     "t": [
+      "The Fātiḥa to the souls of all the righteous servants of God, our parents, all the believing men and believing women, and Muslim men and Muslim women—"
+     ]
+    },
+    {
+     "id": "63",
+     "n": 63,
+     "s": "أَنَّ اللَّهَ يَغْفِرُ لَهُمْ وَيَرْحَمُهُمْ، وَيَنْفَعُنَا بِأَسْرَارِهِمْ وَبَرَكَاتِهِمْ",
+     "t": [
+      "that God forgives them and has mercy upon them and benefits us by their secrets and blessings."
+     ]
+    },
+    {
+     "id": "64",
+     "n": 64,
+     "s": "وَإِلَى حَضْرَةِ النَّبِيِّ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ الْفَاتِحَةُ",
+     "t": [
+      "And to the venerable Prophet Muḥammad, God’s mercy and peace be upon him. [Then recite the Fātiḥa]."
+     ]
+    },
+    {
+     "id": "65",
+     "n": 65,
+     "s": "اللَّهُمَّ إِنَّا نَسْأَلُكَ رِضَاكَ وَالْجَنَّةَ، وَنَعُوذُ بِكَ مِنْ سَخَطِكَ وَالنَّارِ",
+     "t": [
+      "O God, we ask You for Your pleasure and Paradise, and we seek refuge in You from Your wrath and the Fire."
+     ],
+     "c": 3
+    }
+   ]
+  }
+ ]
+}

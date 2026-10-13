@@ -6,6 +6,8 @@
 })(typeof self !== 'undefined' ? self : this, function (U) {
   const n = (x) => U.ar(x);
   const bt = (x, u) => U.baytCount(x, u);
+  /* كلمة الوحدة بحسب الشاشة الحالية: ذكر، أو سطر (الأوراد)، أو بيت */
+  const uw = (d, l, b) => ({ dhikr: d, line: l }[U.getUnit()] || b);
   const dc = (x) => U.dayCount(x);
 
   const ar = {
@@ -14,13 +16,14 @@
     modeLearn: 'الحفظ الجديد', modeNear: 'المراجعة القريبة', modeFar: 'المراجعة البعيدة',
     cancel: 'إلغاء', close: 'إغلاق', back: 'العودة',
     optional: 'اختياري', chapterN: (p) => 'الفصل ' + (p.i < 10 ? ['الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس', 'السابع', 'الثامن', 'التاسع', 'العاشر'][p.i] : n(p.i + 1)),
-    baytN: (p) => (U.getUnit() === 'dhikr' ? 'الذكر ' : 'البيت ') + n(p.n),
-    showVerse: () => (U.getUnit() === 'dhikr' ? 'إظهار الذكر' : 'إظهار البيت'), hideVerse: () => (U.getUnit() === 'dhikr' ? 'إخفاء الذكر' : 'إخفاء البيت'),
+    baytN: (p) => uw('الذكر ', 'السطر ', 'البيت ') + n(p.n),
+    showVerse: () => uw('إظهار الذكر', 'إظهار السطر', 'إظهار البيت'), hideVerse: () => uw('إخفاء الذكر', 'إخفاء السطر', 'إخفاء البيت'),
     timesN: (p) => (p.n === 2 ? 'مرتان' : (p.n >= 3 && p.n <= 10) ? n(p.n) + ' مرات' : n(p.n) + ' مرة'), holdTrans: 'اضغط مطوّلًا على النص لترجمته',
     /* لوحة الحفظ والمراجعة */
     homeTitle: 'الحفظ والمراجعة',
     allDoneToday: 'اكتمل اليوم', chipNew: 'حفظ جديد', chipNear: (p) => `مراجعة قريبة: ${n(p.n)}`, chipFar: (p) => `مراجعة بعيدة: ${n(p.n)}`,
     homeAllDone: 'أتممت كل شيء اليوم', homeAllDoneSub: 'لا حفظ جديد ولا مراجعات متبقية. بارك الله فيك.', homeProgress: (p) => `اكتمل اليوم: ${n(p.a)} من ${n(p.b)}`, poemAllDone: 'اكتمل كل شيء هنا اليوم',
+    testKicker: () => uw('اختبر نفسك على آخر الأذكار', 'اختبر نفسك على آخر الأسطر', 'اختبر نفسك على آخر الأبيات'), testShort: 'اختبار', testDone: 'تم', testHint: () => uw('استظهر ما حفظته الآن مع ما قبله', 'استظهر ما حفظته الآن مع الأسطر السابقة', 'استظهر ما حفظته الآن مع الأبيات السابقة'), sessionDoneT: (p) => `أتممت حفظ ${bt(p.n)} اليوم.`,
     secMem: 'قيد الحفظ', secRev: 'قيد المراجعة', addPoem: 'إضافة إلى قائمتي', addNone: 'كل ما في المكتب موجود في قائمتك الآن.',
     homeEmptyT: 'لم تبدأ حفظ شيء بعد', homeEmptyB: 'أضف قصيدة أو أذكارًا لتبدأ، ويمكنك حفظ أكثر من واحد معًا.',
     memStat: (p) => `${bt(p.b, p.u)}، حُفظ منها ${n(p.n)}`, cardDue: (p) => `للمراجعة اليوم: ${n(p.n)}`,
@@ -72,7 +75,7 @@
     libEmptyT: (p) => `لا توجد ${p.title} بعد`, libEmptyB: 'ستظهر هنا عند إضافتها إلى التطبيق.',
     stOld: 'المراجعة البعيدة', stNextReview: (p) => 'المراجعة القادمة ' + p.when, stConsol: 'تثبيت', stConsolSub: (p) => `بقي ${dc(p.days)} من التثبيت`,
     stNow: 'قيد الحفظ الآن', stProg: 'قيد الحفظ', stNext: 'التالي', stNew: 'لم يبدأ',
-    poemProgress: (p) => `${n(p.n)} من ${bt(p.b)} في الفصول الأساسية`, readPoem: () => (U.getUnit() === 'dhikr' ? 'قراءة الأذكار' : 'قراءة القصيدة'), memorizingNow: 'قيد الحفظ الآن', memorizeThis: 'اجعلها قيد الحفظ', chaptersH: 'الفصول', chaptersBtn: 'الفصول وتحديد المحفوظ', chaptersHint: 'اضغط على فصل لتبدأ الحفظ منه أو لتحدّده محفوظًا', changePoem: 'تغيير القصيدة',
+    poemProgress: (p) => `${n(p.n)} من ${bt(p.b)} في الفصول الأساسية`, readPoem: () => uw('قراءة الأذكار', 'قراءة الورد', 'قراءة القصيدة'), memorizingNow: 'قيد الحفظ الآن', memorizeThis: 'اجعلها قيد الحفظ', chaptersH: 'الفصول', chaptersBtn: 'الفصول وتحديد المحفوظ', chaptersHint: 'اضغط على فصل لتبدأ الحفظ منه أو لتحدّده محفوظًا', changePoem: 'تغيير القصيدة',
     readChapter: 'قراءة الفصل', continueHere: 'تابع الحفظ من هنا', startHere: 'ابدأ الحفظ من هذا الفصل', markMemorized: 'تم حفظ الفصل', restartChapter: 'إعادة الحفظ من البداية',
     markTitle: (p) => `كم تُتقن «${p.title}»؟`, markSub: 'يدخل الفصل المراجعة البعيدة، ويُحدَّد موعد أول مراجعة من تقييمك.',
     md1: 'لا أستطيع استظهاره الآن', md2: 'أتذكّره بجهد وتردّد', md3: 'أستظهره بثقة مع أخطاء يسيرة', md4: 'أستظهره بسرعة ودون تردّد',
@@ -101,12 +104,13 @@
     modeLearn: 'New memorization', modeNear: 'New review', modeFar: 'Old review',
     cancel: 'Cancel', close: 'Close', back: 'Back',
     optional: 'Optional', chapterN: (p) => 'Chapter ' + (p.i + 1),
-    baytN: (p) => (U.getUnit() === 'dhikr' ? 'Dhikr ' : 'Verse ') + n(p.n),
-    showVerse: () => (U.getUnit() === 'dhikr' ? 'Show dhikr' : 'Show verse'), hideVerse: () => (U.getUnit() === 'dhikr' ? 'Hide dhikr' : 'Hide verse'),
+    baytN: (p) => uw('Dhikr ', 'Line ', 'Verse ') + n(p.n),
+    showVerse: () => uw('Show dhikr', 'Show line', 'Show verse'), hideVerse: () => uw('Hide dhikr', 'Hide line', 'Hide verse'),
     timesN: (p) => `${n(p.n)}×`, holdTrans: 'Press and hold the text for its translation',
     homeTitle: 'Memorize & Review',
     allDoneToday: 'All done today', chipNew: 'New memorization', chipNear: (p) => `Near review: ${n(p.n)}`, chipFar: (p) => `Old review: ${n(p.n)}`,
     homeAllDone: 'Everything is done for today', homeAllDoneSub: 'No new memorization or reviews left. Well done.', homeProgress: (p) => `Done today: ${n(p.a)} of ${n(p.b)}`, poemAllDone: 'Everything here is done for today',
+    testKicker: () => uw('Quick test on the last adhkār', 'Quick test on the last lines', 'Quick test on the last verses'), testShort: 'Test', testDone: 'Done', testHint: () => uw('Recite what you just memorized with the one before it', 'Recite what you just memorized with the lines before it', 'Recite what you just memorized with the verses before it'), sessionDoneT: (p) => `You memorized ${bt(p.n)} today.`,
     secMem: 'Memorizing', secRev: 'In review', addPoem: 'Add to my list', addNone: 'Everything in the library is already on your list.',
     homeEmptyT: 'You have not started anything yet', homeEmptyB: 'Add a poem or the adhkār to begin. You can memorize several at once.',
     memStat: (p) => `${bt(p.b, p.u)}, ${n(p.n)} memorized`, cardDue: (p) => `${n(p.n)} to review today`,
@@ -154,7 +158,7 @@
     libEmptyT: (p) => `No ${p.title} yet`, libEmptyB: 'They will appear here when added to the app.',
     stOld: 'Old review', stNextReview: (p) => 'Next review ' + p.when, stConsol: 'Consolidating', stConsolSub: (p) => `${dc(p.days)} of consolidation left`,
     stNow: 'Memorizing now', stProg: 'In progress', stNext: 'Next', stNew: 'Not started',
-    poemProgress: (p) => `${n(p.n)} of ${bt(p.b)} in the main chapters`, readPoem: () => (U.getUnit() === 'dhikr' ? 'Read the adhkār' : 'Read the poem'), memorizingNow: 'Memorizing now', memorizeThis: 'Memorize this poem', chaptersH: 'Chapters', chaptersBtn: 'Chapters & marking', chaptersHint: 'Tap a chapter to start memorizing from it or mark it as memorized', changePoem: 'Change poem',
+    poemProgress: (p) => `${n(p.n)} of ${bt(p.b)} in the main chapters`, readPoem: () => uw('Read the adhkār', 'Read the wird', 'Read the poem'), memorizingNow: 'Memorizing now', memorizeThis: 'Memorize this poem', chaptersH: 'Chapters', chaptersBtn: 'Chapters & marking', chaptersHint: 'Tap a chapter to start memorizing from it or mark it as memorized', changePoem: 'Change poem',
     readChapter: 'Read chapter', continueHere: 'Continue memorizing from here', startHere: 'Start memorizing from this chapter', markMemorized: 'Mark chapter as memorized', restartChapter: 'Restart this chapter',
     markTitle: (p) => `How well do you know “${p.title}”?`, markSub: 'The chapter enters old review, and your rating sets its first review date.',
     md1: 'I cannot recite it now', md2: 'I recall it with effort and hesitation', md3: 'I recite it with confidence and few slips', md4: 'I recite it quickly without hesitation',

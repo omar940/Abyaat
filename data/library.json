@@ -14,6 +14,11 @@
    "id": "adhkar",
    "title": "أذكار",
    "titleEn": "Adhkār"
+  },
+  {
+   "id": "awraad",
+   "title": "أوراد",
+   "titleEn": "Awrād"
   }
  ],
  "poems": [
@@ -43,6 +48,61 @@
    "titleEn": "Adhkār",
    "fullTitleEn": "Daily adhkār",
    "authorEn": "From the Qur’an and the Sunnah"
+  },
+  {
+   "id": "ibn-ashir",
+   "file": "data/poems/ibn-ashir.json",
+   "section": "mutoon",
+   "title": "ابن عاشر",
+   "fullTitle": "المرشد المعين على الضروري من علوم الدين",
+   "author": "الإمام عبد الواحد بن عاشر",
+   "baytCount": 317,
+   "chapterCount": 42,
+   "titleEn": "Ibn ‘Āshir",
+   "fullTitleEn": "Al-Murshid al-Mu‘īn ‘alā al-Ḍarūrī min ‘Ulūm al-Dīn",
+   "authorEn": "Imām ‘Abd al-Wāḥid ibn ‘Āshir"
+  },
+  {
+   "id": "wird-latif",
+   "file": "data/poems/wird-latif.json",
+   "section": "awraad",
+   "type": "wird",
+   "title": "الورد اللطيف",
+   "fullTitle": "الورد اللطيف للإمام الحداد",
+   "author": "الإمام عبد الله بن علوي الحداد",
+   "baytCount": 81,
+   "chapterCount": 12,
+   "titleEn": "Al-Wird al-Laṭīf",
+   "fullTitleEn": "Al-Wird al-Laṭīf of Imām al-Ḥaddād",
+   "authorEn": "Imām ‘Abd Allāh b. ‘Alawī al-Ḥaddād"
+  },
+  {
+   "id": "ratib",
+   "file": "data/poems/ratib.json",
+   "section": "awraad",
+   "type": "wird",
+   "title": "الراتب الشهير",
+   "fullTitle": "الراتب الشهير للإمام الحداد",
+   "author": "الإمام عبد الله بن علوي الحداد",
+   "baytCount": 65,
+   "chapterCount": 11,
+   "titleEn": "Al-Rātib al-Shahīr",
+   "fullTitleEn": "Al-Rātib al-Shahīr of Imām al-Ḥaddād",
+   "authorEn": "Imām ‘Abd Allāh b. ‘Alawī al-Ḥaddād"
+  },
+  {
+   "id": "hizb-bahr",
+   "file": "data/poems/hizb-bahr.json",
+   "section": "awraad",
+   "type": "wird",
+   "title": "حزب البحر",
+   "fullTitle": "حزب البحر للإمام الشاذلي",
+   "author": "الإمام أبو الحسن الشاذلي",
+   "baytCount": 71,
+   "chapterCount": 8,
+   "titleEn": "Ḥizb al-Baḥr",
+   "fullTitleEn": "Ḥizb al-Baḥr of Imām al-Shādhilī",
+   "authorEn": "Imām Abū al-Ḥasan al-Shādhilī"
   }
  ]
 }
