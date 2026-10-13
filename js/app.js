@@ -224,6 +224,13 @@
   }
   /* الحفظ الجديد بلا شاشة تمهيدية: تبدأ الجلسة مباشرةً بعدد الأبيات المحفوظ في الإعدادات، ويُعدَّل من الأعلى بزرّي + و − */
   /* بعد كل بيت (وبعد اختباره): بيت تالٍ، أو نهاية الجلسة فيرجع إلى شاشة القصيدة دون شاشة وسيطة */
+  /* احتساب البيت الحالي محفوظًا (بعد الاختبار إن وُجد) */
+  function commitLearned(pid, cid) {
+    const L = ui.learn, r = S.markLearned(pid, cid);
+    L.done += 1; L.hint = false; L.hidden = false;
+    if (r.completed) L.completed.push(cid);
+    else if (r.segCompleted) L.completedParts.push({ cid, segIdx: r.segIdx, segCount: r.segCount });
+  }
   function afterLearnStep() {
     const L = ui.learn;
     if (L.done >= L.target || !learnCursor()) return finishLearn();
@@ -640,7 +647,7 @@
       case 'unenroll-ask': return confirmSheet(t('removeQ'), t('removeBody'), t('removeYes'), 'unenroll-yes', {}, true);
       case 'unenroll-yes': S.setEnrolled(S.state.activePoem, false); ui.poemOpen = false; ui.mode = null; closeSheet(); toast(t('tPoemRemoved')); return render();
       /* الحفظ الجديد */
-      case 'test-done': ui.test = null; return afterLearnStep();
+      case 'test-done': { const T = ui.test; ui.test = null; if (T && T.pending) commitLearned(T.pid, T.cid); return afterLearnStep(); }
       case 'noop': return;
       case 'learn-target': { const v = Math.min(30, Math.max(L.done + 1, L.target + Number(d.d))); L.target = v; S.setPerDay(S.state.activePoem, v); return render({ keep: true }); }
       case 'learn-home': ui.mode = null; return render();
@@ -653,16 +660,12 @@
       case 'toggle-en': L.en = !L.en; return render({ keep: true });
       case 'learn-known': {
         const cursor = learnCursor(); if (!cursor) return finishLearn();
-        const r = S.markLearned(cursor.pid, cursor.chap.id);
-        L.done += 1; L.hint = false; L.hidden = false;
-        if (r.completed) L.completed.push(cursor.chap.id);
-        else if (r.segCompleted) L.completedParts.push({ cid: cursor.chap.id, segIdx: r.segIdx, segCount: r.segCount });
-        /* الخطوة الأخيرة: اختبار على البيت الحالي والبيتين السابقين في الفصل (القصائد والمتون والأوراد، لا الأذكار) */
-        const learnedNow = S.chapter(cursor.pid, cursor.chap.id).learned;
-        if (!isDhikr(cursor.pid) && learnedNow >= 2) {
-          ui.test = { pid: cursor.pid, cid: cursor.chap.id, start: Math.max(0, learnedNow - 3), end: learnedNow, shown: 0, page: 0, segIdx: 0 };
+        /* لا يُحتسب البيت محفوظًا إلا بعد اجتياز الاختبار على البيت الحالي والبيتين السابقين (القصائد والمتون والأوراد، لا الأذكار) */
+        if (!isDhikr(cursor.pid) && cursor.idx >= 1) {
+          ui.test = { pid: cursor.pid, cid: cursor.chap.id, start: Math.max(0, cursor.idx - 2), end: cursor.idx + 1, shown: 0, page: 0, segIdx: 0, pending: true };
           L.stage = 'test'; return render();
         }
+        commitLearned(cursor.pid, cursor.chap.id);
         return afterLearnStep();
       }
       /* المراجعة القريبة */
