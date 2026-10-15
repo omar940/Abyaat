@@ -320,7 +320,7 @@
     const fwd = o.last
       ? `<button class="rc-finish" data-act="${o.finishAct}">${IC.check}<span>${esc(o.finishLabel)}</span></button>`
       : `<button data-act="${o.nextAct}" aria-label="${e('nextSet')}">${ARR(2)}</button>`;
-    return `<div class="rc" dir="ltr"><button data-act="${o.prevAct}" aria-label="${e('prevSet')}" ${o.page === 0 ? 'disabled' : ''}>${ARR(2, true)}</button>
+    return `<div class="rc" dir="ltr"><button data-act="${o.prevAct}" aria-label="${e('prevSet')}" ${o.page === 0 && o.shown <= 0 ? 'disabled' : ''}>${ARR(2, true)}</button>
       <button data-act="reveal-minus" aria-label="${e('hideLine')}" ${o.shown <= 0 ? 'disabled' : ''}>${ARR(1, true)}</button>${mid}
       <button data-act="reveal-plus" aria-label="${e('showLine')}" ${o.shown >= o.lines ? 'disabled' : ''}>${ARR(1)}</button>${fwd}</div>`;
   }
@@ -362,13 +362,13 @@
     const { c: T, slice, start, pages, page, lines, shown } = pagerPage('test'), modes = revealModes(slice, shown);
     const body = slice.map((b, i) => baytHTML(b, start + i, { no: true, m: modes[i], nopeek: true, trans: true, orn: false })).join('<div class="orn"></div>');
     return `<div class="fit-box folio rev nowrap" dir="rtl" data-min="11" data-max="44"><div class="fit-content">${body}</div></div>
-      <div class="actions">${pagerBar({ page, pages, shown, lines, last: true, label: t('testShort'), prevAct: 'noop', nextAct: 'noop', finishAct: 'test-done', finishLabel: t('testDone') })}</div>`;
+      <div class="actions">${pagerBar({ page, pages, shown, lines, last: true, label: t('testShort'), prevAct: 'prev-set', nextAct: 'noop', finishAct: 'test-done', finishLabel: t('testDone') })}</div>`;
   }
   function nearPager() {
     const { c: N, slice, start, dh, pages, page, last, lines, shown } = pagerPage('near'), modes = revealModes(slice, shown);
     const body = slice.map((b, i) => whenLabel(slice, i) + baytHTML(b, start + i, { no: true, m: modes[i], nopeek: true, trans: true, orn: false })).join('<div class="orn"></div>');
     return `<div class="fit-box folio rev ${dh ? 'wrap' : 'nowrap'}" dir="rtl" data-min="${dh ? 14 : 11}" data-max="${dh ? 34 : 44}"><div class="fit-content">${body}</div></div>
-      <div class="actions">${pagerBar({ page, pages, shown, lines, last, prevAct: 'near-prev', nextAct: 'near-next', finishAct: 'near-finish', finishLabel: t('finishShort') })}</div>`;
+      <div class="actions">${pagerBar({ page, pages, shown, lines, last, prevAct: 'prev-set', nextAct: 'near-next', finishAct: 'near-finish', finishLabel: t('finishShort') })}</div>`;
   }
   function openPagerInfo() {
     const row = (ic, txt) => `<li><span class="info-ic">${ic}</span><span>${esc(txt)}</span></li>`;
@@ -409,6 +409,13 @@
     if (pg.last) return;
     c.page = pg.page + 1; c.shown = near ? null : 0; return render();
   }
+  /* السهم المزدوج الخلفي: يُخفي الصفحة كلها إن كان فيها شيء ظاهر، وإلا رجع إلى المجموعة السابقة */
+  function prevSet() {
+    const kind = pagerKind(), near = kind === 'near', pg = pagerPage(kind), c = pg.c;
+    if (pg.shown > 0) { c.shown = 0; return render({ keep: true }); }
+    if (pg.page <= 0) return;
+    c.page = pg.page - 1; c.shown = near ? null : 0; return render();
+  }
   function stepPager(fwd) {
     const kind = pagerKind(), near = kind === 'near', pg = pagerPage(kind), c = pg.c;
     if (fwd && pg.shown >= pg.lines) {
@@ -430,7 +437,7 @@
       return `<div class="tapwrap${Q.missed[i] ? ' missed' : ''}" role="button" tabindex="0" aria-pressed="${!!Q.missed[i]}" data-act="q-toggle" data-i="${i}">${whenLabel(slice, k)}${baytHTML(b, i, { no: true, m: modes[k], nopeek: true, trans: true, orn: false })}</div>`;
     }).join('<div class="orn"></div>');
     return `<div class="fit-box folio rev ${dh ? 'wrap' : 'nowrap'}" dir="rtl" data-min="${dh ? 14 : 11}" data-max="${dh ? 34 : 44}"><div class="fit-content">${body}</div></div>
-      <div class="actions">${pagerBar({ page, pages, shown, lines, last, marked, prevAct: 'q-prev', nextAct: 'q-next', finishAct: 'q-finish', finishLabel: t('finishShort') })}</div>`;
+      <div class="actions">${pagerBar({ page, pages, shown, lines, last, marked, prevAct: 'prev-set', nextAct: 'q-next', finishAct: 'q-finish', finishLabel: t('finishShort') })}</div>`;
   }
   /* اختيار الفترة: الخيارات الأربعة من FSRS، وكل زر يبيّن موعد المراجعة القادمة */
   function farRate() {
@@ -676,7 +683,7 @@
       }
       /* المراجعة القريبة */
       case 'near-open': Object.assign(N, { stage: 'pager', pid: d.pid, cid: d.cid, segIdx: Number(d.seg), page: 0, shown: null }); return render();
-      case 'near-prev': N.page -= 1; N.shown = null; return render();
+      case 'prev-set': return prevSet();
       case 'near-next': return nextSet();
       case 'near-finish': {
         const r = S.finishNewReview(N.pid, N.cid, N.segIdx), next = S.newReviewList().find((x) => !x.done && x.pid === N.pid);
@@ -689,7 +696,6 @@
       /* المراجعة البعيدة */
       case 'far-open': startFar(d.pid, d.cid, Number(d.seg)); return render();
       case 'q-toggle': { const k = Number(d.i); if (Q.missed[k]) delete Q.missed[k]; else Q.missed[k] = true; return render({ keep: true }); }
-      case 'q-prev': Q.page = Math.max(0, Q.page - 1); Q.shown = 0; return render();
       case 'q-next': return nextSet();
       case 'reveal-plus': case 'reveal-minus': {
         const pg = pagerPage(pagerKind());
@@ -838,7 +844,7 @@
       if (!ev.shiftKey) return stepPager(fwd);
       const pg = pagerPage(kind);
       if (fwd) return nextSet();
-      if (!fwd && pg.page > 0) { pg.c.page = pg.page - 1; pg.c.shown = near ? null : 0; return render(); }
+      if (!fwd) return prevSet();
       return;
     }
     const el = ev.target.closest && ev.target.closest('[role="button"][data-act]');
