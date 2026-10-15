@@ -374,7 +374,7 @@
     const row = (ic, txt) => `<li><span class="info-ic">${ic}</span><span>${esc(txt)}</span></li>`;
     const far = ui.mode === 'far';
     openSheet(`<h2>${e('infoTitle')}</h2><ul class="info-list">${row(ARR(1), t('infoTap'))}${row(ARR(1), t('infoShow'))}${row(ARR(1, true), t('infoHide'))}${row(ARR(2), t('infoNext'))}${row(ARR(2, true), t('infoPrev'))}
-      ${far ? row(IC.check, t('farPrompt')) : ''}${row(ARR(2), t('infoAll'))}${row(IC.eye, t('infoTrans'))}${row(IC.eye, t('infoKeys'))}${row(IC.check, t('infoDone'))}</ul>
+      ${far ? row(IC.check, t('farPrompt')) : ''}${row('•', t('infoTrans'))}${row('•', t('infoKeys'))}${row(IC.check, t('infoDone'))}</ul>
       <div class="opts"><button class="btn block quiet" data-act="sheet-close">${e('close')}</button></div>`);
   }
   function nearMsg(pid, cid, segIdx, r) {
