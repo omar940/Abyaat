@@ -316,8 +316,7 @@
   /* ظرف الذكر (عند خلع الثياب مثلًا) فوق نصّه في صفحات المراجعة، ويُكتب مرة واحدة لما تتابع من أذكار بظرف واحد */
   const whenLabel = (slice, i) => { const b = slice[i]; if (!b.w || (i > 0 && slice[i - 1].w === b.w && slice[i - 1].wEn === b.wEn)) return ''; return `<div class="dh-when"${da}>${esc(pick(b, 'w'))}</div>`; };
   function pagerBar(o) {
-    const all = o.shown >= o.lines && o.lines > 0;
-    const mid = `<div class="rc-mid"><button class="rc-eye" data-act="reveal-all" aria-label="${e(all ? 'hideAll' : 'showAll')}" aria-pressed="${all}">${all ? IC.eyeOff : IC.eye}</button><span class="rc-cnt">${o.label ? esc(o.label) : `${ar(o.page + 1)} / ${ar(o.pages)}`}${o.marked ? `<i class="rc-mark" aria-hidden="true">${ar(o.marked)}</i>` : ''}</span></div>`;
+    const mid = `<div class="rc-mid"><span class="rc-cnt">${o.label ? esc(o.label) : `${ar(o.page + 1)} / ${ar(o.pages)}`}${o.marked ? `<i class="rc-mark" aria-hidden="true">${ar(o.marked)}</i>` : ''}</span></div>`;
     const fwd = o.last
       ? `<button class="rc-finish" data-act="${o.finishAct}">${IC.check}<span>${esc(o.finishLabel)}</span></button>`
       : `<button data-act="${o.nextAct}" aria-label="${e('nextSet')}">${ARR(2)}</button>`;
@@ -374,8 +373,8 @@
   function openPagerInfo() {
     const row = (ic, txt) => `<li><span class="info-ic">${ic}</span><span>${esc(txt)}</span></li>`;
     const far = ui.mode === 'far';
-    openSheet(`<h2>${e('infoTitle')}</h2><ul class="info-list">${row(IC.eye, t('infoTap'))}${row(ARR(1), t('infoShow'))}${row(ARR(1, true), t('infoHide'))}${row(ARR(2), t('infoNext'))}${row(ARR(2, true), t('infoPrev'))}
-      ${far ? row(IC.check, t('farPrompt')) : ''}${row(IC.eye, t('infoAll'))}${row(IC.eye, t('infoTrans'))}${row(IC.eye, t('infoKeys'))}${row(IC.check, t('infoDone'))}</ul>
+    openSheet(`<h2>${e('infoTitle')}</h2><ul class="info-list">${row(ARR(1), t('infoTap'))}${row(ARR(1), t('infoShow'))}${row(ARR(1, true), t('infoHide'))}${row(ARR(2), t('infoNext'))}${row(ARR(2, true), t('infoPrev'))}
+      ${far ? row(IC.check, t('farPrompt')) : ''}${row(ARR(2), t('infoAll'))}${row(IC.eye, t('infoTrans'))}${row(IC.eye, t('infoKeys'))}${row(IC.check, t('infoDone'))}</ul>
       <div class="opts"><button class="btn block quiet" data-act="sheet-close">${e('close')}</button></div>`);
   }
   function nearMsg(pid, cid, segIdx, r) {
@@ -403,6 +402,13 @@
   /* خمسة أبيات في الصفحة: استظهر، ثم المس البيت مرّتين ليُؤشَّر عليه كصعب */
   /* لمسة/سهم لوحة المفاتيح: يُظهر سطرًا أو يُخفيه؛ وإن كانت الصفحة ظاهرة كلها فالتقدّم يقلب إلى المجموعة التالية،
      وإن كانت مخفية كلها فالرجوع يعود إلى المجموعة السابقة (ظاهرةً كلها، فيُخفى منها سطرٌ سطر) */
+  /* السهم المزدوج الأمامي: يُظهر الصفحة كلها أولًا، فإن كانت ظاهرة انتقل إلى المجموعة التالية */
+  function nextSet() {
+    const kind = pagerKind(), near = kind === 'near', pg = pagerPage(kind), c = pg.c;
+    if (pg.shown < pg.lines) { c.shown = pg.lines; return render({ keep: true }); }
+    if (pg.last) return;
+    c.page = pg.page + 1; c.shown = near ? null : 0; return render();
+  }
   function stepPager(fwd) {
     const kind = pagerKind(), near = kind === 'near', pg = pagerPage(kind), c = pg.c;
     if (fwd && pg.shown >= pg.lines) {
@@ -671,7 +677,7 @@
       /* المراجعة القريبة */
       case 'near-open': Object.assign(N, { stage: 'pager', pid: d.pid, cid: d.cid, segIdx: Number(d.seg), page: 0, shown: null }); return render();
       case 'near-prev': N.page -= 1; N.shown = null; return render();
-      case 'near-next': N.page += 1; N.shown = null; return render();
+      case 'near-next': return nextSet();
       case 'near-finish': {
         const r = S.finishNewReview(N.pid, N.cid, N.segIdx), next = S.newReviewList().find((x) => !x.done && x.pid === N.pid);
         toast(nearMsg(N.pid, N.cid, N.segIdx, r));
@@ -684,15 +690,10 @@
       case 'far-open': startFar(d.pid, d.cid, Number(d.seg)); return render();
       case 'q-toggle': { const k = Number(d.i); if (Q.missed[k]) delete Q.missed[k]; else Q.missed[k] = true; return render({ keep: true }); }
       case 'q-prev': Q.page = Math.max(0, Q.page - 1); Q.shown = 0; return render();
-      case 'q-next': Q.page += 1; Q.shown = 0; return render();
+      case 'q-next': return nextSet();
       case 'reveal-plus': case 'reveal-minus': {
         const pg = pagerPage(pagerKind());
         pg.c.shown = Math.min(pg.lines, Math.max(0, pg.shown + (name === 'reveal-plus' ? 1 : -1)));
-        return render({ keep: true });
-      }
-      case 'reveal-all': {
-        const pg = pagerPage(pagerKind());
-        pg.c.shown = pg.shown >= pg.lines ? 0 : pg.lines;
         return render({ keep: true });
       }
       case 'pager-info': return openPagerInfo();
@@ -836,7 +837,7 @@
       const fwd = ev.key === 'ArrowRight', kind = pagerKind(), near = kind === 'near';
       if (!ev.shiftKey) return stepPager(fwd);
       const pg = pagerPage(kind);
-      if (fwd && !pg.last) { pg.c.page += 1; pg.c.shown = near ? null : 0; return render(); }
+      if (fwd) return nextSet();
       if (!fwd && pg.page > 0) { pg.c.page = pg.page - 1; pg.c.shown = near ? null : 0; return render(); }
       return;
     }
