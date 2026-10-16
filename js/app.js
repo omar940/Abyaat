@@ -220,7 +220,7 @@
       <button class="btn block ghost" style="margin-top:22px" data-act="unenroll-ask">${e('removePoem')}</button>`;
   }
 
-  /* ---------- المعاينة: قراءة الأبيات الثلاثة القادمة ثلاث مرات قبل حفظها ---------- */
+  /* ---------- التمهيد: قراءة الأبيات الثلاثة القادمة ثلاث مرات قبل حفظها ---------- */
   function vPreview() {
     const pid = S.state.activePoem, items = pid && POEMS.get(pid) ? S.previewItems(pid) : [];
     if (!items.length) { ui.mode = null; return vHome(); }

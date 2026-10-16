@@ -13,7 +13,7 @@
   const ar = {
     docTitle: 'تعاهد', appName: 'تعاهد',
     navLabel: 'التنقل الرئيسي', navHome: 'الحفظ والمراجعة', navLib: 'المكتب', navSettings: 'الإعدادات',
-    modePreview: 'المعاينة', chipPreview: 'معاينة', previewPill: (p) => `${n(p.n)} من ${n(p.m)}`, previewIdleSub: 'لا أبيات قادمة', previewDoneSub: 'قرأت الأبيات القادمة اليوم', previewTodoSub: () => uw('اقرأ الأذكار القادمة', 'اقرأ الأسطر القادمة ثلاث مرات قبل حفظها', 'اقرأ الأبيات الثلاثة القادمة ثلاث مرات قبل حفظها'), previewReadN: (p) => `القراءة ${n(p.n)} من ${n(p.m)}`, previewRead: 'قرأتها', previewBack: 'رجوع', previewFinish: 'أتممت القراءة', tPreviewDone: 'تمت المعاينة. سيكون الحفظ أيسر بإذن الله',
+    modePreview: 'التمهيد', chipPreview: 'تمهيد', previewPill: (p) => `${n(p.n)} من ${n(p.m)}`, previewIdleSub: 'لا أبيات قادمة', previewDoneSub: 'قرأت الأبيات القادمة اليوم', previewTodoSub: () => uw('اقرأ الأذكار القادمة', 'اقرأ الأسطر القادمة ثلاث مرات قبل حفظها', 'اقرأ الأبيات الثلاثة القادمة ثلاث مرات قبل حفظها'), previewReadN: (p) => `القراءة ${n(p.n)} من ${n(p.m)}`, previewRead: 'قرأتها', previewBack: 'رجوع', previewFinish: 'أتممت القراءة', tPreviewDone: 'تمت المعاينة. سيكون الحفظ أيسر بإذن الله',
     modeLearn: 'الحفظ الجديد', modeNear: 'المراجعة القريبة', modeFar: 'المراجعة البعيدة',
     cancel: 'إلغاء', close: 'إغلاق', back: 'العودة',
     optional: 'اختياري', chapterN: (p) => 'الفصل ' + (p.i < 10 ? ['الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس', 'السابع', 'الثامن', 'التاسع', 'العاشر'][p.i] : n(p.i + 1)),
