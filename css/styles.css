@@ -412,3 +412,5 @@ html[dir="ltr"] #top .brand{flex-direction:row}
 .allclear-ic .ic{width:20px;height:20px;stroke-width:2.6}
 
 .li.susp .t,.li.susp .s{opacity:.55}
+
+.pv-count{text-align:center;color:var(--ink-2);font-size:14px;font-weight:500;margin:0}

@@ -13,6 +13,7 @@
   const ar = {
     docTitle: 'تعاهد', appName: 'تعاهد',
     navLabel: 'التنقل الرئيسي', navHome: 'الحفظ والمراجعة', navLib: 'المكتب', navSettings: 'الإعدادات',
+    modePreview: 'المعاينة', chipPreview: 'معاينة', previewPill: (p) => `${n(p.n)} من ${n(p.m)}`, previewIdleSub: 'لا أبيات قادمة', previewDoneSub: 'قرأت الأبيات القادمة اليوم', previewTodoSub: () => uw('اقرأ الأذكار القادمة', 'اقرأ الأسطر القادمة ثلاث مرات قبل حفظها', 'اقرأ الأبيات الثلاثة القادمة ثلاث مرات قبل حفظها'), previewReadN: (p) => `القراءة ${n(p.n)} من ${n(p.m)}`, previewRead: 'قرأتها', previewBack: 'رجوع', previewFinish: 'أتممت القراءة', tPreviewDone: 'تمت المعاينة. سيكون الحفظ أيسر بإذن الله',
     modeLearn: 'الحفظ الجديد', modeNear: 'المراجعة القريبة', modeFar: 'المراجعة البعيدة',
     cancel: 'إلغاء', close: 'إغلاق', back: 'العودة',
     optional: 'اختياري', chapterN: (p) => 'الفصل ' + (p.i < 10 ? ['الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس', 'السابع', 'الثامن', 'التاسع', 'العاشر'][p.i] : n(p.i + 1)),
@@ -101,6 +102,7 @@
   const en = {
     docTitle: "Ta'āhud: poems & adhkār memorizer", appName: "Ta'āhud",
     navLabel: 'Main navigation', navHome: 'Memorize', navLib: 'Library', navSettings: 'Settings',
+    modePreview: 'Preview', chipPreview: 'Preview', previewPill: (p) => `${n(p.n)} of ${n(p.m)}`, previewIdleSub: 'No upcoming verses', previewDoneSub: 'You read the upcoming verses today', previewTodoSub: () => uw('Read the upcoming adhkār', 'Read the next three lines, three times, before memorizing them', 'Read the next three verses, three times, before memorizing them'), previewReadN: (p) => `Reading ${n(p.n)} of ${n(p.m)}`, previewRead: 'I read it', previewBack: 'Back', previewFinish: 'Finish reading', tPreviewDone: 'Preview done. Memorizing will be easier, God willing',
     modeLearn: 'New memorization', modeNear: 'New review', modeFar: 'Old review',
     cancel: 'Cancel', close: 'Close', back: 'Back',
     optional: 'Optional', chapterN: (p) => 'Chapter ' + (p.i + 1),

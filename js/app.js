@@ -157,11 +157,12 @@
   function dayStatus(pid) {
     const it = poemItems(pid), nearN = it.near.filter((x) => !x.done).length, farN = it.far.filter((x) => x.isDue).length;
     const hasNew = !!S.currentChapter(pid), newOk = !hasNew || S.newDoneToday(pid) >= S.perDayOf(pid);
-    return { nearN, farN, hasNew, newOk, done: newOk && !nearN && !farN };
+    const previewN = S.previewPending(pid) ? 1 : 0;
+    return { nearN, farN, hasNew, newOk, previewN, done: newOk && !nearN && !farN && !previewN };
   }
   const statusChips = (st) => st.done
     ? `<span class="pill green">${IC.check}${e('allDoneToday')}</span>`
-    : (!st.newOk ? `<span class="pill gold">${e('chipNew')}</span>` : '') + (st.nearN ? `<span class="pill rust">${e('chipNear', { n: st.nearN })}</span>` : '') + (st.farN ? `<span class="pill rust">${e('chipFar', { n: st.farN })}</span>` : '');
+    : (st.previewN ? `<span class="pill gold">${e('chipPreview')}</span>` : '') + (!st.newOk ? `<span class="pill gold">${e('chipNew')}</span>` : '') + (st.nearN ? `<span class="pill rust">${e('chipNear', { n: st.nearN })}</span>` : '') + (st.farN ? `<span class="pill rust">${e('chipFar', { n: st.farN })}</span>` : '');
   function poemCard(pid, act) {
     const poem = POEMS.get(pid), pr = S.poemProgress(pid), st = act === 'poem-open' ? dayStatus(pid) : null;
     return `<li style="margin-bottom:12px"><button class="book${st && st.done ? ' is-done' : ''}" data-act="${act}" data-pid="${esc(pid)}"><span class="spine"></span><span class="body">
@@ -198,6 +199,10 @@
     const learn = !cm ? ['done', t('doneM'), t('learnAllSub')]
       : st.newOk ? ['done', t('doneM'), t('learnDoneSub', { n: S.newDoneToday(pid) })]
       : ['todo', kicker(pid, cm.id), ctitle(cm)];
+    const pvN = S.previewItems(pid).length;
+    const preview = !pvN ? ['idle', t('nearIdlePill'), t('previewIdleSub')]
+      : S.previewDone(pid) ? ['done', t('doneF'), t('previewDoneSub')]
+      : ['todo', t('previewPill', { n: S.previewReads(pid), m: S.PREVIEW_READS }), t('previewTodoSub')];
     const pending = it.near.filter((x) => !x.done).length;
     const near = !it.near.length ? ['idle', t('nearIdlePill'), t('nearIdleSub')]
       : pending ? ['todo', t('nearLeft', { n: pending }), t('nearTodoSub')]
@@ -211,8 +216,20 @@
       <div style="margin:10px 0 12px"><div class="bar" role="progressbar" aria-valuenow="${pr.pct}" aria-valuemin="0" aria-valuemax="100"><i style="width:${pr.pct}%"></i></div>
         <p class="small muted" style="margin-top:6px">${e('memStat', { n: pr.done, b: pr.total })}</p></div>
       <button class="btn block quiet" data-act="learn-chapters">${e('chaptersBtn')}</button>
-      <div class="modes">${modeCard('learn', 'modeLearn', ...learn)}${modeCard('near', 'modeNear', ...near)}${modeCard('far', 'modeFar', ...far)}</div>
+      <div class="modes">${modeCard('preview', 'modePreview', ...preview)}${modeCard('learn', 'modeLearn', ...learn)}${modeCard('near', 'modeNear', ...near)}${modeCard('far', 'modeFar', ...far)}</div>
       <button class="btn block ghost" style="margin-top:22px" data-act="unenroll-ask">${e('removePoem')}</button>`;
+  }
+
+  /* ---------- المعاينة: قراءة الأبيات الثلاثة القادمة ثلاث مرات قبل حفظها ---------- */
+  function vPreview() {
+    const pid = S.state.activePoem, items = pid && POEMS.get(pid) ? S.previewItems(pid) : [];
+    if (!items.length) { ui.mode = null; return vHome(); }
+    const slice = items.map((it) => chapterOf(pid, it.cid).bayts[it.idx]), modes = revealModes(slice, lineCount(slice));
+    const body = slice.map((b, i) => whenLabel(slice, i) + baytHTML(b, items[i].idx, { no: true, m: modes[i], trans: true, orn: false })).join('<div class="orn"></div>');
+    const reads = S.previewReads(pid), total = S.PREVIEW_READS, done = reads >= total, last = reads + 1 >= total;
+    return `<div class="fit-box folio rev nowrap" dir="rtl" data-min="11" data-max="44"><div class="fit-content">${body}</div></div>
+      <div class="actions"><p class="pv-count">${done ? e('previewDoneSub') : e('previewReadN', { n: reads + 1, m: total })}</p>
+        ${done ? `<button class="btn block quiet" data-act="mode-back">${e('previewBack')}</button>` : `<button class="btn block" data-act="preview-read">${e(last ? 'previewFinish' : 'previewRead')}</button>`}</div>`;
   }
 
   /* ---------- الحفظ الجديد ---------- */
@@ -558,7 +575,7 @@
 
   /* ---------- الرسم ---------- */
   const cur = () => (ui.tab === 'home' ? (ui.mode || 'home') : ui.tab);
-  const FLUSH = () => (cur() === 'learn' && ui.learn.stage === 'learn' && S.state.activePoem && POEMS.get(S.state.activePoem) && !!learnCursor())
+  const FLUSH = () => cur() === 'preview' || (cur() === 'learn' && ui.learn.stage === 'learn' && S.state.activePoem && POEMS.get(S.state.activePoem) && !!learnCursor())
     || (cur() === 'learn' && ui.learn.stage === 'test' && !!ui.test) || (cur() === 'near' && ui.near.stage === 'pager') || (cur() === 'far' && ui.far.stage === 'review');
 
   let lastY = 0;
@@ -580,7 +597,7 @@
     $$('#tabs button').forEach((b) => { if (b.dataset.tab === ui.tab) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current'); });
     const upid = ui.tab === 'lib' ? ((ui.lib.reader && ui.lib.reader.pid) || ui.lib.poem) : S.state.activePoem;
     U.setUnit(upid && S.meta(upid) ? unitOf(upid) : 'bayt');
-    const html = { home: vHome, add: vAdd, learn: vLearn, near: vNear, far: vFar, lib: vLib, settings: vSettings }[cur()]();
+    const html = { home: vHome, add: vAdd, learn: vLearn, preview: vPreview, near: vNear, far: vFar, lib: vLib, settings: vSettings }[cur()]();
     view.classList.toggle('flush', FLUSH());
     view.innerHTML = html;
     view.scrollTop = opts.keep ? prev : 0;
@@ -608,7 +625,7 @@
       tt.firstElementChild.textContent = pk === 'test' ? t('testKicker') : withPart(kicker(pg.pid, pg.cid), pg.segIdx, sc); tt.lastElementChild.textContent = cTitle(pg.pid, pg.cid);
       tt.lastElementChild.dir = 'auto';
     }
-    const n = S.pendingNear() + S.dueOld().length, b = $('#tabs [data-tab="home"] .badge');
+    const n = S.pendingNear() + S.dueOld().length + S.previewPendingCount(), b = $('#tabs [data-tab="home"] .badge');
     b.hidden = !n; b.textContent = ar(n);
   }
   /* هاتف أفقيًا: لا يُصغَّر النص ليتّسع كل البيوت في الارتفاع القصير، بل يبقى مقروءًا ويُمرَّر الصندوق رأسيًا */
@@ -625,7 +642,7 @@
   /* ---------- الأحداث ---------- */
   function go(tab) {
     if (ui.tab === 'lib' && ui.lib.reader) ui.lib.reader.pos = rAnchor();
-    if (tab === 'learn' || tab === 'near' || tab === 'far') {
+    if (tab === 'learn' || tab === 'near' || tab === 'far' || tab === 'preview') {
       ui.tab = 'home'; ui.mode = tab; ui.poemOpen = true;
       const apid = S.state.activePoem;
       if (tab === 'learn') { if (learnCursor()) startLearn(); else ui.learn.stage = 'chapters'; }
@@ -651,6 +668,11 @@
     const d = el.dataset, L = ui.learn, N = ui.near, Q = ui.far;
     switch (name) {
       case 'goto': return go(d.to);
+      case 'preview-read': {
+        const pid = S.state.activePoem, r = S.previewRead(pid);
+        if (r >= S.PREVIEW_READS) { toast(t('tPreviewDone')); ui.mode = null; }
+        return render();
+      }
       case 'mode-back': if (ui.mode) ui.mode = null; else ui.poemOpen = false; return render();
       case 'sheet-close': return closeSheet();
       case 'perday': { const v = Math.min(10, Math.max(1, S.settings().perDay + Number(d.d))); S.setSetting('perDay', v); return render({ keep: true }); }
