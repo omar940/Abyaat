@@ -85,7 +85,7 @@
         const len = c.bayts.length, existing = state.poems[p.id] && state.poems[p.id].chapters[c.id];
         const legacy = existing && !existing.segs && (existing.learned > 0 || existing.card || existing.daysDone || existing.completedOn);
         if (legacy) { migrateLegacyChapter(existing); save(); }
-        return { id: c.id, title: c.title, titleEn: c.titleEn, group: c.group, groupEn: c.groupEn, optional: !!c.optional, len, segs: legacy ? [{ start: 0, len }] : splitSegments(len) };
+        return { id: c.id, title: c.title, titleEn: c.titleEn, group: c.group, groupEn: c.groupEn, optional: !!c.optional, kind: c.kind, len, segs: legacy ? [{ start: 0, len }] : splitSegments(len) };
       }),
     };
   }

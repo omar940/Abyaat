@@ -96,8 +96,9 @@
   const kicker = (pid, cid) => {
     const m = S.meta(pid), c = m.chapters.find((x) => x.id === cid);
     if (m.type === 'dhikr') return pick(c, 'group') || '';
+    if (c.kind) return t(c.kind === 'closing' ? 'kindClosing' : 'kindOpening');   // الافتتاح والختام: غير مرقَّمين
     if (c.optional) return ctitle(c);
-    return t('chapterN', { i: m.chapters.filter((x) => !x.optional).findIndex((x) => x.id === cid) });
+    return t('chapterN', { i: m.chapters.filter((x) => !x.optional && !x.kind).findIndex((x) => x.id === cid) });
   };
   /* تسمية الجزء: تظهر فقط حين يُقسَّم الفصل إلى أكثر من جزء واحد في المراجعة */
   const partLabel = (segIdx, segCount) => segCount > 1 ? t('partN', { i: segIdx + 1, total: segCount }) : '';

@@ -1,7 +1,7 @@
 # تعاهد — Ta'āhud
 
 A progressive web app for memorizing Arabic poems (qaṣā’id), texts (mutūn), daily adhkār and awrād, with spaced repetition. The name تعاهد (*ta‘āhud*) means tending something regularly so it is not lost; the logo is the word عهد with the ه (the knot) highlighted.
-The interface is in Arabic (right-to-left) by default, with an English interface and a dark mode available in الإعدادات (Settings). The poems themselves always stay in Arabic. First poem included: **Qaṣīdat al-Burdah** (160 bayts, 10 chapters, plus optional opening and closing bayts).
+The interface is in Arabic (right-to-left) by default, with an English interface and a dark mode available in الإعدادات (Settings). The poems themselves always stay in Arabic. First poem included: **Qaṣīdat al-Burdah** (169 bayts: the opening, 10 chapters and the closing).
 
 The app has three tabs: **الحفظ والمراجعة** (your memorizing list: the poems and adhkār you are working on, with those still being memorized at the top and those in review at the bottom; open one to see its progress, the chapters button and its three cards: new memorization, near review, old review), **المكتب** (library, reading only) and **الإعدادات** (settings). You can memorize several poems at once; add one with **إضافة إلى قائمتي** (progress is kept if you remove it and add it again later).
 
@@ -61,7 +61,7 @@ python3 -m http.server 8000
 }
 ```
 
-- `section` is `qasaid` or `mutoon`. Add `"optional": true` to a chapter that should be skipped by default (like the Burdah's opening and closing).
+- `section` is `qasaid` or `mutoon`. Add `"optional": true` to a chapter that should be skipped by default, and `"kind": "opening"` or `"kind": "closing"` to an unnumbered opening or closing chapter (the Burdah's opening and closing are normal parts of the memorization flow, labeled الافتتاح and الختام instead of a chapter number).
 - `id` values must be unique within the poem and must **never change** after users start memorizing (progress is keyed by them). `n` is the displayed bayt number (omit it for unnumbered bayts). `t` is optional.
 - For متون (prose or verse texts), use one "bayt" per unit and put the whole unit in `s` (leave `e` as an empty string if there is no second half).
 
