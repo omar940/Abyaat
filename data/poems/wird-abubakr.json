@@ -1,0 +1,315 @@
+{
+ "id": "wird-abubakr",
+ "type": "wird",
+ "section": "awraad",
+ "title": "ورد أبي بكر بن سالم",
+ "titleEn": "Wird of Abū Bakr b. Sālim",
+ "fullTitle": "ورد الشيخ أبي بكر بن سالم",
+ "fullTitleEn": "Wird of Shaykh Abū Bakr b. Sālim",
+ "author": "الشيخ أبو بكر بن سالم",
+ "authorEn": "Shaykh Abū Bakr b. Sālim",
+ "source": "مختارات من «الخلاصة» للحبيب عمر بن حفيظ، والترجمة الإنجليزية من طبعة أشنتار (٢٠١٣) بتحرير غُسَين محمد، وقد رُفعت عنها حقوق النشر",
+ "sourceEn": "Selected from “Al-Khulāṣah – The Cream of Remembrance” compiled by Ḥabīb ‘Umar b. Ḥafīẓ; English translation and edition by Prof. Ghoesain Mohamed (Ashnataar Publications, 2nd ed. 2013), whose copyright has been removed for free use.",
+ "chapters": [
+  {
+   "id": "thana",
+   "title": "الثناء والصلاة على النبي ﷺ",
+   "titleEn": "Praise and prayer upon the Prophet ﷺ",
+   "bayts": [
+    {
+     "id": "1",
+     "n": 1,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ.",
+     "t": [
+      "In the Name of Allāh, the Most Compassionate, the Most Merciful."
+     ]
+    },
+    {
+     "id": "2",
+     "n": 2,
+     "s": "اللَّهُمَّ يَا عَظِيمَ السُّلْطَانِ، يَا قَدِيمَ الْإِحْسَانِ، يَا دَائِمَ النِّعَمِ،",
+     "t": [
+      "O Allāh! O Great Sovereign; O Eternal Benevolence, O Continuous Bestower of Blessings,"
+     ]
+    },
+    {
+     "id": "3",
+     "n": 3,
+     "s": "يَا كَثِيرَ الْجُودِ، يَا وَاسِعَ الْعَطَاءِ، يَا خَفِيَّ اللُّطْفِ، يَا جَمِيلَ الصُّنْعِ،",
+     "t": [
+      "O the One of Excessive Generosity, of Excessive Giving, of Hidden Kindness, of Beautiful Making."
+     ]
+    },
+    {
+     "id": "4",
+     "n": 4,
+     "s": "يَا حَلِيمًا لَا يَعْجَلُ،",
+     "t": [
+      "O the Forbearing, Who does not haste in punishment;"
+     ]
+    },
+    {
+     "id": "5",
+     "n": 5,
+     "s": "صَلِّ يَا رَبِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَآلِهِ وَارْضَ عَنِ الصَّحَابَةِ أَجْمَعِينَ،",
+     "t": [
+      "bestow, O Lord, Blessings on our master Muḥammad and his family, and be satisfied with all his Companions."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tayseer",
+   "title": "دعاء التيسير",
+   "titleEn": "The supplication for ease",
+   "bayts": [
+    {
+     "id": "6",
+     "n": 6,
+     "s": "اللَّهُمَّ لَكَ الْحَمْدُ شُكْرًا، وَلَكَ الْمَنُّ فَضْلًا، وَأَنْتَ رَبُّنَا حَقًّا،",
+     "t": [
+      "O Allāh! To You belong all Praise as Thanks, and to You belong all Favours as Grace, and You are our Lord in truth;"
+     ]
+    },
+    {
+     "id": "7",
+     "n": 7,
+     "s": "وَنَحْنُ عَبِيدُكَ رِقًّا، وَأَنْتَ لَمْ تَزَلْ لِذَلِكَ أَهْلًا،",
+     "t": [
+      "we are indeed Your bondsmen, and You will always be deserving of that."
+     ]
+    },
+    {
+     "id": "8",
+     "n": 8,
+     "s": "يَا مُيَسِّرَ كُلِّ عَسِيرٍ، وَيَا جَابِرَ كُلِّ كَسِيرٍ، وَيَا صَاحِبَ كُلِّ فَرِيدٍ،",
+     "t": [
+      "O You Who eases every difficulty, and heals the fractured one; Who is the companion to every solitary soul;"
+     ]
+    },
+    {
+     "id": "9",
+     "n": 9,
+     "s": "وَيَا مُغْنِيَ كُلِّ فَقِيرٍ، وَيَا مُقَوِّيَ كُلِّ ضَعِيفٍ، وَيَا مَأْمَنَ كُلِّ مَخِيفٍ،",
+     "t": [
+      "O Enricher of the poor; O Strengthener of the weak; O Comforter of the frightened,"
+     ]
+    },
+    {
+     "id": "10",
+     "n": 10,
+     "s": "يَسِّرْ عَلَيْنَا كُلَّ عَسِيرٍ، فَتَيْسِيرُ الْعَسِيرِ عَلَيْكَ يَسِيرٌ.",
+     "t": [
+      "ease all difficulties for us, for the easing of difficulties is easy for You."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "need",
+   "title": "الحاجة والخوف",
+   "titleEn": "Needs and fear",
+   "bayts": [
+    {
+     "id": "11",
+     "n": 11,
+     "s": "اللَّهُمَّ يَا مَنْ لَا يَحْتَاجُ إِلَى الْبَيَانِ وَالتَّفْسِيرِ؛",
+     "t": [
+      "O Allāh! O You Who needs no clarification and explanation,"
+     ]
+    },
+    {
+     "id": "12",
+     "n": 12,
+     "s": "حَاجَاتُنَا كَثِيرٌ، وَأَنْتَ عَالِمٌ بِهَا وَخَبِيرٌ،",
+     "t": [
+      "our needs are many, and about them You are All Knowing, All Aware."
+     ]
+    },
+    {
+     "id": "13",
+     "n": 13,
+     "s": "اللَّهُمَّ إِنِّي أَخَافُ مِنْكَ، وَأَخَافُ مِمَّنْ يَخَافُ مِنْكَ،",
+     "t": [
+      "O Allāh! I fear You, and I fear whoever fears You,"
+     ]
+    },
+    {
+     "id": "14",
+     "n": 14,
+     "s": "وَأَخَافُ مِمَّنْ لَا يَخَافُ مِنْكَ.",
+     "t": [
+      "and I fear whoever does not fear You."
+     ]
+    },
+    {
+     "id": "15",
+     "n": 15,
+     "s": "اللَّهُمَّ بِحَقِّ مَنْ يَخَافُ مِنْكَ؛ نَجِّنَا مِمَّنْ لَا يَخَافُ مِنْكَ.",
+     "t": [
+      "O Allāh! By the honour of those who fear You, save us from those who do not fear You."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "protect",
+   "title": "الحفظ والحمد",
+   "titleEn": "Protection and praise",
+   "bayts": [
+    {
+     "id": "16",
+     "n": 16,
+     "s": "اللَّهُمَّ بِحَقِّ سَيِّدِنَا مُحَمَّدٍ احْرِسْنَا بِعَيْنِكَ الَّتِي لَا تَنَامُ،",
+     "t": [
+      "O Allāh! By the honour of our master Muḥammad, watch us with Your Eyes that never sleep;"
+     ]
+    },
+    {
+     "id": "17",
+     "n": 17,
+     "s": "وَاكْنُفْنَا بِكَنَفِكَ الَّذِي لَا يُرَامُ،",
+     "t": [
+      "protect us with Your Protection that does not waiver;"
+     ]
+    },
+    {
+     "id": "18",
+     "n": 18,
+     "s": "وَارْحَمْنَا بِقُدْرَتِكَ عَلَيْنَا فَلَا نَهْلِكُ وَأَنْتَ ثِقَتُنَا وَرَجَاؤُنَا،",
+     "t": [
+      "have mercy upon us by virtue of Your Power over us so that we do not perish; You are our Reliance and Hope,"
+     ]
+    },
+    {
+     "id": "19",
+     "n": 19,
+     "s": "وَصَلَّى اللَّهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَآلِهِ وَصَحْبِهِ وَسَلَّمَ،",
+     "t": [
+      "and may the Blessings and Peace of Allāh be upon our master Muḥammad, his family and Companions;"
+     ]
+    },
+    {
+     "id": "20",
+     "n": 20,
+     "s": "وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ،",
+     "t": [
+      "and Praise be to Allāh, the Lord of all the Worlds,"
+     ]
+    },
+    {
+     "id": "21",
+     "n": 21,
+     "s": "عَدَدَ خَلْقِهِ، وَرِضَى نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ.",
+     "t": [
+      "to the number of His Creation, to the extent of His Pleasure, to the weight of His Throne, and the ink that it would take to write His Words."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jawami",
+   "title": "جوامع الدعاء",
+   "titleEn": "Comprehensive supplication",
+   "bayts": [
+    {
+     "id": "22",
+     "n": 22,
+     "s": "اللَّهُمَّ إِنَّا نَسْأَلُكَ زِيَادَةً فِي الدِّينِ، وَبَرَكَةً فِي الْعُمْرِ، وَصِحَّةً فِي الْجَسَدِ،",
+     "t": [
+      "O Allāh! We ask You: increase (us) in (our) religion, prosperity in life, a healthy body,"
+     ]
+    },
+    {
+     "id": "23",
+     "n": 23,
+     "s": "وَسِعَةً فِي الرِّزْقِ، وَتَوْبَةً قَبْلَ الْمَوْتِ، وَشَهَادَةً عِنْدَ الْمَوْتِ، وَمَغْفِرَةً بَعْدَ الْمَوْتِ،",
+     "t": [
+      "abundant sustenance, repentance before death, martyrdom at death, forgiveness after death,"
+     ]
+    },
+    {
+     "id": "24",
+     "n": 24,
+     "s": "وَعَفْوًا عِنْدَ الْحِسَابِ، وَأَمَانًا مِنَ الْعَذَابِ، وَنَصِيبًا مِنَ الْجَنَّةِ،",
+     "t": [
+      "pardon at the Reckoning, safety from torture (in Hellfire), a share of Paradise,"
+     ]
+    },
+    {
+     "id": "25",
+     "n": 25,
+     "s": "وَارْزُقْنَا النَّظَرَ إِلَى وَجْهِكَ الْكَرِيمِ،",
+     "t": [
+      "and grant us to look at Your Holy Face,"
+     ]
+    },
+    {
+     "id": "26",
+     "n": 26,
+     "s": "وَصَلَّى اللَّهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَآلِهِ وَصَحْبِهِ وَسَلَّمَ،",
+     "t": [
+      "and may the Blessings and Peace of Allāh be upon Muḥammad, his family and his Companions,"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "khatm",
+   "title": "الختام والاستغفار",
+   "titleEn": "The closing and seeking forgiveness",
+   "bayts": [
+    {
+     "id": "27",
+     "n": 27,
+     "s": "سُبْحَانَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُونَ،",
+     "t": [
+      "Glory be to your Lord; the Lord of Honour and Power Who is far superior than what they attribute to Him;"
+     ]
+    },
+    {
+     "id": "28",
+     "n": 28,
+     "s": "وَسَلَامٌ عَلَى الْمُرْسَلِينَ،",
+     "t": [
+      "And Peace be on the Messengers;"
+     ]
+    },
+    {
+     "id": "29",
+     "n": 29,
+     "s": "وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ،",
+     "t": [
+      "And Praise be to Allāh, the Lord and Cherisher of the Worlds. [Sūrah Al-Ṣāffāt (37), Verses 180-182]"
+     ]
+    },
+    {
+     "id": "30",
+     "n": 30,
+     "s": "عَدَدَ خَلْقِهِ وَرِضَى نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ.",
+     "t": [
+      "To the number of His Creation, to the extent of His Pleasure, to the weight of His Throne, and the ink that it would take to write His Words."
+     ]
+    },
+    {
+     "id": "31",
+     "n": 31,
+     "s": "أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الرَّحْمَنُ الرَّحِيمُ الْحَيُّ الْقَيُّومُ الَّذِي لَا يَمُوتُ وَأَتُوبُ إِلَيْهِ، رَبِّ اغْفِرْ لِي.",
+     "t": [
+      "I seek forgiveness from Allāh; there is no god but Him, the Most Compassionate, the Most Merciful, the Ever-Living, the Self-Subsisting, Who never dies; I repent to Him, O Lord forgive me."
+     ],
+     "c": 27
+    },
+    {
+     "id": "32",
+     "n": 32,
+     "s": "أَسْتَغْفِرُ اللَّهَ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ.",
+     "t": [
+      "I ask Allāh’s forgiveness for all believing men and women."
+     ],
+     "c": 27
+    }
+   ]
+  }
+ ]
+}
