@@ -140,7 +140,7 @@
   /* ---- التمهيد: قراءة ثلاثة أبيات قادمة ثلاث مرات يوميًا ليألفها القلب قبل حفظها (ما عدا الأذكار) ---- */
   const PREVIEW_READS = 3;
   /* كم يُعاين من القادم لكل قصيدة أو أذكار: الافتراضي ثلاثة أبيات (وذكر واحد للأذكار)، ويُضبط من شاشة التمهيد */
-  const previewMax = (pid) => (metas[pid] && metas[pid].type === 'dhikr' ? 5 : 10);
+  const previewMax = () => 5;
   const previewCountOf = (pid) => { const v = state.poems[pid] && state.poems[pid].previewCount; return Math.min(previewMax(pid), Math.max(1, v || (metas[pid] && metas[pid].type === 'dhikr' ? 1 : 3))); };
   function setPreviewCount(pid, v) { ps(pid).previewCount = Math.min(previewMax(pid), Math.max(1, v)); save(); }
   /* الأبيات القادمة بترتيب الحفظ: من موضع الحفظ الحالي، وتتابع في الفصول التالية المفتوحة إن قصر الفصل؛ تتخطى الفصول المعلّقة */
