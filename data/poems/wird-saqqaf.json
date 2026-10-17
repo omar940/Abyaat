@@ -1,0 +1,350 @@
+{
+ "id": "wird-saqqaf",
+ "type": "wird",
+ "section": "awraad",
+ "title": "ورد السقاف",
+ "titleEn": "Wird al-Saqqāf",
+ "fullTitle": "ورد الإمام أبي بكر بن عبد الرحمن السقاف",
+ "fullTitleEn": "Wird of Imām Abū Bakr b. ʿAbd al-Raḥmān al-Saqqāf",
+ "author": "الإمام أبو بكر بن عبد الرحمن السقاف",
+ "authorEn": "Imām Abū Bakr b. ʿAbd al-Raḥmān al-Saqqāf",
+ "source": "مأخوذ من «الخلاصة» للحبيب عمر بن حفيظ، والترجمة الإنجليزية من طبعة أشنتار (٢٠١٣)",
+ "sourceEn": "From “Al-Khulāṣah – The Cream of Remembrance” (Ashnataar Publications, 2nd ed. 2013), Arabic and English translation; minor corrections to the translation where it departs from the Arabic.",
+ "chapters": [
+  {
+   "id": "fortress",
+   "title": "التحصن بدرب الله",
+   "titleEn": "Fortifying oneself with the fortification of Allāh",
+   "bayts": [
+    {
+     "id": "1",
+     "n": 1,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ؛ اللَّهُمَّ إِنِّي احْتَطْتُ بِدَرْبِ اللَّهِ،",
+     "t": [
+      "In the Name of Allāh, the Most Compassionate, the Most Merciful. O Allāh! I have protected myself with the fortification of Allāh:"
+     ]
+    },
+    {
+     "id": "2",
+     "n": 2,
+     "s": "طُولُهُ مَا شَاءَ اللَّهُ، قُفْلُهُ لَا إِلَهَ إِلَّا اللَّهُ،",
+     "t": [
+      "its length is māshā’Allāh (what Allāh has Willed); its lock is lā ilāha illallāh (there is no god but Allāh);"
+     ]
+    },
+    {
+     "id": "3",
+     "n": 3,
+     "s": "بَابُهُ مُحَمَّدٌ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ،",
+     "t": [
+      "its door is Muḥammadur rasūlullāh (Muḥammad is the Messenger of Allāh), may the Blessings and Peace of Allāh be upon him and his family;"
+     ]
+    },
+    {
+     "id": "4",
+     "n": 4,
+     "s": "سَقْفُهُ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ؛ أَحَاطَ بِنَا مِنْ",
+     "t": [
+      "its roof is lā ḥawla wa lā quwwata illā billāhil ʿaliyyil ʿaẓīm (there is no Power nor Strength except with Allāh, the Most Exalted, the Mighty); embrace us with,"
+     ]
+    },
+    {
+     "id": "5",
+     "n": 5,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+     "t": [
+      "In the Name of Allāh, Most Compassionate, Most Merciful."
+     ]
+    },
+    {
+     "id": "6",
+     "n": 6,
+     "s": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+     "t": [
+      "All Praise be to Allāh, Lord of the Universe;"
+     ]
+    },
+    {
+     "id": "7",
+     "n": 7,
+     "s": "الرَّحْمَنِ الرَّحِيمِ",
+     "t": [
+      "Most Compassionate, Most Merciful;"
+     ]
+    },
+    {
+     "id": "8",
+     "n": 8,
+     "s": "مَالِكِ يَوْمِ الدِّينِ",
+     "t": [
+      "Lord of the Day of Judgement."
+     ]
+    },
+    {
+     "id": "9",
+     "n": 9,
+     "s": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+     "t": [
+      "You alone do we worship, and to You alone do we turn for help."
+     ]
+    },
+    {
+     "id": "10",
+     "n": 10,
+     "s": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+     "t": [
+      "Guide us to the Straight Way."
+     ]
+    },
+    {
+     "id": "11",
+     "n": 11,
+     "s": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+     "t": [
+      "The Way of those on whom You have bestowed Your Grace; not the way of those who have earned Your anger, nor of those who went astray. [Sūrah al-Fātiḥah (1), Verses 1-7]"
+     ]
+    },
+    {
+     "id": "12",
+     "n": 12,
+     "s": "سُورٌ سُورٌ سُورٌ،",
+     "t": [
+      "With His Wall (of Protection), with His Wall (of Protection), with His Wall (of Protection)."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kursi",
+   "title": "آية الكرسي",
+   "titleEn": "Āyat al-Kursī (2:255)",
+   "bayts": [
+    {
+     "id": "13",
+     "n": 13,
+     "s": "اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",
+     "t": [
+      "Allāh! There is no deity but Him; the Ever-Living, the Self Subsisting, the Eternal One."
+     ]
+    },
+    {
+     "id": "14",
+     "n": 14,
+     "s": "لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ",
+     "t": [
+      "Neither slumber nor sleep can overtake Him."
+     ]
+    },
+    {
+     "id": "15",
+     "n": 15,
+     "s": "لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ",
+     "t": [
+      "To Him belongs whatsoever is in the Heavens and whatsoever is on the earth."
+     ]
+    },
+    {
+     "id": "16",
+     "n": 16,
+     "s": "مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ",
+     "t": [
+      "Who is there that can intercede in His Presence except by His permission?"
+     ]
+    },
+    {
+     "id": "17",
+     "n": 17,
+     "s": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",
+     "t": [
+      "He Knows what will happen to them (His creatures) in this world and what will happen to them in the Hereafter;"
+     ]
+    },
+    {
+     "id": "18",
+     "n": 18,
+     "s": "وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ",
+     "t": [
+      "nor shall they comprehend anything at all of His Knowledge except as He Wills."
+     ]
+    },
+    {
+     "id": "19",
+     "n": 19,
+     "s": "وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ",
+     "t": [
+      "His Throne extends over the Heavens and the earth,"
+     ]
+    },
+    {
+     "id": "20",
+     "n": 20,
+     "s": "وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ",
+     "t": [
+      "and guarding and preserving it, does not exhaust Him, for He is the Exalted, the All-Mighty. [Sūrah Al-Baqarah (2), Verse 255]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "protection",
+   "title": "الحماية من كل شر",
+   "titleEn": "Protection from every harm",
+   "bayts": [
+    {
+     "id": "21",
+     "n": 21,
+     "s": "بِنَا اسْتَدَارَتْ كَمَا اسْتَدَارَتِ الْمَلَائِكَةُ بِمَدِينَةِ الرَّسُولِ،",
+     "t": [
+      "This verse will protect us the way the Angels have protected the Prophetic city,"
+     ]
+    },
+    {
+     "id": "22",
+     "n": 22,
+     "s": "بِلَا خَنْدَقٍ وَلَا سُورٍ، مِنْ كُلِّ قَدَرٍ مَقْدُورٍ، وَحَذَرٍ مَحْذُورٍ، وَمِنْ جَمِيعِ الشُّرُورِ،",
+     "t": [
+      "with no trench or walls, from every Decreed Ordainment and from every warned-about threat, and from all evils;"
+     ]
+    },
+    {
+     "id": "23",
+     "n": 23,
+     "s": "تَتَرَّسْنَا بِاللَّهِ",
+     "t": [
+      "Allāh is our shield."
+     ],
+     "c": 3
+    },
+    {
+     "id": "24",
+     "n": 24,
+     "s": "مِنْ عَدُوِّنَا وَعَدُوِّ اللَّهِ، مِنْ سَاقِ عَرْشِ اللَّهِ، إِلَى قَاعِ أَرْضِ اللَّهِ،",
+     "t": [
+      "Against our enemy and the enemy of Allāh, from the Pillar of Allāh’s Throne to the depths of Allāh’s earth;"
+     ]
+    },
+    {
+     "id": "25",
+     "n": 25,
+     "s": "بِمِائَةِ أَلْفِ أَلْفِ أَلْفِ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ؛",
+     "t": [
+      "with a hundred thousand thousand thousand of: There is no Power nor Strength except with Allāh, the Exalted, the Mighty."
+     ]
+    },
+    {
+     "id": "26",
+     "n": 26,
+     "s": "صِنْعَتُهُ لَا تَنْقَطِعُ بِمِائَةِ أَلْفِ أَلْفِ أَلْفِ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ،",
+     "t": [
+      "Its composition will never break with a hundred thousand thousand thousand of: There is no Power nor Strength except with Allāh, the Exalted, the Mighty."
+     ]
+    },
+    {
+     "id": "27",
+     "n": 27,
+     "s": "عَزِيمَتُهُ لَا تَنْشَقُّ بِمِائَةِ أَلْفِ أَلْفِ أَلْفِ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ.",
+     "t": [
+      "Its fortification will never shatter with a hundred thousand thousand thousand of: There is no Power nor Strength except with Allāh, the Exalted, the Mighty."
+     ]
+    },
+    {
+     "id": "28",
+     "n": 28,
+     "s": "اللَّهُمَّ إِنْ أَحَدٌ أَرَادَنِي بِسُوءٍ مِنَ الْجِنِّ وَالْإِنْسِ وَالْوُحُوشِ وَغَيْرِهِمْ مِنْ سَائِرِ الْمَخْلُوقَاتِ؛",
+     "t": [
+      "O Allāh! If someone from the jinn, humans, beasts or anything else from the rest of creation,"
+     ]
+    },
+    {
+     "id": "29",
+     "n": 29,
+     "s": "مِنْ بَشَرٍ أَوْ شَيْطَانٍ أَوْ سُلْطَانٍ أَوْ وَسْوَاسٍ، فَارْدُدْ نَظَرَهُمْ فِي انْتِكَاسٍ،",
+     "t": [
+      "of humankind, the devil, a ruler or evil whisperer, plots to cause me any harm, then cause their (evil) gazes to relapse,"
+     ]
+    },
+    {
+     "id": "30",
+     "n": 30,
+     "s": "وَقُلُوبَهُمْ فِي وَسْوَاسٍ، وَأَيْدِيَهِمْ فِي إِفْلَاسٍ، وَأَوْبِقْهُمْ مِنَ الرِّجْلِ إِلَى الرَّأْسِ،",
+     "t": [
+      "and instill trouble in their hearts, and make them bankrupt, and disable them from head to toe,"
+     ]
+    },
+    {
+     "id": "31",
+     "n": 31,
+     "s": "لَا فِي سَهْلٍ يَقْطَعُ، وَلَا فِي جَبَلٍ يَطْلُعُ، بِمِائَةِ أَلْفِ أَلْفِ أَلْفِ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ،",
+     "t": [
+      "so that they can neither cross a plane, nor climb a mountain, with a hundred thousand thousand thousand of: There is no Power nor Strength except with Allāh, the Exalted, the Mighty."
+     ]
+    },
+    {
+     "id": "32",
+     "n": 32,
+     "s": "وَصَلَّى اللَّهُ عَلَى سَيِّدِنَا مُحَمَّدٍ، وَعَلَى آلِهِ وَسَلَّمَ.",
+     "t": [
+      "And may the Blessings and Peace of Allāh be upon our master Muḥammad, and upon his family."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "closing",
+   "title": "الختام والاستغفار",
+   "titleEn": "The closing and seeking forgiveness",
+   "bayts": [
+    {
+     "id": "33",
+     "n": 33,
+     "s": "سُبْحَانَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُونَ",
+     "t": [
+      "Glory be to your Lord; the Lord of Honour and Power Who is far superior than what they attribute to Him;"
+     ]
+    },
+    {
+     "id": "34",
+     "n": 34,
+     "s": "وَسَلَامٌ عَلَى الْمُرْسَلِينَ",
+     "t": [
+      "And Peace be on the Messengers;"
+     ]
+    },
+    {
+     "id": "35",
+     "n": 35,
+     "s": "وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+     "t": [
+      "And Praise be to Allāh, the Lord and Cherisher of the Worlds. [Sūrah Al-Ṣāffāt (37), Verses 180-182]"
+     ]
+    },
+    {
+     "id": "36",
+     "n": 36,
+     "s": "فِي كُلِّ لَحْظَةٍ أَبَدًا، عَدَدَ خَلْقِهِ، وَرِضَى نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ.",
+     "t": [
+      "At every moment forever, to the number of His Creation, to the extent of His Pleasure, to the weight of His Throne, and the ink that it would take to write His Words."
+     ]
+    },
+    {
+     "id": "37",
+     "n": 37,
+     "s": "أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الرَّحْمَنُ الرَّحِيمُ الْحَيُّ الْقَيُّومُ الَّذِي لَا يَمُوتُ وَأَتُوبُ إِلَيْهِ، رَبِّ اغْفِرْ لِي.",
+     "t": [
+      "I seek forgiveness from Allāh; there is no god but Him, the Most Compassionate, the Most Merciful, the Ever-Living, the Self-Subsisting, Who never dies; I repent to Him, O Lord forgive me."
+     ],
+     "c": 27
+    },
+    {
+     "id": "38",
+     "n": 38,
+     "s": "أَسْتَغْفِرُ اللَّهَ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ.",
+     "t": [
+      "I ask Allāh’s Forgiveness for all believing men and women."
+     ],
+     "c": 27
+    }
+   ]
+  }
+ ]
+}

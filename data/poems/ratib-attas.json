@@ -1,0 +1,846 @@
+{
+ "id": "ratib-attas",
+ "type": "wird",
+ "section": "awraad",
+ "title": "راتب العطاس",
+ "titleEn": "Rātib al-ʿAṭṭās",
+ "fullTitle": "راتب الإمام عمر بن عبد الرحمن العطاس",
+ "fullTitleEn": "Rātib of Imām ʿUmar b. ʿAbd al-Raḥmān al-ʿAṭṭās",
+ "author": "الإمام عمر بن عبد الرحمن العطاس",
+ "authorEn": "Imām ʿUmar b. ʿAbd al-Raḥmān al-ʿAṭṭās",
+ "source": "مأخوذ من «الخلاصة» للحبيب عمر بن حفيظ، والترجمة الإنجليزية من طبعة أشنتار (٢٠١٣)",
+ "sourceEn": "From “Al-Khulāṣah – The Cream of Remembrance” (Ashnataar Publications, 2nd ed. 2013), Arabic and English translation; minor corrections to the translation where it departs from the Arabic.",
+ "chapters": [
+  {
+   "id": "fatiha",
+   "title": "الفاتحة والاستعاذة",
+   "titleEn": "The Fātiḥah and the seeking of refuge",
+   "bayts": [
+    {
+     "id": "1",
+     "n": 1,
+     "s": "الْفَاتِحَةُ إِلَى حَضْرَةِ النَّبِيِّ سَيِّدِنَا مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ،",
+     "t": [
+      "Al-Fātiḥah to the holy presence of our master, beloved Muḥammad, may Allāh bestow Blessings and Peace upon him, his family and Companions."
+     ]
+    },
+    {
+     "id": "2",
+     "n": 2,
+     "s": "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ.",
+     "t": [
+      "I seek refuge in Allāh from the accursed Satan."
+     ]
+    },
+    {
+     "id": "3",
+     "n": 3,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+     "t": [
+      "In the Name of Allāh, the Most Compassionate, the Most Merciful."
+     ]
+    },
+    {
+     "id": "4",
+     "n": 4,
+     "s": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+     "t": [
+      "All Praise be to Allāh, Lord of the Universe;"
+     ]
+    },
+    {
+     "id": "5",
+     "n": 5,
+     "s": "الرَّحْمَنِ الرَّحِيمِ",
+     "t": [
+      "Most Compassionate, Most Merciful;"
+     ]
+    },
+    {
+     "id": "6",
+     "n": 6,
+     "s": "مَالِكِ يَوْمِ الدِّينِ",
+     "t": [
+      "Lord of the Day of Judgement."
+     ]
+    },
+    {
+     "id": "7",
+     "n": 7,
+     "s": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+     "t": [
+      "You alone do we worship, and to You alone do we turn for help."
+     ]
+    },
+    {
+     "id": "8",
+     "n": 8,
+     "s": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+     "t": [
+      "Guide us to the Straight Way."
+     ]
+    },
+    {
+     "id": "9",
+     "n": 9,
+     "s": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+     "t": [
+      "The Way of those on whom You have bestowed Your Grace; not the way of those who have earned Your anger, nor of those who went astray. Āmīn [Sūrah Al-Fātiḥah (1), Verses 1-7]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hashr",
+   "title": "خواتيم سورة الحشر",
+   "titleEn": "The end of al-Ḥashr (59:21–24)",
+   "bayts": [
+    {
+     "id": "10",
+     "n": 10,
+     "s": "أَعُوذُ بِاللَّهِ السَّمِيعِ الْعَلِيمِ مِنَ الشَّيْطَانِ الرَّجِيمِ.",
+     "t": [
+      "I seek refuge in Allāh, the All-Hearing and All-Knowing, from the accursed Satan."
+     ],
+     "c": 3
+    },
+    {
+     "id": "11",
+     "n": 11,
+     "s": "لَوْ أَنْزَلْنَا هَذَا الْقُرْآنَ عَلَى جَبَلٍ لَرَأَيْتَهُ خَاشِعًا مُتَصَدِّعًا مِنْ خَشْيَةِ اللَّهِ",
+     "t": [
+      "Had We sent down this Qur’ān on a mountain, you would have certainly seen it humbling itself and splitting asunder for its fear of Allāh."
+     ]
+    },
+    {
+     "id": "12",
+     "n": 12,
+     "s": "وَتِلْكَ الْأَمْثَالُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ",
+     "t": [
+      "We relate these parables to men so that they may reflect."
+     ]
+    },
+    {
+     "id": "13",
+     "n": 13,
+     "s": "هُوَ اللَّهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ هُوَ الرَّحْمَنُ الرَّحِيمُ",
+     "t": [
+      "He is Allāh, there is no other god, but Him. The All-Knower of the Unseen and the seen. He is the Most Compassionate, Most Merciful."
+     ]
+    },
+    {
+     "id": "14",
+     "n": 14,
+     "s": "هُوَ اللَّهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ سُبْحَانَ اللَّهِ عَمَّا يُشْرِكُونَ",
+     "t": [
+      "He is Allāh, there is no god, but Him; the King, the Most Pure, the Source of Peace (and Perfection), the Giver of Security, the Protector, the All-Mighty, the Compeller, the Supremely Great; Glory be to Allāh. (High is He) above all that they associate as partners with Him."
+     ]
+    },
+    {
+     "id": "15",
+     "n": 15,
+     "s": "هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ لَهُ الْأَسْمَاءُ الْحُسْنَى يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ وَهُوَ الْعَزِيزُ الْحَكِيمُ",
+     "t": [
+      "He is Allāh, the Creator, the Maker, the Fashioner. To Him belongs the Most Beautiful Names. Everything in the Heavens and the earth glorify Him. And He is the All-Mighty, the All-Wise. [Sūrah Al-Ḥashr (59), Verses 21-24]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "adhkar1",
+   "title": "الأذكار (١)",
+   "titleEn": "The adhkār (1)",
+   "bayts": [
+    {
+     "id": "16",
+     "n": 16,
+     "s": "أَعُوذُ بِاللَّهِ السَّمِيعِ الْعَلِيمِ مِنَ الشَّيْطَانِ الرَّجِيمِ.",
+     "t": [
+      "I seek refuge in Allāh, the All-Hearing, the All-Knowing, from the accursed Satan."
+     ],
+     "c": 3
+    },
+    {
+     "id": "17",
+     "n": 17,
+     "s": "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ.",
+     "t": [
+      "I seek refuge in the Perfect Words of Allāh from the evil of that which He created."
+     ],
+     "c": 3
+    },
+    {
+     "id": "18",
+     "n": 18,
+     "s": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ.",
+     "t": [
+      "In the Name of Allāh, with Whose Name nothing can cause harm on earth and in the Heaven, and He is the All-Hearing and All-Knowing."
+     ],
+     "c": 3
+    },
+    {
+     "id": "19",
+     "n": 19,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ.",
+     "t": [
+      "In the Name of Allāh, Most Compassionate, Most Merciful; and there is no Power nor Strength except with Allāh, the Exalted, the Mighty."
+     ],
+     "c": 10
+    }
+   ]
+  },
+  {
+   "id": "adhkar2",
+   "title": "الأذكار (٢)",
+   "titleEn": "The adhkār (2)",
+   "bayts": [
+    {
+     "id": "20",
+     "n": 20,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ.",
+     "t": [
+      "In the Name of Allāh, Most Compassionate, Most Merciful."
+     ],
+     "c": 3
+    },
+    {
+     "id": "21",
+     "n": 21,
+     "s": "بِسْمِ اللَّهِ تَحَصَّنَّا بِاللَّهِ، بِسْمِ اللَّهِ تَوَكَّلْنَا بِاللَّهِ.",
+     "t": [
+      "In the Name of Allāh, we fortify ourselves with Allāh; In the Name of Allāh, in Allāh do we put our trust."
+     ],
+     "c": 3
+    },
+    {
+     "id": "22",
+     "n": 22,
+     "s": "بِسْمِ اللَّهِ آمَنَّا بِاللَّهِ، وَمَنْ يُؤْمِنْ بِاللَّهِ لَا خَوْفٌ عَلَيْهِ.",
+     "t": [
+      "In the Name of Allāh; and we believe in Allāh; And whoever believes in Allāh shall have no fear."
+     ],
+     "c": 3
+    },
+    {
+     "id": "23",
+     "n": 23,
+     "s": "سُبْحَانَ اللَّهِ عَزَّ اللَّهُ، سُبْحَانَ اللَّهِ جَلَّ اللَّهُ.",
+     "t": [
+      "Glory be to Allāh, to Him belongs all Might; Glory be to Allāh, to Him belongs all Majesty."
+     ],
+     "c": 3
+    },
+    {
+     "id": "24",
+     "n": 24,
+     "s": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ.",
+     "t": [
+      "Glory be to Allāh, and Praise be to Him; Glory be to Allāh, the Magnificent."
+     ],
+     "c": 3
+    },
+    {
+     "id": "25",
+     "n": 25,
+     "s": "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ.",
+     "t": [
+      "Glory be to Allāh, Praise be to Allāh, there is no god, but Allāh, and Allāh is Most Great."
+     ],
+     "c": 4
+    },
+    {
+     "id": "26",
+     "n": 26,
+     "s": "يَا لَطِيفًا بِخَلْقِهِ، يَا عَلِيمًا بِخَلْقِهِ، يَا خَبِيرًا بِخَلْقِهِ؛ اُلْطُفْ بِنَا يَا لَطِيفُ يَا عَلِيمُ يَا خَبِيرُ.",
+     "t": [
+      "O the One Who is Most Kind to all His creatures, O the One Who is Omniscient of all His creatures, O the One who is Most Informed about all His creatures, be kind to us, O the Most Kind, O the All-Knowing, O the Most Informed."
+     ],
+     "c": 3
+    },
+    {
+     "id": "27",
+     "n": 27,
+     "s": "يَا لَطِيفًا لَمْ يَزَلْ، اُلْطُفْ بِنَا فِيمَا نَزَلَ، إِنَّكَ لَطِيفٌ لَمْ تَزَلْ، اُلْطُفْ بِنَا وَالْمُسْلِمِينَ.",
+     "t": [
+      "O the One Who is Most Kind, Who never ceases (to be kind), be kind to us in whatever befalls us; You are indeed the Most Kind, (The One) Who never ceases (to be kind); be kind to us and to all Muslims."
+     ],
+     "c": 3
+    },
+    {
+     "id": "28",
+     "n": 28,
+     "s": "لَا إِلَهَ إِلَّا اللَّهُ.",
+     "t": [
+      "There is no god, but Allāh."
+     ],
+     "c": 40
+    }
+   ]
+  },
+  {
+   "id": "adhkar3",
+   "title": "الصلاة على النبي والاستغفار",
+   "titleEn": "Prayers upon the Prophet and seeking forgiveness",
+   "bayts": [
+    {
+     "id": "29",
+     "n": 29,
+     "s": "مُحَمَّدٌ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ.",
+     "t": [
+      "Muḥammad, may the Blessings and Peace of Allāh be upon him and his family, is the Messenger of Allāh."
+     ]
+    },
+    {
+     "id": "30",
+     "n": 30,
+     "s": "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ.",
+     "t": [
+      "Allāh is sufficient for us, and the most Excellent Disposer (of affairs)."
+     ],
+     "c": 7
+    },
+    {
+     "id": "31",
+     "n": 31,
+     "s": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، اللَّهُمَّ صَلِّ عَلَيْهِ وَسَلِّمْ.",
+     "t": [
+      "O Allāh! Bestow Blessings upon Muḥammad, O Allāh! Bestow Blessings and Peace upon him."
+     ],
+     "c": 10
+    },
+    {
+     "id": "32",
+     "n": 32,
+     "s": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ يَا رَبِّ صَلِّ عَلَيْهِ وَسَلِّمْ، أَسْتَغْفِرُ اللَّهَ.",
+     "t": [
+      "O Allāh! Bestow Blessings upon Muḥammad, O my Lord! Bestow Blessings and Peace upon him. I seek forgiveness from Allāh."
+     ],
+     "c": 11
+    },
+    {
+     "id": "33",
+     "n": 33,
+     "s": "تَائِبُونَ إِلَى اللَّهِ.",
+     "t": [
+      "We repent to Allāh."
+     ],
+     "c": 3
+    },
+    {
+     "id": "34",
+     "n": 34,
+     "s": "يَا اللَّهُ بِهَا، يَا اللَّهُ بِهَا، يَا اللَّهُ بِحُسْنِ الْخَاتِمَةِ.",
+     "t": [
+      "O Allāh! Through it (our good deeds); O Allāh! Through it (our good deeds); O Allāh! Through it (our good deeds) grant us a good ending."
+     ],
+     "c": 3
+    }
+   ]
+  },
+  {
+   "id": "baqara",
+   "title": "خاتمة سورة البقرة",
+   "titleEn": "The end of al-Baqarah (2:285–286)",
+   "bayts": [
+    {
+     "id": "35",
+     "n": 35,
+     "s": "غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ",
+     "t": [
+      "We ask Your forgiveness, our Lord, and to You will we all return."
+     ]
+    },
+    {
+     "id": "36",
+     "n": 36,
+     "s": "لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا",
+     "t": [
+      "Allāh will not burden any soul with more than what it can bear."
+     ]
+    },
+    {
+     "id": "37",
+     "n": 37,
+     "s": "لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ",
+     "t": [
+      "It shall be compensated for whatever good it has done, and it will be punished for whatever evil it has done."
+     ]
+    },
+    {
+     "id": "38",
+     "n": 38,
+     "s": "رَبَّنَا لَا تُؤَاخِذْنَا إِنْ نَسِينَا أَوْ أَخْطَأْنَا",
+     "t": [
+      "(Pray): “Our Lord! Do not take us to task if we forget or make a mistake."
+     ]
+    },
+    {
+     "id": "39",
+     "n": 39,
+     "s": "رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِنْ قَبْلِنَا",
+     "t": [
+      "Our Lord, do not place on us a burden like that which You have placed on those before us!"
+     ]
+    },
+    {
+     "id": "40",
+     "n": 40,
+     "s": "رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ",
+     "t": [
+      "Our Lord, do not place on us a burden that we do not have the strength to bear!"
+     ]
+    },
+    {
+     "id": "41",
+     "n": 41,
+     "s": "وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا أَنْتَ مَوْلَانَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
+     "t": [
+      "Pardon us, and grant us forgiveness; and have Mercy on us. You are our Protector; so grant us victory over the disbelieving people.” [Sūrah Al-Baqarah (2), Verses 285-286]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ded1",
+   "title": "الفاتحة إلى روح النبي ﷺ وآله",
+   "titleEn": "Al-Fātiḥah for the soul of the Prophet ﷺ and his family",
+   "bayts": [
+    {
+     "id": "42",
+     "n": 42,
+     "s": "الْفَاتِحَةَ إِلَى رُوحِ سَيِّدِنَا وَحَبِيبِنَا وَشَفِيعِنَا رَسُولِ اللَّهِ، مُحَمَّدِ بْنِ عَبْدِ اللَّهِ،",
+     "t": [
+      "Al-Fātiḥah on the soul of our master, our beloved, our intercessor, the Messenger of Allāh, Muḥammad bin ʿAbdillāh,"
+     ]
+    },
+    {
+     "id": "43",
+     "n": 43,
+     "s": "وَآلِهِ وَأَصْحَابِهِ وَأَزْوَاجِهِ وَذُرِّيَّتِهِ،",
+     "t": [
+      "his family, his Companions, his wives, his relatives and his family household,"
+     ]
+    },
+    {
+     "id": "44",
+     "n": 44,
+     "s": "أَنَّ اللَّهَ يُعْلِي دَرَجَاتِهِمْ فِي الْجَنَّةِ وَيَنْفَعُنَا بِأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُومِهِمْ فِي الدِّينِ وَالدُّنْيَا وَالْآخِرَةِ",
+     "t": [
+      "that Allāh may elevate their ranks in Paradise and benefit us with their secrets, illuminations and knowledge; and that He showers upon us of their blessings, (spiritual) mysteries, knowledge, and gifts in (our) religion, in this world and in the Hereafter;"
+     ]
+    },
+    {
+     "id": "45",
+     "n": 45,
+     "s": "وَيَجْعَلُنَا مِنْ حِزْبِهِمْ، وَيَرْزُقُنَا مَحَبَّتَهُمْ، وَيَتَوَفَّانَا عَلَى مِلَّتِهِمْ،",
+     "t": [
+      "and make us part of their company; and grant us their love; make us die with their faith,"
+     ]
+    },
+    {
+     "id": "46",
+     "n": 46,
+     "s": "وَيَحْشُرُنَا فِي زُمْرَتِهِمْ فِي خَيْرٍ وَلُطْفٍ وَعَافِيَةٍ. [بِسِرِّ الْفَاتِحَةِ]",
+     "t": [
+      "and resurrect us in their company, with goodness, kindness and vitality. [al-Fātiḥah]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ded2",
+   "title": "الفاتحة إلى المهاجر والفقيه المقدم",
+   "titleEn": "Al-Fātiḥah for al-Muhājir and al-Faqīh al-Muqaddam",
+   "bayts": [
+    {
+     "id": "47",
+     "n": 47,
+     "s": "الْفَاتِحَةَ إِلَى رُوحِ سَيِّدِنَا الْمُهَاجِرِ إِلَى اللَّهِ أَحْمَدَ بْنِ عِيسَى،",
+     "t": [
+      "Al-Fātiḥah upon the soul of our master Al Muhājir Aḥmad bin ʿĪsā who has returned to Allāh,"
+     ]
+    },
+    {
+     "id": "48",
+     "n": 48,
+     "s": "وَإِلَى رُوحِ سَيِّدِنَا الْأُسْتَاذِ الْأَعْظَمِ الْفَقِيهِ الْمُقَدَّمِ مُحَمَّدِ ابْنِ عَلِيٍّ بَاعَلَوِي وَأُصُولِهِمَا وَفُرُوعِهِمْ،",
+     "t": [
+      "and on the soul of our master, our great teacher, the Jurist Al Muqaddam Muḥammad bin ʿAlī Bā ʿAlawī and his genealogical roots (ancestors) and their branches (descendants),"
+     ]
+    },
+    {
+     "id": "49",
+     "n": 49,
+     "s": "وَذَوِي الْحُقُوقِ عَلَيْهِمْ أَجْمَعِينَ أَنَّ اللَّهَ يَغْفِرُ لَهُمْ وَيَرْحَمُهُمْ وَيُعْلِي دَرَجَاتِهِمْ فِي الْجَنَّةِ",
+     "t": [
+      "and all those who have rights over them, that Allāh may forgive them and show Mercy on them; elevate their ranks in Paradise"
+     ]
+    },
+    {
+     "id": "50",
+     "n": 50,
+     "s": "وَيَنْفَعُنَا بِأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُومِهِمْ فِي الدِّينِ وَالدُّنْيَا وَالْآخِرَةِ. [الْفَاتِحَةُ]",
+     "t": [
+      "and make us benefit from their secrets, their luminescences and their knowledge in our religious and worldly affairs and in the Hereafter. [al-Fātiḥah]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ded3",
+   "title": "الفاتحة إلى صاحب الراتب وآل العطاس",
+   "titleEn": "Al-Fātiḥah for the author of the Rātib and the ʿAṭṭās family",
+   "bayts": [
+    {
+     "id": "51",
+     "n": 51,
+     "s": "الْفَاتِحَةَ إِلَى رُوحِ سَيِّدِنَا وَحَبِيبِنَا وَبَرَكَتِنَا صَاحِبِ الرَّاتِبِ قُطْبِ الْأَنْفَاسِ الْحَبِيبِ عُمَرَ بْنِ عَبْدِ الرَّحْمَنِ الْعَطَّاسِ،",
+     "t": [
+      "Al-Fātiḥah on the soul of our master, our beloved, our blessed author of the Rātib, the Pole of the spiritual breaths, al-Ḥabīb ʿUmar bin ʿAbd al-Raḥmān al-ʿAṭṭās;"
+     ]
+    },
+    {
+     "id": "52",
+     "n": 52,
+     "s": "وَإِلَى رُوحِ الشَّيْخِ عَلِيِّ بْنِ عَبْدِ اللَّهِ بَارَاسٍ،",
+     "t": [
+      "and upon the soul of the shaykh ʿAlī bin ʿAbd Allāh Bārās;"
+     ]
+    },
+    {
+     "id": "53",
+     "n": 53,
+     "s": "وَإِلَى رُوحِ الْحَبِيبِ عَبْدِ الرَّحْمَنِ بْنِ عَقِيلٍ الْعَطَّاسِ،",
+     "t": [
+      "and upon the soul of al-Ḥabīb ʿAbd al-Raḥmān bin ʿAqīl al-ʿAṭṭās;"
+     ]
+    },
+    {
+     "id": "54",
+     "n": 54,
+     "s": "وَإِلَى رُوحِ حُسَيْنِ بْنِ عُمَرَ الْعَطَّاسِ وَإِخْوَانِهِ،",
+     "t": [
+      "and upon the soul of Ḥusayn bin ʿUmar al-ʿAṭṭās and his brothers."
+     ]
+    },
+    {
+     "id": "55",
+     "n": 55,
+     "s": "ثُمَّ إِلَى رُوحِ عَقِيلٍ وَعَبْدِ اللَّهِ وَصَالِحِ بْنِ عَبْدِ الرَّحْمَنِ الْعَطَّاسِ،",
+     "t": [
+      "Then on the soul of ʿAqīl and ʿAbd Allāh and Ṣāliḥ bin ʿAbd al-Raḥmān al-ʿAṭṭās;"
+     ]
+    },
+    {
+     "id": "56",
+     "n": 56,
+     "s": "وَإِلَى رُوحِ الْحَبِيبِ عَلِيِّ بْنِ حَسَنِ الْعَطَّاسِ،",
+     "t": [
+      "and upon the soul of al-Ḥabīb ʿAlī bin Ḥasan al-ʿAṭṭās;"
+     ]
+    },
+    {
+     "id": "57",
+     "n": 57,
+     "s": "وَإِلَى رُوحِ الْحَبِيبِ أَحْمَدَ بْنِ حَسَنِ الْعَطَّاسِ وَأُصُولِهِمْ وَفُرُوعِهِمْ وَذَوِي الْحُقُوقِ عَلَيْهِمْ أَجْمَعِينَ",
+     "t": [
+      "and upon the soul of al-Ḥabīb Aḥmad bin Ḥasan al-ʿAṭṭās, and their forefathers and offspring, and upon all those who have rights over them;"
+     ]
+    },
+    {
+     "id": "58",
+     "n": 58,
+     "s": "أَنَّ اللَّهَ يَغْفِرُ لَهُمْ وَيَرْحَمُهُمْ وَيُعْلِي دَرَجَاتِهِمْ فِي الْجَنَّةِ وَيَنْفَعُنَا بِأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُومِهِمْ وَنَفَحَاتِهِمْ فِي الدِّينِ وَالدُّنْيَا وَالْآخِرَةِ. [الْفَاتِحَةُ]",
+     "t": [
+      "that Allāh forgive their sins, and have mercy upon them, and that He elevate their ranks in Paradise, and benefit us with their (spiritual) mysteries, illuminations, knowledge, and gifts in (our) religion, in this world and in the Hereafter. [al-Fātiḥah]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ded4",
+   "title": "الفاتحة إلى الأولياء وأموات المسلمين",
+   "titleEn": "Al-Fātiḥah for the saints and the deceased Muslims",
+   "bayts": [
+    {
+     "id": "59",
+     "n": 59,
+     "s": "الْفَاتِحَةَ إِلَى أَرْوَاحِ الْأَوْلِيَاءِ وَالشُّهَدَاءِ وَالصَّالِحِينَ وَالْأَئِمَّةِ الرَّاشِدِينَ،",
+     "t": [
+      "Al-Fātiḥah on the souls of the saints, the martyrs and the pious and the righteous imāms,"
+     ]
+    },
+    {
+     "id": "60",
+     "n": 60,
+     "s": "وَإِلَى أَرْوَاحِ وَالِدِينَا وَمَشَائِخِنَا وَذَوِي الْحُقُوقِ عَلَيْهِمْ أَجْمَعِينَ،",
+     "t": [
+      "and on the souls of our parents, our learned scholars, and on all those who have rights over them,"
+     ]
+    },
+    {
+     "id": "61",
+     "n": 61,
+     "s": "ثُمَّ إِلَى أَرْوَاحِ أَمْوَاتِ أَهْلِ هَذِهِ الْبَلْدَةِ مِنَ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ",
+     "t": [
+      "Then on the souls of the deceased of this country, of the Muslim men and Muslim women,"
+     ]
+    },
+    {
+     "id": "62",
+     "n": 62,
+     "s": "أَنَّ اللَّهَ يَغْفِرُ لَهُمْ وَيَرْحَمُهُمْ وَيُعْلِي دَرَجَاتِهِمْ فِي الْجَنَّةِ",
+     "t": [
+      "that Allāh may forgive them, have mercy on them and elevate their ranks in Paradise,"
+     ]
+    },
+    {
+     "id": "63",
+     "n": 63,
+     "s": "وَيَنْفَعُنَا بِأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُومِهِمْ فِي الدِّينِ وَالدُّنْيَا وَالْآخِرَةِ. [الْفَاتِحَةُ]",
+     "t": [
+      "and benefit us with their (spiritual) mysteries, knowledge, and gifts in (our) religion, in this world and in the Hereafter. [al-Fātiḥah]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ded5",
+   "title": "الفاتحة بالقبول وتمام كل سول",
+   "titleEn": "Al-Fātiḥah for acceptance and the fulfilment of every request",
+   "bayts": [
+    {
+     "id": "64",
+     "n": 64,
+     "s": "الْفَاتِحَةَ بِالْقَبُولِ وَتَمَامِ كُلِّ سُولٍ وَمَأْمُولٍ وَصَلَاحِ الشَّأْنِ ظَاهِرًا وَبَاطِنًا فِي الدِّينِ وَالدُّنْيَا وَالْآخِرَةِ،",
+     "t": [
+      "Al-Fātiḥah for the acceptance and completion of every plea, desire, and well-being of affairs, revealed and concealed; of religion, in this world and the Hereafter;"
+     ]
+    },
+    {
+     "id": "65",
+     "n": 65,
+     "s": "دَافِعَةً لِكُلِّ شَرٍّ جَالِبَةً لِكُلِّ خَيْرٍ، لَنَا وَلِوَالِدِينَا وَأَوْلَادِنَا وَأَحْبَابِنَا وَمَشَائِخِنَا فِي الدِّينِ، مَعَ اللُّطْفِ وَالْعَافِيَةِ،",
+     "t": [
+      "averting every evil, and gaining every good for us; for our parents, for our children, for our beloved, and for our learned scholars of the religion, with grace and well-being;"
+     ]
+    },
+    {
+     "id": "66",
+     "n": 66,
+     "s": "وَعَلَى نِيَّةٍ أَنَّ اللَّهَ يُنَوِّرُ قُلُوبَنَا وَقَوَالِبَنَا مَعَ الْهُدَى وَالتُّقَى وَالْعَفَافِ وَالْغِنَى،",
+     "t": [
+      "and with the intention that Allāh illuminate our hearts and souls, with guidance, righteousness, abstinence, and independence;"
+     ]
+    },
+    {
+     "id": "67",
+     "n": 67,
+     "s": "وَالْمَوْتِ عَلَى دِينِ الْإِسْلَامِ وَالْإِيمَانِ بِلَا مِحْنَةٍ وَلَا امْتِحَانٍ، بِحَقِّ سَيِّدِ وَلَدِ عَدْنَانَ، وَعَلَى كُلِّ نِيَّةٍ صَالِحَةٍ؛",
+     "t": [
+      "and to die with the religion of Islam, without any calamity or test, by the right of the master of the sons of ‘Adnān (the Prophet Muḥammad), and upon every pure intention;"
+     ]
+    },
+    {
+     "id": "68",
+     "n": 68,
+     "s": "وَإِلَى حَضْرَةِ النَّبِيِّ (مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ). [الْفَاتِحَةُ]",
+     "t": [
+      "and to the honourable Prophet (Muḥammad, may the Blessings and Peace of Allāh be upon him and his family). [al-Fātiḥah]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thana",
+   "title": "الثناء والصلاة على النبي ﷺ",
+   "titleEn": "Praise and prayer upon the Prophet ﷺ",
+   "bayts": [
+    {
+     "id": "69",
+     "n": 69,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ، الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+     "t": [
+      "In the Name of Allāh, the Most Compassionate, the Most Merciful; Praise be to Allāh, Lord of the Worlds,"
+     ]
+    },
+    {
+     "id": "70",
+     "n": 70,
+     "s": "حَمْدًا يُوَافِي نِعَمَهُ وَيُكَافِئُ مَزِيدَهُ، يَا رَبَّنَا لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ وَعَظِيمِ سُلْطَانِكَ،",
+     "t": [
+      "a Praise worthy of Allāh’s Bounties, and Recompense for His (Bountiful) Excess. O our Lord, to You belong all Praise as befits Your Majestic Countenance, and Your Magnificent Authority;"
+     ]
+    },
+    {
+     "id": "71",
+     "n": 71,
+     "s": "سُبْحَانَكَ لَا نُحْصِي ثَنَاءً عَلَيْكَ أَنْتَ كَمَا أَثْنَيْتَ عَلَى نَفْسِكَ، فَلَكَ الْحَمْدُ حَتَّى تَرْضَى،",
+     "t": [
+      "Glory be to You; we cannot count Your Praises the like of which You have Praised Yourself; all Praise be to You, until You are satisfied,"
+     ]
+    },
+    {
+     "id": "72",
+     "n": 72,
+     "s": "وَلَكَ الْحَمْدُ إِذَا رَضِيتَ وَلَكَ الْحَمْدُ بَعْدَ الرِّضَى،",
+     "t": [
+      "and all Praise be to You when You are satisfied, and all Praise be to You after You are satisfied."
+     ]
+    },
+    {
+     "id": "73",
+     "n": 73,
+     "s": "اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي الْأَوَّلِينَ،",
+     "t": [
+      "O Allāh! Bestow Blessings and Peace upon our master Muḥammad, among the first (generations);"
+     ]
+    },
+    {
+     "id": "74",
+     "n": 74,
+     "s": "وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي الْآخِرِينَ،",
+     "t": [
+      "and bestow Blessings and Peace upon our master Muḥammad among the last (generations);"
+     ]
+    },
+    {
+     "id": "75",
+     "n": 75,
+     "s": "وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي كُلِّ وَقْتٍ وَحِينٍ،",
+     "t": [
+      "bestow Blessings and Peace upon our master Muḥammad, at all times;"
+     ]
+    },
+    {
+     "id": "76",
+     "n": 76,
+     "s": "وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي الْمَلَإِ الْأَعْلَى إِلَى يَوْمِ الدِّينِ،",
+     "t": [
+      "bestow Blessings and Peace upon our master Muḥammad, in the higher spiritual realm until the day of Judgement;"
+     ]
+    },
+    {
+     "id": "77",
+     "n": 77,
+     "s": "وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ حَتَّى تَرِثَ الْأَرْضَ وَمَنْ عَلَيْهَا وَأَنْتَ خَيْرُ الْوَارِثِينَ.",
+     "t": [
+      "bestow Blessings and Peace upon our master Muḥammad, until You inherit the earth and whoever is upon it, and You are the Best of Inheritors."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "protect",
+   "title": "الاستحفاظ والدعاء الختامي",
+   "titleEn": "Seeking protection and the closing supplication",
+   "bayts": [
+    {
+     "id": "78",
+     "n": 78,
+     "s": "اللَّهُمَّ إِنَّا نَسْتَحْفِظُكَ وَنَسْتَوْدِعُكَ أَدْيَانَنَا وَأَنْفُسَنَا وَأَمْوَالَنَا وَأَهْلَنَا، وَكُلَّ شَيْءٍ أَعْطَيْتَنَا.",
+     "t": [
+      "O Allāh! We seek Your Protection and we entrust You with our religion, our selves, our wealth and our family, and all that You have given us."
+     ]
+    },
+    {
+     "id": "79",
+     "n": 79,
+     "s": "اللَّهُمَّ اجْعَلْنَا وَإِيَّاهُمْ فِي كَنَفِكَ وَأَمَانِكَ وَعِيَاذِكَ مِنْ كُلِّ شَيْطَانٍ مَرِيدٍ، وَجَبَّارٍ عَنِيدٍ،",
+     "t": [
+      "O Allāh! Place us and them in Your Protection, Your Safety, Your Security, and Your Sanctuary, from any rebellious Satan, and any obstinate tyrant,"
+     ]
+    },
+    {
+     "id": "80",
+     "n": 80,
+     "s": "وَذِي عَيْنٍ وَذِي بَغْيٍ وَذِي حَسَدٍ، وَمِنْ شَرِّ كُلِّ ذِي شَرٍّ، إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.",
+     "t": [
+      "and the possessor of the evil eye, and any oppressor, and any envious person, and from the evil of every evildoer. Indeed, You are capable of all things."
+     ]
+    },
+    {
+     "id": "81",
+     "n": 81,
+     "s": "اللَّهُمَّ جَمِّلْنَا بِالْعَافِيَةِ وَالسَّلَامَةِ، وَحَقِّقْنَا بِالتَّقْوَى وَالِاسْتِقَامَةِ،",
+     "t": [
+      "O Allāh! Beautify us with health and well-being; and realize in us piety and righteousness;"
+     ]
+    },
+    {
+     "id": "82",
+     "n": 82,
+     "s": "وَأَعِذْنَا مِنْ مُوجِبَاتِ النَّدَامَةِ فِي الْحَالِ وَالْمَآلِ، إِنَّكَ سَمِيعُ الدُّعَاءِ.",
+     "t": [
+      "and protect us from all the causes of regret; You are the Hearer of supplication."
+     ]
+    },
+    {
+     "id": "83",
+     "n": 83,
+     "s": "وَصَلِّ اللَّهُمَّ بِجَلَالِكَ وَجَمَالِكَ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ أَجْمَعِينَ،",
+     "t": [
+      "And with Your Majesty and Beauty, bestow Blessings upon our master, Muḥammad, his family, and all his Companions;"
+     ]
+    },
+    {
+     "id": "84",
+     "n": 84,
+     "s": "وَارْزُقْنَا كَمَالَ الْمُتَابَعَةِ لَهُ ظَاهِرًا وَبَاطِنًا يَا أَرْحَمَ الرَّاحِمِينَ،",
+     "t": [
+      "and grant us a perfect following of him, inwardly and outwardly, O the Most Merciful of those Who show Mercy."
+     ]
+    },
+    {
+     "id": "85",
+     "n": 85,
+     "s": "بِفَضْلِ سُبْحَانَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُونَ",
+     "t": [
+      "With the Bounty of: Glory be to your Lord; the Lord of Honour and Power Who is far superior than what they attribute to Him;"
+     ]
+    },
+    {
+     "id": "86",
+     "n": 86,
+     "s": "وَسَلَامٌ عَلَى الْمُرْسَلِينَ",
+     "t": [
+      "And Peace be on the Messengers;"
+     ]
+    },
+    {
+     "id": "87",
+     "n": 87,
+     "s": "وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+     "t": [
+      "And Praise be to Allāh, the Lord and Cherisher of the Worlds. [Sūrah Al-Ṣāffāt (37), Verses 180-182]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "istighfar",
+   "title": "الاستغفار",
+   "titleEn": "Seeking forgiveness",
+   "bayts": [
+    {
+     "id": "88",
+     "n": 88,
+     "s": "أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الرَّحْمَنُ الرَّحِيمُ الْحَيُّ الْقَيُّومُ الَّذِي لَا يَمُوتُ وَأَتُوبُ إِلَيْهِ، رَبِّ اغْفِرْ لِي.",
+     "t": [
+      "I seek forgiveness from Allāh; there is no god but Him, the Most Compassionate, the Most Merciful, the Ever-Living, the Self-Subsisting, Who never dies; I repent to Him, O Lord forgive me."
+     ],
+     "c": 27
+    },
+    {
+     "id": "89",
+     "n": 89,
+     "s": "أَسْتَغْفِرُ اللَّهَ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ.",
+     "t": [
+      "I ask Allāh’s Forgiveness for all believing men and women."
+     ],
+     "c": 27
+    }
+   ]
+  }
+ ]
+}

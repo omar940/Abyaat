@@ -1,0 +1,664 @@
+{
+ "id": "wird-nawawi",
+ "type": "wird",
+ "section": "awraad",
+ "title": "ورد النووي",
+ "titleEn": "Wird al-Nawawī",
+ "fullTitle": "ورد الإمام النووي",
+ "fullTitleEn": "Wird of Imām al-Nawawī",
+ "author": "الإمام النووي",
+ "authorEn": "Imām al-Nawawī",
+ "source": "مأخوذ من «الخلاصة» للحبيب عمر بن حفيظ، والترجمة الإنجليزية من طبعة أشنتار (٢٠١٣)",
+ "sourceEn": "From “Al-Khulāṣah – The Cream of Remembrance” (Ashnataar Publications, 2nd ed. 2013), Arabic and English translation; minor corrections to the translation where it departs from the Arabic.",
+ "chapters": [
+  {
+   "id": "pledge",
+   "title": "التعهد بالحوقلة",
+   "titleEn": "Pledging the ḥawqalah",
+   "bayts": [
+    {
+     "id": "1",
+     "n": 1,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ؛ بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ، أَقُولُ عَلَى نَفْسِي، وَعَلَى دِينِي، وَعَلَى أَهْلِي، وَعَلَى أَوْلَادِي،",
+     "t": [
+      "In the Name of Allāh, the Most Compassionate, the Most Merciful. In the Name of Allāh. Allāh is the Greatest. I pledge upon myself, upon my religion, upon my family, upon my children,"
+     ]
+    },
+    {
+     "id": "2",
+     "n": 2,
+     "s": "وَعَلَى مَالِي، وَعَلَى أَصْحَابِي، وَعَلَى أَدْيَانِهِمْ، وَعَلَى أَمْوَالِهِمْ،",
+     "t": [
+      "upon my property, upon my companions, upon their religion, and upon their property"
+     ]
+    },
+    {
+     "id": "3",
+     "n": 3,
+     "s": "أَلْفَ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ.",
+     "t": [
+      "a thousand times that: There is no Power nor Strength except with Allāh, the Exalted, the Mighty."
+     ]
+    },
+    {
+     "id": "4",
+     "n": 4,
+     "s": "بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، أَقُولُ عَلَى نَفْسِي، وَعَلَى دِينِي، وَعَلَى أَهْلِي، وَعَلَى أَوْلَادِي،",
+     "t": [
+      "In the Name of Allāh, Allāh is the Greatest, Allāh is the Greatest. I pledge upon myself, upon my religion, upon my family, upon my children,"
+     ]
+    },
+    {
+     "id": "5",
+     "n": 5,
+     "s": "وَعَلَى مَالِي، وَعَلَى أَصْحَابِي، وَعَلَى أَدْيَانِهِمْ، وَعَلَى أَمْوَالِهِمْ،",
+     "t": [
+      "upon my property, upon my companions, upon their religion, and upon their property"
+     ]
+    },
+    {
+     "id": "6",
+     "n": 6,
+     "s": "أَلْفَ أَلْفِ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ.",
+     "t": [
+      "a thousand thousand times that: There is no Power nor Strength except with Allāh, the Exalted, the Mighty."
+     ]
+    },
+    {
+     "id": "7",
+     "n": 7,
+     "s": "بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، أَقُولُ عَلَى نَفْسِي، وَعَلَى دِينِي، وَعَلَى أَهْلِي، وَعَلَى أَوْلَادِي،",
+     "t": [
+      "In the Name of Allāh, Allāh is the Greatest, Allāh is the Greatest, Allāh is the Greatest. I pledge upon myself, upon my religion, upon my family, upon my children,"
+     ]
+    },
+    {
+     "id": "8",
+     "n": 8,
+     "s": "وَعَلَى مَالِي، وَعَلَى أَصْحَابِي، وَعَلَى أَدْيَانِهِمْ، وَعَلَى أَمْوَالِهِمْ،",
+     "t": [
+      "upon my property, upon my companions, upon their religion, and upon their property"
+     ]
+    },
+    {
+     "id": "9",
+     "n": 9,
+     "s": "أَلْفَ أَلْفِ أَلْفِ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ.",
+     "t": [
+      "a thousand thousand thousand times that: There is no Power nor Strength except with Allāh, the Exalted, the Mighty."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "basmala",
+   "title": "البسملات",
+   "titleEn": "The basmalahs",
+   "bayts": [
+    {
+     "id": "10",
+     "n": 10,
+     "s": "بِسْمِ اللَّهِ، وَبِاللَّهِ، وَمِنَ اللَّهِ، وَإِلَى اللَّهِ، وَعَلَى اللَّهِ،",
+     "t": [
+      "In the Name of Allāh, and through Allāh, and from Allāh, and towards Allāh, and upon Allāh,"
+     ]
+    },
+    {
+     "id": "11",
+     "n": 11,
+     "s": "وَفِي اللَّهِ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ.",
+     "t": [
+      "and in Allāh – There is no Power nor Strength except with Allāh, the Exalted, the Mighty."
+     ]
+    },
+    {
+     "id": "12",
+     "n": 12,
+     "s": "بِسْمِ اللَّهِ عَلَى دِينِي وَعَلَى نَفْسِي، بِسْمِ اللَّهِ عَلَى مَالِي وَعَلَى أَهْلِي وَعَلَى أَوْلَادِي وَعَلَى أَصْحَابِي،",
+     "t": [
+      "In the Name of Allāh, upon my religion and upon myself. In the Name of Allāh, upon my property, upon my family, upon my children and upon my companions."
+     ]
+    },
+    {
+     "id": "13",
+     "n": 13,
+     "s": "بِسْمِ اللَّهِ عَلَى كُلِّ شَيْءٍ أَعْطَانِيهِ رَبِّي،",
+     "t": [
+      "In the Name of Allāh, upon everything my Lord has given me."
+     ]
+    },
+    {
+     "id": "14",
+     "n": 14,
+     "s": "بِسْمِ اللَّهِ رَبِّ السَّمَوَاتِ السَّبْعِ، وَرَبِّ الْأَرَضِينَ السَّبْعِ، وَرَبِّ الْعَرْشِ الْعَظِيمِ.",
+     "t": [
+      "In the Name of Allāh, Lord of the seven Heavens, Lord of the seven earths, and Lord of the Mighty Throne."
+     ]
+    },
+    {
+     "id": "15",
+     "n": 15,
+     "s": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ.",
+     "t": [
+      "In the Name of Allāh, in Whose Name no harm can be done on earth or in Heaven. He is the All-Hearing and All-Knowing."
+     ],
+     "c": 3
+    },
+    {
+     "id": "16",
+     "n": 16,
+     "s": "بِسْمِ اللَّهِ خَيْرِ الْأَسْمَاءِ فِي الْأَرْضِ وَفِي السَّمَاءِ،",
+     "t": [
+      "In the Name of Allāh – the best of all Names on earth and in the Heavens."
+     ]
+    },
+    {
+     "id": "17",
+     "n": 17,
+     "s": "بِسْمِ اللَّهِ أَفْتَتِحُ وَبِهِ أَخْتَتِمُ؛",
+     "t": [
+      "In the Name of Allāh, I commence and I end with it."
+     ]
+    },
+    {
+     "id": "18",
+     "n": 18,
+     "s": "اللَّهُ اللَّهُ اللَّهُ رَبِّي لَا أُشْرِكُ بِهِ أَحَدًا،",
+     "t": [
+      "Allāh, Allāh, Allāh is My Lord and I associate no partners with Him."
+     ]
+    },
+    {
+     "id": "19",
+     "n": 19,
+     "s": "اللَّهُ اللَّهُ اللَّهُ لَا إِلَهَ إِلَّا هُوَ،",
+     "t": [
+      "Allāh, Allāh, Allāh and there is no god, but Him."
+     ]
+    },
+    {
+     "id": "20",
+     "n": 20,
+     "s": "اللَّهُ اللَّهُ اللَّهُ أَعَزُّ وَأَجَلُّ وَأَكْبَرُ مِمَّا أَخَافُ وَأَحْذَرُ.",
+     "t": [
+      "Allāh, Allāh, Allāh is more Powerful, Stronger and Greater than that which I fear and guard against."
+     ],
+     "c": 3
+    }
+   ]
+  },
+  {
+   "id": "refuge",
+   "title": "الاستعاذة وسورة الإخلاص",
+   "titleEn": "Seeking refuge and Sūrat al-Ikhlāṣ",
+   "bayts": [
+    {
+     "id": "21",
+     "n": 21,
+     "s": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ غَيْرِي، وَمِنْ شَرِّ مَا خَلَقَ رَبِّي؛",
+     "t": [
+      "O Allāh! I seek refuge from the evil of my self, from the evil of others, and from the evil of all which my Lord has created."
+     ]
+    },
+    {
+     "id": "22",
+     "n": 22,
+     "s": "بِكَ اللَّهُمَّ أَحْتَرِزُ مِنْهُمْ، وَبِكَ اللَّهُمَّ أَدْرَأُ فِي نُحُورِهِمْ، وَبِكَ اللَّهُمَّ أَعُوذُ مِنْ شُرُورِهِمْ،",
+     "t": [
+      "With You, O Allāh! Do I fortify myself against them, with You, O Allāh! Do I seek protection against their evil."
+     ]
+    },
+    {
+     "id": "23",
+     "n": 23,
+     "s": "وَأَسْتَكْفِيكَ إِيَّاهُمْ، وَأُقَدِّمُ بَيْنَ يَدَيَّ وَأَيْدِي مَنْ أَحَاطَتْهُ عِنَايَتِي وَشَمَلَتْهُ إِحَاطَتِي؛",
+     "t": [
+      "I seek sufficiency with You against them. I put (as a protection) before myself (Sūrah Ikhlāṣ, which will be read hereafter) and before all who are under my guardianship, as well as those whom I can call to mind."
+     ]
+    },
+    {
+     "id": "24",
+     "n": 24,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+     "t": [
+      "In the Name of Allāh, the Most Compassionate, the Most Merciful."
+     ]
+    },
+    {
+     "id": "25",
+     "n": 25,
+     "s": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+     "t": [
+      "Say: He is Allāh, the One and Only;"
+     ]
+    },
+    {
+     "id": "26",
+     "n": 26,
+     "s": "اللَّهُ الصَّمَدُ",
+     "t": [
+      "Allāh, the Eternal, Absolute;"
+     ]
+    },
+    {
+     "id": "27",
+     "n": 27,
+     "s": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+     "t": [
+      "He does not give birth, nor was He born;"
+     ]
+    },
+    {
+     "id": "28",
+     "n": 28,
+     "s": "وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+     "t": [
+      "And there is nothing like Him. [Sūrah al-Ikhlāṣ (112), Verses 1-4]"
+     ],
+     "c": 3
+    },
+    {
+     "id": "29",
+     "n": 29,
+     "s": "وَمِثْلُ ذَلِكَ عَنْ يَمِينِي وَأَيْمَانِهِمْ،",
+     "t": [
+      "And the same to my right and to their right;"
+     ]
+    },
+    {
+     "id": "30",
+     "n": 30,
+     "s": "وَمِثْلُ ذَلِكَ عَنْ شِمَالِي وَعَنْ شَمَائِلِهِمْ،",
+     "t": [
+      "and the same to my left and to their left;"
+     ]
+    },
+    {
+     "id": "31",
+     "n": 31,
+     "s": "وَمِثْلُ ذَلِكَ أَمَامِي وَأَمَامِهِمْ،",
+     "t": [
+      "and the same in front of me and in front of them;"
+     ]
+    },
+    {
+     "id": "32",
+     "n": 32,
+     "s": "وَمِثْلُ ذَلِكَ مِنْ خَلْفِي وَمِنْ خَلْفِهِمْ،",
+     "t": [
+      "and the same behind me and behind them;"
+     ]
+    },
+    {
+     "id": "33",
+     "n": 33,
+     "s": "وَمِثْلُ ذَلِكَ مِنْ فَوْقِي وَمِنْ فَوْقِهِمْ،",
+     "t": [
+      "and the same above me and above them;"
+     ]
+    },
+    {
+     "id": "34",
+     "n": 34,
+     "s": "وَمِثْلُ ذَلِكَ مِنْ تَحْتِي وَمِنْ تَحْتِهِمْ،",
+     "t": [
+      "and the same beneath me and beneath them;"
+     ]
+    },
+    {
+     "id": "35",
+     "n": 35,
+     "s": "وَمِثْلُ ذَلِكَ مُحِيطٌ بِي وَبِهِمْ وَبِمَا أَحَطْنَا بِهِ.",
+     "t": [
+      "and the same surrounding me and surrounding them; and all that we encompass."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hasbi",
+   "title": "الدعاء بالحفظ والحسبلة",
+   "titleEn": "The supplication for protection and ḥasbalah",
+   "bayts": [
+    {
+     "id": "36",
+     "n": 36,
+     "s": "اللَّهُمَّ إِنِّي أَسْأَلُكَ لِي وَلَهُمْ مِنْ خَيْرِكَ بِخَيْرِكَ الَّذِي لَا يَمْلِكُهُ غَيْرُكَ.",
+     "t": [
+      "O Allāh! I beseech You, through Your Goodness, for me and for them, from Your Goodness which no one other than You possess."
+     ]
+    },
+    {
+     "id": "37",
+     "n": 37,
+     "s": "اللَّهُمَّ اجْعَلْنِي وَإِيَّاهُمْ فِي حِفْظِكَ وَعِيَاذِكَ وَعِبَادِكَ",
+     "t": [
+      "O Allāh! Place them and me under Your Protection and Guard, among Your servants"
+     ]
+    },
+    {
+     "id": "38",
+     "n": 38,
+     "s": "وَعِيَالِكَ وَجِوَارِكَ وَأَمْنِكَ وَأَمَانَتِكَ وَحِزْبِكَ وَحِرْزِكَ وَكَنَفِكَ",
+     "t": [
+      "and Your dependants, in Your proximity; under Your Security and Trust; among Your Party and in Your Sanctuary, Shelter,"
+     ]
+    },
+    {
+     "id": "39",
+     "n": 39,
+     "s": "وَسِتْرِكَ وَلُطْفِكَ مِنْ كُلِّ شَيْطَانٍ وَسُلْطَانٍ، وَإِنْسٍ وَجَانٍّ،",
+     "t": [
+      "Care and Benevolence – from every demon and sultan; human or jinn;"
+     ]
+    },
+    {
+     "id": "40",
+     "n": 40,
+     "s": "وَبَاغٍ وَحَاسِدٍ، وَسَبُعٍ وَحَيَّةٍ وَعَقْرَبٍ،",
+     "t": [
+      "from tyrants and enviers; from predatory beasts, serpents and scorpions;"
+     ]
+    },
+    {
+     "id": "41",
+     "n": 41,
+     "s": "وَمِنْ شَرِّ كُلِّ دَابَّةٍ أَنْتَ آخِذٌ بِنَاصِيَتِهَا إِنَّ رَبِّي عَلَى صِرَاطٍ مُسْتَقِيمٍ.",
+     "t": [
+      "and from the evil of every crawling creature which is under Your control. Indeed, my Lord is on the straight path (in terms of Truth and Justice)."
+     ]
+    },
+    {
+     "id": "42",
+     "n": 42,
+     "s": "حَسْبِيَ الرَّبُّ مِنَ الْمَرْبُوبِينَ،",
+     "t": [
+      "The Lord suffices me from all who are subject to His Lordship."
+     ]
+    },
+    {
+     "id": "43",
+     "n": 43,
+     "s": "حَسْبِيَ الْخَالِقُ مِنَ الْمَخْلُوقِينَ،",
+     "t": [
+      "The Creator suffices me from the created."
+     ]
+    },
+    {
+     "id": "44",
+     "n": 44,
+     "s": "حَسْبِيَ الرَّازِقُ مِنَ الْمَرْزُوقِينَ،",
+     "t": [
+      "The Sustainer suffices me from those who are sustained."
+     ]
+    },
+    {
+     "id": "45",
+     "n": 45,
+     "s": "حَسْبِيَ السَّاتِرُ مِنَ الْمَسْتُورِينَ،",
+     "t": [
+      "The Concealer suffices me from those who are concealed."
+     ]
+    },
+    {
+     "id": "46",
+     "n": 46,
+     "s": "حَسْبِيَ النَّاصِرُ مِنَ الْمَنْصُورِينَ،",
+     "t": [
+      "The Giver of Victory suffices me from those who are granted victory."
+     ]
+    },
+    {
+     "id": "47",
+     "n": 47,
+     "s": "حَسْبِيَ الْقَاهِرُ مِنَ الْمَقْهُورِينَ؛",
+     "t": [
+      "The Vanquisher suffices me from those who are vanquished."
+     ]
+    },
+    {
+     "id": "48",
+     "n": 48,
+     "s": "حَسْبِيَ الَّذِي هُوَ حَسْبِي،",
+     "t": [
+      "The One who is sufficient for me suffices me."
+     ]
+    },
+    {
+     "id": "49",
+     "n": 49,
+     "s": "حَسْبِيَ مَنْ لَمْ يَزَلْ حَسْبِي،",
+     "t": [
+      "He who never ceases sufficing me, suffices me."
+     ]
+    },
+    {
+     "id": "50",
+     "n": 50,
+     "s": "حَسْبِيَ اللَّهُ وَنِعْمَ الْوَكِيلُ،",
+     "t": [
+      "My Lord suffices me and He is the best of Guardians."
+     ]
+    },
+    {
+     "id": "51",
+     "n": 51,
+     "s": "حَسْبِيَ اللَّهُ مِنْ جَمِيعِ خَلْقِهِ،",
+     "t": [
+      "Allāh suffices me from His entire creation."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "verses",
+   "title": "آيات الحفظ",
+   "titleEn": "Verses of protection",
+   "bayts": [
+    {
+     "id": "52",
+     "n": 52,
+     "s": "إِنَّ وَلِيِّيَ اللَّهُ الَّذِي نَزَّلَ الْكِتَابَ وَهُوَ يَتَوَلَّى الصَّالِحِينَ",
+     "t": [
+      "Verily, my Protector, Supporter and Helper is Allāh, Who sent down the Book (from time to time); it is He Who protects the righteous. [Sūrah Al-Aʿrāf (7) Verse 196]"
+     ]
+    },
+    {
+     "id": "53",
+     "n": 53,
+     "s": "وَإِذَا قَرَأْتَ الْقُرْآنَ جَعَلْنَا بَيْنَكَ وَبَيْنَ الَّذِينَ لَا يُؤْمِنُونَ بِالْآخِرَةِ حِجَابًا مَسْتُورًا",
+     "t": [
+      "And when you (O Muḥammad) recite the Qur'ān, We erect between you and those who do not believe in the Hereafter, an invisible barrier."
+     ]
+    },
+    {
+     "id": "54",
+     "n": 54,
+     "s": "وَجَعَلْنَا عَلَى قُلُوبِهِمْ أَكِنَّةً أَنْ يَفْقَهُوهُ وَفِي آذَانِهِمْ وَقْرًا",
+     "t": [
+      "We put veils over their hearts to prevent them from understanding it, and We afflict their ears with deafness so that they do not hear;"
+     ]
+    },
+    {
+     "id": "55",
+     "n": 55,
+     "s": "وَإِذَا ذَكَرْتَ رَبَّكَ فِي الْقُرْآنِ وَحْدَهُ وَلَّوْا عَلَى أَدْبَارِهِمْ نُفُورًا",
+     "t": [
+      "and when you mention your One and Only Lord in the recitation of the Qur'ān, they become averse to Him, and turn their backs. [Sūrah Al-Isrā’ (17) Verses 45-46]"
+     ]
+    },
+    {
+     "id": "56",
+     "n": 56,
+     "s": "فَإِنْ تَوَلَّوْا فَقُلْ حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",
+     "t": [
+      "But if they turn away, say: Allāh is sufficient for me. There is no god but He. In Him do I put my trust and He is the Lord of the Mighty Throne! [Sūrah Al-Tawbah (9), Verse 129]"
+     ],
+     "c": 7
+    },
+    {
+     "id": "57",
+     "n": 57,
+     "s": "وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ، وَصَلَّى اللَّهُ عَلَى سَيِّدِنَا مُحَمَّدٍ النَّبِيِّ الْأُمِّيِّ وَعَلَى آلِهِ وَصَحْبِهِ وَسَلَّمَ.",
+     "t": [
+      "There is no Power nor Strength except with Allāh, the Exalted, the Mighty. And may the Blessings and Peace of Allāh be upon our master Muḥammad, the unlettered Prophet, and upon his family and his Companions."
+     ]
+    },
+    {
+     "id": "58",
+     "n": 58,
+     "s": "[ثُمَّ يَنْفُثُ مِنْ غَيْرِ بَصَقٍ؛ عَنْ يَمِينِهِ (ثَلَاثًا)، وَعَنْ شِمَالِهِ (ثَلَاثًا)، وَعَنْ أَمَامِهِ (ثَلَاثًا)، وَمِنْ خَلْفِهِ (ثَلَاثًا)]",
+     "t": [
+      "[Then the supplicant blows lightly without spitting; to his right (3 times), to his left (3 times), in front of him (3 times), and behind him (3 times).]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hidden",
+   "title": "الاختباء في خزائن بسم الله",
+   "titleEn": "Concealing oneself in the treasures of Bismillāh",
+   "bayts": [
+    {
+     "id": "59",
+     "n": 59,
+     "s": "خَبَأْتُ نَفْسِي فِي خَزَائِنِ بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ،",
+     "t": [
+      "I conceal myself within the treasures of: In the Name of Allāh."
+     ]
+    },
+    {
+     "id": "60",
+     "n": 60,
+     "s": "أَقْفَالُهَا ثِقَتِي بِاللَّهِ، مَفَاتِيحُهَا لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ،",
+     "t": [
+      "Its locks are my trust in Allāh. Its keys are: There is no Power nor Strength except with Allāh."
+     ]
+    },
+    {
+     "id": "61",
+     "n": 61,
+     "s": "أُدَافِعُ بِكَ اللَّهُمَّ عَنْ نَفْسِي مَا أُطِيقُ وَمَا لَا أُطِيقُ،",
+     "t": [
+      "Through You O Allāh! I protect myself from what lies within my power and from what lies outside of it."
+     ]
+    },
+    {
+     "id": "62",
+     "n": 62,
+     "s": "لَا طَاقَةَ لِمَخْلُوقٍ مَعَ قُدْرَةِ الْخَالِقِ؛",
+     "t": [
+      "The created is powerless (when faced) with the Ability of the Creator."
+     ]
+    },
+    {
+     "id": "63",
+     "n": 63,
+     "s": "حَسْبِيَ اللَّهُ وَنِعْمَ الْوَكِيلُ، بِخَفِيِّ لُطْفِ اللَّهِ، بِلَطِيفِ صُنْعِ اللَّهِ،",
+     "t": [
+      "Allāh is sufficient for me, and in Him do I put my trust. With the hidden Kindnesses of Allāh; with the Kindnesses of the Creation of Allāh;"
+     ]
+    },
+    {
+     "id": "64",
+     "n": 64,
+     "s": "بِجَمِيلِ سِتْرِ اللَّهِ، دَخَلْتُ فِي كَنَفِ اللَّهِ، تَشَفَّعْتُ بِسَيِّدِنَا رَسُولِ اللَّهِ،",
+     "t": [
+      "with the Beauty of the Sanctuary of Allāh; I enter under the Guard of Allāh. I seek intercession from our master, the Prophet of Allāh."
+     ]
+    },
+    {
+     "id": "65",
+     "n": 65,
+     "s": "تَحَصَّنْتُ بِأَسْمَاءِ اللَّهِ، آمَنْتُ بِاللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، ادَّخَرْتُ اللَّهَ لِكُلِّ شِدَّةٍ.",
+     "t": [
+      "I protect myself with the Names of Allāh. I believe in Allāh; I place my trust in Allāh; I turn to Allāh in every difficulty;"
+     ]
+    },
+    {
+     "id": "66",
+     "n": 66,
+     "s": "اللَّهُمَّ يَا مَنْ اسْمُهُ مَحْبُوبٌ، وَوَجْهُهُ مَطْلُوبٌ، اكْفِنِي مَا قَلْبِي مِنْهُ مَرْهُوبٌ، أَنْتَ غَالِبٌ غَيْرُ مَغْلُوبٍ.",
+     "t": [
+      "O Allāh! The One Whose Name is beloved; Whose Face is desired, protect me from that which my heart fears; You are overpowering and none can overpower You."
+     ]
+    },
+    {
+     "id": "67",
+     "n": 67,
+     "s": "وَصَلَّى اللَّهُ عَلَى سَيِّدِنَا مُحَمَّدٍ، وَعَلَى آلِهِ وَصَحْبِهِ وَسَلَّمَ،",
+     "t": [
+      "And may the Blessings and Peace of Allāh be upon our master Muḥammad, and upon his family and his Companions."
+     ]
+    },
+    {
+     "id": "68",
+     "n": 68,
+     "s": "حَسْبِيَ اللَّهُ وَنِعْمَ الْوَكِيلُ.",
+     "t": [
+      "Allāh is sufficient for me, and the most Excellent Disposer (of affairs)."
+     ]
+    },
+    {
+     "id": "69",
+     "n": 69,
+     "s": "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ.",
+     "t": [
+      "Allāh is sufficient for us, and the most Excellent Disposer (of affairs)."
+     ],
+     "c": 70
+    }
+   ]
+  },
+  {
+   "id": "closing",
+   "title": "الختام والاستغفار",
+   "titleEn": "The closing and seeking forgiveness",
+   "bayts": [
+    {
+     "id": "70",
+     "n": 70,
+     "s": "فِي كُلِّ لَحْظَةٍ أَبَدًا، عَدَدَ خَلْقِهِ، وَرِضَى نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ.",
+     "t": [
+      "At every moment forever, to the number of His Creation, to the extent of His Pleasure, to the weight of His Throne, and the ink that it would take to write His Words."
+     ]
+    },
+    {
+     "id": "71",
+     "n": 71,
+     "s": "وَأُفَوِّضُ أَمْرِي إِلَى اللَّهِ إِنَّ اللَّهَ بَصِيرٌ بِالْعِبَادِ",
+     "t": [
+      "I shall entrust my affair to Allāh, for Allāh is observant of all (His) servants. [Sūrah Al-Ghāfir (40), Verse 44]"
+     ],
+     "c": 11
+    },
+    {
+     "id": "72",
+     "n": 72,
+     "s": "فِي كُلِّ لَحْظَةٍ أَبَدًا، عَدَدَ خَلْقِهِ، وَرِضَى نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ.",
+     "t": [
+      "At every moment forever, to the number of His Creation, to the extent of His Pleasure, to the weight of His Throne, and the ink that it would take to write His Words."
+     ]
+    },
+    {
+     "id": "73",
+     "n": 73,
+     "s": "أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الرَّحْمَنُ الرَّحِيمُ الْحَيُّ الْقَيُّومُ الَّذِي لَا يَمُوتُ وَأَتُوبُ إِلَيْهِ، رَبِّ اغْفِرْ لِي.",
+     "t": [
+      "I seek forgiveness from Allāh; there is no god but Him, the Most Compassionate, the Most Merciful, the Ever-Living, the Self-Subsisting, Who never dies; I repent to Him, O Lord forgive me."
+     ],
+     "c": 27
+    },
+    {
+     "id": "74",
+     "n": 74,
+     "s": "أَسْتَغْفِرُ اللَّهَ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ.",
+     "t": [
+      "I ask Allāh’s Forgiveness for all believing men and women."
+     ],
+     "c": 27
+    }
+   ]
+  }
+ ]
+}

@@ -8,8 +8,8 @@
  "fullTitleEn": "Al-Wird al-Laṭīf of Imām al-Ḥaddād",
  "author": "الإمام عبد الله بن علوي الحداد",
  "authorEn": "Imām ‘Abd Allāh b. ‘Alawī al-Ḥaddād",
- "source": "النص من نسخة PDF مرفقة (التشكيل مضاف في التطبيق)، والترجمة الإنجليزية منها",
- "sourceEn": "Arabic and English transcribed from the PDF editions supplied by the user; vowelling of the Wird al-Laṭīf was added and should be proofread.",
+ "source": "مأخوذ من «الخلاصة» للحبيب عمر بن حفيظ، والترجمة الإنجليزية من طبعة أشنتار (٢٠١٣)",
+ "sourceEn": "From “Al-Khulāṣah – The Cream of Remembrance” (Ashnataar Publications, 2nd ed. 2013), Arabic and English translation; minor corrections to the translation where it departs from the Arabic.",
  "chapters": [
   {
    "id": "ikhlas",
@@ -21,7 +21,7 @@
      "n": 1,
      "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
      "t": [
-      "In the name of God, the Lord of Mercy, the Giver of Mercy!"
+      "In the Name of Allāh, the Most Compassionate, the Most Merciful."
      ]
     },
     {
@@ -29,7 +29,7 @@
      "n": 2,
      "s": "قُلْ هُوَ اللَّهُ أَحَدٌ",
      "t": [
-      "Say, ‘He is God the One,"
+      "Say: He is Allāh, the One and Only;"
      ]
     },
     {
@@ -37,7 +37,7 @@
      "n": 3,
      "s": "اللَّهُ الصَّمَدُ",
      "t": [
-      "God the eternal."
+      "Allāh, the Eternal, Absolute;"
      ]
     },
     {
@@ -45,7 +45,7 @@
      "n": 4,
      "s": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
      "t": [
-      "He begot no one nor was He begotten."
+      "He does not give birth, nor was He born;"
      ]
     },
     {
@@ -53,8 +53,9 @@
      "n": 5,
      "s": "وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
      "t": [
-      "No one is comparable to Him.’"
-     ]
+      "And there is nothing like Him. [Sūrah Al-Ikhlāṣ (112), Verses 1-4]"
+     ],
+     "c": 3
     }
    ]
   },
@@ -68,7 +69,7 @@
      "n": 6,
      "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
      "t": [
-      "In the name of God, the Lord of Mercy, the Giver of Mercy!"
+      "In the Name of Allāh, the Most Compassionate, the Most Merciful."
      ]
     },
     {
@@ -76,7 +77,7 @@
      "n": 7,
      "s": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
      "t": [
-      "Say [Prophet], ‘I seek refuge with the Lord of daybreak"
+      "Say: I seek refuge with the Lord of the daybreak;"
      ]
     },
     {
@@ -84,7 +85,7 @@
      "n": 8,
      "s": "مِنْ شَرِّ مَا خَلَقَ",
      "t": [
-      "against the harm in what He has created,"
+      "From the mischief of created things;"
      ]
     },
     {
@@ -92,7 +93,7 @@
      "n": 9,
      "s": "وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ",
      "t": [
-      "the harm in the night when darkness gathers,"
+      "From the mischief of darkness as it becomes intense;"
      ]
     },
     {
@@ -100,7 +101,7 @@
      "n": 10,
      "s": "وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
      "t": [
-      "the harm in witches when they blow on knots,"
+      "From the mischief of those who practise secret arts;"
      ]
     },
     {
@@ -108,8 +109,9 @@
      "n": 11,
      "s": "وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ",
      "t": [
-      "the harm in the envier when he envies.’"
-     ]
+      "And from the mischief of the envious one as he practises envy. [Sūrah Al-Falaq (113), Verses 1-5]"
+     ],
+     "c": 3
     }
    ]
   },
@@ -123,7 +125,7 @@
      "n": 12,
      "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
      "t": [
-      "In the name of God, the Lord of Mercy, the Giver of Mercy!"
+      "In the Name of Allāh, the Most Compassionate, the Most Merciful."
      ]
     },
     {
@@ -131,7 +133,7 @@
      "n": 13,
      "s": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
      "t": [
-      "Say, ‘I seek refuge with the Lord of people,"
+      "Say: I seek refuge with the Lord and Cherisher of mankind;"
      ]
     },
     {
@@ -139,7 +141,7 @@
      "n": 14,
      "s": "مَلِكِ النَّاسِ",
      "t": [
-      "the Controller of people,"
+      "The King (or Ruler) of mankind;"
      ]
     },
     {
@@ -147,7 +149,7 @@
      "n": 15,
      "s": "إِلَهِ النَّاسِ",
      "t": [
-      "the God of people,"
+      "The God (or Judge) of mankind;"
      ]
     },
     {
@@ -155,7 +157,7 @@
      "n": 16,
      "s": "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
      "t": [
-      "against the harm of the slinking whisperer—"
+      "From the mischief of the whisperer (of evil), who withdraws (after his whisper);"
      ]
     },
     {
@@ -163,7 +165,7 @@
      "n": 17,
      "s": "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ",
      "t": [
-      "who whispers into the hearts of people—"
+      "(The whisperer) who whispers into the hearts of mankind;"
      ]
     },
     {
@@ -171,8 +173,9 @@
      "n": 18,
      "s": "مِنَ الْجِنَّةِ وَالنَّاسِ",
      "t": [
-      "whether they be jinn or people.’"
-     ]
+      "From among jinn and men. [Sūrah Al-Nās (114), Verses 1-6]"
+     ],
+     "c": 3
     }
    ]
   },
@@ -186,24 +189,24 @@
      "n": 19,
      "s": "رَبِّ أَعُوذُ بِكَ مِنْ هَمَزَاتِ الشَّيَاطِينِ",
      "t": [
-      "‘Lord, I take refuge with You from the goadings of the evil ones;"
-     ],
-     "c": 3
+      "O my Lord! I seek refuge with You from the suggestions of the Evil Ones;"
+     ]
     },
     {
      "id": "20",
      "n": 20,
      "s": "وَأَعُوذُ بِكَ رَبِّ أَنْ يَحْضُرُونِ",
      "t": [
-      "I seek refuge with You, Lord, so that they may not come near me.’"
-     ]
+      "And I seek refuge with You, O my Lord! In the event that they come near me. [Sūrah Al-Mu’minūn (23), Verses 97-98]"
+     ],
+     "c": 3
     },
     {
      "id": "21",
      "n": 21,
      "s": "أَفَحَسِبْتُمْ أَنَّمَا خَلَقْنَاكُمْ عَبَثًا وَأَنَّكُمْ إِلَيْنَا لَا تُرْجَعُونَ",
      "t": [
-      "Did you think We had created you in vain, and that you would not be brought back to Us?"
+      "“Did you (really) imagine that We created you without any purpose, and that you would not be brought back to Us (for account)?”"
      ]
     },
     {
@@ -211,7 +214,7 @@
      "n": 22,
      "s": "فَتَعَالَى اللَّهُ الْمَلِكُ الْحَقُّ لَا إِلَهَ إِلَّا هُوَ رَبُّ الْعَرْشِ الْكَرِيمِ",
      "t": [
-      "Exalted be God, the true King, there is no god but Him, the Lord of the Glorious Throne!"
+      "Therefore, Exalted be Allāh, the True King; there is no god but He; the Lord of the Throne of Honour!"
      ]
     },
     {
@@ -219,7 +222,7 @@
      "n": 23,
      "s": "وَمَنْ يَدْعُ مَعَ اللَّهِ إِلَهًا آخَرَ لَا بُرْهَانَ لَهُ بِهِ فَإِنَّمَا حِسَابُهُ عِنْدَ رَبِّهِ إِنَّهُ لَا يُفْلِحُ الْكَافِرُونَ",
      "t": [
-      "Whoever prays to another god alongside Him—a god for whose existence he has no evidence—will face his reckoning with his Lord. Those who reject the truth will not prosper."
+      "He who invokes another deity along with Allāh – a deity of whose divinity he has no proof – will be brought to account by his Lord. Verily, the unbelievers will not be successful. So say: “O my Lord!"
      ]
     },
     {
@@ -227,7 +230,7 @@
      "n": 24,
      "s": "وَقُلْ رَبِّ اغْفِرْ وَارْحَمْ وَأَنْتَ خَيْرُ الرَّاحِمِينَ",
      "t": [
-      "Say [Prophet], ‘Lord, forgive and have mercy: You are the most merciful of all.’"
+      "Forgive us and have Mercy on us; for You are the best of those Who show Mercy!” [Sūrah Al-Mu’minūn (23), Verses 115-118]"
      ]
     }
    ]
@@ -242,7 +245,7 @@
      "n": 25,
      "s": "فَسُبْحَانَ اللَّهِ حِينَ تُمْسُونَ وَحِينَ تُصْبِحُونَ",
      "t": [
-      "So celebrate God’s glory in the evening, in the morning—"
+      "So glorify Allāh in the evening and in the morning."
      ]
     },
     {
@@ -250,7 +253,7 @@
      "n": 26,
      "s": "وَلَهُ الْحَمْدُ فِي السَّمَاوَاتِ وَالْأَرْضِ وَعَشِيًّا وَحِينَ تُظْهِرُونَ",
      "t": [
-      "praise is due to Him in the heavens and the earth—in the late afternoon, and at midday."
+      "And Praise be to Him in the Heavens and on earth; and glorify Him in the late afternoon and at midday."
      ]
     },
     {
@@ -258,7 +261,7 @@
      "n": 27,
      "s": "يُخْرِجُ الْحَيَّ مِنَ الْمَيِّتِ وَيُخْرِجُ الْمَيِّتَ مِنَ الْحَيِّ وَيُحْيِي الْأَرْضَ بَعْدَ مَوْتِهَا وَكَذَلِكَ تُخْرَجُونَ",
      "t": [
-      "He brings the living out of the dead and the dead out of the living. He gives life to the earth after death, and you will be brought out in the same way."
+      "It is He Who revives the living out of the lifeless, and cause the living to die. He gives life to the earth after its death; and you shall be raised to life (resurrected) in the same way! [Sūrah Al-Rūm (30), Verses 17-19]"
      ]
     },
     {
@@ -266,7 +269,7 @@
      "n": 28,
      "s": "أَعُوذُ بِاللَّهِ السَّمِيعِ الْعَلِيمِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
      "t": [
-      "I seek refuge in Allah, the All-Hearing, the All-Knowing, from the rejected Devil."
+      "I seek refuge in Allāh, the All-Hearing, the All-Knowing, from the rejected shayṭān."
      ],
      "c": 3
     },
@@ -275,7 +278,7 @@
      "n": 29,
      "s": "لَوْ أَنْزَلْنَا هَذَا الْقُرْآنَ عَلَى جَبَلٍ لَرَأَيْتَهُ خَاشِعًا مُتَصَدِّعًا مِنْ خَشْيَةِ اللَّهِ",
      "t": [
-      "If We had sent this Qur’an down to a mountain, you [Prophet] would have seen it humbled and split apart in its awe of God:"
+      "Had We sent down this Qur’ān on a mountain, you would have certainly seen it humbling itself and splitting asunder for its fear of Allāh."
      ]
     },
     {
@@ -283,7 +286,7 @@
      "n": 30,
      "s": "وَتِلْكَ الْأَمْثَالُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ",
      "t": [
-      "We offer people such illustrations so that they may reflect."
+      "We relate these parables to men so that they may reflect."
      ]
     },
     {
@@ -291,7 +294,7 @@
      "n": 31,
      "s": "هُوَ اللَّهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ هُوَ الرَّحْمَنُ الرَّحِيمُ",
      "t": [
-      "He is God: there is no god other than Him. It is He who knows what is hidden as well as what is in the open, He is the Lord of Mercy, the Giver of Mercy."
+      "He is Allāh: there is no god, but Him. The All-Knower of the Unseen and the seen. He is the Most Compassionate, Most Merciful. He is Allāh, there is no god, but Him;"
      ]
     },
     {
@@ -299,7 +302,7 @@
      "n": 32,
      "s": "هُوَ اللَّهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ سُبْحَانَ اللَّهِ عَمَّا يُشْرِكُونَ",
      "t": [
-      "He is God: there is no god other than Him, the Controller, the Holy One, Source of Peace, Granter of Security, Guardian over all, the Almighty, the Compeller, the Truly Great; God is far above anything they consider to be His partner."
+      "the King, the Most Pure, the Source of Peace (and Perfection), the Giver of Security, the Protector, the All-Mighty, the Compeller, the Supremely Great; Glory be to Allāh. (High is He) above all that they associate as partners with Him."
      ]
     },
     {
@@ -307,7 +310,7 @@
      "n": 33,
      "s": "هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ لَهُ الْأَسْمَاءُ الْحُسْنَى يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ وَهُوَ الْعَزِيزُ الْحَكِيمُ",
      "t": [
-      "He is God: the Creator, the Originator, the Shaper. The best names belong to Him. Everything in the heavens and earth glorifies Him: He is the Almighty, the Wise."
+      "He is Allāh, the Creator, the Maker, the Fashioner. To Him belongs the Most Beautiful Names. Everything in the Heavens and the earth glorify Him. And He is the All-Mighty, the All-Wise. [Sūrah Al-Ḥashr (59), Verses 21-24]"
      ]
     },
     {
@@ -315,7 +318,7 @@
      "n": 34,
      "s": "سَلَامٌ عَلَى نُوحٍ فِي الْعَالَمِينَ",
      "t": [
-      "‘Peace be upon Noah among all the nations!’"
+      "“Peace and salutations to Noah among the nations (man, jinn and all that exist)!”"
      ]
     },
     {
@@ -323,7 +326,7 @@
      "n": 35,
      "s": "إِنَّا كَذَلِكَ نَجْزِي الْمُحْسِنِينَ",
      "t": [
-      "This is how We reward those who do good:"
+      "Verily, this is the way that We reward the righteous."
      ]
     },
     {
@@ -331,7 +334,7 @@
      "n": 36,
      "s": "إِنَّهُ مِنْ عِبَادِنَا الْمُؤْمِنِينَ",
      "t": [
-      "he was truly one of Our faithful servants."
+      "For he was one of Our believing bondsmen. [Sūrah Al-Ṣāffāt (37), Verses 79-81]"
      ]
     }
    ]
@@ -346,7 +349,7 @@
      "n": 37,
      "s": "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
      "t": [
-      "I seek refuge in the complete words of Allah from the evil in what He has created."
+      "I seek refuge in the Perfect Words of Allāh from the evil that He created."
      ],
      "c": 3
     },
@@ -355,7 +358,7 @@
      "n": 38,
      "s": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
      "t": [
-      "In the Name of Allah, with whose Name nothing on earth or in heaven can harm, and He is the All-Hearing, the All-Knowing."
+      "In the Name of Allāh, in Whose Name no harm can be done on earth or in Heaven. He is the All-Hearing, the All-Knowing."
      ],
      "c": 3
     },
@@ -364,7 +367,7 @@
      "n": 39,
      "s": "اللَّهُمَّ إِنِّي أَصْبَحْتُ مِنْكَ فِي نِعْمَةٍ وَعَافِيَةٍ وَسِتْرٍ، فَأَتْمِمْ نِعْمَتَكَ عَلَيَّ وَعَافِيَتَكَ وَسِتْرَكَ فِي الدُّنْيَا وَالْآخِرَةِ",
      "t": [
-      "O Allah! As morning comes upon me, I dwell in Your favor, well-being, and protection; so complete Your favor upon me, Your well-being, and Your protection, in this world and the next."
+      "O Allāh! I find myself this morning with favours (bounties), good health and protection from You. So, O Allāh, complete Your favours, good health and Your protection for me in this world as well as in the Hereafter."
      ],
      "c": 3
     },
@@ -373,7 +376,7 @@
      "n": 40,
      "s": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ وَمَلَائِكَتَكَ وَجَمِيعَ خَلْقِكَ أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيكَ لَكَ وَأَنَّ سَيِّدَنَا مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ",
      "t": [
-      "O Allah! As morning comes upon me, I bear witness before You, the Bearers of Your Throne, Your angels, and all Your creation—that You are Allah, there is no god but You, alone with no partners, and that our master Muhammad is Your slave and messenger."
+      "O Allāh! I have arisen this morning taking You as a Witness. And I take as witnesses too the Carriers of the Throne, Your Angels and the entirety of Your creation disclosing that there is none to be worshipped besides You, that You have no partners, and that truly, Muḥammad is Your bondsman and Messenger."
      ],
      "c": 4
     },
@@ -382,7 +385,7 @@
      "n": 41,
      "s": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ حَمْدًا يُوَافِي نِعَمَهُ وَيُكَافِئُ مَزِيدَهُ",
      "t": [
-      "Praise belongs to Allah, Lord of the Worlds—praise that is adequate to His favors and equal to His increase."
+      "All Praise is only for Allāh, Lord of the Worlds; Praises that are equal to His Bounties and matches His added Grace and Bounties."
      ],
      "c": 3
     },
@@ -391,7 +394,7 @@
      "n": 42,
      "s": "آمَنْتُ بِاللَّهِ الْعَظِيمِ وَكَفَرْتُ بِالْجِبْتِ وَالطَّاغُوتِ وَاسْتَمْسَكْتُ بِالْعُرْوَةِ الْوُثْقَى لَا انْفِصَامَ لَهَا وَاللَّهُ سَمِيعٌ عَلِيمٌ",
      "t": [
-      "I believe in Allah the Almighty, and I denounce all idols and false gods, and I grasp the firmest handhold that never breaks, and Allah is All-Hearing, All-Knowing."
+      "I believe in Allāh, the Great, and I reject all idols and false gods, and I grasp solidly the most trustworthy handhold that never breaks. And Allāh is All-Hearing, All-Knowing."
      ],
      "c": 3
     },
@@ -400,7 +403,7 @@
      "n": 43,
      "s": "رَضِيتُ بِاللَّهِ رَبًّا وَبِالْإِسْلَامِ دِينًا وَبِسَيِّدِنَا مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ نَبِيًّا وَرَسُولًا",
      "t": [
-      "I am content with Allah as Lord, with Islam as religion, and with our master Muhammad (Allah’s peace and mercy be upon him) as Prophet and Messenger."
+      "I am pleased with Allāh as my Lord, with Islām as my religion and with our master Muḥammad, Peace and Blessings be upon him and his family, as a Prophet and Messenger."
      ],
      "c": 3
     },
@@ -409,16 +412,15 @@
      "n": 44,
      "s": "حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",
      "t": [
-      "Allah is enough for me: there is no god but Him; I put my trust in Him; He is Lord of the Mighty Throne. (Qur’ān 9:129)"
-     ],
-     "c": 7
+      "Allāh is sufficient for me. There is no god, but He. In Him do I put my trust, and He is the Lord of the Mighty Throne!”"
+     ]
     },
     {
      "id": "45",
      "n": 45,
      "s": "اللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَآلِهِ وَصَحْبِهِ وَسَلِّمْ",
      "t": [
-      "O Allah! Bestow mercy upon our master Muhammad, his Family and Companions, and give them peace."
+      "O Allāh! Send Blessings upon our master Muḥammad, his family and Companions, and bestow Peace upon them. [Sūrah Al-Tawbah (9), Verse 129]"
      ],
      "c": 10
     }
@@ -434,7 +436,7 @@
      "n": 46,
      "s": "اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فُجَاءَةِ الْخَيْرِ، وَأَعُوذُ بِكَ مِنْ فُجَاءَةِ الشَّرِّ",
      "t": [
-      "O Allah! I ask You for sudden good and seek Your protection from sudden evil."
+      "O Allāh! I ask You of unexpected good fortune, and I seek refuge in You from unexpected ill-fortune."
      ]
     },
     {
@@ -442,7 +444,7 @@
      "n": 47,
      "s": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ",
      "t": [
-      "O Allah! You are my Lord, there is no god but You, You created me and I am Your slave. I uphold Your pledge and promise as well as I can;"
+      "O Allāh! You are my Lord. There is none worthy of worship, besides You. You have created me, and I am Your servant, and I am true to my promise and commitment to You, to the best of my ability."
      ]
     },
     {
@@ -450,7 +452,7 @@
      "n": 48,
      "s": "أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ بِذَنْبِي",
      "t": [
-      "I seek Your protection against the evil that I have done; I acknowledge Your favors upon me and I acknowledge my sin,"
+      "I seek refuge in You from the evil of that which I have committed."
      ]
     },
     {
@@ -458,7 +460,7 @@
      "n": 49,
      "s": "فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
      "t": [
-      "so forgive me, for none forgives sin except You."
+      "I acknowledge Your favours upon me, and confess to my sins; forgive me, for none but You can forgive sins."
      ]
     },
     {
@@ -466,7 +468,7 @@
      "n": 50,
      "s": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، عَلَيْكَ تَوَكَّلْتُ وَأَنْتَ رَبُّ الْعَرْشِ الْعَظِيمِ",
      "t": [
-      "O Allah! You are my Lord, there is no god but You. Upon You I rely, and You are the Lord of the Glorious Throne."
+      "O Allāh! You are my Lord, there is no god, but You. In You do I put my (complete) trust, and You are the Lord of the Mighty Throne."
      ]
     },
     {
@@ -474,7 +476,7 @@
      "n": 51,
      "s": "مَا شَاءَ اللَّهُ كَانَ وَمَا لَمْ يَشَأْ لَمْ يَكُنْ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ",
      "t": [
-      "Whatever Allah wills is, and what He does not will is not; and there is no power or ability except by Allah, the Most High, the Almighty."
+      "What Allāh Wills, happens; and what He does not Will, does not happen; and there is no Power nor Strength, save that of Allāh, the Most High, the Great."
      ]
     },
     {
@@ -482,7 +484,7 @@
      "n": 52,
      "s": "أَعْلَمُ أَنَّ اللَّهَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ وَأَنَّ اللَّهَ قَدْ أَحَاطَ بِكُلِّ شَيْءٍ عِلْمًا",
      "t": [
-      "I know that Allah has power over all things and that Allah encompasses all things in His knowledge."
+      "Know that indeed, Allāh has Power over all things, and that indeed, Allāh comprehends all things in His Knowledge."
      ]
     },
     {
@@ -490,7 +492,7 @@
      "n": 53,
      "s": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي وَمِنْ شَرِّ كُلِّ دَابَّةٍ أَنْتَ آخِذٌ بِنَاصِيَتِهَا، إِنَّ رَبِّي عَلَى صِرَاطٍ مُسْتَقِيمٍ",
      "t": [
-      "O Allah! I seek Your protection from the evil of my own self and from the evil of every creature on earth You have taken by the forelock; my Lord is on a straight path."
+      "O Allāh! I seek Your protection from the evil of my self, and from the evil of every moving creature which You have under Your control. Indeed, my Lord is on the straight path (in terms of Truth and Justice)."
      ]
     },
     {
@@ -498,7 +500,7 @@
      "n": 54,
      "s": "يَا حَيُّ يَا قَيُّومُ، بِرَحْمَتِكَ أَسْتَغِيثُ، وَمِنْ عَذَابِكَ أَسْتَجِيرُ، أَصْلِحْ لِي شَأْنِي كُلَّهُ، وَلَا تَكِلْنِي إِلَى نَفْسِي وَلَا إِلَى أَحَدٍ مِنْ خَلْقِكَ طَرْفَةَ عَيْنٍ",
      "t": [
-      "O Ever-Living, O Sustainer! I call upon Your mercy for help and I seek refuge from Your punishment. Rectify all my affairs and do not entrust me to myself or to any of Your creation for even the blink of an eye."
+      "O! The Ever-Living, the Self-Subsisting (by Whom all subsist). I seek help through Your Mercy and protection from Your Punishment. Set right all my affairs, and do not leave me to myself or to anyone from Your creation, even for the blink of an eye."
      ]
     }
    ]
@@ -513,7 +515,7 @@
      "n": 55,
      "s": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَأَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ",
      "t": [
-      "O Allah! I seek refuge in You from sorrow and grief, from incapacity and sloth,"
+      "O Allāh! I seek refuge in You against anxiety and grief, and I seek refuge in You from weakness and laziness,"
      ]
     },
     {
@@ -521,7 +523,7 @@
      "n": 56,
      "s": "وَأَعُوذُ بِكَ مِنَ الْجُبْنِ وَالْبُخْلِ، وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ وَقَهْرِ الرِّجَالِ",
      "t": [
-      "from cowardice and miserliness, and I seek Your protection from overwhelming debt and the tyranny of men."
+      "and I seek refuge in You from cowardice and greed, and from unbearable debt and from the oppression of people."
      ]
     },
     {
@@ -529,7 +531,7 @@
      "n": 57,
      "s": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ",
      "t": [
-      "O Allah! I ask You for well-being in this world and the hereafter."
+      "O Allāh! I beseech You to grant me safety in this world as well as in the Hereafter."
      ]
     },
     {
@@ -537,7 +539,7 @@
      "n": 58,
      "s": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ وَالْمُعَافَاةَ الدَّائِمَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي",
      "t": [
-      "O Allah! I ask You for pardoning, well-being, and constant safety in my religion, worldly life, family, and possessions."
+      "O Allāh! I ask You safety, security and permanent protection in relation to my religion, worldly affairs, family and property."
      ]
     },
     {
@@ -545,7 +547,7 @@
      "n": 59,
      "s": "اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي",
      "t": [
-      "O Allah! Cover my shame and calm my fears."
+      "O Allāh! Conceal my faults and defects and lay to rest my fears."
      ]
     },
     {
@@ -553,7 +555,7 @@
      "n": 60,
      "s": "اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي",
      "t": [
-      "O Allah! Protect me from [the evil] in front of me and behind me, on my right and my left, and from above me—and I take refuge in Your Greatness from the unexpected harm from below me."
+      "O Allāh! Protect me from the front, the rear, the right, the left and from above; I seek refuge in Your Magnificence, in the event that I may be seized from beneath."
      ]
     },
     {
@@ -561,7 +563,7 @@
      "n": 61,
      "s": "اللَّهُمَّ أَنْتَ خَلَقْتَنِي وَأَنْتَ تَهْدِينِي وَأَنْتَ تُطْعِمُنِي وَأَنْتَ تَسْقِينِي وَأَنْتَ تُمِيتُنِي وَأَنْتَ تُحْيِينِي، وَأَنْتَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
      "t": [
-      "O Allah! You created me and You guide me, and You feed me and provide me with drink, and You cause me to die and You give me life, and You have power over all things."
+      "O Allāh! You created me, and You guide me, and You provide me with food, and You provide me with drink; and You shall cause me to die, and You shall give me life (resurrect me); and You have Power over all things."
      ]
     }
    ]
@@ -576,7 +578,7 @@
      "n": 62,
      "s": "أَصْبَحْنَا عَلَى فِطْرَةِ الْإِسْلَامِ وَعَلَى كَلِمَةِ الْإِخْلَاصِ وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِينَ",
      "t": [
-      "We have risen this morning on the original pattern of Islam, upon the Word of Sincerity, on the religion of our Prophet Muhammad (Allah’s mercy and peace be upon him and his family), and upon the confession of Ibrāhīm, who was upright, a Muslim, and not an idolator."
+      "We enter this morning with the natural purity of Islām, with the Words of Sincerity, with the religion of our Prophet Muḥammad (Blessings and Peace be upon him and his family) and in accordance with the faith of our father Ibrāhīm, who was by nature an upright Muslim; and he was not from the idolaters."
      ]
     },
     {
@@ -584,7 +586,7 @@
      "n": 63,
      "s": "اللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَعَلَيْكَ نَتَوَكَّلُ وَإِلَيْكَ النُّشُورُ",
      "t": [
-      "O Allah! By You we live to morning, and by You we live to evening, and by You we live and by You we die, and upon You we rely, and to You is the Resurrection."
+      "O Allāh! We enter the day and the night through Your Power and Mercy. We live and die through You, and on You do we depend, and in Your Presence will we be resurrected."
      ]
     },
     {
@@ -592,7 +594,7 @@
      "n": 64,
      "s": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
      "t": [
-      "Morning has risen upon us and all sovereignty is Allah’s, and all praise belongs to Allah, Lord of the Worlds."
+      "We, and the entire Kingdom of Allāh have risen this morning, purely for the sake of Allāh; and all Praise be to Allāh, Lord of the Worlds."
      ]
     },
     {
@@ -600,7 +602,7 @@
      "n": 65,
      "s": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ فَتْحَهُ وَنَصْرَهُ وَنُورَهُ وَبَرَكَتَهُ وَهُدَاهُ",
      "t": [
-      "O Allah! I ask You for the good of this day, its openings, victories, lights, blessings, and right-guidance."
+      "O Allāh! I ask of You the best of this day, its (spiritual) openings, its help, its light, its blessings and its guidance."
      ]
     },
     {
@@ -608,7 +610,7 @@
      "n": 66,
      "s": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ وَخَيْرَ مَا فِيهِ وَخَيْرَ مَا قَبْلَهُ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ هَذَا الْيَوْمِ وَشَرِّ مَا فِيهِ وَشَرِّ مَا قَبْلَهُ وَشَرِّ مَا بَعْدَهُ",
      "t": [
-      "O Allah! I ask You for the good of this day and the best of what is in it, and the best of what came before it and the best of what comes after it; and I seek refuge in You from the evil of this day and the worst of what is in it, and the worst of what came before it and the worst of what comes after it."
+      "O Allāh! I ask of You the goodness of this day, the best of what is in it, and the best of what is before it, and the best of that which is after it; and I seek Your protection against the evil of this day, the evil that is in it, and the evil of that which is before it, and the evil of that which is after it."
      ]
     },
     {
@@ -616,7 +618,7 @@
      "n": 67,
      "s": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ عَلَى ذَلِكَ",
      "t": [
-      "O Allah! Whatever favors I, or any of Your creatures, received this morning, they come only from You; You have no partners, so to You belongs all praise and to You belongs all thanks."
+      "O Allāh! Whatever bounty has come my way, or the way of any of Your creation this morning, has indeed come from You. You have no partner, and to You belong all Praises and all Thanks."
      ]
     }
    ]
@@ -629,18 +631,18 @@
     {
      "id": "68",
      "n": 68,
-     "s": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَاءَ نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ",
+     "s": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَى نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ",
      "t": [
-      "Transcendent is Allah and praise belongs to Him—equal to the number of His creation, the degree of His good pleasure, the weight of His Throne, and the number of His words."
+      "Glory and Praise be to Allāh, equal to the number of His Creation, to the extent of His Pleasure, to the weight of His Throne, and the ink of the meaning of His Eternal Words."
      ],
      "c": 3
     },
     {
      "id": "69",
      "n": 69,
-     "s": "سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَاءَ نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ",
+     "s": "سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَى نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ",
      "t": [
-      "Transcendent is Allah the Almighty, and praise belongs to Him—equal to the number of His creation, the degree of His good pleasure, the weight of His Throne, and the number of His words."
+      "Glory and Praise be to Allāh, the Magnificent, equal to the number of His Creation, to the extent of His Pleasure, to the weight of His Throne, and the ink of the meaning of His Eternal Words."
      ],
      "c": 3
     },
@@ -649,7 +651,7 @@
      "n": 70,
      "s": "سُبْحَانَ اللَّهِ عَدَدَ مَا خَلَقَ فِي السَّمَاءِ، سُبْحَانَ اللَّهِ عَدَدَ مَا خَلَقَ فِي الْأَرْضِ",
      "t": [
-      "“Transcendent is Allah” equal to what He created in the heavens; “transcendent is Allah” equal to what He created on earth;"
+      "Glory and Praise be to Allāh, equal to the number of His Creation in the Heavens; Glory be to Allāh, equal to the number of His Creation on earth;"
      ]
     },
     {
@@ -657,7 +659,7 @@
      "n": 71,
      "s": "سُبْحَانَ اللَّهِ عَدَدَ مَا بَيْنَ ذَلِكَ، سُبْحَانَ اللَّهِ عَدَدَ مَا هُوَ خَالِقٌ",
      "t": [
-      "“Transcendent is Allah” equal to what is between them both; “transcendent is Allah” equal to whatever He creates."
+      "Glory be to Allāh, equal to the number of His Creation between them (Heaven and earth); Glory be to Allāh, equal to the number of Him being the Creator."
      ]
     },
     {
@@ -665,7 +667,7 @@
      "n": 72,
      "s": "الْحَمْدُ لِلَّهِ عَدَدَ مَا خَلَقَ فِي السَّمَاءِ، الْحَمْدُ لِلَّهِ عَدَدَ مَا خَلَقَ فِي الْأَرْضِ",
      "t": [
-      "“All praise belongs to Allah” equal to what He created in the heavens; “all praise belongs to Allah” equal to what He created on earth;"
+      "All Praise be to Allāh, equal to the number of His Creation in the Heavens; All Praise be to Allāh, equal to the number of His Creation on earth;"
      ]
     },
     {
@@ -673,7 +675,7 @@
      "n": 73,
      "s": "الْحَمْدُ لِلَّهِ عَدَدَ مَا بَيْنَ ذَلِكَ، الْحَمْدُ لِلَّهِ عَدَدَ مَا هُوَ خَالِقٌ",
      "t": [
-      "“All praise belongs to Allah” equal to what is between them both; “all praise belongs to Allah” equal to whatever He creates."
+      "All Praise be to Allāh, equal to the number of His Creation between them (Heaven and earth); All Praise be to Allāh, equal to the number of Him being the Creator."
      ]
     }
    ]
@@ -688,7 +690,7 @@
      "n": 74,
      "s": "لَا إِلَهَ إِلَّا اللَّهُ عَدَدَ مَا خَلَقَ فِي السَّمَاءِ، لَا إِلَهَ إِلَّا اللَّهُ عَدَدَ مَا خَلَقَ فِي الْأَرْضِ",
      "t": [
-      "“There is no god except Allah” equal to what He created in the heavens; “there is no god except Allah” equal to what He created on earth;"
+      "There is no god, but Allāh, equal to the number of His Creation in the Heavens; There is no god, but Allāh, equal to the number of His Creation on earth;"
      ]
     },
     {
@@ -696,7 +698,7 @@
      "n": 75,
      "s": "لَا إِلَهَ إِلَّا اللَّهُ عَدَدَ مَا بَيْنَ ذَلِكَ، لَا إِلَهَ إِلَّا اللَّهُ عَدَدَ مَا هُوَ خَالِقٌ",
      "t": [
-      "“There is no god except Allah” equal to what is between them both; “there is no god except Allah” equal to whatever He creates."
+      "There is no god, but Allāh, equal to the number of His Creation between them (Heaven and earth); There is no god, but Allāh, equal to the number of Him being the Creator."
      ]
     },
     {
@@ -704,7 +706,7 @@
      "n": 76,
      "s": "اللَّهُ أَكْبَرُ عَدَدَ مَا خَلَقَ فِي السَّمَاءِ، اللَّهُ أَكْبَرُ عَدَدَ مَا خَلَقَ فِي الْأَرْضِ",
      "t": [
-      "“Allah is Greater” equal to what He created in the heavens; “Allah is Greater” equal to what He created on earth;"
+      "Allāh is the Greatest, equal to the number of His creation in the Heavens; Allāh is the Greatest, equal to the number of His creation on earth;"
      ]
     },
     {
@@ -712,7 +714,7 @@
      "n": 77,
      "s": "اللَّهُ أَكْبَرُ عَدَدَ مَا بَيْنَ ذَلِكَ، اللَّهُ أَكْبَرُ عَدَدَ مَا هُوَ خَالِقٌ",
      "t": [
-      "“Allah is Greater” equal to what is between them both; “Allah is Greater” equal to whatever He creates."
+      "Allāh is the Greatest, equal to the number of His creation between them (Heaven and earth); Allāh is the Greatest, equal to the number of Him being the Creator."
      ]
     },
     {
@@ -720,7 +722,7 @@
      "n": 78,
      "s": "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ عَدَدَ مَا خَلَقَ فِي السَّمَاءِ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ عَدَدَ مَا خَلَقَ فِي الْأَرْضِ",
      "t": [
-      "“There is no power or ability except by Allah, the Most High, the Almighty” equal to what He created in the heavens; “There is no power or ability except by Allah, the Most High, the Almighty” equal to what He created on earth;"
+      "There is no Power nor Strength except with Allāh the Exalted, the Mighty, equal to the number of His creation in the Heavens; There is no Power nor Strength except with Allāh the Exalted, the Mighty, equal to the number of His creation on earth;"
      ]
     },
     {
@@ -728,22 +730,22 @@
      "n": 79,
      "s": "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ عَدَدَ مَا بَيْنَ ذَلِكَ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ عَدَدَ مَا هُوَ خَالِقٌ",
      "t": [
-      "“There is no power or ability except by Allah, the Most High, the Almighty” equal to what is between them both; “There is no power or ability except by Allah, the Most High, the Almighty” equal to whatever He creates."
+      "There is no Power nor Strength except with Allāh the Exalted, the Mighty, equal to the number His creation between them (Heaven and earth); There is no Power nor Strength except with Allāh the Exalted, the Mighty, equal to the number of Him being the Creator."
      ]
     }
    ]
   },
   {
    "id": "khatm",
-   "title": "الختام",
-   "titleEn": "Closing",
+   "title": "الختام والاستغفار",
+   "titleEn": "Closing and seeking forgiveness",
    "bayts": [
     {
      "id": "80",
      "n": 80,
      "s": "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، عَدَدَ كُلِّ ذَرَّةٍ أَلْفَ مَرَّةٍ",
      "t": [
-      "“There is no god except Allah, One without partner, all control and praise belong to Him, He gives life and death, and He has power over all things”—equal to every atom one thousand times over."
+      "There is no god, but Allāh. He is One. He has no partner. His is the Kingdom, and His is the Praise. He gives life and death, and He has Power over all things; equal to the number of every atom a thousand times."
      ],
      "c": 3
     },
@@ -752,9 +754,35 @@
      "n": 81,
      "s": "اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ مِفْتَاحِ بَابِ رَحْمَةِ اللَّهِ عَدَدَ مَا فِي عِلْمِ اللَّهِ صَلَاةً وَسَلَامًا دَائِمَيْنِ بِدَوَامِ مُلْكِ اللَّهِ، وَعَلَى آلِهِ وَصَحْبِهِ عَدَدَ كُلِّ ذَرَّةٍ أَلْفَ مَرَّةٍ",
      "t": [
-      "“O Allah! Bestow mercy and peace upon our master Muhammad, the key to Allah’s Gates of Mercy—equal to that which is in Allah’s knowledge—a mercy and peace that last as eternally as Allah’s sovereignty, and upon his family and companions”—equal to every atom one thousand times over."
+      "O Allāh! Send Peace and Salutations upon our master Muḥammad, the key to the Door of Your Mercy, equal to the number of Your Knowledge; an Everlasting Peace and Salutation in Your Everlasting Dominion, is showered upon his family and Companions; equal to the number of every atom a thousand times. At every moment forever, to the number of His Creation, to the extent of His Pleasure, to the weight of His Throne, and the ink that it would take to write His Words."
      ],
      "c": 3
+    },
+    {
+     "id": "82",
+     "n": 82,
+     "s": "فِي كُلِّ لَحْظَةٍ أَبَدًا، عَدَدَ خَلْقِهِ، وَرِضَى نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ.",
+     "t": [
+      "At every moment forever, to the number of His Creation, to the extent of His Pleasure, to the weight of His Throne, and the ink that it would take to write His Words."
+     ]
+    },
+    {
+     "id": "83",
+     "n": 83,
+     "s": "أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الرَّحْمُنُ الرَّحِيمُ الْحَيُّ الْقَيُّومُ الَّذِي لَا يَمُوتُ وَأَتُوبُ إِلَيْهِ، رَبِّ اغْفِرْ لِي.",
+     "t": [
+      "I seek forgiveness from Allāh; there is no god but Him, the Most Compassionate, the Most Merciful, the Ever-Living, the Self-Subsisting, Who never dies; I repent to Him, O Lord forgive me."
+     ],
+     "c": 27
+    },
+    {
+     "id": "84",
+     "n": 84,
+     "s": "أَسْتَغْفِرُ اللَّهَ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ.",
+     "t": [
+      "I ask Allāh’s forgiveness for all believing men and women."
+     ],
+     "c": 27
     }
    ]
   }

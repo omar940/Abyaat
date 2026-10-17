@@ -1,0 +1,541 @@
+{
+ "id": "hizb-nasr",
+ "type": "wird",
+ "section": "awraad",
+ "title": "حزب النصر",
+ "titleEn": "Ḥizb al-Naṣr",
+ "fullTitle": "حزب النصر للإمام الحداد",
+ "fullTitleEn": "The Litany of Victory of Imām al-Ḥaddād",
+ "author": "الإمام عبد الله بن علوي الحداد",
+ "authorEn": "Imām ‘Abd Allāh b. ‘Alawī al-Ḥaddād",
+ "source": "مأخوذ من «الخلاصة» للحبيب عمر بن حفيظ، والترجمة الإنجليزية من طبعة أشنتار (٢٠١٣)",
+ "sourceEn": "From “Al-Khulāṣah – The Cream of Remembrance” (Ashnataar Publications, 2nd ed. 2013), Arabic and English translation; minor corrections to the translation where it departs from the Arabic.",
+ "chapters": [
+  {
+   "id": "opening",
+   "title": "الذكر والفتح",
+   "titleEn": "The dhikr and the verses of victory",
+   "bayts": [
+    {
+     "id": "1",
+     "n": 1,
+     "s": "لَا إِلَهَ إِلَّا اللَّهُ الْمَلِكُ الْحَقُّ الْمُبِينُ.",
+     "t": [
+      "There is no god, but Allāh, the King, the Manifest Truth."
+     ],
+     "c": 100
+    },
+    {
+     "id": "2",
+     "n": 2,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+     "t": [
+      "In the Name of Allāh, the Most Compassionate, the Most Merciful."
+     ]
+    },
+    {
+     "id": "3",
+     "n": 3,
+     "s": "إِنَّا فَتَحْنَا لَكَ فَتْحًا مُبِينًا",
+     "t": [
+      "Verily, We have given you (O Muḥammad) a clear (manifest) victory."
+     ]
+    },
+    {
+     "id": "4",
+     "n": 4,
+     "s": "لِيَغْفِرَ لَكَ اللَّهُ مَا تَقَدَّمَ مِنْ ذَنْبِكَ وَمَا تَأَخَّرَ وَيُتِمَّ نِعْمَتَهُ عَلَيْكَ وَيَهْدِيَكَ صِرَاطًا مُسْتَقِيمًا",
+     "t": [
+      "That Allāh may forgive you your sins of the past and the future and complete His Favour on you and guide you on the Straight Path."
+     ]
+    },
+    {
+     "id": "5",
+     "n": 5,
+     "s": "وَيَنْصُرَكَ اللَّهُ نَصْرًا عَزِيزًا",
+     "t": [
+      "So that Allāh might bestow on you His Mighty Help. [Sūrah Al-Fatḥ (48), Verses 1-3]"
+     ]
+    },
+    {
+     "id": "6",
+     "n": 6,
+     "s": "وَكَانَ عِنْدَ اللَّهِ وَجِيهًا",
+     "t": [
+      "And he (Moses) was honourable in the sight of Allāh. [Sūrah Al-Aḥzāb (33), Verse 69]"
+     ]
+    },
+    {
+     "id": "7",
+     "n": 7,
+     "s": "وَجِيهًا فِي الدُّنْيَا وَالْآخِرَةِ وَمِنَ الْمُقَرَّبِينَ",
+     "t": [
+      "(Jesus will be held in honour) in this world and in the Hereafter, and he will be one of those who are granted nearness to Allāh. [Sūrah Āli ʿImrān (3), Verse 45]"
+     ]
+    },
+    {
+     "id": "8",
+     "n": 8,
+     "s": "وَجَّهْتُ وَجْهِيَ لِلَّذِي فَطَرَ السَّمَاوَاتِ وَالْأَرْضَ",
+     "t": [
+      "(Says Abraham): “I have turned my face towards Him Who has created the Heavens and the earth.” [Sūrah Al-Anʿām (6), Verse 79]"
+     ]
+    },
+    {
+     "id": "9",
+     "n": 9,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+     "t": [
+      "In the Name of Allāh, the Most Compassionate, the Most Merciful."
+     ]
+    },
+    {
+     "id": "10",
+     "n": 10,
+     "s": "نَصْرٌ مِنَ اللَّهِ وَفَتْحٌ قَرِيبٌ",
+     "t": [
+      "… help from Allāh (against your enemies) and an imminent victory;"
+     ]
+    },
+    {
+     "id": "11",
+     "n": 11,
+     "s": "وَبَشِّرِ الْمُؤْمِنِينَ",
+     "t": [
+      "and give glad tidings (O Muḥammad) to the believers. [Sūrah Al-Ṣaff (61), Verse 13]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "saff",
+   "title": "سورة الصف (١٤) وآية الكرسي",
+   "titleEn": "Sūrat al-Ṣaff (61:14) and Āyat al-Kursī",
+   "bayts": [
+    {
+     "id": "12",
+     "n": 12,
+     "s": "يَا أَيُّهَا الَّذِينَ آمَنُوا كُونُوا أَنْصَارَ اللَّهِ",
+     "t": [
+      "O you who believe, be Allāh’s Helpers"
+     ]
+    },
+    {
+     "id": "13",
+     "n": 13,
+     "s": "كَمَا قَالَ عِيسَى ابْنُ مَرْيَمَ لِلْحَوَارِيِّينَ مَنْ أَنْصَارِي إِلَى اللَّهِ",
+     "t": [
+      "as Jesus, son of Mary, said to the disciples: “Who will be my helpers (in the work of) Allāh?”"
+     ]
+    },
+    {
+     "id": "14",
+     "n": 14,
+     "s": "قَالَ الْحَوَارِيُّونَ نَحْنُ أَنْصَارُ اللَّهِ",
+     "t": [
+      "The disciples said: “We are Allāh’s helpers...” [Sūrah Al-Ṣaff (61), Verse 14]"
+     ]
+    },
+    {
+     "id": "15",
+     "n": 15,
+     "s": "اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",
+     "t": [
+      "Allāh! There is no deity but Him; the Ever-Living, the Self Subsisting, the Eternal One."
+     ]
+    },
+    {
+     "id": "16",
+     "n": 16,
+     "s": "لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ",
+     "t": [
+      "Neither slumber nor sleep can overtake Him."
+     ]
+    },
+    {
+     "id": "17",
+     "n": 17,
+     "s": "لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ",
+     "t": [
+      "To Him belongs whatsoever is in the Heavens and whatsoever is on the earth."
+     ]
+    },
+    {
+     "id": "18",
+     "n": 18,
+     "s": "مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ",
+     "t": [
+      "Who is there that can intercede in His Presence, except by His permission?"
+     ]
+    },
+    {
+     "id": "19",
+     "n": 19,
+     "s": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",
+     "t": [
+      "He knows what will happen to them (His creatures) in this world, and what will happen to them in the Hereafter;"
+     ]
+    },
+    {
+     "id": "20",
+     "n": 20,
+     "s": "وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ",
+     "t": [
+      "nor shall they comprehend anything at all of His Knowledge except as He Wills."
+     ]
+    },
+    {
+     "id": "21",
+     "n": 21,
+     "s": "وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ",
+     "t": [
+      "His Throne extends over the Heavens and the earth,"
+     ]
+    },
+    {
+     "id": "22",
+     "n": 22,
+     "s": "وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ",
+     "t": [
+      "and guarding and preserving it, does not exhaust Him, for He is the Exalted, the All-Mighty. [Sūrah Al-Baqarah (2), Verse 255]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hashr",
+   "title": "آيات من سورة الحشر",
+   "titleEn": "Verses from Sūrat al-Ḥashr",
+   "bayts": [
+    {
+     "id": "23",
+     "n": 23,
+     "s": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+     "t": [
+      "In the Name of Allāh, the Most Compassionate, the Most Merciful."
+     ]
+    },
+    {
+     "id": "24",
+     "n": 24,
+     "s": "لَوْ أَنْزَلْنَا هَذَا الْقُرْآنَ عَلَى جَبَلٍ لَرَأَيْتَهُ خَاشِعًا مُتَصَدِّعًا مِنْ خَشْيَةِ اللَّهِ",
+     "t": [
+      "Had We sent down this Qur’ān on a mountain, you would have certainly seen it humbling itself and splitting asunder for its fear of Allāh."
+     ]
+    },
+    {
+     "id": "25",
+     "n": 25,
+     "s": "وَتِلْكَ الْأَمْثَالُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ",
+     "t": [
+      "We relate these parables to men so that they may reflect."
+     ]
+    },
+    {
+     "id": "26",
+     "n": 26,
+     "s": "هُوَ اللَّهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ هُوَ الرَّحْمَنُ الرَّحِيمُ",
+     "t": [
+      "He is Allāh: there is no other god but Him. The All-Knower of the Unseen and the seen. He is the Most Compassionate, Most Merciful."
+     ]
+    },
+    {
+     "id": "27",
+     "n": 27,
+     "s": "هُوَ اللَّهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ سُبْحَانَ اللَّهِ عَمَّا يُشْرِكُونَ",
+     "t": [
+      "He is Allāh, there is no other god, but Him; the King, the Most Pure, the Source of Peace (and Perfection), the Giver of Security, the Protector, the All-Mighty, the Compeller, the Supremely Great; Glory be to Allāh. (High is He) above all that they associate as partners with Him."
+     ]
+    },
+    {
+     "id": "28",
+     "n": 28,
+     "s": "هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ لَهُ الْأَسْمَاءُ الْحُسْنَى يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ وَهُوَ الْعَزِيزُ الْحَكِيمُ",
+     "t": [
+      "He is Allāh, the Creator, the Maker, the Fashioner. To Him belongs the Most Beautiful Names. Everything in the Heavens and the earth glorify Him. And He is the All-Mighty, the All-Wise. [Sūrah Al-Ḥashr (59), Verses 21-24]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "refuge",
+   "title": "الاستعاذة والتحصن",
+   "titleEn": "Seeking refuge and fortification",
+   "bayts": [
+    {
+     "id": "29",
+     "n": 29,
+     "s": "أُعِيذُ نَفْسِي بِاللَّهِ تَعَالَى مِنْ كُلِّ مَا يَسْمَعُ بِأُذُنَيْنِ، وَيُبْصِرُ بِعَيْنَيْنِ،",
+     "t": [
+      "I seek refuge for myself with Allāh, the Most High, from whatever hears with two ears, beholds with two eyes,"
+     ]
+    },
+    {
+     "id": "30",
+     "n": 30,
+     "s": "وَيَمْشِي بِرِجْلَيْنِ، وَيَبْطِشُ بِيَدَيْنِ، وَيَتَكَلَّمُ بِشَفَتَيْنِ؛",
+     "t": [
+      "walks with two legs, touches with two hands, speaks with two lips."
+     ]
+    },
+    {
+     "id": "31",
+     "n": 31,
+     "s": "حَصَّنْتُ نَفْسِي بِاللَّهِ الْخَالِقِ الْأَكْبَرِ، مِنْ شَرِّ مَا أَخَافُ وَأَحْذَرُ؛ مِنَ الْجِنِّ وَالْإِنْسِ وَأَنْ يَحْضُرُونِ؛",
+     "t": [
+      "I fortify myself with Allāh, the Great Creator, from evils that I fear or I am wary of, from humans and jinn that may appear (to harm me)."
+     ]
+    },
+    {
+     "id": "32",
+     "n": 32,
+     "s": "عَزَّ جَارُهُ وَجَلَّ ثَنَاؤُهُ وَتَقَدَّسَتْ أَسْمَاؤُهُ وَلَا إِلَهَ غَيْرُهُ.",
+     "t": [
+      "Honoured is the one who is closest to Him; Exalted is His Praise; sacred are His Names, and there is no god, save Him. O Allāh! I (restrain) my enemies by placing You against their necks, and I seek refuge in You from their evils, their ploys, their cunningness, and their deceit. Extinguish the fire of whomsoever intends animosity towards me from among the jinn and humans."
+     ]
+    },
+    {
+     "id": "33",
+     "n": 33,
+     "s": "اللَّهُمَّ إِنِّي أَجْعَلُكَ فِي نُحُورِ أَعْدَائِي،",
+     "t": [
+      "O Allāh! I place You against the necks of my enemies,"
+     ]
+    },
+    {
+     "id": "34",
+     "n": 34,
+     "s": "وَأَعُوذُ بِكَ مِنْ شُرُورِهِمْ وَتَحَيُّلِهِمْ وَمَكْرِهِمْ وَمَكَائِدِهِمْ؛",
+     "t": [
+      "and I seek refuge in You from their evils, their ploys, their cunningness, and their deceit."
+     ]
+    },
+    {
+     "id": "35",
+     "n": 35,
+     "s": "أَطْفِئْ نَارَ مَنْ أَرَادَ بِيَ عَدَاوَةً مِنَ الْجِنِّ وَالْإِنْسِ.",
+     "t": [
+      "Extinguish the fire of whomsoever intends animosity towards me from among the jinn and humans."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "protection",
+   "title": "الحفظ والاستغاثة",
+   "titleEn": "Protection and calling for help",
+   "bayts": [
+    {
+     "id": "36",
+     "n": 36,
+     "s": "يَا حَافِظُ يَا حَفِيظُ، يَا كَافِي يَا مُحِيطُ؛",
+     "t": [
+      "O the Preserver, O the Protector, O the Self-Sufficient, O the All-Embracing,"
+     ]
+    },
+    {
+     "id": "37",
+     "n": 37,
+     "s": "سُبْحَانَكَ يَا رَبِّ؛ مَا أَعْظَمَ شَأْنُكَ وَأَعَزَّ سُلْطَانُكَ.",
+     "t": [
+      "Glory be to You, my Lord; how sublime is Your Rank, and how great is Your Honour!"
+     ]
+    },
+    {
+     "id": "38",
+     "n": 38,
+     "s": "تَحَصَّنْتُ بِاللَّهِ، وَبِأَسْمَاءِ اللَّهِ، وَبِآيَاتِ اللَّهِ، وَمَلَائِكَةِ اللَّهِ،",
+     "t": [
+      "I fortify myself with Allāh, and with the Names of Allāh, and with the Verses of Allāh, and with the Angels of Allāh,"
+     ]
+    },
+    {
+     "id": "39",
+     "n": 39,
+     "s": "وَأَنْبِيَاءِ اللَّهِ، وَرُسُلِ اللَّهِ، وَالصَّالِحِينَ مِنْ عِبَادِ اللَّهِ؛",
+     "t": [
+      "and with the Prophets of Allāh, and with the Messengers of Allāh, and with the righteous among the bondsmen of Allāh."
+     ]
+    },
+    {
+     "id": "40",
+     "n": 40,
+     "s": "حَصَّنْتُ نَفْسِي بِ(لَا إِلَهَ إِلَّا اللَّهُ، مُحَمَّدٌ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ).",
+     "t": [
+      "I fortify myself with: there is no god, but Allāh, and that Muḥammad is the Messenger of Allāh; and may the Blessings and Peace of Allāh be upon him and his family."
+     ]
+    },
+    {
+     "id": "41",
+     "n": 41,
+     "s": "اللَّهُمَّ احْرُسْنِي بِعَيْنِكَ الَّتِي لَا تَنَامُ، وَاكْنُفْنِي بِكَنَفِكَ الَّذِي لَا يُرَامُ،",
+     "t": [
+      "O Allāh! Guard me with Your Eye that never sleeps, and protect me in Your Perfect Protection,"
+     ]
+    },
+    {
+     "id": "42",
+     "n": 42,
+     "s": "وَارْحَمْنِي بِقُدْرَتِكَ عَلَيَّ فَلَا أَهْلِكُ وَأَنْتَ ثِقَتِي وَرَجَائِي.",
+     "t": [
+      "and have mercy upon me with Your Power over me, so that I may not perish while You are my Reliance and my Hope."
+     ]
+    },
+    {
+     "id": "43",
+     "n": 43,
+     "s": "يَا غِيَاثَ الْمُسْتَغِيثِينَ.",
+     "t": [
+      "O the Saviour of those who seek help."
+     ],
+     "c": 3
+    },
+    {
+     "id": "44",
+     "n": 44,
+     "s": "يَا دَرْكَ الْهَالِكِينَ.",
+     "t": [
+      "O the Saviour of those that are going to be destroyed."
+     ],
+     "c": 3
+    },
+    {
+     "id": "45",
+     "n": 45,
+     "s": "اكْفِنِي شَرَّ كُلِّ طَارِقٍ يَطْرُقُ بِلَيْلٍ أَوْ نَهَارٍ، إِلَّا طَارِقًا يَطْرُقُ بِخَيْرٍ إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.",
+     "t": [
+      "Suffice me against every nocturnal visitor that approaches me during the day or night except that visitor that approaches me with goodness. Indeed, You are capable of all things."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "healing",
+   "title": "الرقية والاستكفاء",
+   "titleEn": "Seeking healing and sufficiency",
+   "bayts": [
+    {
+     "id": "46",
+     "n": 46,
+     "s": "بِسْمِ اللَّهِ أَرْقِي نَفْسِي مِنْ كُلِّ مَا يُؤْذِي وَمِنْ كُلِّ حَاسِدٍ؛",
+     "t": [
+      "In the Name of Allāh, I safeguard myself through incantation (ruqyah) from whatever causes harm, and from every envious person;"
+     ]
+    },
+    {
+     "id": "47",
+     "n": 47,
+     "s": "اللَّهُ شِفَائِي؛ بِسْمِ اللَّهِ رَقَيْتُ.",
+     "t": [
+      "so Allāh is my cure. In the Name of Allāh, I safeguard myself."
+     ]
+    },
+    {
+     "id": "48",
+     "n": 48,
+     "s": "اللَّهُمَّ رَبَّ النَّاسِ؛ أَذْهِبِ الْبَأْسَ، اشْفِ أَنْتَ الشَّافِي،",
+     "t": [
+      "O Allāh! The Lord of mankind, remove and cure all illnesses; for You are the One that cures;"
+     ]
+    },
+    {
+     "id": "49",
+     "n": 49,
+     "s": "وَعَافِ أَنْتَ الْمُعَافِي؛ لَا شِفَاءَ إِلَّا شِفَاؤُكَ؛ شِفَاءً لَا يُغَادِرُ سَقَمًا وَلَا أَلَمًا.",
+     "t": [
+      "and restore health, for You are the One who restores health; there is no cure, but Your Cure. A cure that leaves behind no trace of illness and no pain;"
+     ]
+    },
+    {
+     "id": "50",
+     "n": 50,
+     "s": "يَا كَافِي يَا وَافِي يَا حَمِيدُ يَا مَجِيدُ، ارْفَعْ عَنِّي كُلَّ تَعَبٍ شَدِيدٍ،",
+     "t": [
+      "O the Self-Sufficient, O the Fulfiller, O the Praised One, O the Glorious, remove from me extreme exhaustion;"
+     ]
+    },
+    {
+     "id": "51",
+     "n": 51,
+     "s": "وَاكْفِنِي مِنَ الْحَدِّ وَالْحَدِيدِ، وَالْمَرَضِ الشَّدِيدِ، وَالْجَيْشِ الْعَدِيدِ،",
+     "t": [
+      "suffice me against all injurious instruments, severe illnesses and the impending threat (from armies)."
+     ]
+    },
+    {
+     "id": "52",
+     "n": 52,
+     "s": "وَاجْعَلْ لِي نُورًا مِنْ نُورِكَ، وَعِزًّا مِنْ عِزِّكَ، وَنَصْرًا مِنْ نَصْرِكَ،",
+     "t": [
+      "Grant me a light from Your Light, honour from Your Honour, victory from Your Victory,"
+     ]
+    },
+    {
+     "id": "53",
+     "n": 53,
+     "s": "وَبَهَاءً مِنْ بَهَائِكَ، وَعَطَاءً مِنْ عَطَائِكَ، وَحِرَاسَةً مِنْ حِرَاسَتِكَ، وَتَأْيِيدًا مِنْ تَأْيِيدِكَ.",
+     "t": [
+      "magnificence from Your Magnificence, a gift from Your Gifts, a guard from Your Guards, and a support from Your Support."
+     ]
+    },
+    {
+     "id": "54",
+     "n": 54,
+     "s": "يَا ذَا الْجَلَالِ وَالْإِكْرَامِ، وَالْمَوَاهِبِ الْعِظَامِ،",
+     "t": [
+      "O Lord of Sublimity and Honour, and Magnificent Gifts."
+     ]
+    },
+    {
+     "id": "55",
+     "n": 55,
+     "s": "أَسْأَلُكَ أَنْ تَكْفِيَنِي مِنْ شَرِّ كُلِّ ذِي شَرٍّ، إِنَّكَ أَنْتَ اللَّهُ الْخَالِقُ الْأَكْبَرُ.",
+     "t": [
+      "I beseech You to suffice me against the evil of those who cause evil; Verily, You are Allāh, the Creator, the Great."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "closing",
+   "title": "الختام والاستغفار",
+   "titleEn": "The closing and seeking forgiveness",
+   "bayts": [
+    {
+     "id": "56",
+     "n": 56,
+     "s": "وَصَلَّى اللَّهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَآلِهِ وَصَحْبِهِ وَسَلَّمَ تَسْلِيمًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ،",
+     "t": [
+      "And may the Blessings and abundant good, and Blessed Peace of Allāh be upon our master Muḥammad, and upon his family and his Companions."
+     ]
+    },
+    {
+     "id": "57",
+     "n": 57,
+     "s": "وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ظَاهِرًا وَبَاطِنًا وَعَلَى كُلِّ حَالٍ يَا أَرْحَمَ الرَّاحِمِينَ.",
+     "t": [
+      "And Praise be to Allāh, Lord of the Worlds, openly and secretly, and at all times; O the Most Merciful of those who show mercy."
+     ]
+    },
+    {
+     "id": "58",
+     "n": 58,
+     "s": "أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الرَّحْمَنُ الرَّحِيمُ الْحَيُّ الْقَيُّومُ الَّذِي لَا يَمُوتُ وَأَتُوبُ إِلَيْهِ، رَبِّ اغْفِرْ لِي.",
+     "t": [
+      "I seek forgiveness from Allāh; there is no god but Him, the Most Compassionate, the Most Merciful, the Ever-Living, the Self-Subsisting, Who never dies; I repent to Him, O Lord forgive me."
+     ],
+     "c": 27
+    },
+    {
+     "id": "59",
+     "n": 59,
+     "s": "أَسْتَغْفِرُ اللَّهَ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ.",
+     "t": [
+      "I ask Allāh’s Forgiveness for all believing men and women."
+     ],
+     "c": 27
+    }
+   ]
+  }
+ ]
+}
