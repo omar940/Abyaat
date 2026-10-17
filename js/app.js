@@ -203,7 +203,7 @@
     const pvN = S.previewItems(pid).length;
     const preview = !pvN ? ['idle', t('nearIdlePill'), t('previewIdleSub')]
       : S.previewDone(pid) ? ['done', t('doneF'), t('previewDoneSub')]
-      : ['todo', t('previewPill', { n: S.previewReads(pid), m: S.PREVIEW_READS }), t('previewTodoSub')];
+      : ['todo', t('previewPill', { n: S.previewReads(pid), m: S.PREVIEW_READS }), t('previewTodoSub', { n: pvN })];
     const pending = it.near.filter((x) => !x.done).length;
     const near = !it.near.length ? ['idle', t('nearIdlePill'), t('nearIdleSub')]
       : pending ? ['todo', t('nearLeft', { n: pending }), t('nearTodoSub')]
@@ -225,11 +225,14 @@
   function vPreview() {
     const pid = S.state.activePoem, items = pid && POEMS.get(pid) ? S.previewItems(pid) : [];
     if (!items.length) { ui.mode = null; return vHome(); }
-    const slice = items.map((it) => chapterOf(pid, it.cid).bayts[it.idx]), modes = revealModes(slice, lineCount(slice));
+    const dh = isDhikr(pid), slice = items.map((it) => chapterOf(pid, it.cid).bayts[it.idx]), modes = revealModes(slice, lineCount(slice));
     const body = slice.map((b, i) => whenLabel(slice, i) + baytHTML(b, items[i].idx, { no: true, m: modes[i], trans: true, orn: false })).join('<div class="orn"></div>');
     const reads = S.previewReads(pid), total = S.PREVIEW_READS, done = reads >= total, last = reads + 1 >= total;
-    return `<div class="fit-box folio rev nowrap" dir="rtl" data-min="11" data-max="44"><div class="fit-content">${body}</div></div>
-      <div class="actions"><p class="pv-count">${done ? e('previewDoneSub') : e('previewReadN', { n: reads + 1, m: total })}</p>
+    const cnt = S.previewCountOf(pid), max = S.previewMax(pid);
+    const amount = `<div class="stepper"><span class="label">${e('previewAmount')}</span>
+      <span class="ctl" dir="ltr"><button data-act="preview-count" data-d="-1" aria-label="${e('decrease')}" ${cnt <= 1 ? 'disabled' : ''}>−</button><output>${ar(cnt)}</output><button data-act="preview-count" data-d="1" aria-label="${e('increase')}" ${cnt >= max ? 'disabled' : ''}>+</button></span></div>`;
+    return `<div class="fit-box folio rev ${dh ? 'wrap' : 'nowrap'}" dir="rtl" data-min="${dh ? 14 : 11}" data-max="${dh ? 34 : 44}"><div class="fit-content">${body}</div></div>
+      <div class="actions">${amount}<p class="pv-count">${done ? e('previewDoneSub') : e('previewReadN', { n: reads + 1, m: total })}</p>
         ${done ? `<button class="btn block quiet" data-act="mode-back">${e('previewBack')}</button>` : `<button class="btn block" data-act="preview-read">${e(last ? 'previewFinish' : 'previewRead')}</button>`}</div>`;
   }
 
@@ -669,6 +672,7 @@
     const d = el.dataset, L = ui.learn, N = ui.near, Q = ui.far;
     switch (name) {
       case 'goto': return go(d.to);
+      case 'preview-count': { const pid = S.state.activePoem; S.setPreviewCount(pid, S.previewCountOf(pid) + Number(d.d)); return render({ keep: true }); }
       case 'preview-read': {
         const pid = S.state.activePoem, r = S.previewRead(pid);
         if (r >= S.PREVIEW_READS) { toast(t('tPreviewDone')); ui.mode = null; }

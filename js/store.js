@@ -138,16 +138,20 @@
   }
 
   /* ---- التمهيد: قراءة ثلاثة أبيات قادمة ثلاث مرات يوميًا ليألفها القلب قبل حفظها (ما عدا الأذكار) ---- */
-  const PREVIEW_VERSES = 3, PREVIEW_READS = 3;
-  /* الأبيات القادمة بترتيب الحفظ: من موضع الحفظ الحالي، وتتابع في الفصول التالية المفتوحة إن قصر الفصل؛ تتخطى الفصول المعلّقة والاختيارية */
+  const PREVIEW_READS = 3;
+  /* كم يُعاين من القادم لكل قصيدة أو أذكار: الافتراضي ثلاثة أبيات (وذكر واحد للأذكار)، ويُضبط من شاشة التمهيد */
+  const previewMax = (pid) => (metas[pid] && metas[pid].type === 'dhikr' ? 5 : 10);
+  const previewCountOf = (pid) => { const v = state.poems[pid] && state.poems[pid].previewCount; return Math.min(previewMax(pid), Math.max(1, v || (metas[pid] && metas[pid].type === 'dhikr' ? 1 : 3))); };
+  function setPreviewCount(pid, v) { ps(pid).previewCount = Math.min(previewMax(pid), Math.max(1, v)); save(); }
+  /* الأبيات القادمة بترتيب الحفظ: من موضع الحفظ الحالي، وتتابع في الفصول التالية المفتوحة إن قصر الفصل؛ تتخطى الفصول المعلّقة */
   function previewItems(pid) {
-    const m = metas[pid]; if (!m || m.type === 'dhikr') return [];
+    const m = metas[pid]; if (!m) return [];
     const cur = currentChapter(pid); if (!cur) return [];
-    const out = [], idx = m.chapters.findIndex((c) => c.id === cur.id);
-    for (let i = idx; i < m.chapters.length && out.length < PREVIEW_VERSES; i++) {
+    const want = previewCountOf(pid), out = [], idx = m.chapters.findIndex((c) => c.id === cur.id);
+    for (let i = idx; i < m.chapters.length && out.length < want; i++) {
       const c = m.chapters[i], r = chapter(pid, c.id);
-      if ((i !== idx && c.optional) || r.suspended || (r.status !== 'new' && r.status !== 'learning')) continue;
-      for (let k = r.learned || 0; k < c.len && out.length < PREVIEW_VERSES; k++) out.push({ cid: c.id, idx: k });
+      if (r.suspended || (r.status !== 'new' && r.status !== 'learning')) continue;
+      for (let k = r.learned || 0; k < c.len && out.length < want; k++) out.push({ cid: c.id, idx: k });
     }
     return out;
   }
@@ -308,7 +312,7 @@
 
   return {
     get state() { return state; }, KEY, CONSOLIDATION_DAYS, SEG_MAX, registerPoem, meta, chapterMeta, chapter,
-    todayNewDone, currentChapter, previewItems, previewReads, previewDone, previewPending, previewPendingCount, previewRead, PREVIEW_READS, setSuspended, isSuspended, markLearned, setActive, setCurrent, isEnrolled, enrolledIds, setEnrolled, poemStatus, perDayOf, setPerDay, newDoneToday,
+    todayNewDone, currentChapter, previewItems, previewCountOf, setPreviewCount, previewMax, previewReads, previewDone, previewPending, previewPendingCount, previewRead, PREVIEW_READS, setSuspended, isSuspended, markLearned, setActive, setCurrent, isEnrolled, enrolledIds, setEnrolled, poemStatus, perDayOf, setPerDay, newDoneToday,
     newReviewList, pendingNear, finishNewReview, oldReviewList, dueOld, previewOld, applyOldReview,
     previewMark, markMemorized, resetChapter, poemProgress, settings, setSetting, exportJSON, importJSON, resetAll,
   };
