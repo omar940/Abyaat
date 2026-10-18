@@ -119,9 +119,15 @@ html[dir="ltr"] #top .brand{order:2;flex-direction:row-reverse}
 /* بعض الأبيات لا تتّسع مهما صغُر الخط (شاشة قصيرة، وضع أفقي): يُسمح بالتمرير الرأسي بدل انسكاب النص خارج الصندوق */
 .fit-box.folio{overflow-x:hidden;overflow-y:auto}
 .bayt{position:relative}
-.trans-peek{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3em;
+.bayt:has(.trans-peek){display:grid}
+.bayt:has(.trans-peek)>*{grid-area:1/1;min-width:0}
+.bayt.has-no:has(.trans-peek){grid-template-columns:auto 1fr;align-items:center;column-gap:.25em}
+.bayt.has-no:has(.trans-peek)>.bno{grid-area:1/1}
+.bayt.has-no:has(.trans-peek)>.lines{grid-area:1/2}
+.bayt.has-no:has(.trans-peek)>.trans-peek{grid-area:1/1/2/3}
+.trans-peek{z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3em;
   background:var(--surface);border-radius:10px;padding:.3em .5em;opacity:0;pointer-events:none;transition:opacity .12s ease}
-.trans-peek p{margin:0;font-family:var(--font-ui);font-size:max(.5em,13.5px);line-height:1.4;color:var(--ink-2);text-align:center}
+.trans-peek p{margin:0;font-family:var(--font-ui);font-size:max(.5em,13.5px);line-height:1.4;color:var(--ink-2);text-align:center;overflow-wrap:anywhere}
 .bayt.show-trans{cursor:default}
 .bayt.show-trans>*:not(.trans-peek){opacity:0}
 .bayt.show-trans .trans-peek{opacity:1}

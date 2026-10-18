@@ -560,6 +560,15 @@
   }
 
   /* ---------- الإعدادات ---------- */
+  /* يفتح نموذج بلاغ على GitHub معبّأً بمعلومات الجهاز والموضع الحالي */
+  function reportIssue() {
+    const where = ui.tab === 'lib' && ui.lib.reader ? 'library/' + ui.lib.reader.pid : cur();
+    const body = ['<!-- صِف المشكلة أو الخطأ في النص أو الترجمة / Describe the problem or text/translation error -->', '', '', '---',
+      'Screen: ' + where, 'Poem: ' + (S.state.activePoem || '-'), 'Lang: ' + (S.settings().lang || 'ar'),
+      'Viewport: ' + innerWidth + 'x' + innerHeight, 'UA: ' + navigator.userAgent].join('\n');
+    const url = 'https://github.com/omar940/Abyaat/issues/new?title=' + encodeURIComponent('بلاغ / Issue: ') + '&body=' + encodeURIComponent(body);
+    window.open(url, '_blank', 'noopener');
+  }
   function vSettings() {
     const st = S.settings();
     const seg = (key, opts, curVal) => `<div class="seg" role="group">${opts.map(([v, l]) => `<button data-act="set" data-key="${key}" data-val="${v}" aria-pressed="${String(curVal) === String(v)}">${esc(l)}</button>`).join('')}</div>`;
@@ -573,6 +582,7 @@
         <div class="row"><button class="btn quiet small" data-act="export">${e('exportBtn')}</button><button class="btn quiet small" data-act="import">${e('importBtn')}</button></div>
         <input id="imp" type="file" accept="application/json,.json" hidden></div>
       <div class="set"><div class="lbl">${e('updT')}</div><div class="desc">${e('updD')}</div><button class="btn quiet small" data-act="update-app">${e('updBtn')}</button></div>
+      <div class="set"><div class="lbl">${e('repT')}</div><div class="desc">${e('repD')}</div><button class="btn quiet small" data-act="report">${e('repBtn')}</button></div>
       <div class="set"><button class="btn danger small" data-act="reset-ask">${e('eraseBtn')}</button></div>
       <p class="about">${nl(t('about'))}</p>`;
   }
@@ -765,6 +775,7 @@
         return render({ keep: true });
       case 'set-en': S.setSetting('showEn', !S.settings().showEn); return render({ keep: true });
       case 'update-app': return updateApp();
+      case 'report': return reportIssue();
       case 'export': return exportData();
       case 'import': return $('#imp').click();
       case 'reset-ask': return confirmSheet(t('eraseQ'), t('eraseBody'), t('eraseYes'), 'reset-yes', {}, true);

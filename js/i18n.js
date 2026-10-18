@@ -89,6 +89,7 @@
     themeT: 'المظهر', themeD: 'اختر الوضع الفاتح أو الداكن، أو اتبع إعداد جهازك.', themeLight: 'فاتح', themeDark: 'داكن', themeAuto: 'تلقائي',
     langT: 'لغة الواجهة', langD: 'تبقى القصائد بالعربية. تتغيّر الأزرار والقوائم فقط.',
     backupT: 'النسخ الاحتياطي', backupD: 'يُحفظ تقدّمك على هذا الجهاز فقط. صدّر نسخة لنقله أو حفظه.', exportBtn: 'تصدير التقدّم', importBtn: 'استيراد', eraseBtn: 'مسح كل التقدّم',
+    repT: 'الإبلاغ عن مشكلة', repD: 'خطأ في النص أو الترجمة أو عطل في التطبيق؟ يفتح نموذج بلاغ على GitHub (يلزم حساب GitHub).', repBtn: 'إبلاغ عن مشكلة',
     updT: 'تحديث التطبيق', updD: 'يمسح الملفات المخزّنة مؤقتًا ويحمّل أحدث إصدار. تقدّمك لا يتأثر.', updBtn: 'مسح الذاكرة المؤقتة وتحديث', tUpdating: 'جارٍ التحديث…', tUpdFail: 'تعذّر التحديث، تحقّق من الاتصال',
     about: 'تعاهد، الإصدار ١. المراجعة المتباعدة بخوارزمية FSRS، ببطاقة لكل ٨ إلى ١٢ بيتًا من الفصل.\nالأذكار: اختيارها وترتيبها مستفادان من كتاب «أذكار اليوم والليلة» (Daily Adhkār) الصادر عن Ummah Welfare Trust (uwt.org)، والترجمة من وضعنا.\nالخطوط: الأميري وIBM Plex Sans Arabic (رخصة OFL).',
     /* رسائل */
@@ -171,6 +172,7 @@
     themeT: 'Appearance', themeD: 'Choose light or dark, or follow your device.', themeLight: 'Light', themeDark: 'Dark', themeAuto: 'Auto',
     langT: 'Interface language', langD: 'Poems always stay in Arabic. Only the buttons and menus change.',
     backupT: 'Backup', backupD: 'Your progress is saved on this device only. Export a copy to move or keep it.', exportBtn: 'Export progress', importBtn: 'Import', eraseBtn: 'Erase all progress',
+    repT: 'Report an issue', repD: 'A text or translation error, or an app bug? Opens a prefilled issue on GitHub (needs a GitHub account).', repBtn: 'Report an issue',
     updT: 'Update app', updD: 'Clears cached files and loads the latest version. Your progress is not affected.', updBtn: 'Clear cache & update', tUpdating: 'Updating…', tUpdFail: 'Update failed, check your connection',
     about: "Ta'āhud, version 1. Spaced repetition with FSRS, one card per 8–12 verses of a chapter.\nAdhkār: selection and arrangement follow “Daily Adhkār” by Ummah Welfare Trust (uwt.org); the translations are our own.\nFonts: Scheherazade New, Amiri and IBM Plex Sans Arabic (OFL license).",
     tNowMem: 'Now memorizing this poem', tStartHere: 'Memorization will start from this chapter', tAdded: 'Chapter added to old review', tReset: 'Chapter reset',
