@@ -839,19 +839,18 @@
     if (tab) return go(tab.dataset.tab);
     const peek = ev.target.closest('[data-peek]');
     if (peek) { peek.classList.toggle('peek'); return; }
-    /* صفحة المراجعة مقسومة أثلاثًا (بالاتجاه الفعلي لا اتجاه اللغة): الثلث الأيمن يُظهر سطرًا (أو يقلب إلى المجموعة التالية
-       إن ظهرت الصفحة كلها)، والأيسر يُخفي سطرًا (أو يعود إلى السابقة)، والأوسط لا يتقدّم ولا يرجع،
-       ففيه تُلمس مرّتين (خلال 0.4 ث) أبيات المراجعة البعيدة للتأشير على الصعب منها */
-    const zone = ev.target.closest('.fit-box.rev');
-    if (zone && view.contains(zone) && pagerKind()) {
-      const r = zone.getBoundingClientRect(), f = (ev.clientX - r.left) / r.width;
-      if (f > 2 / 3) { dt = null; return stepPager(true); }
-      if (f < 1 / 3) { dt = null; return stepPager(false); }
-      const q = ui.mode === 'far' && ev.target.closest('[data-act="q-toggle"]'), now = Date.now();
-      if (!q) { dt = null; return; }
-      if (dt && dt.key === q.dataset.i && now - dt.time < DTAP_MS) { dt = null; return act('q-toggle', q); }
-      dt = { key: q.dataset.i, time: now };
-      return;
+    /* صفحة المراجعة مقسومة رأسيًا: لمسة في الثلث الأعلى من الشاشة تُخفي السطر الحالي (أو تعود إلى المجموعة السابقة
+       إن اختفت الصفحة كلها)، ولمسة في الثلثين الأسفل تُظهر السطر التالي (أو تقلب إلى المجموعة التالية إن ظهرت كلها).
+       في المراجعة البعيدة تُلمس البيت مرّتين (خلال 0.4 ث) للتأشير عليه صعبًا، ويُلغى أثر اللمسة الأولى منهما */
+    const kind = pagerKind();
+    if (kind && view.contains(ev.target) && !ev.target.closest('button,a,select,input,.actions,.rc')) {
+      const r = view.getBoundingClientRect(), f = (ev.clientY - r.top) / r.height, now = Date.now();
+      const q = ui.mode === 'far' && ev.target.closest('[data-act="q-toggle"]');
+      if (q && dt && dt.key === q.dataset.i && now - dt.time < DTAP_MS) {
+        ui.far.shown = dt.shown; dt = null; return act('q-toggle', q);
+      }
+      dt = q ? { key: q.dataset.i, time: now, shown: pagerPage(kind).shown } : null;
+      return stepPager(f >= 1 / 3);
     }
     const a = ev.target.closest('[data-act]');
     if (a) act(a.dataset.act, a);
