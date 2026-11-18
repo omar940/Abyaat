@@ -47,7 +47,9 @@
   function applyTheme() {
     const s = S.settings().theme, isDark = s === 'dark' || (s === 'auto' && dark && dark.matches);
     document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
-    const m = $('meta[name="theme-color"]'); if (m) m.setAttribute('content', isDark ? '#14110c' : '#eadfc6');
+    /* لون شريط الحالة يطابق خلفية الصفحة تمامًا، وإلا ظهر الشريط العلوي مموّهًا في سفاري الحديث */
+    const m = $('meta[name="theme-color"]'), bg = getComputedStyle(document.body).backgroundColor;
+    if (m) m.setAttribute('content', bg && bg !== 'rgba(0, 0, 0, 0)' ? bg : (isDark ? '#2a1f18' : '#eadfc6'));
   }
   if (dark && dark.addEventListener) dark.addEventListener('change', applyTheme);
 

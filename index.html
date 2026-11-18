@@ -22,6 +22,7 @@
       var st = (JSON.parse(localStorage.getItem('abyaat:v1')) || {}).settings || {}, r = document.documentElement;
       var dk = st.theme === 'dark' || (st.theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
       r.dataset.theme = dk ? 'dark' : 'light';
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', dk ? '#2a1f18' : '#eadfc6');
       if (st.lang === 'en') { r.lang = 'en'; r.dir = 'ltr'; }
     } catch (e) {}
   </script>
