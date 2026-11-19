@@ -24,6 +24,7 @@
       r.dataset.theme = dk ? 'dark' : 'light';
       document.querySelector('meta[name="theme-color"]').setAttribute('content', dk ? '#2a1f18' : '#eadfc6');
       if (st.lang === 'en') { r.lang = 'en'; r.dir = 'ltr'; }
+      if (/iPhone/.test(navigator.userAgent)) r.classList.add('ios');
     } catch (e) {}
   </script>
   <link rel="stylesheet" href="css/styles.css">

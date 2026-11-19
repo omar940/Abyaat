@@ -586,7 +586,7 @@
       <div class="set"><div class="lbl">${e('updT')}</div><div class="desc">${e('updD')}</div><button class="btn quiet small" data-act="update-app">${e('updBtn')}</button></div>
       <div class="set"><div class="lbl">${e('repT')}</div><div class="desc">${e('repD')}</div><button class="btn quiet small" data-act="report">${e('repBtn')}</button></div>
       <div class="set"><button class="btn danger small" data-act="reset-ask">${e('eraseBtn')}</button></div>
-      <p class="about">${nl(t('about'))}</p>`;
+      <p class="about">${nl(t('about'))}</p><p class="about" id="ver"></p>`;
   }
 
   /* ---------- الرسم ---------- */
@@ -651,6 +651,8 @@
     U.fitText(b, { min: b.classList.contains('rev') && shortLand() ? Math.max(min, 22) : min, max: +b.dataset.max || 48 });
   });
   function afterRender() {
+    const ver = $('#ver');
+    if (ver && window.caches) caches.keys().then((k) => { ver.textContent = k.filter((x) => /^abyaat-/.test(x)).join(' '); }).catch(() => {});
     requestAnimationFrame(fitAll);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => requestAnimationFrame(fitAll));
   }
