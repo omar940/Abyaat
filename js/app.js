@@ -168,11 +168,11 @@
     : (st.previewN ? `<span class="pill gold">${e('chipPreview')}</span>` : '') + (!st.newOk ? `<span class="pill gold">${e('chipNew')}</span>` : '') + (st.nearN ? `<span class="pill rust">${e('chipNear', { n: st.nearN })}</span>` : '') + (st.farN ? `<span class="pill rust">${e('chipFar', { n: st.farN })}</span>` : '');
   function poemCard(pid, act) {
     const poem = POEMS.get(pid), pr = S.poemProgress(pid), st = act === 'poem-open' ? dayStatus(pid) : null;
-    return `<li style="margin-bottom:12px"><button class="book${st && st.done ? ' is-done' : ''}" data-act="${act}" data-pid="${esc(pid)}"><span class="spine"></span><span class="body">
+    return `<li class="${st ? 'has-x' : ''}" style="margin-bottom:12px"><button class="book${st && st.done ? ' is-done' : ''}" data-act="${act}" data-pid="${esc(pid)}"><span class="spine"></span><span class="body">
       <div class="name"${da}>${esc(pick(poem, 'title'))}</div><div class="full"${da}>${esc(pick(poem, 'author'))}</div>
       <div class="meta"><span>${e('memStat', { n: pr.done, b: pr.total, u: unitOf(pid) })}</span></div>
       ${st ? `<div class="chips">${statusChips(st)}</div>` : ''}
-      <div class="bar" style="margin-top:10px"><i style="width:${pr.pct}%"></i></div></span></button></li>`;
+      <div class="bar" style="margin-top:10px"><i style="width:${pr.pct}%"></i></div></span></button>${st ? `<button class="card-x" type="button" data-act="card-remove" data-pid="${esc(pid)}" aria-label="${e('removePoem')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg></button>` : ''}</li>`;
   }
   function vHome() {
     const act = S.state.activePoem;
@@ -302,7 +302,7 @@
     const trans = (b.t && showEn) ? `<div class="trans-row">${transHTML(b)}</div>` : '';
     const dh = isDhikr(cursor.pid);
     /* الذكر: الظرف والعدد والمصدر تحت النص، والترجمة بالضغط المطوّل على النص */
-    const meta = (dh || isWird(cursor.pid)) ? `<div class="dh-meta">${b.w ? `<span class="pill gold"${da}>${esc(pick(b, 'w'))}</span>` : ''}${b.c > 1 ? `<span class="pill green">${e('timesN', { n: b.c })}</span>` : ''}${b.r ? `<span${da}>${esc(b.r)}</span>` : ''}${b.t ? `<span class="muted">${e('holdTrans')}</span>` : ''}</div>` : '';
+    const meta = (dh || isWird(cursor.pid)) ? `<div class="dh-meta">${b.w ? `<span class="pill gold"${da}>${esc(pick(b, 'w'))}</span>` : ''}${b.c > 1 ? `<span class="pill green">${e('timesN', { n: b.c })}</span>` : ''}${noteBtn(b)}${b.r ? `<span${da}>${esc(b.r)}</span>` : ''}${b.t ? `<span class="muted">${e('holdTrans')}</span>` : ''}</div>` : '';
     const actions = `<div class="row"><button class="btn quiet" data-act="learn-hide">${hidden ? e('showVerse') : e('hideVerse')}</button>
         <button class="btn quiet" data-act="learn-hint" ${hidden ? '' : 'disabled'}>${L.hint ? e('hideHint') : e('hint')}</button></div>
       <button class="btn block" data-act="learn-known">${e('memorized')}</button>`;
@@ -330,14 +330,16 @@
       <p class="lede">${pending ? e('nearLede', { n: pending }) : e('nearAllDone')}</p>
       <ul class="list" style="margin-top:8px">${rows}</ul>`;
   }
-  /* أسهم المراجعة (مواضعها ثابتة بالعربية والإنجليزية): اليمين للتقدّم واليسار للرجوع.
+  /* أسهم المراجعة رأسية: السهم لأسفل يُظهر والسهم لأعلى يُخفي.
      سهم واحد = سطر (شطر) واحد، سهمان = المجموعة التالية أو السابقة من الأبيات */
-  const ARR = (n, flip) => `<svg class="arr${flip ? ' flip' : ''}" viewBox="0 0 24 24" aria-hidden="true"><path d="${n === 2 ? 'M5 6l6 6-6 6M12 6l6 6-6 6' : 'M9 6l6 6-6 6'}"/></svg>`;
+  const ARR = (n, up) => `<svg class="arr ${up ? 'up' : 'dn'}" viewBox="0 0 24 24" aria-hidden="true"><path d="${n === 2 ? 'M5 6l6 6-6 6M12 6l6 6-6 6' : 'M9 6l6 6-6 6'}"/></svg>`;
   const lineCount = (slice) => slice.reduce((n, b) => n + linesOf(b).length, 0);
   /* يوزّع عدد الأسطر الظاهرة على أبيات الصفحة: لكل بيت مصفوفة حالات 'show' أو 'hide' */
   const revealModes = (slice, shown) => { let rem = shown; return slice.map((b) => { const L = linesOf(b), r = Math.min(L.length, Math.max(0, rem)); rem -= L.length; return L.map((_, i) => (i < r ? 'show' : 'hide')); }); };
   /* ظرف الذكر (عند خلع الثياب مثلًا) فوق نصّه في صفحات المراجعة، ويُكتب مرة واحدة لما تتابع من أذكار بظرف واحد */
-  const whenLabel = (slice, i) => { const b = slice[i]; if (!b.w || (i > 0 && slice[i - 1].w === b.w && slice[i - 1].wEn === b.wEn)) return ''; return `<div class="dh-when"${da}>${esc(pick(b, 'w'))}</div>`; };
+  /* ملاحظة فقهية أو فضل للذكر: زرّ صغير يُظهرها بتلاشٍ */
+  const noteBtn = (b) => b.note ? `<button class="note-btn" type="button" data-act="note" data-id="${esc(b.id)}">${e('noteBtn')}</button>` : '';
+  const whenLabel = (slice, i) => { const b = slice[i], lab = (!b.w || (i > 0 && slice[i - 1].w === b.w && slice[i - 1].wEn === b.wEn)) ? '' : `<span${da}>${esc(pick(b, 'w'))}</span>`, nb = noteBtn(b); return lab || nb ? `<div class="dh-when">${lab}${nb}</div>` : ''; };
   function pagerBar(o) {
     const mid = `<div class="rc-mid"><span class="rc-cnt">${o.label ? esc(o.label) : `${ar(o.page + 1)} / ${ar(o.pages)}`}${o.marked ? `<i class="rc-mark" aria-hidden="true">${ar(o.marked)}</i>` : ''}</span></div>`;
     /* في آخر مجموعة يبقى السهم المزدوج يُظهر الصفحة كلها، فإذا ظهرت صار زرّ الإتمام */
@@ -549,7 +551,7 @@
       const dh = poem.type === 'dhikr';
       const bs = c.bayts.map((b, i) => {
         const meta = (dh || poem.type === 'wird') ? [b.w ? pick(b, 'w') : '', b.c > 1 ? t('timesN', { n: b.c }) : '', b.r || ''].filter(Boolean).join(' · ') : '';
-        return `<article class="rbayt" dir="rtl" data-k="${esc(c.id)}:${i}"><span class="rno">${ar(b.n || i + 1)}</span><div class="rlines"><div class="rs${dh ? ' dh' : ''}">${esc(b.s)}</div>${b.e ? `<div class="re">${esc(b.e)}</div>` : ''}</div>${meta ? `<p class="rmeta"${da}>${esc(meta)}</p>` : ''}${en && b.t ? `<div class="rtrans en" lang="en" dir="ltr">${transParas(b)}</div>` : ''}</article>`;
+        return `<article class="rbayt" dir="rtl" data-k="${esc(c.id)}:${i}"><span class="rno">${ar(b.n || i + 1)}</span><div class="rlines"><div class="rs${dh ? ' dh' : ''}">${esc(b.s)}</div>${b.e ? `<div class="re">${esc(b.e)}</div>` : ''}</div>${meta ? `<p class="rmeta"${da}>${esc(meta)}</p>` : ''}${en && b.t ? `<div class="rtrans en" lang="en" dir="ltr">${transParas(b)}</div>` : ''}${en && b.note ? `<p class="rnote en" lang="en" dir="ltr">${salHTML(b.note)}</p>` : ''}</article>`;
       }).join('');
       return `<section id="rch-${esc(c.id)}"><div class="rch">${kicker(R.pid, c.id) ? `<span class="ch-no"${da}>${esc(kicker(R.pid, c.id))}</span>` : ''}<h3 dir="rtl">${esc(c.title)}</h3>${enTitle(c)}</div>${bs}</section>`;
     }).join('');
@@ -682,9 +684,24 @@
   }
   async function openPoem(pid) { await loadPoem(pid); ui.lib.poem = pid; render(); }
 
+  /* ملاحظة الذكر: لوحة تظهر بتلاشٍ وتُغلق بلمسة في أي موضع */
+  const salHTML = (x) => esc(x).replace(/ﷺ/g, '<span class="sal">ﷺ</span>');
+  function showNote(text) {
+    let n = $('#note');
+    if (!n) { n = document.createElement('div'); n.id = 'note'; n.innerHTML = '<div class="note-card en" lang="en" dir="ltr"></div>'; document.body.appendChild(n); }
+    n.firstChild.innerHTML = salHTML(text); n.classList.add('show');
+  }
+  const hideNote = () => { const n = $('#note'); if (n) n.classList.remove('show'); };
+  function noteOf(id) {
+    const poem = POEMS.get(S.state.activePoem);
+    for (const c of poem ? poem.chapters : []) for (const b of c.bayts) if (b.id === id) return b.note;
+    return '';
+  }
   function act(name, el) {
     const d = el.dataset, L = ui.learn, N = ui.near, Q = ui.far;
     switch (name) {
+      case 'note': return showNote(noteOf(d.id));
+      case 'card-remove': return confirmSheet(t('removeQ'), t('removeBody'), t('removeYes'), 'unenroll-yes', { pid: d.pid }, true);
       case 'goto': return go(d.to);
       case 'preview-count': { const pid = S.state.activePoem; S.setPreviewCount(pid, S.previewCountOf(pid) + Number(d.d)); return render({ keep: true }); }
       case 'preview-read': {
@@ -700,7 +717,7 @@
       case 'add-poem': ui.tab = 'home'; ui.mode = 'add'; return render();
       case 'enroll': return loadPoem(d.pid).then(() => { S.setEnrolled(d.pid, true); S.setActive(d.pid); ui.mode = null; ui.poemOpen = true; toast(t('tPoemAdded')); render(); });
       case 'unenroll-ask': return confirmSheet(t('removeQ'), t('removeBody'), t('removeYes'), 'unenroll-yes', {}, true);
-      case 'unenroll-yes': S.setEnrolled(S.state.activePoem, false); ui.poemOpen = false; ui.mode = null; closeSheet(); toast(t('tPoemRemoved')); return render();
+      case 'unenroll-yes': S.setEnrolled(d.pid || S.state.activePoem, false); ui.poemOpen = false; ui.mode = null; closeSheet(); toast(t('tPoemRemoved')); return render();
       /* الحفظ الجديد */
       case 'test-done': { const T = ui.test; ui.test = null; if (T && T.pending) commitLearned(T.pid, T.cid); return afterLearnStep(); }
       case 'noop': return;
@@ -838,6 +855,7 @@
     if (n && n.closest && n.closest('.fit-box')) ev.preventDefault();
   });
   document.addEventListener('click', (ev) => {
+    if (ev.target.closest('#note')) { hideNote(); return; }
     if (lpFired) { lpFired = false; dt = null; return; }
     const tab = ev.target.closest('[data-tab]');
     if (tab) return go(tab.dataset.tab);
