@@ -8,8 +8,8 @@
  "fullTitleEn": "Al-Khulāṣah: the cream of remembrance",
  "author": "الحبيب عمر بن محمد بن سالم بن حفيظ",
  "authorEn": "Ḥabīb ‘Umar b. Muḥammad b. Sālim b. Ḥafīẓ",
- "source": "مختارات من «الخلاصة» للحبيب عمر بن حفيظ، والترجمة الإنجليزية من طبعة أشنتار (٢٠١٣) بتحرير غُسَين محمد، وقد رُفعت عنها حقوق النشر",
- "sourceEn": "Selected from “Al-Khulāṣah – The Cream of Remembrance” compiled by Ḥabīb ‘Umar b. Ḥafīẓ; English translation and edition by Prof. Ghoesain Mohamed (Ashnataar Publications, 2nd ed. 2013), whose copyright has been removed for free use.",
+ "source": "مختارات من «الخلاصة» للحبيب عمر بن حفيظ، والترجمة الإنجليزية من طبعة أشنتار (٢٠١٣) بتحرير غُسَين محمد، وقد رُفعت عنها حقوق النشر؛ و«آداب اليوم والليلة (١)» من جمعية سفينة، مستخلصة من «الهدي النبوي في كل لحظة» للشيخ عمر حسين الخطيب",
+ "sourceEn": "Selected from “Al-Khulāṣah – The Cream of Remembrance” compiled by Ḥabīb ‘Umar b. Ḥafīẓ; English translation and edition by Prof. Ghoesain Mohamed (Ashnataar Publications, 2nd ed. 2013), whose copyright has been removed for free use. “Daily Adab, Part One” is from Safina Society, drawn from “Prophetic Guidance for Every Moment” by Shaykh ʿUmar Ḥusayn al-Khaṭīb.",
  "chapters": [
   {
    "id": "niyya",
@@ -3732,6 +3732,362 @@
      ],
      "w": "الدعاء في ختام المجالس والدروس",
      "wEn": "Supplication at the end of gatherings and lessons"
+    }
+   ]
+  },
+  {
+   "id": "daily_adab1",
+   "title": "آداب اليوم والليلة (١)",
+   "titleEn": "Daily Adab, Part One",
+   "group": "آداب اليوم والليلة",
+   "groupEn": "Daily Adab",
+   "bayts": [
+    {
+     "id": "d324",
+     "n": 324,
+     "s": "اَلْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
+     "t": [
+      "Praise be to Allāh, who gave us life after He caused us to die, and to Him is the rising."
+     ],
+     "w": "عند الاستيقاظ",
+     "wEn": "On waking"
+    },
+    {
+     "id": "d325",
+     "n": 325,
+     "s": "اَلْحَمْدُ لِلَّهِ الَّذِي عَافَانِي فِي جَسَدِي، وَرَدَّ عَلَيَّ رُوحِي، وَأَذِنَ لِي بِذِكْرِهِ",
+     "t": [
+      "Praise be to Allāh, who gave my body health, returned my soul to me and allowed me to remember Him."
+     ]
+    },
+    {
+     "id": "d326",
+     "n": 326,
+     "s": "لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ،",
+     "t": [
+      "There is no god but Allāh alone, without partner. His is the dominion and His is the praise, and He has power over all things."
+     ],
+     "w": "إن تيسّر، عند الاستيقاظ ليلًا",
+     "wEn": "If you are able, on waking in the night"
+    },
+    {
+     "id": "d327",
+     "n": 327,
+     "s": "سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَٰهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ، رَبِّ اغْفِرْ لِي",
+     "t": [
+      "Glory be to Allāh, praise be to Allāh, there is no god but Allāh, Allāh is greatest, and there is no power or strength except through Allāh, the Most High, the Mighty. My Lord, forgive me."
+     ]
+    },
+    {
+     "id": "d328",
+     "n": 328,
+     "s": "لَا إِلَٰهَ إِلَّا أَنْتَ سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَسْتَغْفِرُكَ لِذَنْبِي، وَأَسْأَلُكَ رَحْمَتَكَ، اللَّهُمَّ زِدْنِي عِلْمًا، وَلَا تُزِغْ قَلْبِي بَعْدَ إِذْ هَدَيْتَنِي، وَهَبْ لِي مِنْ لَدُنْكَ رَحْمَةً، إِنَّكَ أَنْتَ الْوَهَّابُ",
+     "t": [
+      "There is no god but You. Glory and praise be to You, O Allāh. I ask Your forgiveness for my sins and I ask for Your mercy. O Allāh, increase me in knowledge, do not let my heart stray after You have guided me, and grant me mercy from You. You are the Giver."
+     ]
+    },
+    {
+     "id": "d329",
+     "n": 329,
+     "s": "بِسْمِ اللَّهِ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ",
+     "t": [
+      "In the name of Allāh. O Allāh, I seek refuge in You from the male and female devils."
+     ],
+     "w": "قبل دخول الخلاء",
+     "wEn": "Before entering the washroom"
+    },
+    {
+     "id": "d330",
+     "n": 330,
+     "s": "بِسْمِ اللَّهِ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ",
+     "t": [
+      "In the name of Allāh, besides whom there is no god."
+     ],
+     "w": "عند كشف العورة",
+     "wEn": "When uncovering yourself"
+    },
+    {
+     "id": "d331",
+     "n": 331,
+     "s": "غُفْرَانَكَ، الْحَمْدُ لِلَّهِ الَّذِي أَذْهَبَ عَنِّي الْأَذَىٰ وَعَافَانِي",
+     "t": [
+      "I ask Your forgiveness. Praise be to Allāh, who removed harm from me and gave me well-being."
+     ],
+     "w": "عند الخروج من الخلاء",
+     "wEn": "On leaving the washroom"
+    },
+    {
+     "id": "d332",
+     "n": 332,
+     "s": "بِسْمِ اللَّهِ",
+     "t": [
+      "In the name of Allāh."
+     ],
+     "w": "عند بدء الوضوء",
+     "wEn": "Beginning wudu"
+    },
+    {
+     "id": "d333",
+     "n": 333,
+     "s": "أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ [سَيِّدَنَا] مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ،",
+     "t": [
+      "I bear witness that there is no god but Allāh alone, without partner, and that [our master] Muḥammad is His servant and Messenger. O Allāh, make me of those who turn to You often and of those who keep themselves pure."
+     ],
+     "w": "بعد الوضوء",
+     "wEn": "After wudu"
+    },
+    {
+     "id": "d334",
+     "n": 334,
+     "s": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ",
+     "t": [
+      "Glory and praise be to You, O Allāh. I bear witness that there is no god but You. I ask Your forgiveness and I turn to You."
+     ]
+    },
+    {
+     "id": "d335",
+     "n": 335,
+     "s": "اللَّهُمَّ اغْفِرْ لِي ذَنْبِي، وَوَسِّعْ لِي فِي دَارِي، وَبَارِكْ لِي فِي رِزْقِي",
+     "t": [
+      "O Allāh, forgive my sins, make my home spacious for me and bless my provision."
+     ]
+    },
+    {
+     "id": "d336",
+     "n": 336,
+     "s": "الْحَمْدُ لِلَّهِ، اللَّهُمَّ كَمَا حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي، الْحَمْدُ لِلَّهِ الَّذِي سَوَّىٰ خَلْقِي فَعَدَلَهُ، وَكَرَّمَ صُورَةَ وَجْهِي فَحَسَّنَهَا، وَجَعَلَنِي مِنَ الْمُسْلِمِينَ",
+     "t": [
+      "Praise be to Allāh. O Allāh, as You have made my appearance beautiful, make my character beautiful. Praise be to Allāh, who shaped me and proportioned me, honoured my face and made it beautiful, and made me a Muslim."
+     ],
+     "w": "أمام المرآة",
+     "wEn": "At the mirror"
+    },
+    {
+     "id": "d337",
+     "n": 337,
+     "s": "بِسْمِ اللَّهِ، الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَٰذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ،",
+     "t": [
+      "In the name of Allāh. Praise be to Allāh, who clothed me with this and provided it for me without any power or strength of my own."
+     ],
+     "w": "عند لبس الثوب",
+     "wEn": "When dressing"
+    },
+    {
+     "id": "d338",
+     "n": 338,
+     "s": "اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ خَيْرِهِ وَخَيْرِ مَا هُوَ لَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّهِ وَشَرِّ مَا هُوَ لَهُ",
+     "t": [
+      "O Allāh, I ask You for its good and the good it is for, and I seek refuge in You from its harm and the harm it is for."
+     ]
+    },
+    {
+     "id": "d339",
+     "n": 339,
+     "s": "اللَّهُمَّ لَكَ الْحَمْدُ أَنْتَ كَسَوْتَنِيهِ، أَسْأَلُكَ خَيْرَهُ وَخَيْرَ مَا صُنِعَ لَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّهِ وَشَرِّ مَا صُنِعَ لَهُ",
+     "t": [
+      "O Allāh, praise is Yours; You clothed me with it. I ask You for its good and the good it was made for, and I seek refuge in You from its harm and the harm it was made for."
+     ],
+     "w": "عند لبس جديد لأول مرة",
+     "wEn": "When wearing something new for the first time"
+    },
+    {
+     "id": "d340",
+     "n": 340,
+     "s": "الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي مَا أُوَارِي بِهِ عَوْرَتِي، وَأَتَجَمَّلُ بِهِ فِي حَيَاتِي",
+     "t": [
+      "Praise be to Allāh, who clothed me with what covers my nakedness and what I adorn myself with in my life."
+     ]
+    },
+    {
+     "id": "d341",
+     "n": 341,
+     "s": "اِلْبَسْ جَدِيدًا، وَعِشْ حَمِيدًا، وَمُتْ شَهِيدًا",
+     "t": [
+      "Wear new, live praiseworthy, and die a martyr."
+     ],
+     "w": "لمن رأيته في ثوب جديد",
+     "wEn": "To someone in new clothes"
+    },
+    {
+     "id": "d342",
+     "n": 342,
+     "s": "اللَّهُمَّ رَبَّ جِبْرَائِيلَ وَمِيكَائِيلَ وَإِسْرَافِيلَ، فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ، عَالِمَ الْغَيْبِ وَالشَّهَادَةِ، أَنْتَ تَحْكُمُ بَيْنَ عِبَادِكَ فِيمَا كَانُوا فِيهِ يَخْتَلِفُونَ،",
+     "t": [
+      "O Allāh, Lord of Jibrīl, Mīkāʾīl and Isrāfīl, Creator of the heavens and the earth, Knower of the unseen and the seen: You judge between Your servants in what they differed over."
+     ],
+     "w": "افتتاح قيام الليل",
+     "wEn": "Opening the night prayer"
+    },
+    {
+     "id": "d343",
+     "n": 343,
+     "s": "اهْدِنِي لِمَا اخْتُلِفَ فِيهِ مِنَ الْحَقِّ بِإِذْنِكَ، إِنَّكَ تَهْدِي مَنْ تَشَاءُ إِلَىٰ صِرَاطٍ مُسْتَقِيمٍ",
+     "t": [
+      "Guide me by Your permission to the truth in what has been differed over. You guide whom You will to a straight path."
+     ]
+    },
+    {
+     "id": "d344",
+     "n": 344,
+     "s": "سُبْحَانَ الْمَلِكِ الْقُدُّوسِ، رَبِّ الْمَلَائِكَةِ وَالرُّوحِ",
+     "t": [
+      "Glory be to the Sovereign, the Most Pure, Lord of the angels and the Spirit."
+     ],
+     "c": 3,
+     "w": "بعد الوتر",
+     "wEn": "After witr"
+    },
+    {
+     "id": "d345",
+     "n": 345,
+     "s": "اللَّهُمَّ إِنِّي أَعُوذُ بِرِضَاكَ مِنْ سَخَطِكَ، وَبِمُعَافَاتِكَ مِنْ عُقُوبَتِكَ، وَأَعُوذُ بِكَ مِنْكَ، لَا أُحْصِي ثَنَاءً عَلَيْكَ، أَنْتَ كَمَا أَثْنَيْتَ عَلَىٰ نَفْسِكَ",
+     "t": [
+      "O Allāh, I seek refuge in Your pleasure from Your anger, in Your pardon from Your punishment, and in You from You. I cannot count Your praise. You are as You have praised Yourself."
+     ]
+    },
+    {
+     "id": "d346",
+     "n": 346,
+     "s": "رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَىٰ وَالِدَيَّ وَأَنْ أَعْمَلَ صَالِحًا تَرْضَاهُ وَأَصْلِحْ لِي فِي ذُرِّيَّتِي إِنِّي تُبْتُ إِلَيْكَ وَإِنِّي مِنَ الْمُسْلِمِينَ",
+     "t": [
+      "My Lord, inspire me to be grateful for the blessing You gave me and my parents, and to do good that pleases You, and make my children righteous. I have turned to You, and I am of those who submit. [Sūrah Al-Aḥqāf (46), Verse 15]"
+     ],
+     "w": "أدعية من القرآن والسنة",
+     "wEn": "Duʿās from the Qurʾān and Sunnah"
+    },
+    {
+     "id": "d347",
+     "n": 347,
+     "s": "رَبِّ اجْعَلْنِي مُقِيمَ الصَّلَاةِ وَمِنْ ذُرِّيَّتِي رَبَّنَا وَتَقَبَّلْ دُعَاءِ، رَبَّنَا اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ",
+     "t": [
+      "My Lord, make me one who establishes the prayer, and my children too. Our Lord, accept my prayer. Our Lord, forgive me, my parents and the believers on the Day the reckoning is established. [Sūrah Ibrāhīm (14), Verses 40–41]"
+     ]
+    },
+    {
+     "id": "d348",
+     "n": 348,
+     "s": "رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالْإِيمَانِ وَلَا تَجْعَلْ فِي قُلُوبِنَا غِلًّا لِلَّذِينَ آمَنُوا رَبَّنَا إِنَّكَ رَءُوفٌ رَحِيمٌ",
+     "t": [
+      "Our Lord, forgive us and our brothers who came before us in faith, and put no rancour in our hearts toward those who believe. Our Lord, You are Kind and Merciful. [Sūrah Al-Ḥashr (59), Verse 10]"
+     ]
+    },
+    {
+     "id": "d349",
+     "n": 349,
+     "s": "اللَّهُمَّ بِعِلْمِكَ الْغَيْبَ وَقُدْرَتِكَ عَلَى الْخَلْقِ، أَحْيِنِي مَا عَلِمْتَ الْحَيَاةَ خَيْرًا لِي، وَتَوَفَّنِي إِذَا عَلِمْتَ الْوَفَاةَ خَيْرًا لِي،",
+     "t": [
+      "O Allāh, by Your knowledge of the unseen and Your power over creation, keep me alive while life is better for me, and take me when death is better for me."
+     ]
+    },
+    {
+     "id": "d350",
+     "n": 350,
+     "s": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَشْيَتَكَ فِي الْغَيْبِ وَالشَّهَادَةِ، وَأَسْأَلُكَ كَلِمَةَ الْحَقِّ فِي الرِّضَا وَالْغَضَبِ، وَأَسْأَلُكَ الْقَصْدَ فِي الْغِنَىٰ وَالْفَقْرِ،",
+     "t": [
+      "O Allāh, I ask You for fear of You in private and in public, for the word of truth in contentment and anger, and for moderation in wealth and poverty."
+     ]
+    },
+    {
+     "id": "d351",
+     "n": 351,
+     "s": "وَأَسْأَلُكَ نَعِيمًا لَا يَنْفَدُ، وَأَسْأَلُكَ قُرَّةَ عَيْنٍ لَا تَنْقَطِعُ، وَأَسْأَلُكَ الرِّضَا بَعْدَ الْقَضَاءِ، وَأَسْأَلُكَ بَرْدَ الْعَيْشِ بَعْدَ الْمَوْتِ،",
+     "t": [
+      "I ask You for bliss that does not run out, joy that does not end, contentment after Your decree, and an easy life after death,"
+     ]
+    },
+    {
+     "id": "d352",
+     "n": 352,
+     "s": "وَأَسْأَلُكَ لَذَّةَ النَّظَرِ إِلَىٰ وَجْهِكَ، وَالشَّوْقَ إِلَىٰ لِقَائِكَ، فِي غَيْرِ ضَرَّاءَ مُضِرَّةٍ، وَلَا فِتْنَةٍ مُضِلَّةٍ، اللَّهُمَّ زَيِّنَّا بِزِينَةِ الْإِيمَانِ، وَاجْعَلْنَا هُدَاةً مُهْتَدِينَ",
+     "t": [
+      "and I ask You for the delight of looking at Your Face and longing to meet You, without harmful hardship or misleading trial. O Allāh, adorn us with the beauty of faith and make us guides who are guided."
+     ]
+    },
+    {
+     "id": "d353",
+     "n": 353,
+     "s": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الثَّبَاتَ فِي الْأَمْرِ، وَأَسْأَلُكَ عَزِيمَةَ الرُّشْدِ، وَأَسْأَلُكَ شُكْرَ نِعْمَتِكَ، وَحُسْنَ عِبَادَتِكَ، وَأَسْأَلُكَ لِسَانًا صَادِقًا، وَقَلْبًا سَلِيمًا،",
+     "t": [
+      "O Allāh, I ask You for firmness in the religion, resolve upon guidance, gratitude for Your blessings and excellence in worshipping You. I ask You for a truthful tongue and a sound heart."
+     ]
+    },
+    {
+     "id": "d354",
+     "n": 354,
+     "s": "وَأَعُوذُ بِكَ مِنْ شَرِّ مَا تَعْلَمُ، وَأَسْأَلُكَ مِنْ خَيْرِ مَا تَعْلَمُ، وَأَسْتَغْفِرُكَ مِمَّا تَعْلَمُ، إِنَّكَ أَنْتَ عَلَّامُ الْغُيُوبِ",
+     "t": [
+      "I seek refuge in You from the evil You know of, I ask You for the good You know of, and I ask Your forgiveness for what You know. You are the Knower of all that is hidden."
+     ]
+    },
+    {
+     "id": "d355",
+     "n": 355,
+     "s": "اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا، وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ، فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ، وَارْحَمْنِي، إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ",
+     "t": [
+      "O Allāh, I have wronged myself greatly, and no one forgives sins but You. So forgive me with forgiveness from You and have mercy on me. You are the Forgiving, the Merciful."
+     ],
+     "w": "الاستغفار في آخر الليل",
+     "wEn": "Seeking forgiveness in the last part of the night"
+    },
+    {
+     "id": "d356",
+     "n": 356,
+     "s": "اللَّهُمَّ اغْفِرْ لِي مَا قَدَّمْتُ وَمَا أَخَّرْتُ، وَمَا أَسْرَرْتُ وَمَا أَعْلَنْتُ، وَمَا أَسْرَفْتُ، وَمَا أَنْتَ أَعْلَمُ بِهِ مِنِّي، أَنْتَ الْمُقَدِّمُ وَأَنْتَ الْمُؤَخِّرُ، لَا إِلَٰهَ إِلَّا أَنْتَ",
+     "t": [
+      "O Allāh, forgive me what I have done before and what I will do after, what I did in secret and in the open, my excesses, and what You know better than I do. You bring forward and You hold back. There is no god but You."
+     ]
+    },
+    {
+     "id": "d357",
+     "n": 357,
+     "s": "اللَّهُمَّ مَغْفِرَتُكَ أَوْسَعُ مِنْ ذُنُوبِي، وَرَحْمَتُكَ أَرْجَىٰ عِنْدِي مِنْ عَمَلِي",
+     "t": [
+      "O Allāh, Your forgiveness is vaster than my sins, and I have more hope in Your mercy than in my deeds."
+     ],
+     "c": 3
+    },
+    {
+     "id": "d358",
+     "n": 358,
+     "s": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ وَأَنَا أَعْلَمُ، وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ",
+     "t": [
+      "O Allāh, I seek refuge in You from knowingly associating anything with You, and I ask Your forgiveness for what I do not know."
+     ],
+     "c": 3
+    },
+    {
+     "id": "d359",
+     "n": 359,
+     "s": "لَا إِلَٰهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ",
+     "t": [
+      "There is no god but You. Glory be to You. I have been among the wrongdoers."
+     ]
+    },
+    {
+     "id": "d360",
+     "n": 360,
+     "s": "رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ",
+     "t": [
+      "My Lord, forgive me and turn to me. You are the Ever-Relenting, the Merciful."
+     ],
+     "c": 100
+    },
+    {
+     "id": "d361",
+     "n": 361,
+     "s": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ",
+     "t": [
+      "Glory and praise be to Allāh. I ask Allāh’s forgiveness and I turn to Him."
+     ]
+    },
+    {
+     "id": "d362",
+     "n": 362,
+     "s": "أَسْتَغْفِرُ اللَّهَ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
+     "t": [
+      "I ask Allāh’s forgiveness for the believing men and women."
+     ],
+     "c": 27
     }
    ]
   }
