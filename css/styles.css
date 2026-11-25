@@ -429,10 +429,4 @@ html[dir="ltr"] #top .brand{flex-direction:row}
 #note.show{opacity:1;pointer-events:auto}
 .note-card{background:var(--surface);color:var(--ink);border:1px solid var(--line-2);border-radius:16px;padding:16px 18px;max-width:560px;max-height:70dvh;overflow:auto;font-size:15.5px;line-height:1.6;white-space:pre-line;box-shadow:0 8px 30px rgba(0,0,0,.35)}
 .rnote{margin:6px 36px 2px 0;padding:6px 10px;border-inline-start:2px solid var(--gold-line);font-size:13px;line-height:1.5;color:var(--ink-3)}
-/* زرّ الإزالة على بطاقة قائمة الحفظ */
-li.has-x{position:relative}
-li.has-x .book .body{padding-inline-end:46px}
-.card-x{position:absolute;top:6px;inset-inline-end:6px;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--ink-3)}
-.card-x svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
-.card-x:active{background:var(--bg-2)}
 #note .note-card{font-family:var(--font-ui)}

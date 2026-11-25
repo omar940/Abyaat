@@ -168,11 +168,11 @@
     : (st.previewN ? `<span class="pill gold">${e('chipPreview')}</span>` : '') + (!st.newOk ? `<span class="pill gold">${e('chipNew')}</span>` : '') + (st.nearN ? `<span class="pill rust">${e('chipNear', { n: st.nearN })}</span>` : '') + (st.farN ? `<span class="pill rust">${e('chipFar', { n: st.farN })}</span>` : '');
   function poemCard(pid, act) {
     const poem = POEMS.get(pid), pr = S.poemProgress(pid), st = act === 'poem-open' ? dayStatus(pid) : null;
-    return `<li class="${st ? 'has-x' : ''}" style="margin-bottom:12px"><button class="book${st && st.done ? ' is-done' : ''}" data-act="${act}" data-pid="${esc(pid)}"><span class="spine"></span><span class="body">
+    return `<li style="margin-bottom:12px"><button class="book${st && st.done ? ' is-done' : ''}" data-act="${act}" data-pid="${esc(pid)}"><span class="spine"></span><span class="body">
       <div class="name"${da}>${esc(pick(poem, 'title'))}</div><div class="full"${da}>${esc(pick(poem, 'author'))}</div>
       <div class="meta"><span>${e('memStat', { n: pr.done, b: pr.total, u: unitOf(pid) })}</span></div>
       ${st ? `<div class="chips">${statusChips(st)}</div>` : ''}
-      <div class="bar" style="margin-top:10px"><i style="width:${pr.pct}%"></i></div></span></button>${st ? `<button class="card-x" type="button" data-act="card-remove" data-pid="${esc(pid)}" aria-label="${e('removePoem')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg></button>` : ''}</li>`;
+      <div class="bar" style="margin-top:10px"><i style="width:${pr.pct}%"></i></div></span></button></li>`;
   }
   function vHome() {
     const act = S.state.activePoem;
@@ -701,7 +701,6 @@
     const d = el.dataset, L = ui.learn, N = ui.near, Q = ui.far;
     switch (name) {
       case 'note': return showNote(noteOf(d.id));
-      case 'card-remove': return confirmSheet(t('removeQ'), t('removeBody'), t('removeYes'), 'unenroll-yes', { pid: d.pid }, true);
       case 'goto': return go(d.to);
       case 'preview-count': { const pid = S.state.activePoem; S.setPreviewCount(pid, S.previewCountOf(pid) + Number(d.d)); return render({ keep: true }); }
       case 'preview-read': {
@@ -717,7 +716,7 @@
       case 'add-poem': ui.tab = 'home'; ui.mode = 'add'; return render();
       case 'enroll': return loadPoem(d.pid).then(() => { S.setEnrolled(d.pid, true); S.setActive(d.pid); ui.mode = null; ui.poemOpen = true; toast(t('tPoemAdded')); render(); });
       case 'unenroll-ask': return confirmSheet(t('removeQ'), t('removeBody'), t('removeYes'), 'unenroll-yes', {}, true);
-      case 'unenroll-yes': S.setEnrolled(d.pid || S.state.activePoem, false); ui.poemOpen = false; ui.mode = null; closeSheet(); toast(t('tPoemRemoved')); return render();
+      case 'unenroll-yes': S.setEnrolled(S.state.activePoem, false); ui.poemOpen = false; ui.mode = null; closeSheet(); toast(t('tPoemRemoved')); return render();
       /* الحفظ الجديد */
       case 'test-done': { const T = ui.test; ui.test = null; if (T && T.pending) commitLearned(T.pid, T.cid); return afterLearnStep(); }
       case 'noop': return;
